@@ -1,0 +1,11 @@
+They used 10 badges for different achievements. I have summarized the logic that determines when a badge is awarded as follows:
+1. When one starts the survey (Let's go!)
+2. When one reaches 33% of the overall questions (33% Achieved)
+3. When 66% of the questions answered ( 66% Achieved)
+4. After reaching the last page of the survey (Almost Done!)
+5. After answering questions on the last page (Interview)
+6. Completed the survey (Won!)
+7. Answered all questions including open questions ( Full Score)
+8. Takes at least 3 minutes to complete each survey page (Tactician!)
+9. Collect all badges ( Media Collector)
+10. Find the mascot (Audience favorite)
