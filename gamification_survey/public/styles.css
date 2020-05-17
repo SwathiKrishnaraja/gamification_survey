@@ -1,0 +1,51 @@
+.container {
+  text-align: center;
+  border: solid black;
+  display: inline-block;
+}
+.main-body {
+  height: 90vh;
+  margin: auto;
+  width: 90%;
+}
+.home-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+.imprint-button {
+  height: 35px;
+  width: 75px;
+  margin-bottom: 8px;
+}
+.continue-button {
+  width: 120px;
+  height: 40px;
+  font-size: large;
+}
+.language-button-div {
+  float: right;
+  margin-right: 5px;
+  margin-top: 5px;
+}
+.language-button-div button {
+  border: 1px solid black; /* Green border */
+  color: black;
+}
+
+/* Add a background color on hover */
+.language-button-div button:hover {
+  background-color: gray;
+}
+.consent-form-body {
+  height: 90vh;
+  margin: auto;
+  width: 90%;
+}
+.agree-button {
+  width: 120px;
+  height: 40px;
+  font-size: large;
+}
