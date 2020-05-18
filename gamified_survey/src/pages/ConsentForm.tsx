@@ -1,6 +1,6 @@
+import React from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import Link from 'next/link';
 
 const ConsentForm = () => {
   return (
@@ -50,9 +50,9 @@ const ConsentForm = () => {
           <input type="checkbox" /> I agree
         </label>
       </div>
-      <Link href="/PreSurvey" passHref>
+      {/* <Link href="/PreSurvey" passHref>
         <button className="agree-button">Continue</button>
-      </Link>
+      </Link> */}
       <hr style={{ width: '98%' }} />
       <Footer />
     </div>

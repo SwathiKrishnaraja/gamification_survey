@@ -1,5 +1,4 @@
-import Link from 'next/link';
-import { Fragment } from 'react';
+import React, { Fragment } from 'react';
 
 const HomeContent = () => {
   return (
@@ -23,9 +22,9 @@ const HomeContent = () => {
         </p>
         <p style={{ fontSize: 20, textAlign: 'left' }}>Swathi Krishnaraja</p>
       </div>
-      <Link href="/ConsentForm" passHref>
+      {/* <Link href="/ConsentForm" passHref>
         <button className="continue-button">Continue</button>
-      </Link>
+      </Link> */}
     </Fragment>
   );
 };

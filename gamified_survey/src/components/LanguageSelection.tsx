@@ -1,3 +1,4 @@
+import React from 'react'
 const LanguageSelection = () => {
   return (
     <div className="language-button-div">

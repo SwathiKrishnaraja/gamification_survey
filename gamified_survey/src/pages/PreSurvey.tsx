@@ -1,7 +1,7 @@
+import React from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import CustomProgressBar from '../components/CustomProgressBar';
-import Link from 'next/link';
 
 const PreSurvey = () => {
   return (
@@ -11,9 +11,9 @@ const PreSurvey = () => {
         <h2>Pre-Survey Questionnaire</h2>
         <CustomProgressBar />
       </div>
-      <Link href="/TraditionalSurvey" passHref>
+      {/* <Link href="/TraditionalSurvey" passHref>
         <button className="continue-button">Continue</button>
-      </Link>
+      </Link> */}
       <hr style={{ width: '98%' }} />
       <Footer />
     </div>

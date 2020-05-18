@@ -1,6 +1,7 @@
-import Footer from '../components/Footer';
+import React from 'react';
+import Footer from '../components/Footer'
 import LanguageSelection from '../components/LanguageSelection';
-import HomeContent from '../components/English/HomeContent';
+import HomeContent from '../components/HomeContent';
 import Header from '../components/Header';
 
 const Home = () => {
