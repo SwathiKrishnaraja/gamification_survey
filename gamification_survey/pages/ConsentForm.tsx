@@ -6,7 +6,7 @@ const ConsentForm = () => {
   return (
     <div className="container">
       <Header />
-      <div className="consent-form-body">
+      <div className="main-body">
         <ul style={{ textAlign: 'left' }}>
           <li>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do

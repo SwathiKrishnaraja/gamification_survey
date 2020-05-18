@@ -2,12 +2,14 @@
   text-align: center;
   border: solid black;
   display: inline-block;
+  width: 100%;
 }
 .main-body {
   height: 90vh;
   margin: auto;
   width: 90%;
 }
+
 .home-footer {
   display: flex;
   justify-content: space-between;
@@ -39,13 +41,17 @@
 .language-button-div button:hover {
   background-color: gray;
 }
-.consent-form-body {
-  height: 90vh;
-  margin: auto;
-  width: 90%;
-}
+
 .agree-button {
   width: 120px;
   height: 40px;
   font-size: large;
+}
+.progress-bar {
+  background-color: grey;
+}
+
+.progress-bar-div {
+  border: solid black;
+  width: 500px;
 }
