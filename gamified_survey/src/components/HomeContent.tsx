@@ -1,6 +1,8 @@
 import React, { Fragment } from 'react';
+import { useHistory } from 'react-router-dom';
 
 const HomeContent = () => {
+  const history = useHistory();
   return (
     <Fragment>
       <div className="main-body">
@@ -22,9 +24,7 @@ const HomeContent = () => {
         </p>
         <p style={{ fontSize: 20, textAlign: 'left' }}>Swathi Krishnaraja</p>
       </div>
-      {/* <Link href="/ConsentForm" passHref>
-        <button className="continue-button">Continue</button>
-      </Link> */}
+      <button className="continue-button" onClick={() => history.push('/ConsentForm')}>Continue</button>
     </Fragment>
   );
 };
