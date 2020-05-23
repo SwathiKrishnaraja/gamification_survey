@@ -1,30 +1,27 @@
 import React, { Fragment } from 'react';
 import { useHistory } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 const HomeContent = () => {
+  const { t } = useTranslation()
   const history = useHistory();
   return (
     <Fragment>
       <div className="main-body">
-        <h2>MASTER THESIS – EXERCISE AND SPORTS</h2>
-        <p style={{ fontSize: 20, textAlign: 'left' }}>Hello,</p>
+        <h2>{t('homeContent.heading')}</h2>
+        <p style={{ fontSize: 20, textAlign: 'left' }}>{t('homeContent.greeting')}</p>
         <p style={{ fontSize: 20, textAlign: 'left' }}>
-          I would like to invite you to take part in a survey about sports and
-          exercise as part of my master thesis. Please answer the questions as
-          honestly as possible. Of course, all your data will be kept anonymous
-          and confidential and cannot be traced back to you. If you are not sure
-          which answer applies to you, please choose the alternative that
-          applies to you.
+          {t('homeContent.content1')}
         </p>
         <p style={{ fontSize: 20, textAlign: 'left' }}>
-          It will take about 10-15 minutes to answer the questionnaire.
+          {t('homeContent.content2')}
         </p>
         <p style={{ fontSize: 20, textAlign: 'left' }}>
-          Thank you for your cooperation,
+          {t('homeContent.content3')}
         </p>
-        <p style={{ fontSize: 20, textAlign: 'left' }}>Swathi Krishnaraja</p>
+        <p style={{ fontSize: 20, textAlign: 'left' }}> {t('homeContent.name')}</p>
       </div>
-      <button className="continue-button" onClick={() => history.push('/ConsentForm')}>Continue</button>
+      <button className="continue-button" onClick={() => history.push('/ConsentForm')}>{t('homeContent.button')}</button>
     </Fragment>
   );
 };
