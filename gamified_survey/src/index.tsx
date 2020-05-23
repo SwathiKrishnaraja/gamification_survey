@@ -1,13 +1,15 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom';
 import { Route, BrowserRouter as Router } from 'react-router-dom'
 import './index.css';
+import './i18n';
 import App from './App';
 import ConsentForm from './pages/ConsentForm'
 import GamifiedSurvey from './pages/GamifiedSurvey'
 import TraditionalSurvey from './pages/TraditionalSurvey'
 import PreSurvey from './pages/PreSurvey'
 import * as serviceWorker from './serviceWorker';
+
 
 const Routing = () => {
   return (
@@ -21,7 +23,9 @@ const Routing = () => {
   )
 }
 ReactDOM.render(
-  <Routing />,
+  <React.StrictMode>
+    <App />
+  </React.StrictMode >,
   document.getElementById('root')
 );
 

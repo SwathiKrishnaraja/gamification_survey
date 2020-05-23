@@ -31,6 +31,7 @@
   float: right;
   margin-right: 5px;
   margin-top: 5px;
+  margin-bottom: 5px;
 }
 .language-button-div button {
   border: 1px solid black; /* Green border */
@@ -40,6 +41,13 @@
 /* Add a background color on hover */
 .language-button-div button:hover {
   background-color: gray;
+}
+/* Add a background color on hover */
+.language-button-div button:focus {
+  outline: none;
+  outline-color: none;
+  outline-style: none;
+  outline-width: none;
 }
 
 .agree-button {
