@@ -5,6 +5,7 @@ import { useTranslation } from 'react-i18next';
 const HomeContent = () => {
   const { t } = useTranslation()
   const history = useHistory();
+  console.log(history)
   return (
     <Fragment>
       <div className="main-body">
