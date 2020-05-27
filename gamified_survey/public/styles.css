@@ -55,11 +55,26 @@
   height: 40px;
   font-size: large;
 }
+
+.progressBar-h3 {
+  margin-right: 50px;
+}
 .progress-bar {
   background-color: grey;
 }
 
 .progress-bar-div {
   border: solid black;
-  width: 500px;
+  width: 300px;
+}
+.Badges-div {
+  display: flex;
+  justify-content: center;
+}
+.Badges-div img {
+  width: 60px;
+}
+
+.Badges-div h2 {
+  margin-right: 50px;
 }
