@@ -11,7 +11,7 @@ const Home = () => {
       <Header />
 
       <HomeContent />
-      <hr style={{ width: '98%' }} />
+
       <Footer />
     </div>
   );

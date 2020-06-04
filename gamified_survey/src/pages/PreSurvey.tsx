@@ -15,9 +15,8 @@ const PreSurvey = () => {
         <h2>Pre-Survey Questionnaire</h2>
         <CustomProgressBar />
       </div>
-
       <button className="continue-button" onClick={() => history.push('/ChooseVersion')}>{t('homeContent.button')}</button>
-      <hr style={{ width: '98%' }} />
+
       <Footer />
     </div>
   );

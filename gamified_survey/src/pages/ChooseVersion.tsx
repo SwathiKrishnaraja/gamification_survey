@@ -44,13 +44,11 @@ const ChooseVersion = () => {
                         <ImprintModal showModal={showGamified} handleClick={handleGamifiedModal} children={<GamifiedSurveyMock />} />
                         <button className='choose-version-button' onClick={() => history.push('/GamifiedSurvey')}>Choose Gamified</button>
                     </div>
-
                 </div>
             </div>
-
-            <hr style={{ width: '98%' }} />
             <Footer />
         </div>
+
     );
 };
 

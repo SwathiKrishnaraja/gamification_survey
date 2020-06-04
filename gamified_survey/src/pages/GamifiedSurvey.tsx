@@ -15,7 +15,7 @@ const GamifiedSurvey = () => {
         <CustomProgressBar />
       </div>
       <button className="continue-button">{t('gamifiedSurvey.submit')}</button>
-      <hr style={{ width: '98%' }} />
+
       <Footer />
     </div>
   );

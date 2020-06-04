@@ -8,7 +8,9 @@ const Footer = () => {
   }
   return (
     <footer>
+      <hr style={{ width: '98%' }} />
       <div className="home-footer">
+
         <button className="imprint-button" onClick={handleImprintClick}>Imprint</button>
         <ImprintModal showModal={showImprint} handleClick={handleImprintClick} children={<ImprintContent />} />
         <label>Copyrights reserved by Saarland University</label>

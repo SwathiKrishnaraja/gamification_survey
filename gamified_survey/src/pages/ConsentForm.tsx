@@ -55,7 +55,7 @@ const ConsentForm = () => {
         </label>
       </div>
       <button className="agree-button" onClick={() => history.push('/PreSurvey')}>{t('homeContent.button')}</button>
-      <hr style={{ width: '98%' }} />
+
       <Footer />
     </div>
   );
