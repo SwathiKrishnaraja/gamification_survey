@@ -15,6 +15,13 @@ p {
   height: 90vh;
   margin: auto;
   width: 90%;
+  overflow-y: scroll;
+}
+.main-body::-webkit-scrollbar {
+  display: none;
+}
+.main-body {
+  -ms-overflow-style: none;
 }
 /* ############# HOME PAGE ############### */
 .home-footer {
