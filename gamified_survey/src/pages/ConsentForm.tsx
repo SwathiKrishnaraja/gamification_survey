@@ -2,9 +2,11 @@ import React from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { useHistory } from 'react-router-dom'
+import { useTranslation } from 'react-i18next';
 
 const ConsentForm = () => {
   const history = useHistory()
+  const { t } = useTranslation()
   return (
     <div className="container">
       <Header />
@@ -52,10 +54,7 @@ const ConsentForm = () => {
           <input type="checkbox" /> I agree
         </label>
       </div>
-      <button className="agree-button" onClick={() => history.push('/PreSurvey')}>Continue</button>
-      {/* <Link href="/PreSurvey" passHref>
-        <button className="agree-button">Continue</button>
-      </Link> */}
+      <button className="agree-button" onClick={() => history.push('/PreSurvey')}>{t('homeContent.button')}</button>
       <hr style={{ width: '98%' }} />
       <Footer />
     </div>

@@ -8,6 +8,7 @@ import ConsentForm from './pages/ConsentForm'
 import GamifiedSurvey from './pages/GamifiedSurvey'
 import TraditionalSurvey from './pages/TraditionalSurvey'
 import PreSurvey from './pages/PreSurvey'
+import ChooseVersion from './pages/ChooseVersion'
 import * as serviceWorker from './serviceWorker';
 
 
@@ -16,6 +17,7 @@ const Routing = () => {
     <Router>
       <Route exact path='/' component={App} />
       <Route path='/ConsentForm' component={ConsentForm} />
+      <Route path='/ChooseVersion' component={ChooseVersion} />
       <Route path='/GamifiedSurvey' component={GamifiedSurvey} />
       <Route path='/TraditionalSurvey' component={TraditionalSurvey} />
       <Route path='/PreSurvey' component={PreSurvey} />
