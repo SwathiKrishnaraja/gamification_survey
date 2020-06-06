@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, Fragment } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { useTranslation } from 'react-i18next';
@@ -23,7 +23,7 @@ const ChooseVersion = () => {
     }
     return (
         <div className="container">
-            <Header />
+            <Header children={<Fragment />} />
             <div className="main-body">
                 <h2>Choose your Survey version</h2>
                 <p>Here the two versions of survey are provided. Please use the try it button to try the two versions of survey. </p>

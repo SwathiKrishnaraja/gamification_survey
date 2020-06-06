@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { useHistory } from 'react-router-dom'
@@ -9,7 +9,7 @@ const ConsentForm = () => {
   const { t } = useTranslation()
   return (
     <div className="container">
-      <Header />
+      <Header children={<Fragment />} />
       <div className="main-body">
         <ul style={{ textAlign: 'left' }}>
           <li>
