@@ -99,12 +99,16 @@ p {
   margin-right: 50px;
 }
 .progress-bar {
-  background-color: grey;
+  background-color: #2e6da4;
+  height: 15px;
 }
 
 .progress-bar-div {
-  border: solid black;
-  width: 300px;
+  border: solid;
+  width: 200px;
+  border-radius: 6px;
+  border-width: 0.1mm;
+  border-color: #2e6da4;
 }
 .Badges-div {
   display: flex;
@@ -183,4 +187,69 @@ p {
   width: 90%;
   margin-top: 5px;
   height: 100vh;
+}
+
+/* ############### Survey JS */
+.sv_p_root {
+  text-align: left;
+}
+.sv_complete_btn {
+  width: 120px;
+  background-color: #337ab7;
+  border-color: #2e6da4;
+  color: white;
+  padding: 10px 16px;
+  font-size: 18px;
+  border-radius: 6px;
+}
+
+.sv_row {
+  background-color: #f5f5f5;
+  border-width: 0.1mm;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.sv_q_radiogroup {
+  border: solid;
+  border-width: 0.1mm;
+  border-color: white;
+  height: 35px;
+}
+.sv_q_radiogroup_control_item {
+  margin-top: 10px;
+}
+.sv_q_title {
+  font-size: 14px;
+}
+.sv_qstn td {
+  height: 50px;
+  width: 300px;
+  background: white;
+  text-align: center;
+}
+.sv_qstn td:first-child {
+  text-align: left;
+}
+thead {
+  background: white;
+  text-align: center;
+}
+.sv_qstn label.sv_q_m_label {
+  margin-top: -10px;
+}
+.sv_q_checkbox {
+  height: 35px;
+  border: solid white;
+  border-width: 0.1mm;
+}
+.sv_q_checkbox_control_item {
+  margin-top: 9px;
+}
+.sv_q_text_root {
+  height: 100px;
+  margin-left: 35px;
+  margin-bottom: 25px;
+  width: 90%;
+  border: solid lightgray;
+  border-width: 0.1mm;
 }

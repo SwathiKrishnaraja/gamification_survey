@@ -3,6 +3,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import CustomProgressBar from '../components/CustomProgressBar'
 import { useTranslation } from 'react-i18next';
+import { survey } from '../survey/TraditionalSurveyQuestions'
 
 const TraditionalSurvey = () => {
   const { t } = useTranslation()
@@ -11,8 +12,9 @@ const TraditionalSurvey = () => {
       <Header children={<Fragment />} />
       <div className="main-body">
         <CustomProgressBar />
+        {survey}
       </div>
-      <button className="continue-button">{t('gamifiedSurvey.submit')}</button>
+
 
       <Footer />
     </div>
