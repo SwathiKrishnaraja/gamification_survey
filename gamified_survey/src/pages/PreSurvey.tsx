@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import CustomProgressBar from '../components/CustomProgressBar';
@@ -10,7 +10,7 @@ const PreSurvey = () => {
   const { t } = useTranslation()
   return (
     <div className="container">
-      <Header />
+      <Header children={<Fragment />} />
       <div className="main-body">
         <h2>Pre-Survey Questionnaire</h2>
         <CustomProgressBar />

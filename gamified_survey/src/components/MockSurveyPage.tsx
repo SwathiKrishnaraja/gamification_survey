@@ -42,7 +42,7 @@ export const GamifiedSurveyMock = () => {
     const { t } = useTranslation()
     return (
         <div className="mock-container">
-            <Header />
+            <Header children={<Fragment />} />
             <div className="main-body">
                 <Badges />
                 <CustomProgressBar />
@@ -56,7 +56,7 @@ export const TraditionalSurveyMock = () => {
     const { t } = useTranslation()
     return (
         <div className="mock-container">
-            <Header />
+            <Header children={<Fragment />} />
             <div className="main-body">
                 <CustomProgressBar />
             </div>
