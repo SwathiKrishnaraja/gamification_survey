@@ -9,7 +9,6 @@ function App() {
   return (
     <Suspense fallback={(<div>Loading</div>)}>
       <Fragment>
-        {/* <LanguageSelection /> */}
         <Home />
       </Fragment>
     </Suspense>

@@ -4,7 +4,7 @@ import { Route, BrowserRouter as Router } from 'react-router-dom'
 import './index.css';
 import './i18n';
 import App from './App';
-import ConsentForm from './pages/ConsentForm'
+import GuidedTourTraditional from './pages/GuidedTourTraditional'
 import GamifiedSurvey from './pages/GamifiedSurvey'
 import TraditionalSurvey from './pages/TraditionalSurvey'
 import PreSurvey from './pages/PreSurvey'
@@ -16,7 +16,7 @@ const Routing = () => {
   return (
     <Router>
       <Route exact path='/' component={App} />
-      <Route path='/ConsentForm' component={ConsentForm} />
+      <Route path='/GuidedTourTraditional' component={GuidedTourTraditional} />
       <Route path='/ChooseVersion' component={ChooseVersion} />
       <Route path='/GamifiedSurvey' component={GamifiedSurvey} />
       <Route path='/TraditionalSurvey' component={TraditionalSurvey} />

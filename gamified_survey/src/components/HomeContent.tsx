@@ -35,7 +35,7 @@ const HomeContent = () => {
         </div>
 
       </div>
-      <button className="continue-button" onClick={() => history.push('/ConsentForm')}>{t('homeContent.button')}</button>
+      <button className="continue-button" onClick={() => history.push('/GuidedTourTraditional')}>{t('homeContent.button')}</button>
     </Fragment>
   );
 };
