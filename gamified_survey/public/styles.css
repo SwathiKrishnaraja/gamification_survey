@@ -113,9 +113,11 @@ p {
 .Badges-div {
   display: flex;
   justify-content: center;
+  margin-top: 10px;
 }
 .Badges-div img {
   width: 60px;
+  margin-right: 5px;
 }
 .Badges-div-mock img {
   width: 30px !important;
