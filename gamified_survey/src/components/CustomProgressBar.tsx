@@ -7,12 +7,11 @@ const CustomProgressBar = () => {
   const now = 70;
 
   const progressInstance = (
-    <ProgressBar className="progress-bar-div " now={now} label={`${now}%`} />
+    <ProgressBar className="progress-bar-div " now={now} />
   );
   return (
     <Fragment>
-      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-        <h3 className='progressBar-h3'>{t('homeContent.heading')}</h3>
+      <div style={{ marginTop: 10, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
         {progressInstance}
       </div>
     </Fragment >
