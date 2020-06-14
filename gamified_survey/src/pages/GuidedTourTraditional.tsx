@@ -1,57 +1,102 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useState } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import CustomProgressBar from '../components/CustomProgressBar'
 import { useTranslation } from 'react-i18next';
 import { survey } from '../survey/MockSurveyQuestions'
-import Joyride from 'react-joyride';
+import Joyride, { CallBackProps, Step } from 'react-joyride';
 import { Button } from 'react-bootstrap';
+import GuidedTourModal from '../components/GuidedTourModal'
+import { useHistory } from 'react-router-dom';
+
+
+export const TourContinueElement: React.FC = () => {
+    return (
+        <Fragment>
+            <h2>Congrats !</h2>
+            <br />
+            You have finished the Guided tour of first version.
+            <br />
+            Now please proceed to the second version.
+        </Fragment>
+    )
+}
 
 const GuidedTourTraditional = () => {
-    const steps = [
-        {
-            target: '.continue-button',
-            content: "Let's start the tour",
-        },
+    const history = useHistory()
+    const { t } = useTranslation()
+    const [run, setRun] = useState(false)
+    const [showModal, setShowModal] = useState(false)
+    const steps: Step[] = [
+
         {
             target: '.progress-bar-div',
-            content: 'Your progress is shown here.'
+            content: 'Your progress is shown here.',
+            // placement: 'center',
         },
         {
             target: '.sv_row:nth-child(1)',
-            content: 'Few questions are in presented in the radiogroup format. Please choose one option'
+            content: 'Few questions are in presented in the radiogroup format. Please choose one option',
+            placement: 'bottom',
         },
         {
             target: '.sv_row:nth-child(2)',
-            content: 'Few questions are presented in matrix format. Please choose one option.'
+            content: 'Few questions are presented in matrix format. Please choose one option.',
+            placement: 'bottom',
         },
         {
             target: '.sv_row:nth-child(3)',
-            content: 'Few questions are presented with checkboxes. Please feel free to choose multiple options if necessary.'
+            content: 'Few questions are presented with checkboxes. Please feel free to choose multiple options if necessary.',
+            placement: 'bottom',
         },
         {
             target: '.sv_row:nth-child(4)',
-            content: 'Few questions are presented with text area. Please provide your input in the provided text area.'
+            content: 'Few questions are presented with text area. Please provide your input in the provided text area.',
+            placement: 'top',
         },
         {
             target: '.sv_complete_btn',
-            content: 'Once all the questions in the survey is completed, kindly submit using the submit button.'
+            content: 'Once all the questions in the survey is completed, kindly submit using the submit button.',
+            placement: 'top',
         }
     ]
-    const { t } = useTranslation()
+
+    const handleJoyrideCallback = (data: CallBackProps) => {
+        const { status } = data
+        if (status === 'ready') {
+            setShowModal(true)
+        }
+    }
+    const handleClick = (event: React.MouseEvent<HTMLElement>) => {
+        event.preventDefault()
+        setRun(true)
+    }
+
+    const handleTourProceed = () => {
+        history.push('/GuidedTourGamified')
+    }
+
+
     return (
         <div className="container">
             <Joyride
+                callback={handleJoyrideCallback}
                 steps={steps}
+                run={run}
                 showProgress={true}
                 showSkipButton={true}
                 continuous={true} />
             <Header children={<Fragment />} />
             <div className="main-body">
                 <h2>Here is a guided tour for the first version of the survey</h2>
-                <button className='continue-button'>Start Tour</button>
-                <CustomProgressBar />
-                {survey}
+                <button className='continue-button' onClick={handleClick}>Start Tour</button>
+                <div className='guided-tour-div'>
+                    <CustomProgressBar />
+                    {survey}
+                    {showModal
+                        ? <GuidedTourModal showModal={showModal} handleClick={handleTourProceed} children={<TourContinueElement />} modalWindowButton='Continue' />
+                        : <Fragment />}
+                </div>
             </div>
             <Footer />
         </div >

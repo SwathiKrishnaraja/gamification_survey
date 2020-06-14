@@ -5,6 +5,7 @@ import './index.css';
 import './i18n';
 import App from './App';
 import GuidedTourTraditional from './pages/GuidedTourTraditional'
+import GuidedTourGamified from './pages/GuidedTourGamified'
 import GamifiedSurvey from './pages/GamifiedSurvey'
 import TraditionalSurvey from './pages/TraditionalSurvey'
 import PreSurvey from './pages/PreSurvey'
@@ -17,6 +18,7 @@ const Routing = () => {
     <Router>
       <Route exact path='/' component={App} />
       <Route path='/GuidedTourTraditional' component={GuidedTourTraditional} />
+      <Route path='/GuidedTourGamified' component={GuidedTourGamified} />
       <Route path='/ChooseVersion' component={ChooseVersion} />
       <Route path='/GamifiedSurvey' component={GamifiedSurvey} />
       <Route path='/TraditionalSurvey' component={TraditionalSurvey} />
