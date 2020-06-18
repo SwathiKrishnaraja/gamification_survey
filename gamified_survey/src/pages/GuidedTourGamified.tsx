@@ -55,6 +55,7 @@ const GuidedTourGamified = () => {
     const history = useHistory()
     const [run, setRun] = useState(false)
     const [showModal, setShowModal] = useState(false)
+    const [showTour, setShowTour] = useState(false)
     const steps: Step[] = [
         {
             target: '.Badges-div-mock',
@@ -86,11 +87,6 @@ const GuidedTourGamified = () => {
             content: 'Few questions are presented with text area. Please provide your input in the provided text area.',
             placement: 'top',
         },
-        {
-            target: '.sv_complete_btn',
-            content: 'Once all the questions in the survey is completed, kindly submit using the submit button.',
-            placement: 'top',
-        }
     ]
 
     const handleJoyrideCallback = (data: CallBackProps) => {
@@ -99,9 +95,10 @@ const GuidedTourGamified = () => {
             setShowModal(true)
         }
     }
-    const handleClick = (event: React.MouseEvent<HTMLElement>) => {
+    const handleStartTour = (event: React.MouseEvent<HTMLElement>) => {
         event.preventDefault()
         setRun(true)
+        setShowTour(true)
     }
 
     const handleTourProceed = () => {
@@ -119,17 +116,22 @@ const GuidedTourGamified = () => {
                 continuous={true} />
             <Header children={<Fragment />} />
             <div className="main-body">
-                <h2>Here is a guided tour for the first version of the survey</h2>
-                <button className='continue-button' onClick={handleClick}>Start Tour</button>
-                <div className='guided-tour-div'>
-                    <Badges />
-                    <CustomProgressBar />
+                <h2>Here is a guided tour for the second version of the survey</h2>
+                <button className='continue-button' onClick={handleStartTour}>Start Tour</button>
+                {
+                    showTour
+                        ? <div className='guided-tour-div'>
+                            <Badges />
+                            <CustomProgressBar />
 
-                    {survey}
-                    {showModal
-                        ? <GuidedTourModal showModal={showModal} handleClick={handleTourProceed} children={<TourContinueElement />} modalWindowButton='Continue' />
-                        : <Fragment />}
-                </div>
+                            {survey}
+                            {showModal
+                                ? <GuidedTourModal showModal={showModal} handleClick={handleTourProceed} children={<TourContinueElement />} modalWindowButton='Continue' />
+                                : <Fragment />}
+                        </div>
+                        : <Fragment />
+                }
+
 
             </div>
             <Footer />

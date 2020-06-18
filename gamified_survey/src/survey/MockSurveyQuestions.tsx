@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import * as Survey from 'survey-react'
 import { Questions, MatrixObject, Json } from '../types/types'
 
@@ -73,10 +73,19 @@ const q4: Questions = {
 
 
 
-const json: Json = {
+const json = {
     completeText: 'Submit',
-    questions: [q1, q2, q3, q4]
+    questions: [q1, q2, q3, q4],
+    mode: 'display',
 }
 
+const onComplete = (...rest: any) => {
+    console.log(rest)
+}
 
-export const survey = <Survey.Survey json={json} />
+const onCompleting = (options: { allowComplete: boolean }) => {
+    options.allowComplete = false
+    // Option = false
+}
+
+export const survey = <Survey.Survey json={json} onComplete={onComplete} onCompleting={onCompleting} />

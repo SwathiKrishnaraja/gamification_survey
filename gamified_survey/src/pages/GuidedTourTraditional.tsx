@@ -5,7 +5,6 @@ import CustomProgressBar from '../components/CustomProgressBar'
 import { useTranslation } from 'react-i18next';
 import { survey } from '../survey/MockSurveyQuestions'
 import Joyride, { CallBackProps, Step } from 'react-joyride';
-import { Button } from 'react-bootstrap';
 import GuidedTourModal from '../components/GuidedTourModal'
 import { useHistory } from 'react-router-dom';
 
@@ -27,6 +26,7 @@ const GuidedTourTraditional = () => {
     const { t } = useTranslation()
     const [run, setRun] = useState(false)
     const [showModal, setShowModal] = useState(false)
+    const [showTour, setShowTour] = useState(false)
     const steps: Step[] = [
 
         {
@@ -53,11 +53,6 @@ const GuidedTourTraditional = () => {
             target: '.sv_row:nth-child(4)',
             content: 'Few questions are presented with text area. Please provide your input in the provided text area.',
             placement: 'top',
-        },
-        {
-            target: '.sv_complete_btn',
-            content: 'Once all the questions in the survey is completed, kindly submit using the submit button.',
-            placement: 'top',
         }
     ]
 
@@ -67,9 +62,10 @@ const GuidedTourTraditional = () => {
             setShowModal(true)
         }
     }
-    const handleClick = (event: React.MouseEvent<HTMLElement>) => {
+    const handleStartTour = (event: React.MouseEvent<HTMLElement>) => {
         event.preventDefault()
         setRun(true)
+        setShowTour(true)
     }
 
     const handleTourProceed = () => {
@@ -89,14 +85,18 @@ const GuidedTourTraditional = () => {
             <Header children={<Fragment />} />
             <div className="main-body">
                 <h2>Here is a guided tour for the first version of the survey</h2>
-                <button className='continue-button' onClick={handleClick}>Start Tour</button>
-                <div className='guided-tour-div'>
-                    <CustomProgressBar />
-                    {survey}
-                    {showModal
-                        ? <GuidedTourModal showModal={showModal} handleClick={handleTourProceed} children={<TourContinueElement />} modalWindowButton='Continue' />
-                        : <Fragment />}
-                </div>
+                <button className='continue-button' onClick={handleStartTour}>Start Tour</button>
+                {showTour
+                    ? <div className='guided-tour-div'>
+                        <CustomProgressBar />
+                        {survey}
+                        {showModal
+                            ? <GuidedTourModal showModal={showModal} handleClick={handleTourProceed} children={<TourContinueElement />} modalWindowButton='Continue' />
+                            : <Fragment />}
+                    </div>
+                    : <Fragment />
+                }
+
             </div>
             <Footer />
         </div >
