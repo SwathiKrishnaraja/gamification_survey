@@ -3,16 +3,16 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { useTranslation } from 'react-i18next';
 import CustomProgressBar from '../components/CustomProgressBar'
-import First from '../badges/First.png'
-import Second from '../badges/Second.png'
-import Third from '../badges/Third.png'
-import Fourth from '../badges/Fourth.png'
-import Fifth from '../badges/Fifth.png'
-import Sixth from '../badges/Sixth.png'
-import Seventh from '../badges/Seventh.png'
-import Eight from '../badges/Eight.png'
-import Ninth from '../badges/Ninth.png'
-import Tenth from '../badges/Tenth.png'
+import First from '../badges/1.png'
+import Second from '../badges/2.png'
+import Third from '../badges/3.png'
+import Fourth from '../badges/4.png'
+import Fifth from '../badges/5.png'
+import Sixth from '../badges/6.png'
+import Seventh from '../badges/7.png'
+import Eight from '../badges/8.png'
+import Ninth from '../badges/9.png'
+import Tenth from '../badges/10.png'
 
 
 const Badges = () => {

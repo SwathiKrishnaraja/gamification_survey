@@ -4,6 +4,7 @@ import Footer from '../components/Footer';
 import Badges from '../components/Badges'
 import { useTranslation } from 'react-i18next';
 import CustomProgressBar from '../components/CustomProgressBar'
+import { survey } from '../survey/TraditionalSurveyQuestions'
 
 const GamifiedSurvey = () => {
   const { t } = useTranslation()
@@ -13,8 +14,8 @@ const GamifiedSurvey = () => {
       <div className="main-body">
         <Badges />
         <CustomProgressBar />
+        {survey}
       </div>
-      <button className="continue-button">{t('gamifiedSurvey.submit')}</button>
 
       <Footer />
     </div>
