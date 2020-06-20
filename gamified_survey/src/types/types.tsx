@@ -17,4 +17,5 @@ export interface MatrixObject {
 export interface Json {
     questions: Array<Questions>
     completeText: string
+    mode: 'display' | 'edit'
 }

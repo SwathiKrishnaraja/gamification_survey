@@ -73,19 +73,10 @@ const q4: Questions = {
 
 
 
-const json = {
+const json: Json = {
     completeText: 'Submit',
     questions: [q1, q2, q3, q4],
     mode: 'display',
 }
 
-const onComplete = (...rest: any) => {
-    console.log(rest)
-}
-
-const onCompleting = (options: { allowComplete: boolean }) => {
-    options.allowComplete = false
-    // Option = false
-}
-
-export const survey = <Survey.Survey json={json} onComplete={onComplete} onCompleting={onCompleting} />
+export const survey = <Survey.Survey json={json} />
