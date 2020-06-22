@@ -17,15 +17,16 @@ import Seventh from '../badges/7.png'
 import Eight from '../badges/8.png'
 import Ninth from '../badges/9.png'
 import Tenth from '../badges/10.png'
+import Notifications from '../Toast/Notifications'
+import { BadgeDetail } from '../types/types'
 
 const TourContinueElement: React.FC = () => {
     return (
-        <Fragment>
+        <div>
             <h2>Congrats !</h2>
             <br />
             You have finished the Guided tour of the second version.
-
-        </Fragment>
+        </div>
     )
 }
 const Badges: React.FC = () => {
@@ -49,6 +50,38 @@ const Badges: React.FC = () => {
         </Fragment>
     )
 }
+const steps: Step[] = [
+    {
+        target: '.Badges-div-mock',
+        content: 'In this version, you are awarded badges for your progress in the survey'
+    },
+
+    {
+        target: '.progress-bar-div',
+        content: 'Your progress is shown here.',
+        // placement: 'center',
+    },
+    {
+        target: '.sv_row:nth-child(1)',
+        content: 'Few questions are in presented in the radiogroup format. Please choose one option',
+        placement: 'bottom',
+    },
+    {
+        target: '.sv_row:nth-child(2)',
+        content: 'Few questions are presented in matrix format. Please choose one option.',
+        placement: 'bottom',
+    },
+    {
+        target: '.sv_row:nth-child(3)',
+        content: 'Few questions are presented with checkboxes. Please feel free to choose multiple options if necessary.',
+        placement: 'bottom',
+    },
+    {
+        target: '.sv_row:nth-child(4)',
+        content: 'Few questions are presented with text area. Please provide your input in the provided text area.',
+        placement: 'top',
+    },
+]
 
 const GuidedTourGamified = () => {
     const { t } = useTranslation()
@@ -56,43 +89,28 @@ const GuidedTourGamified = () => {
     const [run, setRun] = useState(false)
     const [showModal, setShowModal] = useState(false)
     const [showTour, setShowTour] = useState(false)
-    const steps: Step[] = [
-        {
-            target: '.Badges-div-mock',
-            content: 'In this version, you are awarded badges for your progress in the survey'
-        },
+    const [showBadge, setShowBadge] = useState(false)
+    const [badgeDetail, setBadgeDetail] = useState<BadgeDetail>({
+        src: '',
+        description: ''
+    })
 
-        {
-            target: '.progress-bar-div',
-            content: 'Your progress is shown here.',
-            // placement: 'center',
-        },
-        {
-            target: '.sv_row:nth-child(1)',
-            content: 'Few questions are in presented in the radiogroup format. Please choose one option',
-            placement: 'bottom',
-        },
-        {
-            target: '.sv_row:nth-child(2)',
-            content: 'Few questions are presented in matrix format. Please choose one option.',
-            placement: 'bottom',
-        },
-        {
-            target: '.sv_row:nth-child(3)',
-            content: 'Few questions are presented with checkboxes. Please feel free to choose multiple options if necessary.',
-            placement: 'bottom',
-        },
-        {
-            target: '.sv_row:nth-child(4)',
-            content: 'Few questions are presented with text area. Please provide your input in the provided text area.',
-            placement: 'top',
-        },
-    ]
+    const handleBadgeClose = () => {
+        setShowBadge(false)
+    }
 
     const handleJoyrideCallback = (data: CallBackProps) => {
         const { status } = data
+        console.log(status)
+
         if (status === 'ready') {
-            setShowModal(true)
+            setShowBadge(true)
+            setBadgeDetail({
+                src: First,
+                description: 'Congrats you have finished the guided tour'
+
+            })
+            // setShowModal(true)
         }
     }
     const handleStartTour = (event: React.MouseEvent<HTMLElement>) => {
@@ -107,6 +125,7 @@ const GuidedTourGamified = () => {
 
     return (
         <div className="container">
+            <Notifications badgeDetail={badgeDetail} showBadge={showBadge} handleBadgeClose={handleBadgeClose} />
             <Joyride
                 callback={handleJoyrideCallback}
                 steps={steps}

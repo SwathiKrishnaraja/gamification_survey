@@ -19,3 +19,20 @@ export interface Json {
     completeText: string
     mode: 'display' | 'edit'
 }
+
+export interface NotificationsContent {
+    badgeDetail: BadgeDetail
+    showBadge: boolean
+    handleBadgeClose: () => void
+}
+
+export interface BadgeDetail {
+    src: any
+    description: string
+}
+
+export interface Badge {
+    src: any
+    name: string,
+    description: string
+}

@@ -10,12 +10,8 @@ import Eight from '../badges/8.png'
 import Ninth from '../badges/9.png'
 import Tenth from '../badges/10.png'
 import { useTranslation } from 'react-i18next';
+import { Badge } from '../types/types'
 
-interface Badge {
-    src: any
-    name: string,
-    description: string
-}
 const listOfImages: Array<Badge> = [
     {
         src: First,
