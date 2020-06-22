@@ -120,6 +120,39 @@ p {
   width: 60px;
   margin-right: 5px;
 }
+.individual-badge {
+  position: relative;
+}
+.individual-badge .badge-tooltip {
+  visibility: hidden;
+  width: 120px;
+  background-color: darkgray;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  top: 98%;
+  left: 50%;
+  margin-left: -60px;
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.individual-badge:hover .badge-tooltip {
+  visibility: visible;
+}
+.individual-badge .badge-tooltip::after {
+  content: '';
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent darkgray transparent;
+}
+
 .Badges-div-mock img {
   margin: 2px;
   height: 50px !important;
