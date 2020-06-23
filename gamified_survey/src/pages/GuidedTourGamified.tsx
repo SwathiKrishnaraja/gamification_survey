@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from 'react';
+import React, { Fragment, useState, useEffect } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import CustomProgressBar from '../components/CustomProgressBar'
@@ -50,10 +50,12 @@ const Badges: React.FC = () => {
         </Fragment>
     )
 }
-const steps: Step[] = [
+const stepsForTour1: Step[] = [
     {
         target: '.Badges-div-mock',
-        content: 'In this version, you are awarded badges for your progress in the survey'
+        content: 'In this version, you are awarded badges for your progress in the survey',
+        disableBeacon: true,
+        spotlightPadding: 0,
     },
 
     {
@@ -81,12 +83,32 @@ const steps: Step[] = [
         content: 'Few questions are presented with text area. Please provide your input in the provided text area.',
         placement: 'top',
     },
+    {
+        target: '.toast',
+        content: 'You are presented with a badge based on your achievement.',
+        placement: 'bottom',
+    },
+]
+const stepsForTour2: Step[] = [
+    {
+        target: '.toast',
+        content: 'You are presented with a badge based on your achievement.',
+        disableBeacon: true,
+        spotlightPadding: 0,
+        // placement: 'bottom',
+    },
+    {
+        target: '.Badges-div-mock',
+        content: 'The badge gets activated in the badges list',
+        spotlightPadding: 0,
+    },
 ]
 
 const GuidedTourGamified = () => {
     const { t } = useTranslation()
     const history = useHistory()
-    const [run, setRun] = useState(false)
+    const [runTour1, setRunTour1] = useState(false)
+    const [runTour2, setRunTour2] = useState(false)
     const [showModal, setShowModal] = useState(false)
     const [showTour, setShowTour] = useState(false)
     const [showBadge, setShowBadge] = useState(false)
@@ -99,23 +121,37 @@ const GuidedTourGamified = () => {
         setShowBadge(false)
     }
 
-    const handleJoyrideCallback = (data: CallBackProps) => {
-        const { status } = data
-        console.log(status)
+    const handleJoyrideCallbackForTour1 = (data: CallBackProps) => {
+        const { index, status } = data
+        console.log(index)
 
-        if (status === 'ready') {
+        if (index === 6) {
             setShowBadge(true)
             setBadgeDetail({
                 src: First,
                 description: 'Congrats you have finished the guided tour'
 
             })
-            // setShowModal(true)
         }
+        if (status === 'ready') {
+            setRunTour2(true)
+        }
+
+    }
+
+    const handleJoyrideCallbackForTour2 = (data: CallBackProps) => {
+        const { index, status } = data
+        if (index === 1) {
+            setShowBadge(false)
+        }
+        if (status === 'ready') {
+            setShowModal(true)
+        }
+
     }
     const handleStartTour = (event: React.MouseEvent<HTMLElement>) => {
         event.preventDefault()
-        setRun(true)
+        setRunTour1(true)
         setShowTour(true)
     }
 
@@ -127,10 +163,17 @@ const GuidedTourGamified = () => {
         <div className="container">
             <Notifications badgeDetail={badgeDetail} showBadge={showBadge} handleBadgeClose={handleBadgeClose} />
             <Joyride
-                callback={handleJoyrideCallback}
-                steps={steps}
-                run={run}
-                showProgress={true}
+                callback={handleJoyrideCallbackForTour1}
+                steps={stepsForTour1}
+                run={runTour1}
+                // showProgress={true}
+                showSkipButton={true}
+                continuous={true} />
+            <Joyride
+                callback={handleJoyrideCallbackForTour2}
+                steps={stepsForTour2}
+                run={runTour2}
+                // showProgress={true}
                 showSkipButton={true}
                 continuous={true} />
             <Header children={<Fragment />} />

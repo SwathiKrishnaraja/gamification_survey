@@ -3,7 +3,6 @@ import { createPortal } from 'react-dom'
 import { NotificationsContent } from '../types/types'
 
 const Notifications = ({ badgeDetail, showBadge, handleBadgeClose }: NotificationsContent) => {
-    console.log(badgeDetail.src)
     return (
         showBadge ? createPortal(
             <div className="toasts-wrapper">
