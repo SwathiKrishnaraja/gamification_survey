@@ -1,10 +1,16 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Badge } from '../types/types'
+import { BadgeContext } from '../context/BadgeContext'
 
-const ShowBadge = ({ src, name, description }: Badge) => {
+const ShowBadge = ({ id, src, name, description }: Badge) => {
+    let styles = 'inactive-badge'
+    const { achievedBadge } = useContext(BadgeContext)
+    if (achievedBadge.id === id) {
+        styles = 'active-badge'
+    }
     return (
         <div className='individual-badge'>
-            <img alt={name} src={src} />
+            <img className={styles} alt={name} src={src} />
             <span className='badge-tooltip'>
                 <b>
                     {name}

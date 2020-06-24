@@ -11,18 +11,21 @@ import TraditionalSurvey from './pages/TraditionalSurvey'
 import PreSurvey from './pages/PreSurvey'
 import ChooseVersion from './pages/ChooseVersion'
 import * as serviceWorker from './serviceWorker';
+import BadgeProvider from './context/BadgeContext'
 
 
 const Routing = () => {
   return (
     <Router>
-      <Route exact path='/' component={App} />
-      <Route path='/GuidedTourTraditional' component={GuidedTourTraditional} />
-      <Route path='/GuidedTourGamified' component={GuidedTourGamified} />
-      <Route path='/ChooseVersion' component={ChooseVersion} />
-      <Route path='/GamifiedSurvey' component={GamifiedSurvey} />
-      <Route path='/TraditionalSurvey' component={TraditionalSurvey} />
-      <Route path='/PreSurvey' component={PreSurvey} />
+      <BadgeProvider>
+        <Route exact path='/' component={App} />
+        <Route path='/GuidedTourTraditional' component={GuidedTourTraditional} />
+        <Route path='/GuidedTourGamified' component={GuidedTourGamified} />
+        <Route path='/ChooseVersion' component={ChooseVersion} />
+        <Route path='/GamifiedSurvey' component={GamifiedSurvey} />
+        <Route path='/TraditionalSurvey' component={TraditionalSurvey} />
+        <Route path='/PreSurvey' component={PreSurvey} />
+      </BadgeProvider>
     </Router>
   )
 }

@@ -11,7 +11,7 @@ const Badges = () => {
             <div className='Badges-div'>
                 <h2>{t('badges.title')}</h2>
                 {listOfImages.map(element =>
-                    <ShowBadge {...element} />
+                    <ShowBadge key={Math.random()} {...element} />
                 )}
             </div>
             <hr style={{ width: '100%' }} />

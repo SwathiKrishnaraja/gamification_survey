@@ -120,6 +120,14 @@ p {
   width: 60px;
   margin-right: 5px;
 }
+.inactive-badge {
+  opacity: 0.5;
+}
+
+.active-badge {
+  opacity: 1;
+}
+
 .individual-badge {
   position: relative;
 }

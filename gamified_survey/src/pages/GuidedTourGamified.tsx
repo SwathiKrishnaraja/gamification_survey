@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from 'react';
+import React, { Fragment, useState, useContext } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import CustomProgressBar from '../components/CustomProgressBar'
@@ -12,6 +12,8 @@ import Notifications from '../Toast/Notifications'
 import { BadgeDetail } from '../types/types'
 import GuidedTourBadges from '../components/GuidedTour/GuidedTourBadges'
 import { stepsForTour1, stepsForTour2 } from '../components/GuidedTour/TourSteps'
+import { BadgeContext } from '../context/BadgeContext'
+import { listOfMockImages } from '../badges/BadgeList'
 
 const TourContinueElement: React.FC = () => {
     return (
@@ -24,6 +26,7 @@ const TourContinueElement: React.FC = () => {
 }
 
 const GuidedTourGamified = () => {
+    const { addAchievedBadge } = useContext(BadgeContext)
     const { t } = useTranslation()
     const history = useHistory()
     const [runTour1, setRunTour1] = useState(false)
@@ -45,6 +48,7 @@ const GuidedTourGamified = () => {
         console.log(index)
 
         if (index === 7) {
+            addAchievedBadge(listOfMockImages[0])
             setShowBadge(true)
             setBadgeDetail({
                 src: First,

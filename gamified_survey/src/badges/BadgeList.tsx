@@ -25,51 +25,61 @@ export const listOfMockBadges = [mockImage1, mockImage2, mockImage3, mockImage4,
 
 export const listOfImages: Array<Badge> = [
     {
+        id: 100,
         src: First,
         name: "Let's go !",
         description: 'Start the survey'
     },
     {
+        id: 101,
         src: Second,
         name: "33% Achieved",
         description: 'Answer 33% of the questions'
     },
     {
+        id: 103,
         src: Third,
         name: "Audience favorite",
         description: 'Find the mascot'
     },
     {
+        id: 104,
         src: Fourth,
         name: "66% Achieved",
         description: 'Answer 66% of the questions'
     },
     {
+        id: 105,
         src: Fifth,
         name: "Fast Achiever",
         description: 'Reach the last 5 questions'
     },
     {
+        id: 106,
         src: Sixth,
         name: "Master of Interview",
         description: 'Answer the interview questions'
     },
     {
+        id: 107,
         src: Seventh,
         name: "Winner",
         description: 'Complete the survey'
     },
     {
+        id: 108,
         src: Eight,
         name: "Full Points",
         description: 'Answer all questions including the open ones'
     },
     {
+        id: 109,
         src: Ninth,
         name: "Tactician",
         description: 'Takes at least 30 seconds for each question'
     },
     {
+        id: 110,
         src: Tenth,
         name: "Medal Collector",
         description: 'Collect all badges'
@@ -78,51 +88,61 @@ export const listOfImages: Array<Badge> = [
 
 export const listOfMockImages: Array<Badge> = [
     {
+        id: 201,
         src: mockImage1,
         name: "Let's go !",
         description: 'Start the survey'
     },
     {
+        id: 202,
         src: mockImage2,
         name: "33% Achieved",
         description: 'Answer 33% of the questions'
     },
     {
+        id: 203,
         src: mockImage3,
         name: "Audience favorite",
         description: 'Find the mascot'
     },
     {
+        id: 204,
         src: mockImage4,
         name: "66% Achieved",
         description: 'Answer 66% of the questions'
     },
     {
+        id: 205,
         src: mockImage5,
         name: "Fast Achiever",
         description: 'Reach the last 5 questions'
     },
     {
+        id: 206,
         src: mockImage6,
         name: "Master of Interview",
         description: 'Answer the interview questions'
     },
     {
+        id: 207,
         src: mockImage7,
         name: "Winner",
         description: 'Complete the survey'
     },
     {
+        id: 208,
         src: mockImage8,
         name: "Full Points",
         description: 'Answer all questions including the open ones'
     },
     {
+        id: 209,
         src: mockImage9,
         name: "Tactician",
         description: 'Takes at least 30 seconds for each question'
     },
     {
+        id: 210,
         src: mockImage10,
         name: "Medal Collector",
         description: 'Collect all badges'

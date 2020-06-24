@@ -32,6 +32,7 @@ export interface BadgeDetail {
 }
 
 export interface Badge {
+    id: number
     src: any
     name: string,
     description: string
