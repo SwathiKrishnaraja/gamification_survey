@@ -1,13 +1,13 @@
-import React, { createContext, useState } from 'react'
+import React, { createContext, useState, useReducer } from 'react'
 import { Badge } from '../types/types'
-
+import { reducer } from '../reducer/reducer'
 
 type Props = {
     children: React.ReactNode
 }
 type BadgeContextType = {
     achievedBadge: Badge,
-    addAchievedBadge: (badge: Badge) => void
+    dispatch: (args: any) => void
 }
 
 const defaultValue = {
@@ -19,27 +19,17 @@ const defaultValue = {
 
 export const BadgeContext = createContext<BadgeContextType>({
     achievedBadge: defaultValue,
-    addAchievedBadge: (defaultValue) => { }
+    dispatch: () => null
 })
 
 
-
 const BadgeProvider = ({ children }: Props) => {
-    const [achievedBadge, setAchievedBadge] = useState<Badge>({
-        id: 1,
-        src: '',
-        description: '',
-        name: ''
-    })
-    const addAchievedBadge = (badge: Badge) => {
-        setAchievedBadge({
-            ...achievedBadge,
-            ...badge
-        })
-    }
+    const [achievedBadge, dispatch] = useReducer(reducer,
+        defaultValue
+    )
 
     return (
-        <BadgeContext.Provider value={{ achievedBadge, addAchievedBadge }} >
+        <BadgeContext.Provider value={{ achievedBadge, dispatch }} >
             {children}
         </BadgeContext.Provider>
     )
