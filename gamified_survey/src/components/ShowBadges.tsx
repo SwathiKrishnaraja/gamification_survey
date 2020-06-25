@@ -5,8 +5,7 @@ import { BadgeContext } from '../context/BadgeContext'
 const ShowBadge = ({ id, src, name, description }: Badge) => {
     let styles = 'inactive-badge'
     const { achievedBadge } = useContext(BadgeContext)
-    console.log(achievedBadge)
-    if (achievedBadge.id === id) {
+    if (achievedBadge.find(element => element.id === id)) {
         styles = 'active-badge'
     }
     return (

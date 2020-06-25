@@ -3,17 +3,18 @@ import { Badge } from '../types/types'
 
 interface AddBadgeAction {
     type: 'ADD_BADGE',
-    achievedBadge: Array<Badge>
+    achievedBadge: Badge
 }
 
-export const reducer = (state: Badge, action: AddBadgeAction) => {
+export const addBadgeReducer = (state: Array<Badge>, action: AddBadgeAction) => {
     const { achievedBadge } = action
     switch (action.type) {
         case 'ADD_BADGE':
-            return ({
+            return [
                 ...state,
-                ...achievedBadge,
-            })
+                achievedBadge,
+            ]
+
         default:
             return state
     }
