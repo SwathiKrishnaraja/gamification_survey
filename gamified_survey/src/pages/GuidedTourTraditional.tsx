@@ -5,7 +5,7 @@ import CustomProgressBar from '../components/CustomProgressBar'
 import { useTranslation } from 'react-i18next';
 import { survey } from '../survey/MockSurveyQuestions'
 import Joyride, { CallBackProps, Step } from 'react-joyride';
-import GuidedTourModal from '../components/GuidedTourModal'
+import GuidedTourModal from '../components/GuidedTour/GuidedTourModal'
 import { useHistory } from 'react-router-dom';
 
 
