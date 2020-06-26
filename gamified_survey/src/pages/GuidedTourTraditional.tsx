@@ -13,10 +13,12 @@ export const TourContinueElement: React.FC = () => {
     return (
         <Fragment>
             <h2>Congrats !</h2>
-            <br />
+            <h2>
+                <br />
             You have finished the Guided tour of first version.
             <br />
             Now please proceed to the second version.
+            </h2>
         </Fragment>
     )
 }
@@ -91,7 +93,7 @@ const GuidedTourTraditional = () => {
                         <CustomProgressBar />
                         {survey}
                         {showModal
-                            ? <GuidedTourModal showModal={showModal} handleClick={handleTourProceed} children={<TourContinueElement />} modalWindowButton='Continue' />
+                            ? <GuidedTourModal showModal={showModal} handleClick={handleTourProceed} children={<TourContinueElement />} modalWindowButton='Continue' styleClass='guided-modal-main' buttonClass='continue-button' />
                             : <Fragment />}
                     </div>
                     : <Fragment />

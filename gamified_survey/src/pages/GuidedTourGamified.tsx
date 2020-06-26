@@ -14,14 +14,17 @@ import GuidedTourBadges from '../components/GuidedTour/GuidedTourBadges'
 import { stepsForTour1, stepsForTour2 } from '../components/GuidedTour/TourSteps'
 import { BadgeContext } from '../context/BadgeContext'
 import { listOfMockImages } from '../badges/BadgeList'
-import { type } from 'os';
+
 
 const TourContinueElement: React.FC = () => {
     return (
         <div>
             <h2>Congrats !</h2>
             <br />
-            You have finished the Guided tour of the second version.
+            <h2>
+                You have finished the Guided tour of the second version.
+            </h2>
+
         </div>
     )
 }
@@ -110,7 +113,7 @@ const GuidedTourGamified = () => {
 
                             {survey}
                             {showModal
-                                ? <GuidedTourModal showModal={showModal} handleClick={handleTourProceed} children={<TourContinueElement />} modalWindowButton='Continue' />
+                                ? <GuidedTourModal showModal={showModal} handleClick={handleTourProceed} children={<TourContinueElement />} modalWindowButton='Continue' styleClass='guided-modal-main' buttonClass='continue-button' />
                                 : <Fragment />}
                         </div>
                         : <Fragment />
