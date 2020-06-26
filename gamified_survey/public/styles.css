@@ -101,7 +101,8 @@ p {
 }
 .progress-bar {
   background-color: #2e6da4;
-  height: 15px;
+  height: 18px;
+  color: white;
 }
 
 .progress-bar-div {
@@ -300,8 +301,8 @@ thead {
 .guided-modal-main {
   position: fixed;
   background: white;
-  width: 40%;
-  height: 40%;
+  width: 400px;
+  height: 210px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);

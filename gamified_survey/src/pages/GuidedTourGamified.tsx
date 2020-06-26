@@ -19,11 +19,12 @@ import { listOfMockImages } from '../badges/BadgeList'
 const TourContinueElement: React.FC = () => {
     return (
         <div>
-            <h2>Congrats !</h2>
+            <h2>Congratulations !</h2>
+            <hr style={{ width: '98%' }} />
             <br />
-            <h2>
+            <h4>
                 You have finished the Guided tour of the second version.
-            </h2>
+            </h4>
 
         </div>
     )

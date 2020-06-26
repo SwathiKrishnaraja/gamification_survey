@@ -15,7 +15,7 @@ const GuidedTourModal: React.FC<Props> = ({ showModal, handleClick, children, mo
         <div className={modalCss}>
             <section className={styleClass}>
                 {children}
-                <div style={modalCancelButton ? { display: 'flex', justifyContent: 'flex-end' } : { marginTop: 60 }}>
+                <div style={modalCancelButton ? { display: 'flex', justifyContent: 'flex-end' } : {}}>
                     {modalCancelButton ? <button className={buttonClass} onClick={handleClick}> {modalCancelButton}</button> : null}
                     <button className={buttonClass} onClick={handleClick}> {modalWindowButton}</button>
                 </div>
