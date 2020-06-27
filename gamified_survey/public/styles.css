@@ -101,7 +101,8 @@ p {
 }
 .progress-bar {
   background-color: #2e6da4;
-  height: 15px;
+  height: 18px;
+  color: white;
 }
 
 .progress-bar-div {
@@ -300,8 +301,8 @@ thead {
 .guided-modal-main {
   position: fixed;
   background: white;
-  width: 40%;
-  height: 40%;
+  width: 400px;
+  height: 210px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -365,4 +366,53 @@ thead {
   align-items: baseline;
   height: 35px;
   color: white;
+}
+/* Exit Survey */
+.exit-survey {
+  margin-right: 10px;
+  color: black;
+  text-decoration: none;
+}
+.exit-survey-button {
+  background-color: #337ab7;
+  border-color: #2e6da4;
+  color: white;
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: 400;
+  text-align: center;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  border-radius: 4px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  margin-right: 5px;
+}
+
+.exit-survey-modal {
+  position: fixed;
+  background: white;
+  width: 550px;
+  height: 100px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow-y: scroll;
+}
+.x-styled-close {
+  margin: 10px;
+  background: white;
+  border: none;
+  cursor: pointer;
+}
+.x-styled-close:hover {
+  background: #f5f5f5;
 }

@@ -6,7 +6,6 @@ interface Props {
     children: React.ReactNode
 }
 const ImprintModal: React.FC<Props> = ({ showModal, handleClick, children }) => {
-    console.log(showModal)
     const modalCss = showModal ? 'modal-open' : 'modal-close'
     return (
         <div className={modalCss}>

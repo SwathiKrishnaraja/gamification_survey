@@ -4,19 +4,23 @@ import Footer from '../components/Footer';
 import CustomProgressBar from '../components/CustomProgressBar'
 import { useTranslation } from 'react-i18next';
 import { survey } from '../survey/MockSurveyQuestions'
-import Joyride, { CallBackProps, Step } from 'react-joyride';
+import Joyride, { CallBackProps } from 'react-joyride';
 import GuidedTourModal from '../components/GuidedTour/GuidedTourModal'
 import { useHistory } from 'react-router-dom';
+import { stepsForTraditionalTour } from '../components/GuidedTour/TourSteps';
 
 
 export const TourContinueElement: React.FC = () => {
     return (
         <Fragment>
-            <h2>Congrats !</h2>
-            <br />
+            <h2>Congratulations !</h2>
+            <hr style={{ width: '98%' }} />
+            <h4>
+                <br />
             You have finished the Guided tour of first version.
             <br />
             Now please proceed to the second version.
+            </h4>
         </Fragment>
     )
 }
@@ -27,34 +31,7 @@ const GuidedTourTraditional = () => {
     const [run, setRun] = useState(false)
     const [showModal, setShowModal] = useState(false)
     const [showTour, setShowTour] = useState(false)
-    const steps: Step[] = [
 
-        {
-            target: '.progress-bar-div',
-            content: 'Your progress is shown here.',
-            // placement: 'center',
-        },
-        {
-            target: '.sv_row:nth-child(1)',
-            content: 'Few questions are in presented in the radiogroup format. Please choose one option',
-            placement: 'bottom',
-        },
-        {
-            target: '.sv_row:nth-child(2)',
-            content: 'Few questions are presented in matrix format. Please choose one option.',
-            placement: 'bottom',
-        },
-        {
-            target: '.sv_row:nth-child(3)',
-            content: 'Few questions are presented with checkboxes. Please feel free to choose multiple options if necessary.',
-            placement: 'bottom',
-        },
-        {
-            target: '.sv_row:nth-child(4)',
-            content: 'Few questions are presented with text area. Please provide your input in the provided text area.',
-            placement: 'top',
-        }
-    ]
 
     const handleJoyrideCallback = (data: CallBackProps) => {
         const { status } = data
@@ -77,7 +54,7 @@ const GuidedTourTraditional = () => {
         <div className="container">
             <Joyride
                 callback={handleJoyrideCallback}
-                steps={steps}
+                steps={stepsForTraditionalTour}
                 run={run}
                 showProgress={true}
                 showSkipButton={true}
@@ -91,7 +68,7 @@ const GuidedTourTraditional = () => {
                         <CustomProgressBar />
                         {survey}
                         {showModal
-                            ? <GuidedTourModal showModal={showModal} handleClick={handleTourProceed} children={<TourContinueElement />} modalWindowButton='Continue' />
+                            ? <GuidedTourModal showModal={showModal} handleClick={handleTourProceed} children={<TourContinueElement />} modalWindowButton='Continue' styleClass='guided-modal-main' buttonClass='continue-button' />
                             : <Fragment />}
                     </div>
                     : <Fragment />

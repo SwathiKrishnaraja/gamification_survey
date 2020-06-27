@@ -7,7 +7,7 @@ const CustomProgressBar = () => {
   const now = 70;
 
   const progressInstance = (
-    <ProgressBar className="progress-bar-div " now={now} />
+    <ProgressBar className="progress-bar-div " now={now} label={`${now}%`} />
   );
   return (
     <Fragment>
