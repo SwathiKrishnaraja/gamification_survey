@@ -198,7 +198,7 @@ p {
   transform: translate(-50%, -50%);
   overflow-y: scroll;
 }
-
+/* Choose version page */
 .choose-version-div {
   margin-top: 10px;
   display: flex;
@@ -206,8 +206,8 @@ p {
 }
 
 .choose-version-div img {
-  width: 500px;
-  height: 400px;
+  width: 450px;
+  height: 350px;
   border: solid black;
 }
 .choose-version-blocks {
@@ -219,13 +219,13 @@ p {
   margin-top: 5px;
 }
 .choose-version-button {
-  height: 45px;
-  width: 150px;
   background-color: #337ab7;
   border-color: #2e6da4;
   color: white;
+  padding: 10px 16px;
+  font-size: 14px;
+  border-radius: 6px;
 }
-
 .mock-container {
   text-align: center;
   display: inline-block;
