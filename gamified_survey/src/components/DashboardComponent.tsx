@@ -104,7 +104,7 @@ const DashboardComponent = () => {
     return (
         <Fragment>
             <div className='dashboard'>
-                <span style={{ margin: 10 }}>Congratulation ! You have achieved the following badges.</span>
+                <span style={{ margin: 10 }}>Congratulations ! You have achieved the following badges.</span>
                 {listOfImages
                     .filter(badge => badge.isActive)
                     .map(element => (<RenderBadge src={element.src} name={element.name} description={element.description} />))}
