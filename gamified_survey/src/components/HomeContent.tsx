@@ -30,7 +30,7 @@ const HomeContent = () => {
         <div style={{ textAlign: 'left' }}>
           <h4>*Data Protection and Participation Information</h4>
           <input type='checkbox' />
-          <label>I have read and understood the information on data protection and the participation information and agree that my data may be used anonymously for the mentioned purposes</label>
+          <label>I have read and understood the information on <a style={{ textDecoration: 'none', color: '#337ab7' }} href='# '>data protection</a> and the participation information and agree that my data may be used anonymously for the mentioned purposes</label>
         </div>
 
       </div>
