@@ -93,14 +93,12 @@ const GuidedTourGamified = () => {
                 callback={handleJoyrideCallbackForTour1}
                 steps={stepsForTour1}
                 run={runTour1}
-                showSkipButton={true}
                 spotlightClicks={true}
                 continuous={true} />
             <Joyride
                 callback={handleJoyrideCallbackForTour2}
                 steps={stepsForTour2}
                 run={runTour2}
-                showSkipButton={true}
                 continuous={true} />
             <Header children={<Fragment />} />
             <div className="main-body">

@@ -412,7 +412,6 @@ thead {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  overflow-y: scroll;
 }
 .x-styled-close {
   margin: 10px;

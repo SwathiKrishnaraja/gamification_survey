@@ -56,7 +56,6 @@ const GuidedTourTraditional = () => {
                 callback={handleJoyrideCallback}
                 steps={stepsForTraditionalTour}
                 run={run}
-                showSkipButton={true}
                 continuous={true} />
             <Header children={<Fragment />} />
             <div className="main-body">

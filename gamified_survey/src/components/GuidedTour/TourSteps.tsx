@@ -17,7 +17,8 @@ export const stepsForTour1: Step[] = [
     {
         target: '.progress-bar-div',
         content: 'Your progress is shown here.',
-        disableBeacon: true
+        disableBeacon: true,
+        spotlightPadding: 0
     },
     {
         target: '.sv_row:nth-child(1)',
@@ -28,21 +29,25 @@ export const stepsForTour1: Step[] = [
         target: '.sv_row:nth-child(2)',
         content: 'Few questions are presented in matrix format. Please choose one option.',
         placement: 'bottom',
+        spotlightPadding: 0
     },
     {
         target: '.sv_row:nth-child(3)',
         content: 'Few questions are presented with checkboxes. Please feel free to choose multiple options if necessary.',
         placement: 'bottom',
+        spotlightPadding: 0
     },
     {
         target: '.sv_row:nth-child(4)',
         content: 'Few questions are presented with text area. Please provide your input in the provided text area.',
         placement: 'top',
+        spotlightPadding: 0
     },
     {
         target: '.toast',
         content: 'You are presented with a badge based on your achievement.',
         placement: 'bottom',
+        spotlightPadding: 0
     },
 ]
 export const stepsForTour2: Step[] = [
@@ -64,26 +69,31 @@ export const stepsForTraditionalTour: Step[] = [
     {
         target: '.progress-bar-div',
         content: 'Your progress is shown here.',
-        disableBeacon: true
+        disableBeacon: true,
+        spotlightPadding: 0
     },
     {
         target: '.sv_row:nth-child(1)',
         content: 'Few questions are in presented in the radiogroup format. Please choose one option',
         placement: 'bottom',
+        spotlightPadding: 0
     },
     {
         target: '.sv_row:nth-child(2)',
         content: 'Few questions are presented in matrix format. Please choose one option.',
         placement: 'bottom',
+        spotlightPadding: 0
     },
     {
         target: '.sv_row:nth-child(3)',
         content: 'Few questions are presented with checkboxes. Please feel free to choose multiple options if necessary.',
         placement: 'bottom',
+        spotlightPadding: 0
     },
     {
         target: '.sv_row:nth-child(4)',
         content: 'Few questions are presented with text area. Please provide your input in the provided text area.',
         placement: 'top',
+        spotlightPadding: 0
     }
 ]
