@@ -4,7 +4,7 @@ import Footer from '../components/Footer';
 import Badges from '../components/Badges'
 import { useTranslation } from 'react-i18next';
 import CustomProgressBar from '../components/CustomProgressBar'
-import { survey } from '../survey/TraditionalSurveyQuestions'
+import SurveyQuestions from '../survey/GamifiedSurveyQuestions'
 import ExitSurvey from '../components/ExitSurvey';
 
 
@@ -16,7 +16,7 @@ const GamifiedSurvey = () => {
       <div className="main-body">
         <Badges />
         <CustomProgressBar />
-        {survey}
+        <SurveyQuestions />
       </div>
 
       <Footer />

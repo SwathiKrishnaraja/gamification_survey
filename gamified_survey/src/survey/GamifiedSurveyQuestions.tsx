@@ -491,7 +491,7 @@ const json: Json = {
 const SurveyQuestions = () => {
     const history = useHistory()
     return (
-        <Survey.Survey json={json} onComplete={() => history.push('/Thanks')} />
+        <Survey.Survey json={json} onComplete={() => history.push('/Dashboard')} />
     )
 }
 export default SurveyQuestions 

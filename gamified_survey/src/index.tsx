@@ -12,7 +12,8 @@ import PreSurvey from './pages/PreSurvey'
 import ChooseVersion from './pages/ChooseVersion'
 import * as serviceWorker from './serviceWorker';
 import BadgeProvider from './context/BadgeContext'
-
+import Dashboard from './pages/Dashboard'
+import Thanks from './pages/Thanks';
 
 const Routing = () => {
   return (
@@ -25,6 +26,8 @@ const Routing = () => {
         <Route path='/GamifiedSurvey' component={GamifiedSurvey} />
         <Route path='/TraditionalSurvey' component={TraditionalSurvey} />
         <Route path='/PreSurvey' component={PreSurvey} />
+        <Route path='/Dashboard' component={Dashboard} />
+        <Route path='/Thanks' component={Thanks} />
       </BadgeProvider>
     </Router>
   )
