@@ -1,9 +1,8 @@
-import React, { useState, Fragment } from 'react'
+import React from 'react'
 import * as Survey from 'survey-react'
 import { Questions, MatrixObject, Json } from '../types/types'
 import { useHistory } from 'react-router-dom'
-import GuidedTourModal from '../components/GuidedTour/GuidedTourModal'
-import ThanksText from '../components/ThanksText'
+
 const q1: Questions = {
     type: "radiogroup",
     name: 'q1',
@@ -484,25 +483,15 @@ const q26: Questions = {
 
 
 const json: Json = {
-    completeText: 'Submit',
+    completeText: 'Complete Survey',
     questions: [q1, q2, q3, q4, q5, q6, q7, q8, q9, q10, q11, q12, q13, q14, q15, q16, q17, q18, q19, q20, q21, q22, q23, q24, q25, q26
     ],
     mode: "edit"
 }
 const SurveyQuestions = () => {
     const history = useHistory()
-    const [showModal, setShowModal] = useState(false)
-    const handleClick = () => {
-        setShowModal(showModal ? false : true)
-    }
-    const handleProceedButton = () => {
-        history.push('/PostSurvey')
-    }
     return (
-        <Fragment>
-            <Survey.Survey json={json} onComplete={handleClick} />
-            <GuidedTourModal showModal={showModal} handleClick={handleProceedButton} children={<ThanksText />} styleClass='thank-you-modal' modalWindowButton='Proceed' buttonClass='exit-survey-button' />
-        </Fragment>
+        <Survey.Survey json={json} onComplete={() => history.push('/Dashboard')} />
     )
 }
 export default SurveyQuestions 

@@ -90,37 +90,37 @@ export const listOfMockImages: Array<Badge> = [
     {
         id: 201,
         src: mockImage1,
-        name: "Let's go !",
+        name: "Head-start",
         description: 'Start the survey'
     },
     {
         id: 202,
         src: mockImage2,
-        name: "33% Achieved",
+        name: "Pusher",
         description: 'Answer 33% of the questions'
     },
     {
         id: 203,
         src: mockImage3,
-        name: "Audience favorite",
+        name: "With a purpose",
         description: 'Find the mascot'
     },
     {
         id: 204,
         src: mockImage4,
-        name: "66% Achieved",
+        name: "Go-getter",
         description: 'Answer 66% of the questions'
     },
     {
         id: 205,
         src: mockImage5,
-        name: "Fast Achiever",
+        name: "Reacher",
         description: 'Reach the last 5 questions'
     },
     {
         id: 206,
         src: mockImage6,
-        name: "Master of Interview",
+        name: "I am a Star",
         description: 'Answer the interview questions'
     },
     {
@@ -138,13 +138,13 @@ export const listOfMockImages: Array<Badge> = [
     {
         id: 209,
         src: mockImage9,
-        name: "Tactician",
+        name: "Grandmaster",
         description: 'Takes at least 30 seconds for each question'
     },
     {
         id: 210,
         src: mockImage10,
-        name: "Medal Collector",
+        name: "Midas touch",
         description: 'Collect all badges'
     },
 ]

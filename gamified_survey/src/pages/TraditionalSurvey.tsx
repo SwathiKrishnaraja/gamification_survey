@@ -3,7 +3,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import CustomProgressBar from '../components/CustomProgressBar'
 import { useTranslation } from 'react-i18next';
-import { survey } from '../survey/TraditionalSurveyQuestions'
+import SurveyQuestions from '../survey/TraditionalSurveyQuestions'
 import ExitSurvey from '../components/ExitSurvey';
 
 const TraditionalSurvey = () => {
@@ -13,7 +13,7 @@ const TraditionalSurvey = () => {
       <Header children={<ExitSurvey />} />
       <div className="main-body">
         <CustomProgressBar />
-        {survey}
+        <SurveyQuestions />
       </div>
 
 

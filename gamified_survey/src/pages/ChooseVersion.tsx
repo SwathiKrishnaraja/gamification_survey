@@ -2,25 +2,16 @@ import React, { useState, Fragment } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { useTranslation } from 'react-i18next';
-import TSPage from '../content/TSPage.png'
-import GSPage from '../content/GSPage.png'
-import ImprintModal from '../components/ImprintModal'
-import { GamifiedSurveyMock, TraditionalSurveyMock } from '../components/MockSurveyPage'
+import TSPage from '../content/firstVersion.png'
+import GSPage from '../content/secondVersion.png'
 import { useHistory } from 'react-router-dom';
 
 
 
 const ChooseVersion = () => {
     const history = useHistory()
-    const [showTraditional, setShowTraditional] = useState<boolean>(false)
-    const [showGamified, setShowGamified] = useState<boolean>(false)
     const { t } = useTranslation()
-    const handleTraditionalModal = () => {
-        setShowTraditional(showTraditional ? false : true)
-    }
-    const handleGamifiedModal = () => {
-        setShowGamified(showGamified ? false : true)
-    }
+
     return (
         <div className="container">
             <Header children={<Fragment />} />
@@ -31,18 +22,14 @@ const ChooseVersion = () => {
                 <p><b> As soon as you choose, the survey starts.</b></p>
                 <div className='choose-version-div'>
                     <div className='choose-version-blocks'>
-                        <h3> Traditional Survey</h3>
+                        <h3> First version</h3>
                         <img alt='TSPage' src={TSPage} />
-                        <button onClick={handleTraditionalModal}>Try it</button>
-                        <ImprintModal showModal={showTraditional} handleClick={handleTraditionalModal} children={<TraditionalSurveyMock />} />
-                        <button className='choose-version-button' onClick={() => history.push('/TraditionalSurvey')}>Choose Traditional</button>
+                        <button className='choose-version-button' onClick={() => history.push('/TraditionalSurvey')}>Choose first version</button>
                     </div>
                     <div className='choose-version-blocks'>
-                        <h3> Gamified Survey</h3>
+                        <h3> Second version</h3>
                         <img alt='GSPage' src={GSPage} />
-                        <button onClick={handleGamifiedModal}>Try it</button>
-                        <ImprintModal showModal={showGamified} handleClick={handleGamifiedModal} children={<GamifiedSurveyMock />} />
-                        <button className='choose-version-button' onClick={() => history.push('/GamifiedSurvey')}>Choose Gamified</button>
+                        <button className='choose-version-button' onClick={() => history.push('/GamifiedSurvey')}>Choose second version</button>
                     </div>
                 </div>
             </div>
