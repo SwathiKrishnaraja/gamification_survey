@@ -4,7 +4,7 @@ import Footer from '../components/Footer';
 import CustomProgressBar from '../components/CustomProgressBar';
 import { useHistory } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-
+import Survey from '../survey/PreSurveyQuestions'
 const PreSurvey = () => {
   const history = useHistory()
   const { t } = useTranslation()
@@ -12,10 +12,9 @@ const PreSurvey = () => {
     <div className="container">
       <Header children={<Fragment />} />
       <div className="main-body">
-        <h2>Pre-Survey Questionnaire</h2>
-        <CustomProgressBar />
+        <h3>Please answer the following questions about yourself before entering the survey</h3>
+        <Survey />
       </div>
-      <button className="continue-button" onClick={() => history.push('/ChooseVersion')}>{t('homeContent.button')}</button>
 
       <Footer />
     </div>
