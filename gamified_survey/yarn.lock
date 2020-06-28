@@ -10159,10 +10159,10 @@ supports-color@^7.0.0, supports-color@^7.1.0:
   dependencies:
     has-flag "^4.0.0"
 
-survey-react@^1.7.10:
-  version "1.7.10"
-  resolved "https://registry.yarnpkg.com/survey-react/-/survey-react-1.7.10.tgz#67772a73ca5700664a2f13a2f339072664cf8c0b"
-  integrity sha512-XaTPPmYF8QW3SDcQLFnsBmSouYhG9XEB8MUjXKeuSOHn+88WXyhFzVgtosmLGQDfcM7ARi6WMlkgoiP84N9o3w==
+survey-react@^1.7.15:
+  version "1.7.15"
+  resolved "https://registry.yarnpkg.com/survey-react/-/survey-react-1.7.15.tgz#0d30b4faf9c158124ba54858d32664e72966a8ae"
+  integrity sha512-aTWbQUq1TpaygVLtMhyml2j91AXiHNI++csTv+bP1PuuYhcX5jklUa6CW/GDL1RmnkErtOvx49BeNkweF91Owg==
 
 svg-parser@^2.0.0:
   version "2.0.4"

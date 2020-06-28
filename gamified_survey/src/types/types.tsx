@@ -1,5 +1,5 @@
 export interface Questions {
-    type: 'checkbox' | 'radiogroup' | 'matrix' | 'text',
+    type: 'checkbox' | 'radiogroup' | 'matrix' | 'text' | 'rating',
     name: string,
     title: string,
     columns?: Array<MatrixObject>
@@ -7,6 +7,8 @@ export interface Questions {
     choices?: Array<string>,
     isRequired?: boolean,
     hasSelectAll?: true,
+    minRateDescription?: string,
+    maxRateDescription?: string
 
 }
 

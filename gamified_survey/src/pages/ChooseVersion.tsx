@@ -2,10 +2,8 @@ import React, { useState, Fragment } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { useTranslation } from 'react-i18next';
-import TSPage from '../content/TSPage.png'
-import GSPage from '../content/GSPage.png'
-import ImprintModal from '../components/ImprintModal'
-import { GamifiedSurveyMock, TraditionalSurveyMock } from '../components/MockSurveyPage'
+import TSPage from '../content/firstVersion.png'
+import GSPage from '../content/secondVersion.png'
 import { useHistory } from 'react-router-dom';
 
 

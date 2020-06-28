@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useState, Fragment } from 'react'
 import * as Survey from 'survey-react'
 import { Questions, MatrixObject, Json } from '../types/types'
 import { useHistory } from 'react-router-dom'
-
+import GuidedTourModal from '../components/GuidedTour/GuidedTourModal'
+import ThanksText from '../components/ThanksText'
 const q1: Questions = {
     type: "radiogroup",
     name: 'q1',
@@ -490,8 +491,18 @@ const json: Json = {
 }
 const SurveyQuestions = () => {
     const history = useHistory()
+    const [showModal, setShowModal] = useState(false)
+    const handleClick = () => {
+        setShowModal(showModal ? false : true)
+    }
+    const handleProceedButton = () => {
+        history.push('/PostSurvey')
+    }
     return (
-        <Survey.Survey json={json} onComplete={() => history.push('/Thanks')} />
+        <Fragment>
+            <Survey.Survey json={json} onComplete={handleClick} />
+            <GuidedTourModal showModal={showModal} handleClick={handleProceedButton} children={<ThanksText />} styleClass='thank-you-modal' modalWindowButton='Proceed' buttonClass='exit-survey-button' />
+        </Fragment>
     )
 }
 export default SurveyQuestions 

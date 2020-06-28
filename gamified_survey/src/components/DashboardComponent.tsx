@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React, { Fragment, useState } from 'react'
 import First from '../badges/1.png'
 import Second from '../badges/2.png'
 import Third from '../badges/3.png'
@@ -10,6 +10,8 @@ import Eight from '../badges/8.png'
 import Ninth from '../badges/9.png'
 import Tenth from '../badges/10.png'
 import { useHistory } from 'react-router-dom'
+import GuidedTourModal from './GuidedTour/GuidedTourModal'
+import ThanksText from '../components/ThanksText'
 
 export const listOfImages = [
     {
@@ -91,6 +93,14 @@ type RenderBadge = {
 
 const DashboardComponent = () => {
     const history = useHistory()
+    const [showModal, setShowModal] = useState(false)
+    const handleClick = () => {
+        setShowModal(showModal ? false : true)
+    }
+    const handleProceedButton = () => {
+        history.push('/PostSurvey')
+    }
+
     return (
         <Fragment>
             <div className='dashboard'>
@@ -100,7 +110,8 @@ const DashboardComponent = () => {
                     .map(element => (<RenderBadge src={element.src} name={element.name} description={element.description} />))}
                 <span style={{ margin: 10 }}>Please click submit to complete the survey</span>
             </div >
-            <button style={{ marginTop: 20 }} className="continue-button" onClick={() => history.push('/Thanks')}>Submit</button>
+            <button style={{ marginTop: 20 }} className="continue-button" onClick={handleClick}>Submit</button>
+            <GuidedTourModal showModal={showModal} handleClick={handleProceedButton} children={<ThanksText />} styleClass='thank-you-modal' modalWindowButton='Proceed' buttonClass='exit-survey-button' />
         </Fragment>
 
     )

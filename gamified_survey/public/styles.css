@@ -206,9 +206,9 @@ p {
 }
 
 .choose-version-div img {
-  width: 450px;
   height: 350px;
-  border: solid black;
+  width: 330px;
+  border: solid #337ab7;
 }
 .choose-version-blocks {
   display: flex;
@@ -239,7 +239,7 @@ p {
   text-align: left;
 }
 .sv_complete_btn {
-  width: 120px;
+  /* width: 120px; */
   background-color: #337ab7;
   border-color: #2e6da4;
   color: white;
@@ -297,6 +297,13 @@ thead {
   width: 90%;
   border: solid lightgray;
   border-width: 0.1mm;
+}
+.sv_main .sv-visuallyhidden {
+  clip: auto;
+  width: 5px !important;
+  height: 10px;
+  height: 10px !important;
+  position: unset;
 }
 .guided-modal-main {
   position: fixed;
@@ -437,4 +444,18 @@ thead {
   width: 300px;
   border-radius: 6px;
   background: #d1cfcf;
+}
+
+.thank-you-modal {
+  position: fixed;
+  display: flex;
+  background: white;
+  flex-direction: column;
+  justify-content: space-around;
+  /* width: 550px; */
+  height: 180px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* overflow-y: scroll;
 }
