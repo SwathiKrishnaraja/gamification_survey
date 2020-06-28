@@ -43,8 +43,8 @@ p {
   display: flex;
 }
 .home-page-logos img {
-  height: 30%;
-  width: 30%;
+  height: 50px;
+  margin: 5px;
 }
 /* ################# END OF HOME PAGE ############# */
 .imprint-button {
