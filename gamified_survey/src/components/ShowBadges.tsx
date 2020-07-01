@@ -1,11 +1,13 @@
 import React, { useContext } from 'react'
 import { Badge } from '../types/types'
-import { BadgeContext } from '../context/BadgeContext'
+import { useStore } from 'react-redux'
+
 
 const ShowBadge = ({ id, src, name, description }: Badge) => {
     let styles = 'inactive-badge'
-    const { achievedBadge } = useContext(BadgeContext)
-    if (achievedBadge.find(element => element.id === id)) {
+    const store = useStore()
+    const achievedBadge = store.getState()
+    if (achievedBadge.find((element: { id: number }) => element.id === id)) {
         styles = 'active-badge'
     }
     return (

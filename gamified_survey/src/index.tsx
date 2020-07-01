@@ -11,30 +11,34 @@ import TraditionalSurvey from './pages/TraditionalSurvey'
 import PreSurvey from './pages/PreSurvey'
 import ChooseVersion from './pages/ChooseVersion'
 import * as serviceWorker from './serviceWorker';
-import BadgeProvider from './context/BadgeContext'
 import Dashboard from './pages/Dashboard'
 import PostSurvey from './pages/PostSurvey';
+import { createStore } from 'redux'
+import { Provider } from 'react-redux'
+import addBadgeReducer from './reducer/reducer'
+
+const store = createStore(addBadgeReducer)
 
 const Routing = () => {
   return (
     <Router>
-      <BadgeProvider>
-        <Route exact path='/' component={App} />
-        <Route path='/GuidedTourTraditional' component={GuidedTourTraditional} />
-        <Route path='/GuidedTourGamified' component={GuidedTourGamified} />
-        <Route path='/ChooseVersion' component={ChooseVersion} />
-        <Route path='/GamifiedSurvey' component={GamifiedSurvey} />
-        <Route path='/TraditionalSurvey' component={TraditionalSurvey} />
-        <Route path='/PreSurvey' component={PreSurvey} />
-        <Route path='/Dashboard' component={Dashboard} />
-        <Route path='/PostSurvey' component={PostSurvey} />
-      </BadgeProvider>
+      <Route exact path='/' component={App} />
+      <Route path='/GuidedTourTraditional' component={GuidedTourTraditional} />
+      <Route path='/GuidedTourGamified' component={GuidedTourGamified} />
+      <Route path='/ChooseVersion' component={ChooseVersion} />
+      <Route path='/GamifiedSurvey' component={GamifiedSurvey} />
+      <Route path='/TraditionalSurvey' component={TraditionalSurvey} />
+      <Route path='/PreSurvey' component={PreSurvey} />
+      <Route path='/Dashboard' component={Dashboard} />
+      <Route path='/PostSurvey' component={PostSurvey} />
     </Router>
   )
 }
 ReactDOM.render(
   <React.StrictMode>
-    <Routing />
+    <Provider store={store}>
+      <Routing />
+    </Provider>
   </React.StrictMode >,
   document.getElementById('root')
 );

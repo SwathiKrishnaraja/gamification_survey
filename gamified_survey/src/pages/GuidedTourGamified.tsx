@@ -12,8 +12,8 @@ import Notifications from '../Toast/Notifications'
 import { BadgeDetail } from '../types/types'
 import GuidedTourBadges from '../components/GuidedTour/GuidedTourBadges'
 import { stepsForTour1, stepsForTour2 } from '../components/GuidedTour/TourSteps'
-import { BadgeContext } from '../context/BadgeContext'
 import { listOfMockImages } from '../badges/BadgeList'
+import { useDispatch } from 'react-redux'
 
 
 const TourContinueElement: React.FC = () => {
@@ -31,7 +31,8 @@ const TourContinueElement: React.FC = () => {
 }
 
 const GuidedTourGamified = () => {
-    const { dispatch } = useContext(BadgeContext)
+    // const { dispatch } = useContext(BadgeContext)
+    const dispatch = useDispatch()
     const { t } = useTranslation()
     const history = useHistory()
     const [runTour1, setRunTour1] = useState(false)
@@ -53,7 +54,7 @@ const GuidedTourGamified = () => {
         console.log(index)
 
         if (index === 7) {
-            dispatch({ type: 'ADD_BADGE', achievedBadge: listOfMockImages[0] })
+            dispatch({ type: 'ADD_BADGE', payload: listOfMockImages[0] })
             setShowBadge(true)
             setBadgeDetail({
                 src: First,
