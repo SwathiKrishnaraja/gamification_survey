@@ -1,6 +1,6 @@
 import React, { useState, Fragment } from 'react'
 import * as Survey from 'survey-react'
-import { Questions, MatrixObject, Json } from '../types/types'
+import { Questions, MatrixObject } from '../types/types'
 import { useHistory } from 'react-router-dom'
 import GuidedTourModal from '../components/GuidedTour/GuidedTourModal'
 import ThanksText from '../components/ThanksText'
@@ -483,12 +483,123 @@ const q26: Questions = {
 }
 
 
-const json: Json = {
-    completeText: 'Submit',
-    questions: [q1, q2, q3, q4, q5, q6, q7, q8, q9, q10, q11, q12, q13, q14, q15, q16, q17, q18, q19, q20, q21, q22, q23, q24, q25, q26
+const json = {
+    "completeText": "Submit",
+    showPrevButton: false,
+    "pages": [
+        {
+            "elements": [
+                {
+                    "type": "panel",
+                    "elements": [
+                        q1, q2, q3
+                    ],
+                    "name": "panel1"
+                }
+            ],
+            "name": "page0"
+        },
+        {
+            "elements": [
+                {
+                    "type": "panel",
+                    "elements": [
+                        q4, q5, q6
+                    ],
+                    "name": "panel2"
+                }
+            ],
+            "name": "page1"
+        },
+        {
+            "elements": [
+                {
+                    "type": "panel",
+                    "elements": [
+                        q7, q8, q9
+                    ],
+                    "name": "panel3"
+                }
+            ],
+            "name": "page2"
+        },
+        {
+            "elements": [
+                {
+                    "type": "panel",
+                    "elements": [
+                        q10, q11, q12
+                    ],
+                    "name": "panel4"
+                }
+            ],
+            "name": "page3"
+        },
+        {
+            "elements": [
+                {
+                    "type": "panel",
+                    "elements": [
+                        q13, q14, q15
+                    ],
+                    "name": "panel5"
+                }
+            ],
+            "name": "page4"
+        },
+        {
+            "elements": [
+                {
+                    "type": "panel",
+                    "elements": [
+                        q16, q17, q18
+                    ],
+                    "name": "panel5"
+                }
+            ],
+            "name": "page5"
+        },
+        {
+            "elements": [
+                {
+                    "type": "panel",
+                    "elements": [
+                        q19, q20, q21
+                    ],
+                    "name": "panel6"
+                }
+            ],
+            "name": "page6"
+        },
+        {
+            "elements": [
+                {
+                    "type": "panel",
+                    "elements": [
+                        q22, q23, q24
+                    ],
+                    "name": "panel7"
+                }
+            ],
+            "name": "page7"
+        },
+        {
+            "elements": [
+                {
+                    "type": "panel",
+                    "elements": [
+                        q25, q26,
+                    ],
+                    "name": "panel8"
+                }
+            ],
+            "name": "page8"
+        },
     ],
     mode: "edit"
 }
+
+
 const SurveyQuestions = () => {
     const history = useHistory()
     const [showModal, setShowModal] = useState(false)

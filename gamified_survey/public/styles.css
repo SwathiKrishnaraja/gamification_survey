@@ -247,7 +247,24 @@ p {
   font-size: 18px;
   border-radius: 6px;
 }
-
+.sv_next_btn {
+  background-color: #337ab7;
+  border-color: #2e6da4;
+  color: white;
+  padding: 10px 16px;
+  font-size: 18px;
+  border-radius: 6px; 
+  width: 120px; 
+}
+.sv_prev_btn {
+  background-color: #337ab7;
+  border-color: #2e6da4;
+  color: white;
+  padding: 10px 16px;
+  font-size: 18px;
+  border-radius: 6px; 
+  width: 120px; 
+}
 .sv_row {
   background-color: white;
   margin-top: 15px;
@@ -329,6 +346,9 @@ thead {
   height: 10px;
   height: 10px !important;
   position: unset;
+}
+.sv_p_container {
+  padding: 5px;
 }
 .guided-modal-main {
   position: fixed;

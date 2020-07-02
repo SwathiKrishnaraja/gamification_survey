@@ -1,6 +1,6 @@
 import React from 'react'
 import * as Survey from 'survey-react'
-import { Questions, MatrixObject, Json } from '../types/types'
+import { Questions, MatrixObject } from '../types/types'
 import { useHistory } from 'react-router-dom'
 
 const q1: Questions = {
@@ -132,7 +132,7 @@ const q5: Questions = {
 
 
 
-const json: Json = {
+const json = {
     completeText: 'Submit and Exit',
     questions: [q1, q2, q3, q4, q5],
     mode: "edit"
