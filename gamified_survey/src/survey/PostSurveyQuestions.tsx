@@ -133,12 +133,25 @@ const q5: Questions = {
 
 
 const json = {
-    completeText: 'Submit and Exit',
-    questions: [q1, q2, q3, q4, q5],
-    mode: "edit"
+    "completeText": "Submit",
+    showPrevButton: false,
+    "pages": [
+        {
+            "elements": [
+                {
+                    "type": "panel",
+                    "elements": [
+                        q1, q2, q3, q4, q5
+                    ],
+                    "name": "panel1"
+                }
+            ],
+            "name": "page0"
+        },
+    ],
+    mode: 'edit'
 }
 const SurveyQuestions = () => {
-    const history = useHistory()
     return (
         <Survey.Survey json={json} />
     )

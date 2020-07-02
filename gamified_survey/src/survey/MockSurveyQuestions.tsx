@@ -74,9 +74,23 @@ const q4: Questions = {
 
 
 const json = {
-    completeText: 'Submit',
-    questions: [q1, q2, q3, q4],
-    mode: 'display',
+    "completeText": "Submit",
+    showPrevButton: false,
+    "pages": [
+        {
+            "elements": [
+                {
+                    "type": "panel",
+                    "elements": [
+                        q1, q2, q3, q4
+                    ],
+                    "name": "panel1"
+                }
+            ],
+            "name": "page0"
+        },
+    ],
+    mode: 'display'
 }
 
 export const survey = <Survey.Survey json={json} />
