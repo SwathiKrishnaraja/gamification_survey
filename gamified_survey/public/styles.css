@@ -134,7 +134,7 @@ p {
 }
 .individual-badge .badge-tooltip {
   visibility: hidden;
-  width: 120px;
+  width: 150px;
   background-color: darkgray;
   color: #fff;
   text-align: center;
@@ -156,7 +156,7 @@ p {
   position: absolute;
   bottom: 100%;
   left: 50%;
-  margin-left: -5px;
+  margin-left: -18px;
   border-width: 5px;
   border-style: solid;
   border-color: transparent transparent darkgray transparent;
