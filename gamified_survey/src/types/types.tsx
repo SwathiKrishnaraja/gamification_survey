@@ -38,4 +38,6 @@ export interface Badge {
     src: any
     name: string,
     description: string
+    isAchieved: boolean
+    isNotified: boolean
 }

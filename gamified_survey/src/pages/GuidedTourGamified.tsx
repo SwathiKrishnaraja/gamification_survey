@@ -7,14 +7,13 @@ import { survey } from '../survey/MockSurveyQuestions'
 import GuidedTourModal from '../components/GuidedTour/GuidedTourModal'
 import { useHistory } from 'react-router-dom';
 import Joyride, { CallBackProps } from 'react-joyride';
-import First from '../badges/guidedTour/1.png'
 import Notifications from '../Toast/Notifications'
 import { BadgeDetail } from '../types/types'
 import GuidedTourBadges from '../components/GuidedTour/GuidedTourBadges'
 import { stepsForTour1, stepsForTour2 } from '../components/GuidedTour/TourSteps'
 import { listOfMockImages } from '../badges/BadgeList'
-import { useDispatch } from 'react-redux'
-
+import { useDispatch, useStore } from 'react-redux'
+import { Badge } from '../types/types'
 
 const TourContinueElement: React.FC = () => {
     return (
@@ -31,7 +30,6 @@ const TourContinueElement: React.FC = () => {
 }
 
 const GuidedTourGamified = () => {
-    // const { dispatch } = useContext(BadgeContext)
     const dispatch = useDispatch()
     const { t } = useTranslation()
     const history = useHistory()
@@ -44,6 +42,21 @@ const GuidedTourGamified = () => {
         src: '',
         description: ''
     })
+    const store = useStore()
+    const handleNotification = () => {
+        const achievedBadges = store.getState().filter((badge: Badge) => !(badge.isNotified))
+        if (achievedBadges.length >= 1) {
+            setShowBadge(true)
+            setBadgeDetail({
+                src: achievedBadges[0]!.src,
+                description: achievedBadges[0]!.description
+            })
+            dispatch({ type: 'NOTIFY_BADGE', payload: achievedBadges[0] })
+        }
+    }
+
+    store.subscribe(handleNotification)
+
 
     const handleBadgeClose = () => {
         setShowBadge(false)
@@ -51,15 +64,8 @@ const GuidedTourGamified = () => {
 
     const handleJoyrideCallbackForTour1 = (data: CallBackProps) => {
         const { index, status } = data
-        console.log(index)
-
-        if (index === 7) {
+        if (index === 7 && status === 'running') {
             dispatch({ type: 'ADD_BADGE', payload: listOfMockImages[0] })
-            setShowBadge(true)
-            setBadgeDetail({
-                src: First,
-                description: 'Congrats you have finished the guided tour'
-            })
         }
         if (status === 'ready') {
             setRunTour2(true)
