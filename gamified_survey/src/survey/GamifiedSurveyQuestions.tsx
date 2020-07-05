@@ -616,7 +616,6 @@ const SurveyQuestions = () => {
     const [count, setCount] = useState(0)
 
     const handleSurveyAnswer = (sender: Survey.SurveyModel, options: any): any => {
-        console.log(options)
         const { question } = options
         if (!(answerStore.find(element => element.id === question.id))) {
             setAnswerStore([
@@ -626,7 +625,9 @@ const SurveyQuestions = () => {
                     isAnswered: question.isAnswered
                 }
             ])
-            setCount(count + 1)
+            if (question.isAnswered) {
+                setCount(count + 1)
+            }
         }
     }
 
