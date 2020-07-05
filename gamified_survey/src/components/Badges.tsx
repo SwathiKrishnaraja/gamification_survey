@@ -1,21 +1,16 @@
-import React, { Fragment, Suspense, useState, useEffect } from 'react'
+import React, { Fragment, useEffect } from 'react'
 import { useTranslation } from 'react-i18next';
-import { Badge } from '../types/types'
 import { listOfImages } from '../badges/BadgeList'
 import ShowBadge from '../components/ShowBadges'
-import { useStore } from 'react-redux';
+import { useSelector } from 'react-redux';
 
 const Badges = () => {
     const { t } = useTranslation()
-    const store = useStore()
-    const [storeChanged, setStoreChanged] = useState(false)
-    const handleSubscribe = () => {
-        setStoreChanged(storeChanged ? false : true)
-    }
-    store.subscribe(handleSubscribe)
+    const triggerRender = useSelector(state => state)
 
     useEffect(() => {
-    }, [storeChanged])
+    }, [triggerRender])
+
     return (
         <Fragment>
             <div className='Badges-div'>
