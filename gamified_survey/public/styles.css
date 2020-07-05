@@ -253,8 +253,8 @@ p {
   color: white;
   padding: 10px 16px;
   font-size: 18px;
-  border-radius: 6px; 
-  width: 120px; 
+  border-radius: 6px;
+  width: 120px;
 }
 .sv_prev_btn {
   background-color: #337ab7;
@@ -262,8 +262,8 @@ p {
   color: white;
   padding: 10px 16px;
   font-size: 18px;
-  border-radius: 6px; 
-  width: 120px; 
+  border-radius: 6px;
+  width: 120px;
 }
 .sv_row {
   background-color: white;
@@ -272,7 +272,7 @@ p {
   border-style: inset;
   border-style: groove;
   border-color: #f5f5f5;
-  border-radius: 6px;;
+  border-radius: 6px;
 }
 
 .sv_q_radiogroup {
@@ -494,10 +494,11 @@ thead {
   background: white;
   flex-direction: column;
   justify-content: space-around;
-  /* width: 550px; */
   height: 180px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  /* overflow-y: scroll;
+}
+.react-joyride__tooltip div button {
+  background-color: #337ab7 !important;
 }

@@ -90,7 +90,7 @@ const json = {
             "name": "page0"
         },
     ],
-    mode: 'display'
+    mode: 'edit'
 }
 
 export const survey = <Survey.Survey json={json} />
