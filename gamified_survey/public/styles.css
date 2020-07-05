@@ -225,6 +225,7 @@ p {
   padding: 10px 16px;
   font-size: 14px;
   border-radius: 6px;
+  cursor: pointer;
 }
 .mock-container {
   text-align: center;
@@ -373,10 +374,10 @@ thead {
 /* Notifications */
 .toasts-wrapper {
   position: absolute;
-  top: 5px;
-  left: 50%;
-  /* bottom: 0px;
-  left: 82%; */
+  /* top: 5px;
+  left: 50%; */
+  bottom: 0px;
+  left: 82%;
   transition: transform 0.6s ease-in;
   animation: toast-in-left 0.7s;
   transform: translate(-50%, 0%);

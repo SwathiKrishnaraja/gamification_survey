@@ -1,7 +1,7 @@
 import React from 'react'
 import { Badge } from '../types/types'
 
-interface AddBadgeAction {
+interface BadgeAction {
     type: 'ADD_BADGE' | 'NOTIFY_BADGE',
     payload: Badge
 }
@@ -17,7 +17,7 @@ const defaultState: Array<Badge> = [
 
     }]
 
-const addBadgeReducer = (state = defaultState, action: AddBadgeAction): Array<Badge> => {
+const addBadgeReducer = (state = defaultState, action: BadgeAction): Array<Badge> => {
     const { payload } = action
     switch (action.type) {
         case 'ADD_BADGE':
@@ -37,7 +37,6 @@ const addBadgeReducer = (state = defaultState, action: AddBadgeAction): Array<Ba
                             isNotified: true
                         })
                     } else {
-                        console.log('inside else', payload)
                         return badge
                     }
                 }

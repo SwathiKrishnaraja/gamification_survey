@@ -1,7 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import * as Survey from 'survey-react'
 import { Questions, MatrixObject } from '../types/types'
 import { useHistory } from 'react-router-dom'
+import { survey } from './MockSurveyQuestions'
+import { useStore } from 'react-redux'
+import { type } from 'os'
+import badgeProvider from '../BadgeRules/BadgeRules';
+import { useDispatch } from 'react-redux';
 
 const q1: Questions = {
     type: "radiogroup",
@@ -597,11 +602,47 @@ const json = {
     ],
     mode: "edit"
 }
-
+export const model = new Survey.Model(json);
+type AnswerStore = {
+    id: string,
+    isAnswered: boolean
+}
 const SurveyQuestions = () => {
+    const dispatch = useDispatch()
+    const provideBadge = badgeProvider(dispatch)
+
     const history = useHistory()
+    const [answerStore, setAnswerStore] = useState<Array<AnswerStore>>([{ id: '0', isAnswered: true }])
+    const [count, setCount] = useState(0)
+
+    const handleSurveyAnswer = (sender: Survey.SurveyModel, options: any): any => {
+        console.log(options)
+        const { question } = options
+        if (!(answerStore.find(element => element.id === question.id))) {
+            setAnswerStore([
+                ...answerStore,
+                {
+                    id: question.id,
+                    isAnswered: question.isAnswered
+                }
+            ])
+            setCount(count + 1)
+        }
+    }
+
+    switch (count) {
+        case 9:
+            provideBadge.badge.thirtyThreeBadge()
+            break
+        case 17:
+            provideBadge.badge.sixtySixBadge()
+            break
+        default:
+            console.log(count)
+    }
+
     return (
-        <Survey.Survey json={json} onComplete={() => history.push('/Dashboard')} />
+        <Survey.Survey model={model} onValueChanged={handleSurveyAnswer} onComplete={() => history.push('/Dashboard')} />
     )
 }
 export default SurveyQuestions 
