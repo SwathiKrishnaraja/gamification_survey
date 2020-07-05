@@ -16,6 +16,7 @@ import PostSurvey from './pages/PostSurvey';
 import { createStore } from 'redux'
 import { Provider } from 'react-redux'
 import addBadgeReducer from './reducer/reducer'
+import Toast from './Toast/Toast';
 
 const store = createStore(addBadgeReducer)
 
@@ -35,11 +36,12 @@ const Routing = () => {
   )
 }
 ReactDOM.render(
-  <React.StrictMode>
-    <Provider store={store}>
-      <Routing />
-    </Provider>
-  </React.StrictMode >,
+  // <React.StrictMode>
+  <Provider store={store}>
+    <Routing />
+    <Toast />
+  </Provider>,
+  // </React.StrictMode >,
   document.getElementById('root')
 );
 

@@ -1,8 +1,13 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { createPortal } from 'react-dom'
 import { NotificationsContent } from '../types/types'
 
 const Notifications = ({ badgeDetail, showBadge, handleBadgeClose }: NotificationsContent) => {
+    useEffect(() => {
+        setTimeout(() => {
+            handleBadgeClose()
+        }, 5000)
+    })
     return (
         showBadge ? createPortal(
             <div className="toasts-wrapper">

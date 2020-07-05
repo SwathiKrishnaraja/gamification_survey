@@ -7,13 +7,10 @@ import { survey } from '../survey/MockSurveyQuestions'
 import GuidedTourModal from '../components/GuidedTour/GuidedTourModal'
 import { useHistory } from 'react-router-dom';
 import Joyride, { CallBackProps } from 'react-joyride';
-import Notifications from '../Toast/Notifications'
-import { BadgeDetail } from '../types/types'
 import GuidedTourBadges from '../components/GuidedTour/GuidedTourBadges'
 import { stepsForTour1, stepsForTour2 } from '../components/GuidedTour/TourSteps'
 import { listOfMockImages } from '../badges/BadgeList'
-import { useDispatch, useStore } from 'react-redux'
-import { Badge } from '../types/types'
+import { useDispatch } from 'react-redux'
 
 const TourContinueElement: React.FC = () => {
     return (
@@ -37,30 +34,6 @@ const GuidedTourGamified = () => {
     const [runTour2, setRunTour2] = useState(false)
     const [showModal, setShowModal] = useState(false)
     const [showTour, setShowTour] = useState(false)
-    const [showBadge, setShowBadge] = useState(false)
-    const [badgeDetail, setBadgeDetail] = useState<BadgeDetail>({
-        src: '',
-        description: ''
-    })
-    const store = useStore()
-    const handleNotification = () => {
-        const achievedBadges = store.getState().filter((badge: Badge) => !(badge.isNotified))
-        if (achievedBadges.length >= 1) {
-            setShowBadge(true)
-            setBadgeDetail({
-                src: achievedBadges[0]!.src,
-                description: achievedBadges[0]!.description
-            })
-            dispatch({ type: 'NOTIFY_BADGE', payload: achievedBadges[0] })
-        }
-    }
-
-    store.subscribe(handleNotification)
-
-
-    const handleBadgeClose = () => {
-        setShowBadge(false)
-    }
 
     const handleJoyrideCallbackForTour1 = (data: CallBackProps) => {
         const { index, status } = data
@@ -74,10 +47,8 @@ const GuidedTourGamified = () => {
     }
 
     const handleJoyrideCallbackForTour2 = (data: CallBackProps) => {
-        const { index, status } = data
-        if (index === 1) {
-            setShowBadge(false)
-        }
+        const { status } = data
+
         if (status === 'ready') {
             setShowModal(true)
         }
@@ -95,7 +66,6 @@ const GuidedTourGamified = () => {
 
     return (
         <div className="container">
-            <Notifications badgeDetail={badgeDetail} showBadge={showBadge} handleBadgeClose={handleBadgeClose} />
             <Joyride
                 callback={handleJoyrideCallbackForTour1}
                 steps={stepsForTour1}

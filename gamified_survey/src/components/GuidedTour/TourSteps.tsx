@@ -62,6 +62,7 @@ export const stepsForTour2: Step[] = [
         target: '.Badges-div',
         content: 'The badge gets activated in the badges list',
         spotlightPadding: 0,
+        disableBeacon: true,
     },
 ]
 export const stepsForTraditionalTour: Step[] = [
