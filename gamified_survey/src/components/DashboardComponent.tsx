@@ -93,11 +93,7 @@ type RenderBadge = {
 
 const DashboardComponent = () => {
     const history = useHistory()
-    const [showModal, setShowModal] = useState(false)
-    const handleClick = () => {
-        setShowModal(showModal ? false : true)
-    }
-    const handleProceedButton = () => {
+    const handleNextButton = () => {
         history.push('/PostSurvey')
     }
 
@@ -108,10 +104,10 @@ const DashboardComponent = () => {
                 {listOfImages
                     .filter(badge => badge.isActive)
                     .map(element => (<RenderBadge src={element.src} name={element.name} description={element.description} />))}
-                <span style={{ margin: 10 }}>Please click submit to complete the survey</span>
+                <span style={{ marginLeft: 10, marginTop: 5 }}>Thank you for completing the survey. </span>
+                <span style={{ marginLeft: 10, marginTop: 5, marginBottom: 5 }}>Please let us know how you feel about the survey by clicking on 'Next'.</span>
             </div >
-            <button style={{ marginTop: 20 }} className="continue-button" onClick={handleClick}>Submit</button>
-            <GuidedTourModal showModal={showModal} handleClick={handleProceedButton} children={<ThanksText />} styleClass='thank-you-modal' modalWindowButton='Proceed' buttonClass='exit-survey-button' />
+            <button style={{ marginTop: 20 }} className="continue-button" onClick={handleNextButton}>Next</button>
         </Fragment>
 
     )

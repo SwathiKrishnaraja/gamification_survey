@@ -16,11 +16,6 @@ export interface MatrixObject {
     value: number | string
     text: string
 }
-export interface Json {
-    questions: Array<Questions>
-    completeText: string
-    mode: 'display' | 'edit'
-}
 
 export interface NotificationsContent {
     badgeDetail: BadgeDetail
