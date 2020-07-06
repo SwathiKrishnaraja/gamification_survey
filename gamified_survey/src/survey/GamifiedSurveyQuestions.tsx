@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import * as Survey from 'survey-react'
 import { Questions, MatrixObject } from '../types/types'
 import { useHistory } from 'react-router-dom'
@@ -630,17 +630,19 @@ const SurveyQuestions = () => {
             }
         }
     }
+    useEffect(() => {
+        switch (count) {
+            case 9:
+                provideBadge.badge.thirtyThreeBadge()
+                break
+            case 17:
+                provideBadge.badge.sixtySixBadge()
+                break
+            default:
+                console.log(count)
+        }
+    })
 
-    switch (count) {
-        case 9:
-            provideBadge.badge.thirtyThreeBadge()
-            break
-        case 17:
-            provideBadge.badge.sixtySixBadge()
-            break
-        default:
-            console.log(count)
-    }
 
     return (
         <Survey.Survey model={model} onValueChanged={handleSurveyAnswer} onComplete={() => history.push('/Dashboard')} />

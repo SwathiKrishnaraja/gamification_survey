@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import Notifications from './Notifications'
-import { useStore, useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { BadgeDetail, Badge } from '../types/types'
 
 const Toast: React.FC = () => {
-    const store = useStore()
+    const dispatch = useDispatch()
     const [showBadge, setShowBadge] = useState(false)
     const [badgeDetail, setBadgeDetail] = useState<BadgeDetail>({
         src: '',
@@ -14,19 +14,22 @@ const Toast: React.FC = () => {
         setShowBadge(false)
     }
 
-    const handleToast = () => {
-        const achievedBadges = store.getState().filter((badge: Badge) => !(badge.isNotified))
-        if (achievedBadges.length >= 1) {
+    const newBadge = useSelector((state: Array<Badge>) => {
+        return state.filter((badge: Badge) => !(badge.isNotified))
+    })
+
+
+    useEffect(() => {
+        if (newBadge.length >= 1) {
+            dispatch({ type: 'NOTIFY_BADGE', payload: newBadge[0] })
             setShowBadge(true)
             setBadgeDetail({
-                src: achievedBadges[0]!.src,
-                description: achievedBadges[0]!.description
+                src: newBadge[0]!.src,
+                description: newBadge[0]!.description
             })
-            dispatch({ type: 'NOTIFY_BADGE', payload: achievedBadges[0] })
         }
-    }
-    const dispatch = useDispatch()
-    store.subscribe(handleToast)
+    }, [dispatch, newBadge])
+
     return (
         showBadge ?
             <Notifications badgeDetail={badgeDetail} showBadge={showBadge} handleBadgeClose={handleBadgeClose} />

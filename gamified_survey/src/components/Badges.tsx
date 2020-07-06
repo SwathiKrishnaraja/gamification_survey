@@ -3,13 +3,11 @@ import { useTranslation } from 'react-i18next';
 import { listOfImages } from '../badges/BadgeList'
 import ShowBadge from '../components/ShowBadges'
 import { useSelector } from 'react-redux';
+import { Badge } from '../types/types';
 
 const Badges = () => {
     const { t } = useTranslation()
-    const triggerRender = useSelector(state => state)
 
-    useEffect(() => {
-    }, [triggerRender])
 
     return (
         <Fragment>

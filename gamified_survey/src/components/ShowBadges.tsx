@@ -1,12 +1,14 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect, useRef, ReactHTMLElement } from 'react'
 import { Badge } from '../types/types'
-import { useStore } from 'react-redux'
+import { useSelector } from 'react-redux'
 
 
-const ShowBadge = ({ id, src, name, description }: Badge) => {
+const ShowBadge = ({ id, src, name, description, isAchieved }: Badge) => {
     let styles = 'inactive-badge'
-    const store = useStore()
-    const achievedBadge = store.getState()
+    const achievedBadge = useSelector((state: Array<Badge>) => {
+        return state.filter((badge: Badge) => (badge.isAchieved))
+    })
+
     if (achievedBadge.find((element: { id: number }) => element.id === id)) {
         styles = 'active-badge'
     }
