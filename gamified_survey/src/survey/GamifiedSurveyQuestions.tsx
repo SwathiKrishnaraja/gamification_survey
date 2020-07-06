@@ -41,6 +41,9 @@ const SurveyQuestions = () => {
             case 17:
                 provideBadge.badge.sixtySixBadge()
                 break
+            case 26:
+                provideBadge.badge.fullPoints()
+                break
             default:
                 console.log(count)
         }
