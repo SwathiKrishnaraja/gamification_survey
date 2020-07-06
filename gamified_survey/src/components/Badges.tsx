@@ -1,14 +1,10 @@
-import React, { Fragment, useEffect } from 'react'
+import React, { Fragment } from 'react'
 import { useTranslation } from 'react-i18next';
 import { listOfImages } from '../badges/BadgeList'
 import ShowBadge from '../components/ShowBadges'
-import { useSelector } from 'react-redux';
-import { Badge } from '../types/types';
 
 const Badges = () => {
     const { t } = useTranslation()
-
-
     return (
         <Fragment>
             <div className='Badges-div'>
