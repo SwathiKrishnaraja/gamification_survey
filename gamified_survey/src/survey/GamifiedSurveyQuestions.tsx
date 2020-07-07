@@ -34,6 +34,7 @@ const SurveyQuestions = () => {
         }
     }
     useEffect(() => {
+        console.log('gst')
         switch (count) {
             case 9:
                 provideBadge.badge.thirtyThreeBadge()
@@ -46,6 +47,9 @@ const SurveyQuestions = () => {
                 break
             default:
                 console.log(count)
+        }
+        return () => {
+            console.log('unmount gst')
         }
     })
 

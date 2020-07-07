@@ -1,5 +1,4 @@
 import { listOfImages } from '../badges/BadgeList'
-import { useDispatch } from 'react-redux'
 import { Badge } from '../types/types'
 import { Dispatch } from 'redux'
 
@@ -21,6 +20,9 @@ const badgeProvider = (dispatch: Dispatch<BadgeAction>) => {
         },
         sixtySixBadge: () => {
             dispatch({ type: 'ADD_BADGE', payload: listOfImages[3] })
+        },
+        winner: () => {
+            dispatch({ type: 'ADD_BADGE', payload: listOfImages[6] })
         },
         fullPoints: () => {
             dispatch({ type: 'ADD_BADGE', payload: listOfImages[7] })

@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import Badges from '../components/MockDashboardBadge'
+import Badges from '../components/Badges'
 import { useTranslation } from 'react-i18next';
 import CustomProgressBar from '../components/CustomProgressBar'
 import DashboardComponent from '../components/DashboardComponent';

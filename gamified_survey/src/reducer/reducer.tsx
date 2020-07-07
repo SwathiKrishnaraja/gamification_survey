@@ -12,7 +12,7 @@ const defaultState: Array<Badge> = [
         src: '',
         name: '',
         description: '',
-        isAchieved: true,
+        isAchieved: false,
         isNotified: true,
 
     }]
