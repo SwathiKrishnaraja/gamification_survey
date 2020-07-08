@@ -8,7 +8,6 @@ type Props = {
 }
 const Notifications = (props: Props) => {
     const { badges, showBadge, handleBadgeClose } = props
-    console.log(badges)
     useEffect(() => {
         setTimeout(() => {
             handleBadgeClose()

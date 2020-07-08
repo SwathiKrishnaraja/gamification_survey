@@ -26,6 +26,9 @@ const badgeProvider = (dispatch: Dispatch<BadgeAction>) => {
         },
         fullPoints: () => {
             dispatch({ type: 'ADD_BADGE', payload: listOfImages[7] })
+        },
+        medalCollector: () => {
+            dispatch({ type: 'ADD_BADGE', payload: listOfImages[9] })
         }
 
     }

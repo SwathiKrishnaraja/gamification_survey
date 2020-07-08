@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import * as Survey from 'survey-react'
 import { useHistory } from 'react-router-dom'
 import badgeProvider from '../BadgeRules/BadgeRules';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector, useStore, shallowEqual } from 'react-redux';
 import json from './GamifiedSurveyJSON'
 
 export const model = new Survey.Model(json);
@@ -13,6 +13,7 @@ type AnswerStore = {
 const SurveyQuestions = () => {
     const dispatch = useDispatch()
     const provideBadge = badgeProvider(dispatch)
+    const store = useStore()
 
     const history = useHistory()
     const [answerStore, setAnswerStore] = useState<Array<AnswerStore>>([{ id: '0', isAnswered: true }])
@@ -33,8 +34,10 @@ const SurveyQuestions = () => {
             }
         }
     }
+
+
+
     useEffect(() => {
-        console.log('gst')
         switch (count) {
             case 9:
                 provideBadge.badge.thirtyThreeBadge()
@@ -44,18 +47,25 @@ const SurveyQuestions = () => {
                 break
             case 26:
                 provideBadge.badge.fullPoints()
+                const currentStore = store.getState()
+                if (Object.keys(currentStore).length === 9) {
+                    provideBadge.badge.medalCollector()
+                }
                 break
             default:
                 console.log(count)
         }
         return () => {
-            console.log('unmount gst')
         }
-    })
+    }, [count, provideBadge.badge, store])
 
+    const handleSurveyCompletion = () => {
+        provideBadge.badge.winner()
+        history.push('/Dashboard')
+    }
 
     return (
-        <Survey.Survey model={model} onValueChanged={handleSurveyAnswer} onComplete={() => history.push('/Dashboard')} />
+        <Survey.Survey model={model} onValueChanged={handleSurveyAnswer} onComplete={handleSurveyCompletion} />
     )
 }
 export default SurveyQuestions 
