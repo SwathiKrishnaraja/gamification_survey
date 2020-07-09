@@ -21,6 +21,12 @@ const badgeProvider = (dispatch: Dispatch<BadgeAction>) => {
         sixtySixBadge: () => {
             dispatch({ type: 'ADD_BADGE', payload: listOfImages[3] })
         },
+        fastAchiever: () => {
+            dispatch({ type: 'ADD_BADGE', payload: listOfImages[4] })
+        },
+        masterOfInterview: () => {
+            dispatch({ type: 'ADD_BADGE', payload: listOfImages[5] })
+        },
         winner: () => {
             dispatch({ type: 'ADD_BADGE', payload: listOfImages[6] })
         },
@@ -29,7 +35,7 @@ const badgeProvider = (dispatch: Dispatch<BadgeAction>) => {
         },
         medalCollector: () => {
             dispatch({ type: 'ADD_BADGE', payload: listOfImages[9] })
-        }
+        },
 
     }
 

@@ -7,6 +7,7 @@ import json from './GamifiedSurveyJSON'
 
 export const model = new Survey.Model(json);
 type AnswerStore = {
+    name: string,
     id: string,
     isAnswered: boolean
 }
@@ -16,8 +17,9 @@ const SurveyQuestions = () => {
     const store = useStore()
 
     const history = useHistory()
-    const [answerStore, setAnswerStore] = useState<Array<AnswerStore>>([{ id: '0', isAnswered: true }])
+    const [answerStore, setAnswerStore] = useState<Array<AnswerStore>>([{ name: '', id: '0', isAnswered: true }])
     const [count, setCount] = useState(0)
+    const listOfLastPageQuestions = ['q25', 'q26']
 
     const handleSurveyAnswer = (sender: Survey.SurveyModel, options: any): any => {
         const { question } = options
@@ -25,6 +27,7 @@ const SurveyQuestions = () => {
             setAnswerStore([
                 ...answerStore,
                 {
+                    name: question.name,
                     id: question.id,
                     isAnswered: question.isAnswered
                 }
@@ -32,6 +35,21 @@ const SurveyQuestions = () => {
             if (question.isAnswered) {
                 setCount(count + 1)
             }
+            // below check is to provide the badge if all the questions in the last page is answered
+            if (answerStore
+                .map(element => listOfLastPageQuestions.includes(element.name))
+                .length === 2) {
+                console.log('')
+                provideBadge.badge.masterOfInterview()
+            }
+        }
+    }
+    const handlePageChange = (sender: Survey.SurveyModel, options: any): any => {
+        const { newCurrentPage } = options
+        // below is the check to provide badge if the user has reached the last page of the survey
+        if (newCurrentPage.name === 'page8') {
+            console.log(options);
+            provideBadge.badge.fastAchiever()
         }
     }
 
@@ -65,7 +83,11 @@ const SurveyQuestions = () => {
     }
 
     return (
-        <Survey.Survey model={model} onValueChanged={handleSurveyAnswer} onComplete={handleSurveyCompletion} />
+        <Survey.Survey model={model}
+            onValueChanged={handleSurveyAnswer}
+            onComplete={handleSurveyCompletion}
+            onCurrentPageChanged={handlePageChange}
+        />
     )
 }
 export default SurveyQuestions 
