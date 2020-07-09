@@ -36,13 +36,8 @@ const SurveyQuestions = () => {
             if (question.isAnswered) {
                 setCount(count + 1)
             }
-            // below check is to provide the badge if all the questions in the last page is answered
-            if (answerStore
-                .map(element => listOfLastPageQuestions.includes(element.name))
-                .length === 2) {
-                console.log('')
-                provideBadge.badge.masterOfInterview()
-            }
+
+
         }
     }
     const handlePageChange = (sender: Survey.SurveyModel, options: any): any => {
@@ -59,6 +54,16 @@ const SurveyQuestions = () => {
             provideBadge.badge.fastAchiever()
         }
     }
+
+    // below check is to provide the badge if all the questions in the last page is answered
+    useEffect(() => {
+        if (answerStore
+            .filter(element => listOfLastPageQuestions.includes(element.name))
+            .length === 2) {
+            provideBadge.badge.masterOfInterview()
+        }
+    }, [answerStore, listOfLastPageQuestions, provideBadge.badge])
+
 
 
 
