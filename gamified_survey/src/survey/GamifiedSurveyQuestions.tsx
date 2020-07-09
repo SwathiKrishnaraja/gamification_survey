@@ -4,6 +4,7 @@ import { useHistory } from 'react-router-dom'
 import badgeProvider from '../BadgeRules/BadgeRules';
 import { useDispatch, useSelector, useStore, shallowEqual } from 'react-redux';
 import json from './GamifiedSurveyJSON'
+import { survey } from './MockSurveyQuestions';
 
 export const model = new Survey.Model(json);
 type AnswerStore = {
@@ -45,7 +46,13 @@ const SurveyQuestions = () => {
         }
     }
     const handlePageChange = (sender: Survey.SurveyModel, options: any): any => {
-        const { newCurrentPage } = options
+        const { newCurrentPage, oldCurrentPage } = options
+        // stops the time of previous page and starts the new timer
+        model.stopTimer()
+        model.startTimer()
+        const timeSpentOnPreviousPage = oldCurrentPage?.timeSpent
+        console.log(timeSpentOnPreviousPage)
+
         // below is the check to provide badge if the user has reached the last page of the survey
         if (newCurrentPage.name === 'page8') {
             console.log(options);
