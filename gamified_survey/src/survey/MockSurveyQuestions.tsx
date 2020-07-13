@@ -76,13 +76,14 @@ const q4: Questions = {
 const json = {
     "completeText": "Submit",
     showPrevButton: false,
+    showCompletedPage: false,
     "pages": [
         {
             "elements": [
                 {
                     "type": "panel",
                     "elements": [
-                        q1, q2, q3, q4
+                        q1, q2
                     ],
                     "name": "panel1"
                 }
@@ -92,5 +93,5 @@ const json = {
     ],
     mode: 'edit'
 }
+export const model = new Survey.Model(json);
 
-export const survey = <Survey.Survey json={json} />
