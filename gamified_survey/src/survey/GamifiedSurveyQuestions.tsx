@@ -16,6 +16,7 @@ const SurveyQuestions = () => {
     const dispatch = useDispatch()
     const provideBadge = badgeProvider(dispatch)
     const store = useStore()
+    const [isTactician, setIsTactician] = useState(0)
 
     const history = useHistory()
     const [answerStore, setAnswerStore] = useState<Array<AnswerStore>>([{ name: '', id: '0', isAnswered: true }])
@@ -46,7 +47,9 @@ const SurveyQuestions = () => {
         model.stopTimer()
         model.startTimer()
         const timeSpentOnPreviousPage = oldCurrentPage?.timeSpent
-        console.log(timeSpentOnPreviousPage)
+        if (timeSpentOnPreviousPage > 1) {
+            setIsTactician(isTactician + 1)
+        }
 
         // below is the check to provide badge if the user has reached the last page of the survey
         if (newCurrentPage.name === 'page8') {
@@ -62,7 +65,11 @@ const SurveyQuestions = () => {
             .length === 2) {
             provideBadge.badge.masterOfInterview()
         }
-    }, [answerStore, listOfLastPageQuestions, provideBadge.badge])
+        if (isTactician === 8) {
+            setIsTactician(0)
+            provideBadge.badge.tactician()
+        }
+    }, [answerStore, isTactician, listOfLastPageQuestions, provideBadge.badge])
 
 
 
