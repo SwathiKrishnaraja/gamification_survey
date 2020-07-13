@@ -1,6 +1,5 @@
-import React, { Fragment, Suspense } from 'react'
+import React, { Fragment } from 'react'
 import { useTranslation } from 'react-i18next';
-import { Badge } from '../types/types'
 import { listOfImages } from '../badges/BadgeList'
 import ShowBadge from '../components/ShowBadges'
 
@@ -11,7 +10,7 @@ const Badges = () => {
             <div className='Badges-div'>
                 <h2>{t('badges.title')}</h2>
                 {listOfImages.map(element =>
-                    <ShowBadge key={Math.random()} {...element} />
+                    <ShowBadge key={element.id} {...element} />
                 )}
             </div>
             <hr style={{ width: '100%' }} />

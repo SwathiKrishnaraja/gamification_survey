@@ -1,7 +1,6 @@
 import React, { Fragment, Suspense } from 'react';
 import './App.css';
 import Home from './pages/Home';
-import LanguageSelection from './components/LanguageSelection'
 
 
 function App() {

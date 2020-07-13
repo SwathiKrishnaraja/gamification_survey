@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useEffect } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Badges from '../components/Badges'
@@ -6,9 +6,17 @@ import { useTranslation } from 'react-i18next';
 import CustomProgressBar from '../components/CustomProgressBar'
 import SurveyQuestions from '../survey/GamifiedSurveyQuestions'
 import ExitSurvey from '../components/ExitSurvey';
-
+import badgeProvider from '../BadgeRules/BadgeRules';
+import { useDispatch, useSelector, useStore, shallowEqual } from 'react-redux';
 
 const GamifiedSurvey = () => {
+  const dispatch = useDispatch()
+  const provideBadge = badgeProvider(dispatch)
+
+  useEffect(() => {
+    provideBadge.badge.letsGoBadge()
+  })
+
   const { t } = useTranslation()
   return (
     <div className="container">

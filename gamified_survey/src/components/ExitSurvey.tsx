@@ -1,8 +1,6 @@
 import React, { useState, Fragment } from 'react'
 import GuidedTourModal from './GuidedTour/GuidedTourModal'
 
-
-
 const ExitSurvey: React.FC = () => {
     const [showModal, setShowModal] = useState(false)
     const handleClick = () => {

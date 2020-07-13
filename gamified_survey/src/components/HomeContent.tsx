@@ -8,7 +8,6 @@ import umtlLogo from '../content/umtlLogo.png'
 const HomeContent = () => {
   const { t } = useTranslation()
   const history = useHistory();
-  console.log(history)
   return (
     <Fragment>
       <div className="main-body">

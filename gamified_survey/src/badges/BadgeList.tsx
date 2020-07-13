@@ -25,7 +25,7 @@ export const listOfMockBadges = [mockImage1, mockImage2, mockImage3, mockImage4,
 
 export const listOfImages: Array<Badge> = [
     {
-        id: 100,
+        id: 101,
         src: First,
         name: "Let's go !",
         description: 'Start the survey',
@@ -33,7 +33,7 @@ export const listOfImages: Array<Badge> = [
         isNotified: false,
     },
     {
-        id: 101,
+        id: 102,
         src: Second,
         name: "33% Achieved",
         description: 'Answer 33% of the questions',
