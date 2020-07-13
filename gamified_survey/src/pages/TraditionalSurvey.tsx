@@ -12,7 +12,7 @@ const TraditionalSurvey = () => {
     <div className="container">
       <Header children={<ExitSurvey />} />
       <div className="main-body">
-        <CustomProgressBar />
+        <CustomProgressBar progress={70} />
         <SurveyQuestions />
       </div>
 

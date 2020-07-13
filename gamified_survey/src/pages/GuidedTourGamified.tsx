@@ -87,7 +87,7 @@ const GuidedTourGamified = () => {
                     showTour
                         ? <div className='guided-tour-div'>
                             <GuidedTourBadges />
-                            <CustomProgressBar />
+                            <CustomProgressBar progress={70} />
 
                             {survey}
                             {showModal

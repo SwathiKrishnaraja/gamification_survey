@@ -2,9 +2,12 @@ import React, { Fragment } from 'react'
 import { ProgressBar } from 'react-bootstrap';
 import { useTranslation } from 'react-i18next';
 
-const CustomProgressBar = () => {
+type Props = {
+  progress: number
+}
+const CustomProgressBar = (progress: Props) => {
   const { t } = useTranslation()
-  const now = 70;
+  const now = progress.progress;
 
   const progressInstance = (
     <ProgressBar className="progress-bar-div " now={now} label={`${now}%`} />

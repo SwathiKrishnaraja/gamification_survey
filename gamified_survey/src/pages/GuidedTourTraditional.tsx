@@ -64,7 +64,7 @@ const GuidedTourTraditional = () => {
                 <button className='continue-button' onClick={handleStartTour}>Start Tour</button>
                 {showTour
                     ? <div className='guided-tour-div'>
-                        <CustomProgressBar />
+                        <CustomProgressBar progress={70} />
                         {survey}
                         {showModal
                             ? <GuidedTourModal showModal={showModal} handleClick={handleTourProceed} children={<TourContinueElement />} modalWindowButton='Continue' styleClass='guided-modal-main' buttonClass='continue-button' />

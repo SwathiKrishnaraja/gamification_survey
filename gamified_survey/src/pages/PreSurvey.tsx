@@ -1,7 +1,6 @@
 import React, { Fragment } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import CustomProgressBar from '../components/CustomProgressBar';
 import { useHistory } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import Survey from '../survey/PreSurveyQuestions'

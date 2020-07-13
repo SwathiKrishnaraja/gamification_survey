@@ -23,7 +23,7 @@ const GamifiedSurvey = () => {
       <Header children={<ExitSurvey />} />
       <div className="main-body">
         <Badges />
-        <CustomProgressBar />
+        <CustomProgressBar progress={70} />
         <SurveyQuestions />
       </div>
 

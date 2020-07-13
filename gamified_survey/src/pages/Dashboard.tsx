@@ -15,7 +15,7 @@ const Dashboard = () => {
             <Header children={<></>} />
             <div className="main-body">
                 <Badges />
-                <CustomProgressBar />
+                <CustomProgressBar progress={100} />
                 <DashboardComponent />
             </div>
 
