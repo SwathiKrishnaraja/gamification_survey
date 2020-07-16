@@ -12,6 +12,7 @@ import GuidedTourBadges from '../components/GuidedTour/GuidedTourBadges'
 import { stepsForTour1 } from '../components/GuidedTour/TourSteps'
 import { listOfMockImages } from '../badges/BadgeList'
 import { useDispatch } from 'react-redux'
+import ExitSurvey from '../components/ExitSurvey'
 
 const TourContinueElement: React.FC = () => {
     return (
@@ -45,7 +46,7 @@ const GuidedTourGamified = () => {
     const handleJoyrideCallbackForTour1 = (data: CallBackProps) => {
         const { index, status } = data
         console.log(index, status)
-        if (index === 3 && status === 'running') {
+        if (index === 4 && status === 'running') {
             dispatch({ type: 'ADD_BADGE', payload: listOfMockImages[0] })
         }
         if (status === 'ready') {
@@ -79,7 +80,7 @@ const GuidedTourGamified = () => {
                     }
                 }}
                 continuous={true} />
-            <Header children={<Fragment />} />
+            <Header children={<ExitSurvey />} />
             <div className="main-body">
                 <h2>Here is a guided tour for the second version of the survey</h2>
                 <button className='continue-button' onClick={handleStartTour}>Start Tour</button>

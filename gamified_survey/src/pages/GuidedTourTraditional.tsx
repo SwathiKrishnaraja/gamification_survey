@@ -1,14 +1,15 @@
-import React, { Fragment, useState } from 'react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import React, { Fragment, useState } from 'react'
+import Header from '../components/Header'
+import Footer from '../components/Footer'
 import CustomProgressBar from '../components/CustomProgressBar'
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from 'react-i18next'
 import { model } from '../survey/MockSurveyQuestions'
 import * as Survey from 'survey-react'
-import Joyride, { CallBackProps } from 'react-joyride';
+import Joyride, { CallBackProps } from 'react-joyride'
 import GuidedTourModal from '../components/GuidedTour/GuidedTourModal'
-import { useHistory } from 'react-router-dom';
-import { stepsForTraditionalTour } from '../components/GuidedTour/TourSteps';
+import { useHistory } from 'react-router-dom'
+import { stepsForTraditionalTour } from '../components/GuidedTour/TourSteps'
+import ExitSurvey from '../components/ExitSurvey'
 
 
 export const TourContinueElement: React.FC = () => {
@@ -74,7 +75,7 @@ const GuidedTourTraditional = () => {
                     }
                 }}
                 continuous={true} />
-            <Header children={<Fragment />} />
+            <Header children={<ExitSurvey />} />
             <div className="main-body">
                 <h2>Here is a guided tour for the first version of the survey</h2>
                 <button className='continue-button' onClick={handleStartTour}>Start Tour</button>
