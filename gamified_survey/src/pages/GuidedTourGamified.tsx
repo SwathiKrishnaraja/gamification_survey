@@ -3,14 +3,14 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import CustomProgressBar from '../components/CustomProgressBar'
 import { useTranslation } from 'react-i18next';
-import { model } from '../survey/MockSurveyQuestions'
+import { model } from '../survey/MockQuestionsGamified'
 import * as Survey from 'survey-react'
 import GuidedTourModal from '../components/GuidedTour/GuidedTourModal'
 import { useHistory } from 'react-router-dom';
 import Joyride, { CallBackProps } from 'react-joyride';
 import GuidedTourBadges from '../components/GuidedTour/GuidedTourBadges'
 import { stepsForTour1 } from '../components/GuidedTour/TourSteps'
-import { listOfMockImages, listOfImages } from '../badges/BadgeList'
+import { listOfMockImages } from '../badges/BadgeList'
 import { useDispatch } from 'react-redux'
 import ExitSurvey from '../components/ExitSurvey'
 
