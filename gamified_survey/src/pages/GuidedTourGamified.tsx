@@ -1,4 +1,4 @@
-import React, { Fragment, useState, useContext } from 'react';
+import React, { Fragment, useState, useContext, useEffect } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import CustomProgressBar from '../components/CustomProgressBar'
@@ -10,7 +10,7 @@ import { useHistory } from 'react-router-dom';
 import Joyride, { CallBackProps } from 'react-joyride';
 import GuidedTourBadges from '../components/GuidedTour/GuidedTourBadges'
 import { stepsForTour1 } from '../components/GuidedTour/TourSteps'
-import { listOfMockImages } from '../badges/BadgeList'
+import { listOfMockImages, listOfImages } from '../badges/BadgeList'
 import { useDispatch } from 'react-redux'
 import ExitSurvey from '../components/ExitSurvey'
 
@@ -61,6 +61,7 @@ const GuidedTourGamified = () => {
     }
 
     const handleTourProceed = () => {
+        dispatch({ type: 'REMOVE_BADGE', payload: listOfMockImages[0] })
         history.push('/ChooseVersion')
     }
 
@@ -89,7 +90,6 @@ const GuidedTourGamified = () => {
                         ? <div className='guided-tour-div'>
                             <GuidedTourBadges />
                             <CustomProgressBar progress={70} />
-
                             <SurveyQuestions />
                             {
                                 showModal

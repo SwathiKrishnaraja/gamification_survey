@@ -1,8 +1,7 @@
-import React from 'react'
 import { Badge } from '../types/types'
 
 interface BadgeAction {
-    type: 'ADD_BADGE' | 'NOTIFY_BADGE',
+    type: 'ADD_BADGE' | 'NOTIFY_BADGE' | 'REMOVE_BADGE',
     payload: Badge
 }
 
@@ -41,6 +40,11 @@ const addBadgeReducer = (state = defaultState, action: BadgeAction): Array<Badge
                     }
                 }
                 )
+            ]
+        case 'REMOVE_BADGE':
+            console.log(state)
+            return [
+                ...state.filter(badge => badge.id !== payload.id)
             ]
 
         default:

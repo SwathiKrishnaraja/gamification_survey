@@ -7,7 +7,7 @@ import CustomProgressBar from '../components/CustomProgressBar'
 import SurveyQuestions from '../survey/GamifiedSurveyQuestions'
 import ExitSurvey from '../components/ExitSurvey';
 import badgeProvider from '../BadgeRules/BadgeRules';
-import { useDispatch, useSelector, useStore, shallowEqual } from 'react-redux';
+import { useDispatch } from 'react-redux';
 
 const GamifiedSurvey = () => {
   const dispatch = useDispatch()
@@ -15,7 +15,7 @@ const GamifiedSurvey = () => {
 
   useEffect(() => {
     provideBadge.badge.letsGoBadge()
-  })
+  }, [provideBadge.badge])
 
   const { t } = useTranslation()
   return (

@@ -76,7 +76,7 @@ const q4: Questions = {
 const json = {
     "completeText": "Submit",
     showPrevButton: false,
-    showCompletedPage: false,
+    // showCompletedPage: false,
     "pages": [
         {
             "elements": [

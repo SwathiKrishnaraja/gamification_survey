@@ -92,7 +92,7 @@ export const listOfImages: Array<Badge> = [
         id: 109,
         src: Ninth,
         name: "Tactician",
-        description: 'Takes at least 30 seconds for each question',
+        description: 'Takes at least 3 minutes for each page',
         isAchieved: false,
         isNotified: false,
     },

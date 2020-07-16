@@ -46,7 +46,6 @@ const GuidedTourTraditional = () => {
 
 
     const handleJoyrideCallback = () => {
-
         setShowModal(true)
 
     }

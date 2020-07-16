@@ -1,13 +1,20 @@
 import React, { useState } from 'react'
 import ImprintModal from './ImprintModal';
 import ImprintContent from './ImprintContent'
+import styled from 'styled-components'
+
+const FooterComponent = styled.footer`
+  position: relative;
+  bottom: 0px;
+  width: 100%
+`
 const Footer = () => {
   const [showImprint, setShowImprint] = useState<boolean>(false)
   const handleImprintClick = () => {
     setShowImprint(showImprint ? false : true)
   }
   return (
-    <footer>
+    <FooterComponent>
       <hr style={{ width: '98%' }} />
       <div className="home-footer">
 
@@ -16,7 +23,7 @@ const Footer = () => {
         <ImprintModal showModal={showImprint} handleClick={handleImprintClick} title='Privacy and General Information' children={<ImprintContent />} />
 
       </div>
-    </footer>
+    </FooterComponent>
   );
 };
 
