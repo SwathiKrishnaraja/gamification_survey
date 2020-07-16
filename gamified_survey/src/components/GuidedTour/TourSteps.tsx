@@ -56,7 +56,7 @@ export const stepsForTraditionalTour: Step[] = [
         disableOverlay: true,
     },
     {
-        target: '.sv_row:nth-child(1)',
+        target: '.sv_row:nth-child(2)',
         content: 'Questions are presented in the below formats. Please choose option and click Submit to proceed to the next page',
         placement: 'bottom',
         spotlightPadding: 0,
