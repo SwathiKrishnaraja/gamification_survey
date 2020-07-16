@@ -1,9 +1,9 @@
-import React, { Fragment, useState, useContext } from 'react';
+import React, { Fragment, useState, useContext, useEffect } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import CustomProgressBar from '../components/CustomProgressBar'
 import { useTranslation } from 'react-i18next';
-import { model } from '../survey/MockSurveyQuestions'
+import { model } from '../survey/MockQuestionsGamified'
 import * as Survey from 'survey-react'
 import GuidedTourModal from '../components/GuidedTour/GuidedTourModal'
 import { useHistory } from 'react-router-dom';
@@ -61,6 +61,7 @@ const GuidedTourGamified = () => {
     }
 
     const handleTourProceed = () => {
+        dispatch({ type: 'REMOVE_BADGE', payload: listOfMockImages[0] })
         history.push('/ChooseVersion')
     }
 
@@ -89,7 +90,6 @@ const GuidedTourGamified = () => {
                         ? <div className='guided-tour-div'>
                             <GuidedTourBadges />
                             <CustomProgressBar progress={70} />
-
                             <SurveyQuestions />
                             {
                                 showModal

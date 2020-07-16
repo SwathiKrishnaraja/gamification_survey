@@ -3,7 +3,7 @@ import Header from '../components/Header'
 import Footer from '../components/Footer'
 import CustomProgressBar from '../components/CustomProgressBar'
 import { useTranslation } from 'react-i18next'
-import { model } from '../survey/MockSurveyQuestions'
+import { model } from '../survey/MockQuestionsTraditional'
 import * as Survey from 'survey-react'
 import Joyride, { CallBackProps } from 'react-joyride'
 import GuidedTourModal from '../components/GuidedTour/GuidedTourModal'
@@ -45,8 +45,7 @@ const GuidedTourTraditional = () => {
     const [showTour, setShowTour] = useState(false)
 
 
-    const handleJoyrideCallback = () => {
-
+    const handleSurveyCallback = () => {
         setShowModal(true)
 
     }
@@ -83,7 +82,7 @@ const GuidedTourTraditional = () => {
                     ? <div className='guided-tour-div'>
                         <CustomProgressBar progress={70} />
                         <SurveyQuestions
-                            callback={handleJoyrideCallback}
+                            callback={handleSurveyCallback}
                         />
                         {showModal
                             ? <GuidedTourModal showModal={showModal} handleClick={handleTourProceed} children={<TourContinueElement />} modalWindowButton='Continue' styleClass='guided-modal-main' buttonClass='continue-button' />
