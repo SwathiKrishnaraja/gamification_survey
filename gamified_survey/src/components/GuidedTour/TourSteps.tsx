@@ -6,95 +6,61 @@ export const stepsForTour1: Step[] = [
         content: 'In this version, you are awarded badges for your progress in the survey',
         disableBeacon: true,
         spotlightPadding: 0,
+        disableOverlay: true,
     },
     {
         target: '.individual-badge',
         content: 'Hover over the badge to see the badge details',
         spotlightPadding: 0,
-        placement: 'right'
+        placement: 'left',
+        disableOverlay: true,
     },
 
     {
         target: '.progress-bar-div',
         content: 'Your progress is shown here.',
         disableBeacon: true,
-        spotlightPadding: 0
+        spotlightPadding: 0,
+        disableOverlay: true,
     },
     {
-        target: '.sv_row:nth-child(1)',
-        content: 'Few questions are in presented in the radiogroup format. Please choose one option',
-        placement: 'bottom',
-    },
-    {
-        target: '.sv_row:nth-child(2)',
-        content: 'Few questions are presented in matrix format. Please choose one option.',
-        placement: 'bottom',
-        spotlightPadding: 0
-    },
-    {
-        target: '.sv_row:nth-child(3)',
-        content: 'Few questions are presented with checkboxes. Please feel free to choose multiple options if necessary.',
-        placement: 'bottom',
-        spotlightPadding: 0
-    },
-    {
-        target: '.sv_row:nth-child(4)',
-        content: 'Few questions are presented with text area. Please provide your input in the provided text area.',
-        placement: 'top',
-        spotlightPadding: 0
-    },
-    {
-        target: '.toast',
-        content: 'You are presented with a badge based on your achievement.',
-        placement: 'bottom',
-        spotlightPadding: 0
-    },
-]
-export const stepsForTour2: Step[] = [
-    {
-        target: '.toast',
-        content: 'You are presented with a badge based on your achievement.',
+        target: '.exit-survey',
+        content: 'You have an option to exit the survey at any point in the survey. Please note that all the answers will be cleared on choosing to exit the survey.',
         disableBeacon: true,
         spotlightPadding: 0,
-        // placement: 'bottom',
+        disableOverlay: true,
     },
     {
         target: '.Badges-div',
-        content: 'The badge gets activated in the badges list',
+        content: 'On progressing in the survey, you will be notified when you unlock a new badge. The badge gets activated in the badges list. It is also possible to unlock other badges by progressing in the survey',
         spotlightPadding: 0,
         disableBeacon: true,
+        disableOverlay: true,
     },
 ]
+
 export const stepsForTraditionalTour: Step[] = [
 
     {
         target: '.progress-bar-div',
         content: 'Your progress is shown here.',
         disableBeacon: true,
-        spotlightPadding: 0
+        spotlightPadding: 0,
+        disableOverlay: true,
+    },
+    {
+        target: '.exit-survey',
+        content: 'You have an option to exit the survey at any point in the survey. Please note that all the answers will be cleared on choosing to exit the survey.',
+        disableBeacon: true,
+        spotlightPadding: 0,
+        disableOverlay: true,
     },
     {
         target: '.sv_row:nth-child(1)',
-        content: 'Few questions are in presented in the radiogroup format. Please choose one option',
+        content: 'Questions are presented in the below formats. Please choose option and click Submit to proceed to the next page',
         placement: 'bottom',
-        spotlightPadding: 0
+        spotlightPadding: 0,
+        disableOverlay: true,
     },
-    {
-        target: '.sv_row:nth-child(2)',
-        content: 'Few questions are presented in matrix format. Please choose one option.',
-        placement: 'bottom',
-        spotlightPadding: 0
-    },
-    {
-        target: '.sv_row:nth-child(3)',
-        content: 'Few questions are presented with checkboxes. Please feel free to choose multiple options if necessary.',
-        placement: 'bottom',
-        spotlightPadding: 0
-    },
-    {
-        target: '.sv_row:nth-child(4)',
-        content: 'Few questions are presented with text area. Please provide your input in the provided text area.',
-        placement: 'top',
-        spotlightPadding: 0
-    }
+
 ]

@@ -2,8 +2,8 @@ import React, { useState, Fragment } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { useTranslation } from 'react-i18next';
-import TSPage from '../content/firstVersion.png'
-import GSPage from '../content/secondVersion.png'
+import TSPage from '../content/TS.png'
+import GSPage from '../content/GS.png'
 import { useHistory } from 'react-router-dom';
 
 

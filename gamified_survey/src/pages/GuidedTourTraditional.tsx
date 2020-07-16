@@ -1,13 +1,15 @@
-import React, { Fragment, useState } from 'react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import React, { Fragment, useState } from 'react'
+import Header from '../components/Header'
+import Footer from '../components/Footer'
 import CustomProgressBar from '../components/CustomProgressBar'
-import { useTranslation } from 'react-i18next';
-import { survey } from '../survey/MockSurveyQuestions'
-import Joyride, { CallBackProps } from 'react-joyride';
+import { useTranslation } from 'react-i18next'
+import { model } from '../survey/MockSurveyQuestions'
+import * as Survey from 'survey-react'
+import Joyride, { CallBackProps } from 'react-joyride'
 import GuidedTourModal from '../components/GuidedTour/GuidedTourModal'
-import { useHistory } from 'react-router-dom';
-import { stepsForTraditionalTour } from '../components/GuidedTour/TourSteps';
+import { useHistory } from 'react-router-dom'
+import { stepsForTraditionalTour } from '../components/GuidedTour/TourSteps'
+import ExitSurvey from '../components/ExitSurvey'
 
 
 export const TourContinueElement: React.FC = () => {
@@ -24,6 +26,16 @@ export const TourContinueElement: React.FC = () => {
         </Fragment>
     )
 }
+type SurveyQuestionsProps = {
+    callback: () => void
+}
+export const SurveyQuestions = ({ callback }: SurveyQuestionsProps) => {
+    return (
+        <Survey.Survey model={model}
+            onComplete={callback}
+        />
+    )
+}
 
 const GuidedTourTraditional = () => {
     const history = useHistory()
@@ -33,11 +45,10 @@ const GuidedTourTraditional = () => {
     const [showTour, setShowTour] = useState(false)
 
 
-    const handleJoyrideCallback = (data: CallBackProps) => {
-        const { status } = data
-        if (status === 'ready') {
-            setShowModal(true)
-        }
+    const handleJoyrideCallback = () => {
+
+        setShowModal(true)
+
     }
     const handleStartTour = (event: React.MouseEvent<HTMLElement>) => {
         event.preventDefault()
@@ -53,19 +64,27 @@ const GuidedTourTraditional = () => {
     return (
         <div className="container">
             <Joyride
-                callback={handleJoyrideCallback}
                 steps={stepsForTraditionalTour}
                 run={run}
                 hideBackButton={true}
+                styles={{
+                    options: {
+                        arrowColor: '#f5f5f5',
+                        backgroundColor: '#f5f5f5',
+                        zIndex: 1000,
+                    }
+                }}
                 continuous={true} />
-            <Header children={<Fragment />} />
+            <Header children={<ExitSurvey />} />
             <div className="main-body">
                 <h2>Here is a guided tour for the first version of the survey</h2>
                 <button className='continue-button' onClick={handleStartTour}>Start Tour</button>
                 {showTour
                     ? <div className='guided-tour-div'>
                         <CustomProgressBar progress={70} />
-                        {survey}
+                        <SurveyQuestions
+                            callback={handleJoyrideCallback}
+                        />
                         {showModal
                             ? <GuidedTourModal showModal={showModal} handleClick={handleTourProceed} children={<TourContinueElement />} modalWindowButton='Continue' styleClass='guided-modal-main' buttonClass='continue-button' />
                             : <Fragment />}
