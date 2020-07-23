@@ -633,3 +633,58 @@ thead {
 .react-joyride__tooltip div button {
   background-color: #337ab7 !important;
 }
+
+/* ----------------- Leaderboard ------------------------- */
+
+.leaderBoard-body {
+  display: flex;
+  /* position: absolute; */
+}
+
+.survey-body {
+  width: 70%;
+}
+
+.points {
+  margin-top: 15px;
+  margin-left: 20px;
+  height: 50px;
+  background: #dbd9d9;
+}
+
+.points-container {
+  display: flex;
+  justify-content: space-evenly;
+  background: #337ab7;
+  width: 100px;
+  height: 30px;
+  align-items: center;
+  float: right;
+  color: white;
+  margin: 10px;
+  font-weight: bolder;
+}
+
+.leaderBoard {
+  display: flex;
+  margin-top: 20px;
+  margin-left: 20px;
+  height: 300px;
+  background-color: #dbd9d9;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-evenly;
+}
+
+.points-leaderBoards-container {
+  position: -webkit-sticky;
+  width: 30%;
+  position: sticky;
+  top: 0;
+}
+
+.leader-element {
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+}

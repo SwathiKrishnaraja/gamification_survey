@@ -10,6 +10,7 @@ import GamifiedSurvey from './pages/GamifiedSurvey'
 import TraditionalSurvey from './pages/TraditionalSurvey'
 import PreSurvey from './pages/PreSurvey'
 import ChooseVersion from './pages/ChooseVersion'
+import LeaderBoardSurvey from './pages/LeaderboardSurvey'
 import * as serviceWorker from './serviceWorker';
 import Dashboard from './pages/Dashboard'
 import PostSurvey from './pages/PostSurvey';
@@ -32,6 +33,7 @@ const Routing = () => {
       <Route path='/PreSurvey' component={PreSurvey} />
       <Route path='/Dashboard' component={Dashboard} />
       <Route path='/PostSurvey' component={PostSurvey} />
+      <Route path='/LeaderBoardSurvey' component={LeaderBoardSurvey} />
     </Router>
   )
 }
