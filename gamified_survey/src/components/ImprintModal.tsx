@@ -9,7 +9,7 @@ interface Props {
 const ImprintModal: React.FC<Props> = ({ showModal, handleClick, children, title }) => {
     const modalCss = showModal ? 'modal-open' : 'modal-close'
     return (
-        <div className={modalCss}>
+        <div data-testid='modal' className={modalCss}>
             <section className='modalMain'>
                 <div style={{
                     display: 'flex',
