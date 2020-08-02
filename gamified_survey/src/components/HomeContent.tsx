@@ -10,9 +10,14 @@ const HomeContent = () => {
   const { t } = useTranslation()
   const history = useHistory()
   const [showModal, setShowModal] = useState<boolean>(false)
+  const [hasAgreed, setHasAgreed] = useState<boolean>(false)
 
   const handleDataProtectionTagClick = () => {
     setShowModal(showModal ? false : true)
+  }
+
+  const handleCheckBoxClick = () => {
+    setHasAgreed(true)
   }
 
   return (
@@ -35,13 +40,13 @@ const HomeContent = () => {
         </div>
         <div style={{ textAlign: 'left' }}>
           <h4>*Data Protection and Participation Information</h4>
-          <input type='checkbox' />
+          <input type='checkbox' onClick={handleCheckBoxClick} />
           <label>I have read and understood the information on <a style={{ textDecoration: 'none', color: '#337ab7' }} onClick={handleDataProtectionTagClick} href='# '>data protection</a> and the participation information and agree that my data may be used anonymously for the mentioned purposes</label>
           <ImprintModal children={<ImprintContent />} handleClick={handleDataProtectionTagClick} showModal={showModal} title='Privacy and General Information' />
         </div>
 
       </div>
-      <button className="continue-button" onClick={() => history.push('/PreSurvey')}>{t('homeContent.button')}</button>
+      <button className="continue-button" onClick={() => hasAgreed ? history.push('/PreSurvey') : null}>{t('homeContent.button')}</button>
     </Fragment>
   );
 };
