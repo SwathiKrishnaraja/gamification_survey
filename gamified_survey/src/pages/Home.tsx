@@ -10,9 +10,7 @@ const Home = () => {
   return (
     <div className="container">
       <Header children={<LanguageSelection />} />
-
       <HomeContent />
-
       <Footer />
     </div>
   );
