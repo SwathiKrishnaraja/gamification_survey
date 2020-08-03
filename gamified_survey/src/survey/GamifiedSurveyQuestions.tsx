@@ -11,7 +11,13 @@ type AnswerStore = {
     id: string,
     isAnswered: boolean
 }
-const SurveyQuestions = () => {
+
+type Props = {
+    progress: number,
+    handleProgress: () => void
+}
+
+const SurveyQuestions = ({ handleProgress }: Props) => {
     const dispatch = useDispatch()
     const provideBadge = badgeProvider(dispatch)
     const store = useStore()
@@ -41,6 +47,7 @@ const SurveyQuestions = () => {
         }
     }
     const handlePageChange = (sender: Survey.SurveyModel, options: any): any => {
+        handleProgress()
         const { newCurrentPage, oldCurrentPage } = options
         // stops the time of previous page and starts the new timer
         model.stopTimer()

@@ -604,7 +604,7 @@ type Props = {
     handleProgress: () => void
 }
 
-const SurveyQuestions = ({ progress, handleProgress }: Props) => {
+const SurveyQuestions = ({ handleProgress }: Props) => {
     const history = useHistory()
     const [showModal, setShowModal] = useState(false)
     const handleClick = () => {
