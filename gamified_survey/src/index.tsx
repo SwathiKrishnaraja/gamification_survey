@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { Route, BrowserRouter as Router } from 'react-router-dom'
 import './index.css';
 import './i18n';
-import App from './App';
+import Home from './pages/Home';
 import GuidedTourTraditional from './pages/GuidedTourTraditional'
 import GuidedTourGamified from './pages/GuidedTourGamified'
 import GamifiedSurvey from './pages/GamifiedSurvey'
@@ -24,7 +24,7 @@ const store = createStore(addBadgeReducer)
 const Routing = () => {
   return (
     <Router>
-      <Route exact path='/' component={App} />
+      <Route exact path='/' component={Home} />
       <Route path='/GuidedTourTraditional' component={GuidedTourTraditional} />
       <Route path='/GuidedTourGamified' component={GuidedTourGamified} />
       <Route path='/ChooseVersion' component={ChooseVersion} />

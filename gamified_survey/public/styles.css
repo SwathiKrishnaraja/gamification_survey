@@ -232,7 +232,9 @@ p {
 }
 .mock-container {
   text-align: center;
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
   width: 90%;
   margin-top: 5px;
   height: 100vh;
