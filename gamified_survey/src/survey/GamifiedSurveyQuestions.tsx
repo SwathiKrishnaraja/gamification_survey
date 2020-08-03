@@ -52,7 +52,6 @@ const SurveyQuestions = () => {
 
         // below is the check to provide badge if the user has reached the last page of the survey
         if (newCurrentPage.name === 'page8') {
-            console.log(options);
             provideBadge.badge.fastAchiever()
         }
     }
