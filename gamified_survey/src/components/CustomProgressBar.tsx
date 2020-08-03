@@ -5,12 +5,12 @@ import { useTranslation } from 'react-i18next';
 type Props = {
   progress: number
 }
-const CustomProgressBar = (progress: Props) => {
+const CustomProgressBar = ({ progress }: Props) => {
   const { t } = useTranslation()
-  const now = progress.progress;
+  const now = progress
 
   const progressInstance = (
-    <ProgressBar className="progress-bar-div " now={now} label={`${now}%`} />
+    <ProgressBar data-testid='progress-bar' className="progress-bar-div " now={now} />
   );
   return (
     <Fragment>

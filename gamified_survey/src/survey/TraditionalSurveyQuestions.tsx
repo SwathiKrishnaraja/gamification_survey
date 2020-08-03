@@ -599,8 +599,12 @@ const json = {
     mode: "edit"
 }
 
+type Props = {
+    progress: number,
+    handleProgress: () => void
+}
 
-const SurveyQuestions = () => {
+const SurveyQuestions = ({ handleProgress }: Props) => {
     const history = useHistory()
     const [showModal, setShowModal] = useState(false)
     const handleClick = () => {
@@ -609,9 +613,10 @@ const SurveyQuestions = () => {
     const handleProceedButton = () => {
         history.push('/PostSurvey')
     }
+
     return (
         <Fragment>
-            <Survey.Survey json={json} onComplete={handleClick} />
+            <Survey.Survey json={json} onComplete={handleClick} onCurrentPageChanged={() => handleProgress()} />
             <GuidedTourModal showModal={showModal} handleClick={handleProceedButton} children={<ThanksText />} styleClass='thank-you-modal' modalWindowButton='Proceed' buttonClass='exit-survey-button' />
         </Fragment>
     )

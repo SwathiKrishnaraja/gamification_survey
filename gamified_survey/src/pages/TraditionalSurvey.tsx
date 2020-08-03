@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React, { useState } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import CustomProgressBar from '../components/CustomProgressBar'
@@ -8,12 +8,21 @@ import ExitSurvey from '../components/ExitSurvey';
 
 const TraditionalSurvey = () => {
   const { t } = useTranslation()
+  const [progress, setProgress] = useState<number>(0)
+
+  const handleProgress = () => {
+    if (progress === 88) {
+      setProgress(100)
+    } else {
+      setProgress(progress + 11)
+    }
+  }
   return (
     <div className="container">
       <Header children={<ExitSurvey />} />
       <div className="main-body">
-        <CustomProgressBar progress={70} />
-        <SurveyQuestions />
+        <CustomProgressBar progress={progress} />
+        <SurveyQuestions progress={progress} handleProgress={handleProgress} />
       </div>
 
 
