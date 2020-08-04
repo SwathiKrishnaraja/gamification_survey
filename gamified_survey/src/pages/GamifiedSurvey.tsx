@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect, useState, useMemo, useCallback } from 'react';
+import React, { useEffect, useState, useMemo, useCallback, useRef } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Badges from '../components/Badges'
@@ -11,7 +11,7 @@ import { useDispatch } from 'react-redux';
 
 const GamifiedSurvey = () => {
   const dispatch = useDispatch()
-  const provideBadge = badgeProvider(dispatch)
+  const provideBadge = useMemo(() => badgeProvider(dispatch), [dispatch])
   const [progress, setProgress] = useState<number>(0)
 
   const handleProgress = () => {
@@ -22,11 +22,9 @@ const GamifiedSurvey = () => {
     }
   }
 
-
   useEffect(() => {
     provideBadge.badge.letsGoBadge()
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
+  }, [provideBadge.badge])
 
   const { t } = useTranslation()
   return (
