@@ -1,16 +1,16 @@
 import React, { Fragment } from 'react'
 import { useTranslation } from 'react-i18next';
-import { listOfImages } from '../badges/BadgeList'
-import ShowBadge from '../components/ShowBadges'
+import { listOfMockImages } from '../../badges/BadgeList'
+import ShowBadge from '../ShowBadges'
 
-const Badges = () => {
+const GuidedTourBadges = () => {
     const { t } = useTranslation()
     return (
         <Fragment>
             <div className='Badges-div'>
                 <h2>{t('badges.title')}</h2>
-                {listOfImages.map(element =>
-                    <ShowBadge key={element.id} {...element} />
+                {listOfMockImages.map(element =>
+                    <ShowBadge key={Math.random()} {...element} />
                 )}
             </div>
             <hr style={{ width: '100%' }} />
@@ -18,4 +18,4 @@ const Badges = () => {
     )
 }
 
-export default Badges
+export default GuidedTourBadges
