@@ -3,8 +3,8 @@ import { useHistory } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import udsLogo from '../content/sic.png'
 import dfkiLogo from '../content/DFKI_Logo.jpg'
-import ImprintContent from '../components/ImprintContent'
-import ImprintModal from '../components/ImprintModal'
+import ImprintContent from './ImprintContent'
+import ImprintModal from './ImprintModal'
 import styled from 'styled-components'
 
 const PrivacyHeading = styled.h4`
