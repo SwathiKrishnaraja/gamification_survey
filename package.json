@@ -6,8 +6,8 @@
   "author": "SwathiKrishnaraja <swathikrishnaraja149@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start-server": "npx ts-node index.ts",
-    "build-server": "npx tsc",
+    "start": "npx ts-node index.ts",
+    "build": "npx tsc",
     "start-client": "cd ./client && yarn start",
     "build-client": "cd ./client && yarn build",
     "heroku-postbuild": "cd ./client && yarn build"
