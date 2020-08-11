@@ -6,10 +6,11 @@
   "author": "SwathiKrishnaraja <swathikrishnaraja149@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start-server": "cd ./server && npx ts-node index.ts",
-    "build-server": "cd ./server && npx tsc",
+    "start-server": "npx ts-node index.ts",
+    "build-server": "npx tsc",
     "start-client": "cd ./client && yarn start",
-    "build-client": "cd ./client && yarn build"
+    "build-client": "cd ./client && yarn build",
+    "heroku-postbuild": "cd ./client && yarn build"
   },
   "dependencies": {
     "@types/express": "^4.17.7",
