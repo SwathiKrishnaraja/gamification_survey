@@ -4,6 +4,7 @@ import { Questions, MatrixObject } from '../types/types'
 import { useHistory } from 'react-router-dom'
 import GuidedTourModal from '../components/GuidedTour/GuidedTourModal'
 import ThanksText from '../components/ThanksText'
+import { SurveyModel } from 'survey-react'
 const q1: Questions = {
     type: "radiogroup",
     name: 'q1',
@@ -607,8 +608,10 @@ type Props = {
 const SurveyQuestions = ({ handleProgress }: Props) => {
     const history = useHistory()
     const [showModal, setShowModal] = useState(false)
-    const handleClick = () => {
+    const handleClick = (sender: SurveyModel, options: any) => {
         setShowModal(showModal ? false : true)
+        const result = sender.data
+        console.log(sender.data)
     }
     const handleProceedButton = () => {
         history.push('/PostSurvey')
