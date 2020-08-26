@@ -20,3 +20,30 @@ CREATE TABLE participant_info
     leaderboard_position INT,
     narratives_unlocked INT
 );
+
+INSERT INTO participant_info
+    (
+    survey_mode,
+    result,
+    char_count,
+    average_time,
+    time_taken,
+    badges
+    )
+VALUES
+    (
+        'GAMIFIED_VERSION',
+        '{"q1": "No answer", "q2": "Healthy"}',
+        25,
+        6000,
+        800000,
+        5
+);
+
+
+
+
+
+-- db local start steps
+-- psql -d postgres -U api_user
+-- \c survey
