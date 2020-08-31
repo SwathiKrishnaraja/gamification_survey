@@ -4,7 +4,7 @@ CREATE TABLE "public"."Mode"
     mode VARCHAR(255) NOT NULL
 );
 
-CREATE TABLE "public"."ExitCanditatesß"
+CREATE TABLE "public"."ExitCandidates"
 (
     id SERIAL PRIMARY KEY NOT NULL,
     cases INT

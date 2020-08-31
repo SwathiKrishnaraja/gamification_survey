@@ -7,11 +7,9 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model ExitCanditates_ {
+model ExitCandidates {
   id    Int  @default(autoincrement()) @id
   cases Int?
-
-  @@map("ExitCanditatesß")
 }
 
 model Mode {
