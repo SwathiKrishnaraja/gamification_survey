@@ -129,11 +129,27 @@ const json = {
     ],
     mode: 'edit'
 }
-
+const handleNavigationOnComplete = async (history: import("history").History<import("history").History.UnknownFacade> | string[]) => {
+    const surveyModeResponse = await fetch('http://localhost:8080/mode',)
+    // const mode = await surveyModeResponse.json()
+    const response = await fetch('http://localhost:8080/mode', {
+        method: 'POST', // *GET, POST, PUT, DELETE, etc.
+        cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+        credentials: 'same-origin', // include, *same-origin, omit
+        headers: {
+            'Content-Type': 'application/json'
+            // 'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: JSON.stringify({ mode: 'GAMIFIED_VERSION' }) // body data type must match "Content-Type" header
+    });
+    console.log(response.json())
+    // console.log(mode)
+    history.push('/GuidedTourTraditional')
+}
 const SurveyQuestions = () => {
     const history = useHistory()
     return (
-        <Survey.Survey json={json} onComplete={() => history.push('/GuidedTourTraditional')} />
+        <Survey.Survey json={json} onComplete={() => handleNavigationOnComplete(history)} />
     )
 }
 export default SurveyQuestions 
