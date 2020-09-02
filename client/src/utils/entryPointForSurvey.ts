@@ -1,5 +1,7 @@
-/* This file requests the backend api to get the previous survey modes 
-and assigns the current survey mode */
+/** 
+ *  This file requests the backend api to get the previous survey modes 
+    and assigns the current survey mode 
+*/
 
 
 const modes = [
@@ -23,9 +25,9 @@ const getSurveyMode = async () => {
 const getIndexOfMode = (listOfModes: Array<string>, mode: string) =>
     listOfModes.findIndex((val) => val === mode)
 
-/* 
-    Implements a simple round robin approach to assign the survey mode 
-    @returns survey mode 
+/** 
+   * Implements a simple round robin approach to assign the survey mode 
+   * @returns survey mode 
 */
 const assignNewSurveyMode = async () => {
     let newMode
