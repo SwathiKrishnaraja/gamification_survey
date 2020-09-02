@@ -15,18 +15,28 @@ const modes = [
     'GAMIFIED_CHOICE_3'
 ]
 
-const getIndexOfMode = (listOfModes: Array<string>, mode: string) =>
-    listOfModes.findIndex((val) => val === mode)
-
-const assignNewSurveyMode = async () => {
-    const previousMode = await getSurveyMode()
-    const newMode = modes[getIndexOfMode(modes, previousMode) + 1]
-    return newMode
-}
 const getSurveyMode = async () => {
     const surveyModeResponse = await fetch('http://localhost:8080/mode')
     const modes = await surveyModeResponse.json()
     return modes.pop()
+}
+const getIndexOfMode = (listOfModes: Array<string>, mode: string) =>
+    listOfModes.findIndex((val) => val === mode)
+
+/* 
+    Implements a simple round robin approach to assign the survey mode 
+    @returns survey mode 
+*/
+const assignNewSurveyMode = async () => {
+    let newMode
+    const previousMode = await getSurveyMode()
+    const indexOfPreviousMode = getIndexOfMode(modes, previousMode)
+    if (indexOfPreviousMode === (modes.length - 1)) {
+        newMode = modes[0]
+    } else {
+        newMode = modes[indexOfPreviousMode + 1]
+    }
+    return newMode
 }
 
 export { assignNewSurveyMode }
