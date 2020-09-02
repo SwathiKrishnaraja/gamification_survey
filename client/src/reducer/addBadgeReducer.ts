@@ -1,6 +1,15 @@
+/**
+ * This file contains the redux reducer to store the badge information 
+ * of the current participant.
+ * @action 'ADD_BADGE' adds the collected badge to the store
+ * @action 'NOTIFY_BADGE' is used to render the notification pop up toast component
+ * @action 'REMOVE_BADGE' is used to remove the badge that gets added to the store
+ * during the guided tour of gamified survey.
+ */
+
 import { Badge } from '../types/types'
 
-interface BadgeAction {
+export type BadgeAction = {
     type: 'ADD_BADGE' | 'NOTIFY_BADGE' | 'REMOVE_BADGE',
     payload: Badge
 }
@@ -42,7 +51,6 @@ const addBadgeReducer = (state = defaultState, action: BadgeAction): Array<Badge
                 )
             ]
         case 'REMOVE_BADGE':
-            console.log(state)
             return [
                 ...state.filter(badge => badge.id !== payload.id)
             ]

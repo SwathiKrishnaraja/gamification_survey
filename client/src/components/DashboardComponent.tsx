@@ -2,6 +2,7 @@ import React, { Fragment } from 'react'
 import { useHistory } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import { Badge } from '../types/types'
+import { RootState } from '../reducer/reducer'
 
 type RenderBadge = {
     src: any,
@@ -10,7 +11,7 @@ type RenderBadge = {
 }
 
 const DashboardComponent = () => {
-    const listOfAchievedBadges: Array<Badge> = useSelector((state: Array<Badge>) => state)
+    const listOfAchievedBadges: Array<Badge> = useSelector((state: RootState) => state.addBadgeReducer)
     const history = useHistory()
     const handleNextButton = () => {
         history.push('/PostSurvey')
