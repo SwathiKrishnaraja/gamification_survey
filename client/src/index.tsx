@@ -15,10 +15,10 @@ import Dashboard from './pages/Dashboard'
 import PostSurvey from './pages/PostSurvey';
 import { createStore } from 'redux'
 import { Provider } from 'react-redux'
-import addBadgeReducer from './reducer/reducer'
+import rootReducer from './reducer/reducer'
 import Toast from './Toast/Toast';
 
-const store = createStore(addBadgeReducer)
+const store = createStore(rootReducer)
 
 const Routing = () => {
   return (
