@@ -1,5 +1,5 @@
 
-import { Questions } from '../types/types'
+import { Questions } from '../../types/types'
 
 
 const q1: Questions = {

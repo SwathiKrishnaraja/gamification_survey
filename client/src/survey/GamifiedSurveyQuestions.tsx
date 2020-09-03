@@ -3,7 +3,7 @@ import * as Survey from 'survey-react'
 import { useHistory } from 'react-router-dom'
 import badgeProvider from '../BadgeRules/BadgeRules';
 import { useDispatch, useSelector, useStore, shallowEqual } from 'react-redux';
-import json from './GamifiedSurveyJSON'
+import json from './json/GamifiedSurveyJSON'
 
 export const model = new Survey.Model(json);
 type AnswerStore = {

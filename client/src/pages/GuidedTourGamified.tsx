@@ -3,7 +3,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import CustomProgressBar from '../components/CustomProgressBar'
 import { useTranslation } from 'react-i18next';
-import { model } from '../survey/MockQuestionsGamified'
+import { model } from '../survey/json/MockQuestionsGamified'
 import * as Survey from 'survey-react'
 import GuidedTourModal from '../components/GuidedTour/GuidedTourModal'
 import { useHistory } from 'react-router-dom';
