@@ -67,4 +67,4 @@ const assignNewSurveyMode = async () => {
     return newMode
 }
 
-export { assignNewSurveyMode }
+export default assignNewSurveyMode 
