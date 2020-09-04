@@ -1,4 +1,4 @@
-import getCharacterCount from '../utils/getCharacterCount'
+import getCharacterCount from '../helpers/getCharacterCount'
 
 describe('getCharacterCount', () => {
     test('Should return the correct character count', () => {
