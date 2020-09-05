@@ -7,7 +7,7 @@ import ThanksText from '../components/ThanksText'
 import { SurveyModel } from 'survey-react'
 import getCharacterCount from '../helpers/getCharacterCount'
 import filterOpenQuestions from '../helpers/filterOpenQuestions'
-import submitSurveyData from '../helpers/submitSurveyData'
+import submitSurveyData from '../api/submitSurveyData'
 import getAverageTime from '../helpers/getAverageTime'
 import { useSelector } from 'react-redux'
 import { RootState } from '../reducer/reducer'
@@ -31,11 +31,13 @@ const SurveyQuestions = ({ handleProgress }: Props) => {
      */
 
     const handleSurveyCompletion = (sender: SurveyModel, options: any) => {
+        let listOfSurveyQuestions = []
         setShowModal(showModal ? false : true)
         try {
             const { timeSpent:time_taken, data } = sender
-            const average_time = getAverageTime(time_taken)
-            const char_count = getCharacterCount(filterOpenQuestions(data)) 
+            listOfSurveyQuestions.push(data)
+            const average_time = Math.round(getAverageTime(time_taken))
+            const char_count = getCharacterCount(filterOpenQuestions(listOfSurveyQuestions)) 
             const result =  data
             submitSurveyData({survey_mode,char_count,time_taken,average_time, result})
             
