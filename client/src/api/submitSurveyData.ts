@@ -13,7 +13,7 @@ type DataType = {
 }
 
 const submitSurveyData = async (data: DataType) => {
-    const response = await fetch('http://localhost:8080', {
+    const response = await fetch('http://localhost:8080/submit', {
         method: 'POST',
         cache: 'no-cache', 
         headers: {
