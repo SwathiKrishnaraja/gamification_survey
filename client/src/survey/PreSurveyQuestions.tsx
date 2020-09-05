@@ -28,7 +28,6 @@ const getNavigationPath = (surveyMode: string): string => {
 
 const SurveyQuestions: React.FC = () => {
     const surveyMode: string = useSelector((state: RootState) => state.entryPointReducer.mode)
-    const dispatch: Dispatch<AddModeActionType> = useDispatch()
     const history = useHistory()
     const path = getNavigationPath(surveyMode)
 
