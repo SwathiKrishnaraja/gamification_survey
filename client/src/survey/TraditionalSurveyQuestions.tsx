@@ -5,6 +5,12 @@ import { useHistory } from 'react-router-dom'
 import GuidedTourModal from '../components/GuidedTour/GuidedTourModal'
 import ThanksText from '../components/ThanksText'
 import { SurveyModel } from 'survey-react'
+import getCharacterCount from '../helpers/getCharacterCount'
+import filterOpenQuestions from '../helpers/filterOpenQuestions'
+import submitSurveyData from '../helpers/submitSurveyData'
+import getAverageTime from '../helpers/getAverageTime'
+import { useSelector } from 'react-redux'
+import { RootState } from '../reducer/reducer'
 
 
 type Props = {
@@ -15,11 +21,27 @@ type Props = {
 const SurveyQuestions = ({ handleProgress }: Props) => {
     const history = useHistory()
     const [showModal, setShowModal] = useState(false)
+    const survey_mode = useSelector((state:RootState) => state.entryPointReducer.mode)
 
+    /**
+     * 
+     * @param sender 
+     * @param options
+     * @event calls submitSurveyData to store the details to the database 
+     */
 
     const handleSurveyCompletion = (sender: SurveyModel, options: any) => {
-        const { timeSpent } = sender
         setShowModal(showModal ? false : true)
+        try {
+            const { timeSpent:time_taken, data } = sender
+            const average_time = getAverageTime(time_taken)
+            const char_count = getCharacterCount(filterOpenQuestions(data)) 
+            const result =  data
+            submitSurveyData({survey_mode,char_count,time_taken,average_time, result})
+            
+        } catch (error) {
+            throw(error)
+        }
     }
     const handleProceedButton = () => {
         history.push('/PostSurvey')
