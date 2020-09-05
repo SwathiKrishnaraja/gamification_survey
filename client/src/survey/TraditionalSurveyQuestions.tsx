@@ -8,6 +8,7 @@ import { SurveyModel } from 'survey-react'
 import getCharacterCount from '../helpers/getCharacterCount'
 import filterOpenQuestions from '../helpers/filterOpenQuestions'
 import submitSurveyData from '../api/submitSurveyData'
+import postSurveyMode from '../api/postSurveyMode'
 import getAverageTime from '../helpers/getAverageTime'
 import { useSelector } from 'react-redux'
 import { RootState } from '../reducer/reducer'
@@ -40,6 +41,7 @@ const SurveyQuestions = ({ handleProgress }: Props) => {
             const char_count = getCharacterCount(filterOpenQuestions(listOfSurveyQuestions)) 
             const result =  data
             submitSurveyData({survey_mode,char_count,time_taken,average_time, result})
+            postSurveyMode({mode: survey_mode})
             
         } catch (error) {
             throw(error)
