@@ -21,7 +21,7 @@ model Participants {
   id                   Int    @default(autoincrement()) @id
   survey_mode          String
   result               Json?
-  char_count           Int?
+  char_count           Json?
   average_time         Int?
   time_taken           Int?
   badges               Int?
