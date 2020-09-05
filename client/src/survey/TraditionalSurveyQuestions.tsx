@@ -29,6 +29,7 @@ const SurveyQuestions = ({ handleProgress }: Props) => {
      * @param sender 
      * @param options
      * @event calls submitSurveyData to store the details to the database 
+     * @event calls postSurveyMode to post the survey mode to postgres
      */
 
     const handleSurveyCompletion = (sender: SurveyModel, options: any) => {
