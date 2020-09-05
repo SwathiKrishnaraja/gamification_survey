@@ -36,3 +36,11 @@ export interface Badge {
     isAchieved: boolean
     isNotified: boolean
 }
+
+export type SurveyQuestionsType = {
+    [key:string]:string
+}
+
+export type OpenQuestions = {
+    [key: string]: string | number
+}
