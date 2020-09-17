@@ -22,8 +22,6 @@ export const TourContinueElement: React.FC = () => {
             <h4>
                 <br />
             You have finished the Guided tour of first version.
-            <br />
-            Now please proceed to the second version.
             </h4>
         </Fragment>
     )
