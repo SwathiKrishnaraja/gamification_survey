@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react'
 import * as Survey from 'survey-react'
-import { Questions, MatrixObject } from '../types/types'
+import { Questions, MatrixObject } from '../../types/types'
 
 const q1: Questions = {
     type: "radiogroup",
@@ -76,7 +76,7 @@ const q4: Questions = {
 const json = {
     "completeText": "Submit",
     showPrevButton: false,
-    showCompletedPage: false,
+    // showCompletedPage: false,
     "pages": [
         {
             "elements": [

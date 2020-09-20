@@ -3,7 +3,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import CustomProgressBar from '../components/CustomProgressBar'
 import { useTranslation } from 'react-i18next';
-import { model } from '../survey/MockQuestionsGamified'
+import { model } from '../survey/json/MockQuestionsGamified'
 import * as Survey from 'survey-react'
 import GuidedTourModal from '../components/GuidedTour/GuidedTourModal'
 import { useHistory } from 'react-router-dom';
@@ -11,8 +11,9 @@ import Joyride, { CallBackProps } from 'react-joyride';
 import GuidedTourBadges from '../components/GuidedTour/GuidedTourBadges'
 import { stepsForTour1 } from '../components/GuidedTour/TourSteps'
 import { listOfMockImages } from '../badges/BadgeList'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import ExitSurvey from '../components/ExitSurvey'
+import { RootState } from '../reducer/reducer';
 
 const TourContinueElement: React.FC = () => {
     return (
@@ -35,6 +36,22 @@ export const SurveyQuestions = () => {
     )
 }
 
+/**
+ * 
+ * @param surveyMode
+ * @returns the navigation path as a string
+ */
+const getNavigationPath = (surveyMode: string): string => {
+    switch (surveyMode) {
+        case 'GAMIFIED':
+            return '/GamifiedSurvey'
+        case 'TRADITIONAL_GAMIFIED':
+            return '/ChooseVersion'
+        default:
+            return '/GamifiedSurvey'
+    }
+}
+
 const GuidedTourGamified = () => {
     const dispatch = useDispatch()
     const { t } = useTranslation()
@@ -42,6 +59,7 @@ const GuidedTourGamified = () => {
     const [runTour1, setRunTour1] = useState(false)
     const [showModal, setShowModal] = useState(false)
     const [showTour, setShowTour] = useState(false)
+    const surveyMode = useSelector((state: RootState) => state.entryPointReducer.mode)
 
     const handleJoyrideCallbackForTour1 = (data: CallBackProps) => {
         const { index, status } = data
@@ -62,7 +80,8 @@ const GuidedTourGamified = () => {
 
     const handleTourProceed = () => {
         dispatch({ type: 'REMOVE_BADGE', payload: listOfMockImages[0] })
-        history.push('/ChooseVersion')
+        const path = getNavigationPath(surveyMode)
+        history.push(path)
     }
 
     return (

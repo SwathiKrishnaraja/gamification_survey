@@ -6,6 +6,8 @@ import dfkiLogo from '../content/DFKI_Logo.jpg'
 import ImprintContent from './ImprintContent'
 import ImprintModal from './ImprintModal'
 import styled from 'styled-components'
+import { useDispatch } from 'react-redux';
+import assignSurveyMode from '../helpers/entryPointForSurvey'
 
 const PrivacyHeading = styled.h4`
 color: ${props => props.color}
@@ -17,6 +19,7 @@ const HomeContent = () => {
   const [showModal, setShowModal] = useState<boolean>(false)
   const [hasAgreed, setHasAgreed] = useState<boolean>(false)
   const [isChecked, setIsChecked] = useState<boolean>(true)
+  const dispatch = useDispatch()
 
   const handleDataProtectionTagClick = () => {
     setShowModal(showModal ? false : true)
@@ -25,6 +28,28 @@ const HomeContent = () => {
   const handleCheckBoxClick = () => {
     setHasAgreed(hasAgreed ? false : true)
   }
+
+  const addSurveyModeToStore = async () => {
+    const surveyMode = await assignSurveyMode()
+    dispatch({ type: 'ADD_BADGE', payload: surveyMode })
+  }
+
+
+  /**
+   * On click of continue the following events are triggered
+   * @event Get the current survey mode
+   * @event Dispatch the survey mode to redux store
+   * @event Navigate the user to the next page conditionally
+   */
+  const handleProceed = () => {
+    addSurveyModeToStore()
+    if (hasAgreed) {
+      history.push('/PreSurvey')
+    } else {
+      setIsChecked(false)
+    }
+  }
+
 
   return (
     <Fragment>
@@ -52,7 +77,7 @@ const HomeContent = () => {
         </div>
 
       </div>
-      <button data-testid='proceed-button' className="continue-button" onClick={() => hasAgreed ? history.push('/PreSurvey') : setIsChecked(false)}>{t('homeContent.button')}</button>
+      <button data-testid='proceed-button' className="continue-button" onClick={handleProceed}>{t('homeContent.button')}</button>
     </Fragment>
   );
 };

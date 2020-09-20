@@ -1,10 +1,21 @@
 import React, { useState, Fragment } from 'react'
 import GuidedTourModal from './GuidedTour/GuidedTourModal'
+import ExitSurveyModal from './modal/ExitSurveyModal'
+import postExitCase from '../api/postExitCase'
 
 const ExitSurvey: React.FC = () => {
     const [showModal, setShowModal] = useState(false)
-    const handleClick = () => {
+    const handleCancelButton = () => {
         setShowModal(showModal ? false : true)
+    }
+
+    const handleConfirmationButton = () => {
+        try {
+            postExitCase()
+        } catch (error) {
+            throw error
+        }
+        window.close()
     }
 
     const ConfirmMessage = () => {
@@ -26,8 +37,8 @@ const ExitSurvey: React.FC = () => {
 
     return (
         <Fragment>
-            <a className='exit-survey' href='# ' onClick={handleClick}>Exit and clear survey</a>
-            <GuidedTourModal showModal={showModal} handleClick={handleClick} children={<ConfirmMessage />} styleClass='exit-survey-modal' modalCancelButton='Cancel' modalWindowButton='Ok' buttonClass='exit-survey-button' />
+            <a className='exit-survey' href='# ' onClick={handleCancelButton}>Exit and clear survey</a>
+            <ExitSurveyModal showModal={showModal} handleCancelButton={handleCancelButton} handleConfirmationButton={handleConfirmationButton} children={<ConfirmMessage />} styleClass='exit-survey-modal' modalCancelButton='Cancel' modalWindowButton='Ok' buttonClass='exit-survey-button' />
         </Fragment>
     )
 }

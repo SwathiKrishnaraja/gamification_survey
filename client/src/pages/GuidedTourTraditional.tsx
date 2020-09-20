@@ -3,13 +3,15 @@ import Header from '../components/Header'
 import Footer from '../components/Footer'
 import CustomProgressBar from '../components/CustomProgressBar'
 import { useTranslation } from 'react-i18next'
-import { model } from '../survey/MockQuestionsTraditional'
+import { model } from '../survey/json/MockQuestionsTraditional'
 import * as Survey from 'survey-react'
 import Joyride, { CallBackProps } from 'react-joyride'
 import GuidedTourModal from '../components/GuidedTour/GuidedTourModal'
 import { useHistory } from 'react-router-dom'
 import { stepsForTraditionalTour } from '../components/GuidedTour/TourSteps'
 import ExitSurvey from '../components/ExitSurvey'
+import { useSelector } from 'react-redux'
+import { RootState } from '../reducer/reducer'
 
 
 export const TourContinueElement: React.FC = () => {
@@ -20,8 +22,6 @@ export const TourContinueElement: React.FC = () => {
             <h4>
                 <br />
             You have finished the Guided tour of first version.
-            <br />
-            Now please proceed to the second version.
             </h4>
         </Fragment>
     )
@@ -37,12 +37,28 @@ export const SurveyQuestions = ({ callback }: SurveyQuestionsProps) => {
     )
 }
 
+/**
+ * 
+ * @param surveyMode
+ * @returns the navigation path as a string
+ */
+const getNavigationPath = (surveyMode: string): string => {
+    switch (surveyMode) {
+        case 'TRADITIONAL':
+            return '/TraditionalSurvey'
+        case 'TRADITIONAL_GAMIFIED':
+            return '/GuidedTourGamified'
+        default:
+            return '/TraditionalSurvey'
+    }
+}
 const GuidedTourTraditional = () => {
     const history = useHistory()
     const { t } = useTranslation()
     const [run, setRun] = useState(false)
     const [showModal, setShowModal] = useState(false)
     const [showTour, setShowTour] = useState(false)
+    const surveyMode = useSelector((state: RootState) => state.entryPointReducer.mode)
 
 
     const handleSurveyCallback = () => {
@@ -56,7 +72,8 @@ const GuidedTourTraditional = () => {
     }
 
     const handleTourProceed = () => {
-        history.push('/GuidedTourGamified')
+        const path = getNavigationPath(surveyMode)
+        history.push(path)
     }
 
 
