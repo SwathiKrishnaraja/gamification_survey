@@ -6,8 +6,7 @@ CREATE TABLE "public"."Mode"
 
 CREATE TABLE "public"."ExitCandidates"
 (
-    id SERIAL PRIMARY KEY NOT NULL,
-    cases INT
+    id SERIAL PRIMARY KEY NOT NULL
 );
 
 CREATE TABLE "public"."Participants"

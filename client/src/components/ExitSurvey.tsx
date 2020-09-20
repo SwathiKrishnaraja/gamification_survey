@@ -2,20 +2,22 @@ import React, { useState, Fragment } from 'react'
 import GuidedTourModal from './GuidedTour/GuidedTourModal'
 import ExitSurveyModal from './modal/ExitSurveyModal'
 import postExitCase from '../api/postExitCase'
+import { useHistory } from 'react-router'
 
 const ExitSurvey: React.FC = () => {
+    const history = useHistory()
     const [showModal, setShowModal] = useState(false)
     const handleCancelButton = () => {
         setShowModal(showModal ? false : true)
     }
 
-    const handleConfirmationButton = () => {
+    const handleConfirmationButton = async () => {
         try {
-            postExitCase()
+            await postExitCase()
         } catch (error) {
             throw error
         }
-        window.close()
+        history.push('/')
     }
 
     const ConfirmMessage = () => {

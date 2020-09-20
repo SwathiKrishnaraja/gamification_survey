@@ -8,14 +8,13 @@ const prisma = new PrismaClient()
 const app: express.Application = express()
 const PORT = process.env.PORT || 8080
 
-app.use(express.static(`${path.resolve('./')}/client/build`))
+app.use(express.static(`${path.resolve("./")}/client/build`))
 app.use(bodyParser.json())
 
 app.post('/exit', async (req: Request, res: Response) => {
     try {
         const data = await req.body
         const exitCase = await prisma.exitCandidates.create({
-            data: data
         })
         res.send({
             status: 200,

@@ -8,8 +8,7 @@ datasource db {
 }
 
 model ExitCandidates {
-  id    Int  @default(autoincrement()) @id
-  cases Int?
+  id Int @default(autoincrement()) @id
 }
 
 model Mode {
