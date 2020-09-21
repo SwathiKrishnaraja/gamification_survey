@@ -1,11 +1,38 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import CustomProgressBar from '../components/CustomProgressBar'
-import SurveyQuestions from '../survey/GamifiedSurveyQuestions'
+import SurveyQuestions from '../survey/LeaderBoardSurveyQuestions'
 import ExitSurvey from '../components/ExitSurvey';
+import { listOfImages } from '../badges/BadgeList';
+
+
+const createABarGraphElement = (name: string, points: number, height: number): React.ReactElement =>
+    <div className='leader-element' >
+        <span> {points}</span >
+        <div style={{ width: 40, height: height, backgroundColor: '#337ab7', marginLeft: 10 }}></div>
+        <span>{name}</span>
+    </div >
+
+const zeus = createABarGraphElement('zeus', 2200, 220)
+const ron = createABarGraphElement('ron', 800, 80)
+const han = createABarGraphElement('han', 1200, 120)
+const jonas = createABarGraphElement('jonas', 500, 50)
+
+
 
 const LeaderBoardSurvey = () => {
+    const [points, setPoints] = useState<number>(100)
+    const [height, setHeight] = useState<number>(20)
+
+    const user: React.ReactElement = createABarGraphElement('You', points, height)
+
+    const listOfComponents: Array<React.ReactElement> = [zeus, ron, han, jonas, user]
+    const renderSortedComponents = (componentList: Array<React.ReactElement>) =>
+        componentList.sort(
+            (a, b) => (Number(b.props.children[0].props.children[1]) - Number(a.props.children[0].props.children[1]))
+        )
+
 
     return (
         <div className="container">
@@ -20,35 +47,11 @@ const LeaderBoardSurvey = () => {
                         <div className='points'>
                             <div className='points-container'>
                                 <span>Points</span>
-                                <span>1500</span>
+                                <span>{points}</span>
                             </div>
                         </div>
                         <div className='leaderBoard'>
-                            <div className='leader-element'>
-                                <span>2200</span>
-                                <div style={{ width: 40, height: 220, backgroundColor: '#337ab7', marginLeft: 10 }}></div>
-                                <span>Zeus</span>
-                            </div>
-                            <div className='leader-element'>
-                                <span>1500</span>
-                                <div style={{ width: 40, height: 150, backgroundColor: 'blue', marginLeft: 10 }}></div>
-                                <span>You</span>
-                            </div>
-                            <div className='leader-element'>
-                                <span>1000</span>
-                                <div style={{ width: 40, height: 100, backgroundColor: '#337ab7', marginLeft: 10 }}></div>
-                                <span>Ron</span>
-                            </div>
-                            <div className='leader-element'>
-                                <span> 800</span>
-                                <div style={{ width: 40, height: 80, backgroundColor: '#337ab7', marginLeft: 10 }}></div>
-                                <span>Jonas</span>
-                            </div>
-                            <div className='leader-element'>
-                                <span> 500</span>
-                                <div style={{ width: 40, height: 50, backgroundColor: '#337ab7', marginLeft: 10 }}></div>
-                                <span>Han</span>
-                            </div>
+                            {renderSortedComponents(listOfComponents)}
                         </div>
                     </div>
                 </div>
@@ -60,3 +63,5 @@ const LeaderBoardSurvey = () => {
 };
 
 export default LeaderBoardSurvey
+
+
