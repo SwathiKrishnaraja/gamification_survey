@@ -7,10 +7,10 @@ import ExitSurvey from '../components/ExitSurvey';
 import { listOfImages } from '../badges/BadgeList';
 
 
-const createABarGraphElement = (name: string, points: number, height: number): React.ReactElement =>
+const createABarGraphElement = (name: string, points: number, height: number, color: string = '#337ab7'): React.ReactElement =>
     <div className='leader-element' key={Math.random()} >
         <span> {points}</span >
-        <div style={{ width: 40, height: height, backgroundColor: '#337ab7', marginLeft: 10 }}></div>
+        <div style={{ width: 40, height: height, backgroundColor: color, marginLeft: 10 }}></div>
         <span>{name}</span>
     </div >
 
@@ -25,7 +25,7 @@ const LeaderBoardSurvey = () => {
     const [points, setPoints] = useState<number>(100)
     const [height, setHeight] = useState<number>(20)
 
-    const user: React.ReactElement = createABarGraphElement('You', points, height)
+    const user: React.ReactElement = createABarGraphElement('You', points, height, 'blue')
 
     const listOfComponents: Array<React.ReactElement> = [zeus, ron, han, jonas, user]
     const renderSortedComponents = (componentList: Array<React.ReactElement>) =>
