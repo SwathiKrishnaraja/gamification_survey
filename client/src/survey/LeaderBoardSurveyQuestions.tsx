@@ -19,7 +19,7 @@ type Props = {
     handleProgress: () => void
 }
 
-const SurveyQuestions = () => {
+const SurveyQuestions = ({ progress, handleProgress }: Props) => {
     const history = useHistory()
     const [showModal, setShowModal] = useState(false)
     const survey_mode = useSelector((state: RootState) => state.entryPointReducer.mode)
@@ -53,7 +53,7 @@ const SurveyQuestions = () => {
     }
 
     const handlePageChange = (sender: SurveyModel, options: any) => {
-        // handleProgress()
+        handleProgress()
         const { currentPageNo } = sender
         if (currentPageNo === 1) {
             sender.startTimer()

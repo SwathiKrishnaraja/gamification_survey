@@ -3,8 +3,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import CustomProgressBar from '../components/CustomProgressBar'
 import SurveyQuestions from '../survey/LeaderBoardSurveyQuestions'
-import ExitSurvey from '../components/ExitSurvey';
-import { listOfImages } from '../badges/BadgeList';
+import ExitSurvey from '../components/ExitSurvey'
 
 
 const createABarGraphElement = (name: string, points: number, height: number, color: string = '#337ab7'): React.ReactElement =>
@@ -24,6 +23,16 @@ const jonas = createABarGraphElement('jonas', 500, 50)
 const LeaderBoardSurvey = () => {
     const [points, setPoints] = useState<number>(100)
     const [height, setHeight] = useState<number>(20)
+    const [progress, setProgress] = useState<number>(0)
+
+
+    const handleProgress = () => {
+        if (progress === 88) {
+            setProgress(100)
+        } else {
+            setProgress(progress + 11)
+        }
+    }
 
     const user: React.ReactElement = createABarGraphElement('You', points, height, 'blue')
 
@@ -38,10 +47,10 @@ const LeaderBoardSurvey = () => {
         <div className="container">
             <Header children={<ExitSurvey />} />
             <div className="main-body">
-                <CustomProgressBar progress={70} />
+                <CustomProgressBar progress={progress} />
                 <div className='leaderBoard-body'>
                     <div className='survey-body'>
-                        <SurveyQuestions />
+                        <SurveyQuestions progress={progress} handleProgress={handleProgress} />
                     </div>
                     <div className='points-leaderBoards-container'>
                         <div className='points'>
