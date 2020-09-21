@@ -8,7 +8,7 @@ import { listOfImages } from '../badges/BadgeList';
 
 
 const createABarGraphElement = (name: string, points: number, height: number): React.ReactElement =>
-    <div className='leader-element' >
+    <div className='leader-element' key={Math.random()} >
         <span> {points}</span >
         <div style={{ width: 40, height: height, backgroundColor: '#337ab7', marginLeft: 10 }}></div>
         <span>{name}</span>
