@@ -4,6 +4,8 @@ import Footer from '../components/Footer';
 import CustomProgressBar from '../components/CustomProgressBar'
 import SurveyQuestions from '../survey/LeaderBoardSurveyQuestions'
 import ExitSurvey from '../components/ExitSurvey'
+import { useDispatch, useSelector } from 'react-redux';
+import { RootState } from '../reducer/reducer';
 
 
 const createABarGraphElement = (name: string, points: number, height: number, color: string = '#337ab7'): React.ReactElement =>
@@ -21,9 +23,9 @@ const jonas = createABarGraphElement('jonas', 500, 50)
 
 
 const LeaderBoardSurvey = () => {
-    const [points, setPoints] = useState<number>(100)
-    const [height, setHeight] = useState<number>(20)
     const [progress, setProgress] = useState<number>(0)
+    const dispatch = useDispatch()
+    const pointsFromReduxStore = useSelector((state: RootState) => state.addPointsReducer)
 
 
     const handleProgress = () => {
@@ -34,7 +36,7 @@ const LeaderBoardSurvey = () => {
         }
     }
 
-    const user: React.ReactElement = createABarGraphElement('You', points, height, 'blue')
+    const user: React.ReactElement = createABarGraphElement('You', pointsFromReduxStore, (pointsFromReduxStore / 10), 'blue')
 
     const listOfComponents: Array<React.ReactElement> = [zeus, ron, han, jonas, user]
     const renderSortedComponents = (componentList: Array<React.ReactElement>) =>
@@ -43,6 +45,11 @@ const LeaderBoardSurvey = () => {
         )
 
 
+
+    useEffect(() => {
+        dispatch({ type: 'ADD_POINTS', payload: 100 })
+
+    }, [dispatch])
     return (
         <div className="container">
             <Header children={<ExitSurvey />} />
@@ -56,7 +63,7 @@ const LeaderBoardSurvey = () => {
                         <div className='points'>
                             <div className='points-container'>
                                 <span>Points</span>
-                                <span>{points}</span>
+                                <span>{pointsFromReduxStore}</span>
                             </div>
                         </div>
                         <div className='leaderBoard'>
