@@ -77,11 +77,6 @@ const SurveyQuestions = ({ progress, handleProgress }: Props) => {
 
     // below check is to provide the badge if all the questions in the last page is answered
     useEffect(() => {
-        if (answerStore
-            .filter(element => listOfLastPageQuestions.includes(element.name))
-            .length === 2) {
-            dispatch({ type: 'ADD_POINTS', payload: 100 })
-        }
         if (isTactician === 8) {
             setIsTactician(0)
             dispatch({ type: 'ADD_POINTS', payload: 100 })
@@ -111,6 +106,11 @@ const SurveyQuestions = ({ progress, handleProgress }: Props) => {
     }, [count, dispatch, store])
 
     const handleSurveyCompletion = () => {
+        if (answerStore
+            .filter(element => listOfLastPageQuestions.includes(element.name))
+            .length === 2) {
+            dispatch({ type: 'ADD_POINTS', payload: 100 })
+        }
         dispatch({ type: 'ADD_POINTS', payload: 100 })
         history.push('/Dashboard')
     }
