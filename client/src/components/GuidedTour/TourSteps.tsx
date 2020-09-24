@@ -64,3 +64,43 @@ export const stepsForTraditionalTour: Step[] = [
     },
 
 ]
+
+export const stepsForLeaderboardTour: Step[] = [
+
+    {
+        target: '.progress-bar-div',
+        content: 'Your progress is shown here.',
+        disableBeacon: true,
+        spotlightPadding: 0,
+        disableOverlay: true,
+    },
+    {
+        target: '.exit-survey',
+        content: 'You have an option to exit the survey at any point in the survey. Please note that all the answers will be cleared on choosing to exit the survey.',
+        disableBeacon: true,
+        spotlightPadding: 0,
+        disableOverlay: true,
+    },
+    {
+        target: '.sv_row:nth-child(2)',
+        content: 'Questions are presented in the below formats. Please choose option and click Submit to proceed to the next page',
+        placement: 'bottom',
+        spotlightPadding: 0,
+        disableOverlay: true,
+    },
+    {
+        target: '.points-container',
+        content: 'The points you collected is shown here.',
+        placement: 'bottom',
+        spotlightPadding: 0,
+        disableOverlay: true,
+    },
+    {
+        target: '.leaderBoard',
+        content: 'Your can view your position in the leaderboard here.',
+        placement: 'bottom',
+        spotlightPadding: 0,
+        disableOverlay: true,
+    }
+
+]

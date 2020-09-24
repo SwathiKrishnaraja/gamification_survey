@@ -18,6 +18,7 @@ import { createStore } from 'redux'
 import { Provider } from 'react-redux'
 import rootReducer from './reducer/reducer'
 import Toast from './Toast/Toast';
+import GuidedTourLeaderboard from './pages/GuidedTourLeaderboard';
 
 const store = createStore(rootReducer)
 
@@ -27,6 +28,7 @@ const Routing = () => {
       <Route exact path='/' component={Home} />
       <Route path='/GuidedTourTraditional' component={GuidedTourTraditional} />
       <Route path='/GuidedTourGamified' component={GuidedTourGamified} />
+      <Route path='/GuidedTourLeaderboard' component={GuidedTourLeaderboard} />
       <Route path='/ChooseVersion' component={ChooseVersion} />
       <Route path='/GamifiedSurvey' component={GamifiedSurvey} />
       <Route path='/TraditionalSurvey' component={TraditionalSurvey} />
