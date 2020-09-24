@@ -7,26 +7,14 @@ import ExitSurvey from '../components/ExitSurvey'
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '../reducer/reducer';
 import LeaderboardComponent from '../components/LeaderboardComponent'
-
-
-const createABarGraphElement = (name: string, points: number, height: number, color: string = '#337ab7'): React.ReactElement =>
-    <div className='leader-element' key={Math.random()} >
-        <span> {points}</span >
-        <div style={{ width: 40, height: height, backgroundColor: color, marginLeft: 10 }}></div>
-        <span>{name}</span>
-    </div >
-
-const zeus = createABarGraphElement('zeus', 2200, 220)
-const ron = createABarGraphElement('ron', 800, 80)
-const han = createABarGraphElement('han', 1200, 120)
-const jonas = createABarGraphElement('jonas', 500, 50)
+import createABarGraphElement, { barGraphElements } from '../helpers/createLeaderboardElements'
 
 
 const LeaderBoardSurvey = () => {
     const [progress, setProgress] = useState<number>(0)
     const dispatch = useDispatch()
     const pointsFromReduxStore = useSelector((state: RootState) => state.addPointsReducer)
-
+    const { zeus, ron, han, jonas } = barGraphElements
 
     const handleProgress = () => {
         if (progress === 88) {
