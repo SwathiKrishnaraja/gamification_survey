@@ -3,6 +3,8 @@ import GuidedTourModal from './GuidedTour/GuidedTourModal'
 import ExitSurveyModal from './modal/ExitSurveyModal'
 import postExitCase from '../api/postExitCase'
 import { useHistory } from 'react-router'
+import { useSelector } from 'react-redux'
+import { RootState } from '../reducer/reducer'
 
 const ExitSurvey: React.FC = () => {
     const history = useHistory()
@@ -11,9 +13,10 @@ const ExitSurvey: React.FC = () => {
         setShowModal(showModal ? false : true)
     }
 
+    const mode = useSelector((state: RootState) => state.entryPointReducer.mode)
     const handleConfirmationButton = async () => {
         try {
-            await postExitCase()
+            await postExitCase({ mode })
         } catch (error) {
             throw error
         }
