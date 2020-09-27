@@ -29,7 +29,6 @@ const modes = [
     'GAMIFIED_CHOICE_3'
 ]
 
-}
 const getIndexOfMode = (listOfModes: Array<string>, { mode }: SurveyMode) =>
     listOfModes.findIndex((val) => val === mode)
 
