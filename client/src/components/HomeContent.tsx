@@ -7,7 +7,7 @@ import ImprintContent from './ImprintContent'
 import ImprintModal from './ImprintModal'
 import styled from 'styled-components'
 import { useDispatch } from 'react-redux';
-import assignSurveyMode from '../helpers/entryPointForSurvey'
+import assignSurveyMode from '../helpers/assignSurveyMode'
 
 const PrivacyHeading = styled.h4`
 color: ${props => props.color}
@@ -31,7 +31,7 @@ const HomeContent = () => {
 
   const addSurveyModeToStore = async () => {
     const surveyMode = await assignSurveyMode()
-    dispatch({ type: 'ADD_BADGE', payload: surveyMode })
+    dispatch({ type: 'ADD_MODE', payload: surveyMode })
   }
 
 

@@ -10,6 +10,7 @@ import GamifiedSurvey from './pages/GamifiedSurvey'
 import TraditionalSurvey from './pages/TraditionalSurvey'
 import PreSurvey from './pages/PreSurvey'
 import ChooseVersion from './pages/ChooseVersion'
+import LeaderBoardSurvey from './pages/LeaderboardSurvey'
 import * as serviceWorker from './serviceWorker';
 import Dashboard from './pages/Dashboard'
 import PostSurvey from './pages/PostSurvey';
@@ -17,6 +18,8 @@ import { createStore } from 'redux'
 import { Provider } from 'react-redux'
 import rootReducer from './reducer/reducer'
 import Toast from './Toast/Toast';
+import GuidedTourLeaderboard from './pages/GuidedTourLeaderboard';
+import ChooseGamifiedVersion from './pages/ChooseGamifiedVersion';
 
 const store = createStore(rootReducer)
 
@@ -26,12 +29,15 @@ const Routing = () => {
       <Route exact path='/' component={Home} />
       <Route path='/GuidedTourTraditional' component={GuidedTourTraditional} />
       <Route path='/GuidedTourGamified' component={GuidedTourGamified} />
+      <Route path='/GuidedTourLeaderboard' component={GuidedTourLeaderboard} />
+      <Route path='/ChooseGamifiedVersion' component={ChooseGamifiedVersion} />
       <Route path='/ChooseVersion' component={ChooseVersion} />
       <Route path='/GamifiedSurvey' component={GamifiedSurvey} />
       <Route path='/TraditionalSurvey' component={TraditionalSurvey} />
       <Route path='/PreSurvey' component={PreSurvey} />
       <Route path='/Dashboard' component={Dashboard} />
       <Route path='/PostSurvey' component={PostSurvey} />
+      <Route path='/LeaderBoardSurvey' component={LeaderBoardSurvey} />
     </Router>
   )
 }

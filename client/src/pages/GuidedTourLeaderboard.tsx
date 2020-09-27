@@ -3,17 +3,19 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import CustomProgressBar from '../components/CustomProgressBar'
 import { useTranslation } from 'react-i18next';
-import { model } from '../survey/json/MockQuestionsGamified'
+import { model } from '../survey/json/MockQuestionsLeaderboard'
 import * as Survey from 'survey-react'
 import GuidedTourModal from '../components/GuidedTour/GuidedTourModal'
 import { useHistory } from 'react-router-dom';
 import Joyride, { CallBackProps } from 'react-joyride';
 import GuidedTourBadges from '../components/GuidedTour/GuidedTourBadges'
-import { stepsForTour1 } from '../components/GuidedTour/TourSteps'
+import { stepsForLeaderboardTour } from '../components/GuidedTour/TourSteps'
 import { listOfMockImages } from '../badges/BadgeList'
 import { useDispatch, useSelector } from 'react-redux'
 import ExitSurvey from '../components/ExitSurvey'
-import { RootState } from '../reducer/reducer';
+import { RootState } from '../reducer/reducer'
+import createABarGraphElement, { barGraphElements } from '../helpers/createLeaderboardElements'
+import LeaderboardComponent from '../components/LeaderboardComponent';
 
 const TourContinueElement: React.FC = () => {
     return (
@@ -43,24 +45,18 @@ export const SurveyQuestions = () => {
  */
 const getNavigationPath = (surveyMode: string): string => {
     switch (surveyMode) {
-        case 'GAMIFIED':
-            return '/GamifiedSurvey'
-        case 'TRADITIONAL_GAMIFIED_1':
-            return '/ChooseVersion'
-        case 'TRADITIONAL_GAMIFIED_2':
-            return '/ChooseVersion'
-        case 'GAMIFIED_WITH_BADGES':
-            return '/GamifiedSurvey'
+        case 'GAMIFIED_WITH_POINTS':
+            return '/LeaderBoardSurvey'
         case 'GAMIFIED_CHOICE_1':
-            return '/GuidedTourLeaderboard'
+            return '/ChooseGamifiedVersion'
         case 'GAMIFIED_CHOICE_2':
-            return '/GuidedTourLeaderboard'
+            return '/ChooseGamifiedVersion'
         default:
-            return '/GamifiedSurvey'
+            return '/LeaderBoardSurvey'
     }
 }
 
-const GuidedTourGamified = () => {
+const GuidedTourLeaderboard = () => {
     const dispatch = useDispatch()
     const { t } = useTranslation()
     const history = useHistory()
@@ -68,13 +64,12 @@ const GuidedTourGamified = () => {
     const [showModal, setShowModal] = useState(false)
     const [showTour, setShowTour] = useState(false)
     const surveyMode = useSelector((state: RootState) => state.entryPointReducer.mode)
+    const { zeus, ron, han, jonas } = barGraphElements
+    const user = createABarGraphElement('You', 850, 85, 'blue')
+    const listOfComponents: Array<React.ReactElement> = [zeus, ron, han, jonas, user]
 
     const handleJoyrideCallbackForTour1 = (data: CallBackProps) => {
         const { index, status } = data
-        console.log(index, status)
-        if (index === 4 && status === 'running') {
-            dispatch({ type: 'ADD_BADGE', payload: listOfMockImages[0] })
-        }
         if (status === 'ready') {
             setShowModal(true)
         }
@@ -87,7 +82,6 @@ const GuidedTourGamified = () => {
     }
 
     const handleTourProceed = () => {
-        dispatch({ type: 'REMOVE_BADGE', payload: listOfMockImages[0] })
         const path = getNavigationPath(surveyMode)
         history.push(path)
     }
@@ -96,7 +90,7 @@ const GuidedTourGamified = () => {
         <div className="container">
             <Joyride
                 callback={handleJoyrideCallbackForTour1}
-                steps={stepsForTour1}
+                steps={stepsForLeaderboardTour}
                 run={runTour1}
                 spotlightClicks={true}
                 hideBackButton={true}
@@ -115,9 +109,13 @@ const GuidedTourGamified = () => {
                 {
                     showTour
                         ? <div className='guided-tour-div'>
-                            <GuidedTourBadges />
                             <CustomProgressBar progress={70} />
-                            <SurveyQuestions />
+                            <div className='leaderBoard-body'>
+                                <div className='survey-body'>
+                                    <SurveyQuestions />
+                                </div>
+                                <LeaderboardComponent points={850} listOfComponents={listOfComponents} />
+                            </div>
                             {
                                 showModal
                                     ? <GuidedTourModal showModal={showModal} handleClick={handleTourProceed} children={<TourContinueElement />} modalWindowButton='Continue' styleClass='guided-modal-main' buttonClass='continue-button' />
@@ -131,4 +129,4 @@ const GuidedTourGamified = () => {
     );
 };
 
-export default GuidedTourGamified;
+export default GuidedTourLeaderboard;

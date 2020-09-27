@@ -8,8 +8,15 @@ const prisma = new PrismaClient()
 const app: express.Application = express()
 const PORT = process.env.PORT || 8080
 
+
 app.use(express.static(`${path.resolve("./")}/client/build`))
 app.use(bodyParser.json())
+
+app.use(function (req, res, next) {
+    res.header("Access-Control-Allow-Origin", "http://localhost:8080"); // update to match the domain you will make the request from
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    next();
+});
 
 app.post('/exit', async (req: Request, res: Response) => {
     try {
@@ -59,7 +66,11 @@ app.post('/mode', async (req: Request, res: Response) => {
 app.get('/mode', async (req, res) => {
     try {
         const mode = await prisma.mode.findMany()
-        res.send(mode)
+        res.json({
+            status: 200,
+            message: 'Success',
+            body: mode
+        })
 
     } catch (error) {
         throw (error)
@@ -67,7 +78,7 @@ app.get('/mode', async (req, res) => {
 })
 
 app.get('*', (req, res) => {
-    res.sendFile(`${path.resolve('./')}'/client/build/index.html`)
+    res.sendFile(`${path.resolve('./')}/client/build/index.html`)
 })
 
 
