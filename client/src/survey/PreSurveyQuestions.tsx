@@ -3,8 +3,6 @@ import * as Survey from 'survey-react'
 import json from './json/PreSurveyJSON'
 import { useHistory } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
-import { Mode, AddModeActionType } from '../reducer/entryPointReducer'
-import { Dispatch } from 'redux'
 import { RootState } from '../reducer/reducer'
 
 
@@ -19,9 +17,9 @@ const getNavigationPath = (surveyMode: string): string => {
             return '/GuidedTourTraditional'
         case 'GAMIFIED':
             return '/GuidedTourGamified'
-        case 'TRADITIONAL_GAMIFIED1':
+        case 'TRADITIONAL_GAMIFIED_1':
             return '/GuidedTourTraditional'
-        case 'TRADITIONAL_GAMIFIED2':
+        case 'TRADITIONAL_GAMIFIED_2':
             return '/GuidedTourTraditional'
         case 'GAMIFIED_WITH_BADGES':
             return '/GuidedTourGamified'
@@ -31,8 +29,6 @@ const getNavigationPath = (surveyMode: string): string => {
             return '/GuidedTourGamified'
         case 'GAMIFIED_CHOICE_2':
             return '/GuidedTourGamified'
-        case 'GAMIFIED_CHOICE_3':
-            return '/GuidedTourGamified'
         default:
             return '/GuidedTourTraditional'
     }
@@ -40,6 +36,7 @@ const getNavigationPath = (surveyMode: string): string => {
 
 const SurveyQuestions: React.FC = () => {
     const surveyMode: string = useSelector((state: RootState) => state.entryPointReducer.mode)
+
     const history = useHistory()
     const path = getNavigationPath(surveyMode)
 
