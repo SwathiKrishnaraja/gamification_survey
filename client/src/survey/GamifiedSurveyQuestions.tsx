@@ -2,8 +2,14 @@ import React, { useState, useEffect } from 'react'
 import * as Survey from 'survey-react'
 import { useHistory } from 'react-router-dom'
 import badgeProvider from '../BadgeRules/BadgeRules';
-import { useDispatch, useSelector, useStore, shallowEqual } from 'react-redux';
+import { useDispatch, useSelector, useStore } from 'react-redux';
 import json from './json/GamifiedSurveyJSON'
+import getCharacterCount from '../helpers/getCharacterCount'
+import filterOpenQuestions from '../helpers/filterOpenQuestions'
+import submitSurveyData from '../api/submitSurveyData'
+import postSurveyMode from '../api/postSurveyMode'
+import getAverageTime from '../helpers/getAverageTime'
+import { RootState } from '../reducer/reducer';
 
 export const model = new Survey.Model(json);
 type AnswerStore = {
@@ -22,6 +28,8 @@ const SurveyQuestions = ({ handleProgress }: Props) => {
     const provideBadge = badgeProvider(dispatch)
     const store = useStore()
     const [isTactician, setIsTactician] = useState(0)
+    const survey_mode = useSelector((state: RootState) => state.entryPointReducer.mode)
+    const achievedBadges = useSelector((state: RootState) => state.addBadgeReducer)
 
     const history = useHistory()
     const [answerStore, setAnswerStore] = useState<Array<AnswerStore>>([{ name: '', id: '0', isAnswered: true }])
@@ -101,8 +109,25 @@ const SurveyQuestions = ({ handleProgress }: Props) => {
         }
     }, [count, provideBadge.badge, store])
 
-    const handleSurveyCompletion = () => {
+    const handleSurveyCompletion = (sender: Survey.SurveyModel, options: any) => {
+        // provide the winner badge
         provideBadge.badge.winner()
+
+        const badges = achievedBadges.length
+
+        let listOfSurveyQuestions = []
+        try {
+            const { timeSpent: time_taken, data } = sender
+            listOfSurveyQuestions.push(data)
+            const average_time = Math.round(getAverageTime(time_taken))
+            const char_count = getCharacterCount(filterOpenQuestions(listOfSurveyQuestions))
+            const result = data
+            submitSurveyData({ survey_mode, char_count, time_taken, average_time, result, badges })
+            postSurveyMode({ mode: survey_mode })
+
+        } catch (error) {
+            throw (error)
+        }
         history.push('/Dashboard')
     }
 

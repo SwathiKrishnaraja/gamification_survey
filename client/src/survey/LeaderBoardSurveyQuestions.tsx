@@ -5,7 +5,13 @@ import { useHistory } from 'react-router-dom'
 import GuidedTourModal from '../components/GuidedTour/GuidedTourModal'
 import ThanksText from '../components/ThanksText'
 import { SurveyModel } from 'survey-react'
-import { useDispatch, useStore } from 'react-redux'
+import { useDispatch, useSelector, useStore } from 'react-redux'
+import getCharacterCount from '../helpers/getCharacterCount'
+import filterOpenQuestions from '../helpers/filterOpenQuestions'
+import submitSurveyData from '../api/submitSurveyData'
+import postSurveyMode from '../api/postSurveyMode'
+import getAverageTime from '../helpers/getAverageTime'
+import { RootState } from '../reducer/reducer';
 
 export const model = new Survey.Model(json);
 type AnswerStore = {
@@ -28,6 +34,10 @@ const SurveyQuestions = ({ progress, handleProgress }: Props) => {
     const dispatch = useDispatch()
     const [isTactician, setIsTactician] = useState(0)
     const store = useStore()
+    const survey_mode = useSelector((state: RootState) => state.entryPointReducer.mode)
+    const points = useSelector((state: RootState) => state.addPointsReducer)
+
+
     /**
      * 
      * @param sender 
@@ -105,13 +115,30 @@ const SurveyQuestions = ({ progress, handleProgress }: Props) => {
         }
     }, [count, dispatch, store])
 
-    const handleSurveyCompletion = () => {
+    const handleSurveyCompletion = (sender: SurveyModel, options: any) => {
         if (answerStore
             .filter(element => listOfLastPageQuestions.includes(element.name))
             .length === 2) {
             dispatch({ type: 'ADD_POINTS', payload: 100 })
         }
         dispatch({ type: 'ADD_POINTS', payload: 100 })
+
+
+        let listOfSurveyQuestions = []
+        try {
+            const { timeSpent: time_taken, data } = sender
+            listOfSurveyQuestions.push(data)
+            const average_time = Math.round(getAverageTime(time_taken))
+            const char_count = getCharacterCount(filterOpenQuestions(listOfSurveyQuestions))
+            const result = data
+            submitSurveyData({ survey_mode, char_count, time_taken, average_time, result, points })
+            postSurveyMode({ mode: survey_mode })
+
+        } catch (error) {
+            throw (error)
+        }
+
+
         history.push('/Dashboard')
     }
 
