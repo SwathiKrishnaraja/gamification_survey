@@ -7,7 +7,7 @@ import ImprintContent from './ImprintContent'
 import ImprintModal from './ImprintModal'
 import styled from 'styled-components'
 import { useDispatch } from 'react-redux';
-import assignSurveyMode from '../helpers/entryPointForSurvey'
+import assignSurveyMode from '../helpers/assignSurveyMode'
 
 const PrivacyHeading = styled.h4`
 color: ${props => props.color}
