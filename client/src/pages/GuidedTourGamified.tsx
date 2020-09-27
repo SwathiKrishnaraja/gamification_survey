@@ -22,7 +22,7 @@ const TourContinueElement: React.FC = () => {
             <hr style={{ width: '98%' }} />
             <br />
             <h4>
-                You have finished the Guided tou.
+                You have finished the Guided tour.
             </h4>
 
         </div>
@@ -45,17 +45,15 @@ const getNavigationPath = (surveyMode: string): string => {
     switch (surveyMode) {
         case 'GAMIFIED':
             return '/GamifiedSurvey'
-        case 'TRADITIONAL_GAMIFIED1':
+        case 'TRADITIONAL_GAMIFIED_1':
             return '/ChooseVersion'
-        case 'TRADITIONAL_GAMIFIED2':
+        case 'TRADITIONAL_GAMIFIED_2':
             return '/ChooseVersion'
         case 'GAMIFIED_WITH_BADGES':
             return '/GamifiedSurvey'
         case 'GAMIFIED_CHOICE_1':
             return '/GuidedTourLeaderboard'
         case 'GAMIFIED_CHOICE_2':
-            return '/GuidedTourLeaderboard'
-        case 'GAMIFIED_CHOICE_3':
             return '/GuidedTourLeaderboard'
         default:
             return '/GamifiedSurvey'

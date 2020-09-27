@@ -13,8 +13,7 @@ type SurveyMode = {
     'GAMIFIED_WITH_BADGES' |
     'GAMIFIED_WITH_POINTS' |
     'GAMIFIED_CHOICE_1' |
-    'GAMIFIED_CHOICE_2' |
-    'GAMIFIED_CHOICE_3'
+    'GAMIFIED_CHOICE_2'
 }
 
 const modes = [
@@ -26,7 +25,6 @@ const modes = [
     'GAMIFIED_WITH_POINTS',
     'GAMIFIED_CHOICE_1',
     'GAMIFIED_CHOICE_2',
-    'GAMIFIED_CHOICE_3'
 ]
 
 const getIndexOfMode = (listOfModes: Array<string>, { mode }: SurveyMode) =>
@@ -45,8 +43,8 @@ const getPreviousSurveyMode = (modes: Array<SurveyMode>): SurveyMode | boolean =
 */
 const assignSurveyMode = async () => {
     let newMode
-    const modes = await getSurveyMode()
-    const previousMode = getPreviousSurveyMode(modes)
+    const modesFromBackend = await getSurveyMode()
+    const previousMode = await getPreviousSurveyMode(modesFromBackend)
 
     if (previousMode) {
         const indexOfPreviousMode = getIndexOfMode(modes, previousMode as SurveyMode)
