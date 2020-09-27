@@ -1,3 +1,5 @@
+import getSurveyMode from '../api/getSurveyMode'
+
 /** 
  *  This file requests the backend api to get the previous survey modes 
     and assigns the current survey mode 
@@ -27,10 +29,6 @@ const modes = [
     'GAMIFIED_CHOICE_3'
 ]
 
-const getSurveyMode = async () => {
-    const surveyModeResponse = await fetch('http://localhost:8080/mode')
-    const modes = await surveyModeResponse.json()
-    return modes
 }
 const getIndexOfMode = (listOfModes: Array<string>, { mode }: SurveyMode) =>
     listOfModes.findIndex((val) => val === mode)
@@ -46,7 +44,7 @@ const getPreviousSurveyMode = (modes: Array<SurveyMode>): SurveyMode | boolean =
    * Implements a simple round robin approach to assign the survey mode 
    * @returns survey mode 
 */
-const assignNewSurveyMode = async () => {
+const assignSurveyMode = async () => {
     let newMode
     const modes = await getSurveyMode()
     const previousMode = getPreviousSurveyMode(modes)
@@ -65,4 +63,4 @@ const assignNewSurveyMode = async () => {
     return newMode
 }
 
-export default assignNewSurveyMode 
+export default assignSurveyMode 
