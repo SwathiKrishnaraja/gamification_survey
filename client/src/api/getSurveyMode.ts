@@ -1,6 +1,6 @@
 
 const getSurveyMode = async () => {
-    const response = await fetch('http://localhost:8080/mode', {
+    const response = await fetch('https://enigmatic-basin-07550.herokuapp.com/mode', {
         mode: 'no-cors',
     })
     const data = await response.json()

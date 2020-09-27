@@ -1,6 +1,6 @@
 
 const postExitCase = async (data: { mode: string }) => {
-    const response = await fetch('http://localhost:8080/exit', {
+    const response = await fetch('https://enigmatic-basin-07550.herokuapp.com/exit', {
         method: 'POST',
         cache: 'no-cache',
         headers: {
