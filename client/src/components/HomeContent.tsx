@@ -31,7 +31,7 @@ const HomeContent = () => {
 
   const addSurveyModeToStore = async () => {
     const surveyMode = await assignSurveyMode()
-    dispatch({ type: 'ADD_BADGE', payload: surveyMode })
+    dispatch({ type: 'ADD_MODE', payload: surveyMode })
   }
 
 
