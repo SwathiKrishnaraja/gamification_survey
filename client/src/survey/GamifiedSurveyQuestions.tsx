@@ -53,41 +53,7 @@ const SurveyQuestions = ({ handleProgress }: Props) => {
 
 
         }
-    }
-    const handlePageChange = (sender: Survey.SurveyModel, options: any): any => {
-        handleProgress()
-        const { newCurrentPage, oldCurrentPage } = options
-        // stops the time of previous page and starts the new timer
-        model.stopTimer()
-        model.startTimer()
-        const timeSpentOnPreviousPage = oldCurrentPage?.timeSpent
-        if (timeSpentOnPreviousPage > 1) {
-            setIsTactician(isTactician + 1)
-        }
 
-        // below is the check to provide badge if the user has reached the last page of the survey
-        if (newCurrentPage.name === 'page8') {
-            provideBadge.badge.fastAchiever()
-        }
-    }
-
-    // below check is to provide the badge if all the questions in the last page is answered
-    useEffect(() => {
-        if (answerStore
-            .filter(element => listOfLastPageQuestions.includes(element.name))
-            .length === 2) {
-            provideBadge.badge.masterOfInterview()
-        }
-        if (isTactician === 8) {
-            setIsTactician(0)
-            provideBadge.badge.tactician()
-        }
-    }, [answerStore, isTactician, listOfLastPageQuestions, provideBadge.badge])
-
-
-
-
-    useEffect(() => {
         switch (count) {
             case 9:
                 provideBadge.badge.thirtyThreeBadge()
@@ -105,11 +71,36 @@ const SurveyQuestions = ({ handleProgress }: Props) => {
             default:
                 console.log(count)
         }
-        return () => {
+    }
+
+    const handlePageChange = (sender: Survey.SurveyModel, options: any): any => {
+        handleProgress()
+        const { newCurrentPage, oldCurrentPage } = options
+        // stops the time of previous page and starts the new timer
+        model.stopTimer()
+        model.startTimer()
+        const timeSpentOnPreviousPage = oldCurrentPage?.timeSpent
+        if (timeSpentOnPreviousPage > 1) {
+            setIsTactician(isTactician + 1)
         }
-    }, [count, provideBadge.badge, store])
+
+        // below is the check to provide badge if the user has reached the last page of the survey
+        if (newCurrentPage.name === 'page8') {
+            provideBadge.badge.fastAchiever()
+        }
+    }
+
 
     const handleSurveyCompletion = (sender: Survey.SurveyModel, options: any) => {
+        if (answerStore
+            .filter(element => listOfLastPageQuestions.includes(element.name))
+            .length === 2) {
+            provideBadge.badge.masterOfInterview()
+        }
+        if (isTactician === 8) {
+            setIsTactician(0)
+            provideBadge.badge.tactician()
+        }
         // provide the winner badge
         provideBadge.badge.winner()
 
