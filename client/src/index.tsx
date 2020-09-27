@@ -19,6 +19,7 @@ import { Provider } from 'react-redux'
 import rootReducer from './reducer/reducer'
 import Toast from './Toast/Toast';
 import GuidedTourLeaderboard from './pages/GuidedTourLeaderboard';
+import ChooseGamifiedVersion from './pages/ChooseGamifiedVersion';
 
 const store = createStore(rootReducer)
 
@@ -29,6 +30,7 @@ const Routing = () => {
       <Route path='/GuidedTourTraditional' component={GuidedTourTraditional} />
       <Route path='/GuidedTourGamified' component={GuidedTourGamified} />
       <Route path='/GuidedTourLeaderboard' component={GuidedTourLeaderboard} />
+      <Route path='/ChooseGamifiedVersion' component={ChooseGamifiedVersion} />
       <Route path='/ChooseVersion' component={ChooseVersion} />
       <Route path='/GamifiedSurvey' component={GamifiedSurvey} />
       <Route path='/TraditionalSurvey' component={TraditionalSurvey} />

@@ -26,7 +26,7 @@ const LeaderBoardSurvey = () => {
 
     const user: React.ReactElement = createABarGraphElement('You', pointsFromReduxStore, (pointsFromReduxStore / 10), 'blue')
 
-    const listOfComponents: Array<React.ReactElement> = [zeus, ron, han, jonas, user]
+    const listOfComponents: Array<React.ReactElement> = [zeus, han, ron, jonas, user]
 
     useEffect(() => {
         dispatch({ type: 'ADD_POINTS', payload: 100 })
