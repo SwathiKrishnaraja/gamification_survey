@@ -45,8 +45,18 @@ const getNavigationPath = (surveyMode: string): string => {
     switch (surveyMode) {
         case 'GAMIFIED':
             return '/GamifiedSurvey'
-        case 'TRADITIONAL_GAMIFIED':
+        case 'TRADITIONAL_GAMIFIED1':
             return '/ChooseVersion'
+        case 'TRADITIONAL_GAMIFIED2':
+            return '/ChooseVersion'
+        case 'GAMIFIED_WITH_BADGES':
+            return '/GamifiedSurvey'
+        case 'GAMIFIED_CHOICE_1':
+            return '/GuidedTourLeaderboard'
+        case 'GAMIFIED_CHOICE_2':
+            return '/GuidedTourLeaderboard'
+        case 'GAMIFIED_CHOICE_3':
+            return '/GuidedTourLeaderboard'
         default:
             return '/GamifiedSurvey'
     }

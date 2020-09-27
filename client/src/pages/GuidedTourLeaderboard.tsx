@@ -45,12 +45,14 @@ export const SurveyQuestions = () => {
  */
 const getNavigationPath = (surveyMode: string): string => {
     switch (surveyMode) {
-        case 'GAMIFIED':
-            return '/GamifiedSurvey'
-        case 'TRADITIONAL_GAMIFIED':
-            return '/ChooseVersion'
-        case 'LEADERBOARD':
-            return '/ChooseVersion'
+        case 'GAMIFIED_WITH_POINTS':
+            return '/LeaderBoardSurvey'
+        case 'GAMIFIED_CHOICE_1':
+            return '/ChooseGamifiedVersion'
+        case 'GAMIFIED_CHOICE_2':
+            return '/ChooseGamifiedVersion'
+        case 'GAMIFIED_CHOICE_3':
+            return '/ChooseGamifiedVersion'
         default:
             return '/LeaderBoardSurvey'
     }
