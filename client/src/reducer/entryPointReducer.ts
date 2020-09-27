@@ -6,33 +6,20 @@
 
 export type AddModeActionType = {
     type: 'ADD_MODE',
-    payload: Mode
-}
-export type Mode = {
-    mode: 'TRADITIONAL' |
-    'GAMIFIED' |
-    'TRADITIONAL_GAMIFIED_1' |
-    'TRADITIONAL_GAMIFIED_2' |
-    'GAMIFIED_WITH_BADGES' |
-    'GAMIFIED_WITH_POINTS' |
-    'GAMIFIED_CHOICE_1' |
-    'GAMIFIED_CHOICE_2' |
-    'GAMIFIED_CHOICE_3'
+    payload: string
 }
 
-const defaultState: Mode = {
-    mode: 'TRADITIONAL'
+const defaultState = {
+    mode: ''
 }
 
-const entryPointReducer = (state = defaultState, action: AddModeActionType): Mode => {
+const entryPointReducer = (state = defaultState, action: AddModeActionType) => {
     const { payload, type } = action
 
     switch (type) {
         case 'ADD_MODE':
-            return {
-                ...state,
-                ...payload
-            }
+            state.mode = payload
+            return state
 
         default:
             return state
