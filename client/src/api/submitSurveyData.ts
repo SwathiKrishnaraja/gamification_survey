@@ -1,4 +1,5 @@
 import { SurveyQuestionsType, OpenQuestions } from '../types/types'
+import { config } from '../config'
 
 type DataType = {
   survey_mode: string,
@@ -13,7 +14,7 @@ type DataType = {
 }
 
 const submitSurveyData = async (data: DataType) => {
-  const response = await fetch('https://enigmatic-basin-07550.herokuapp.com/submit', {
+  const response = await fetch(`${config.HOST}submit`, {
     method: 'POST',
     cache: 'no-cache',
     headers: {

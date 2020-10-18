@@ -2,6 +2,8 @@ import express, { Request, Response } from 'express'
 import path from 'path'
 import { PrismaClient } from '@prisma/client'
 import bodyParser from 'body-parser'
+import helmet from 'helmet'
+import { config } from './config'
 
 const prisma = new PrismaClient()
 
@@ -11,9 +13,10 @@ const PORT = process.env.PORT || 8080
 
 app.use(express.static(`${path.resolve("./")}/client/build`))
 app.use(bodyParser.json())
+app.use(helmet())
 
 app.use(function (req, res, next) {
-    res.header("Access-Control-Allow-Origin", "https://enigmatic-basin-07550.herokuapp.com"); // update to match the domain you will make the request from
+    res.header("Access-Control-Allow-Origin", `${config.HOST}`); // update to match the domain you will make the request from
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     next();
 });

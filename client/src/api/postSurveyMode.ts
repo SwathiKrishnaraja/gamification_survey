@@ -1,6 +1,8 @@
+import { config } from '../config'
+
 
 const postSurveyMode = async (data: { mode: string }) => {
-  const response = await fetch('https://enigmatic-basin-07550.herokuapp.com/mode', {
+  const response = await fetch(`${config.HOST}mode`, {
     method: 'POST',
     cache: 'no-cache',
     headers: {
