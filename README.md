@@ -1,3 +1,3 @@
 # gamification_survey
 
-Implements a survey for the master thesis.
+Implements a survey for the master thesis program.
