@@ -3,7 +3,7 @@ import { config } from '../config'
 
 
 const getSurveyMode = async () => {
-    const response = await fetch(`${process.env.HOST}mode`, {
+    const response = await fetch(`/mode`, {
         mode: 'no-cors',
     })
     const data = await response.json()

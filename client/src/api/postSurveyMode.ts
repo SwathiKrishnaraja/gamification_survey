@@ -2,7 +2,7 @@ import { config } from '../config'
 
 
 const postSurveyMode = async (data: { mode: string }) => {
-  const response = await fetch(`${process.env.HOST}mode`, {
+  const response = await fetch(`/mode`, {
     method: 'POST',
     cache: 'no-cache',
     headers: {

@@ -1,7 +1,7 @@
 import { config } from '../config'
 
 const postExitCase = async (data: { mode: string }) => {
-    const response = await fetch(`${process.env.HOST}exit`, {
+    const response = await fetch(`/exit`, {
         method: 'POST',
         cache: 'no-cache',
         headers: {
