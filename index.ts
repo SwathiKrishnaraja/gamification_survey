@@ -4,6 +4,12 @@ import { PrismaClient } from '@prisma/client'
 import bodyParser from 'body-parser'
 import helmet from 'helmet'
 import { config } from './config'
+import dotenv from 'dotenv'
+import dotenvExpand from 'dotenv-expand'
+
+const myEnv = dotenv.config({ path: './prisma/.env' })
+dotenvExpand(myEnv)
+console.log(myEnv)
 
 const prisma = new PrismaClient()
 
