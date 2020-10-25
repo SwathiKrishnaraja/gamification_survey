@@ -1,6 +1,9 @@
 
+import { config } from '../config'
+
+
 const getSurveyMode = async () => {
-    const response = await fetch('https://enigmatic-basin-07550.herokuapp.com/mode', {
+    const response = await fetch(`${config.HOST}mode`, {
         mode: 'no-cors',
     })
     const data = await response.json()

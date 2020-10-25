@@ -1,6 +1,7 @@
+import { config } from '../config'
 
 const postExitCase = async (data: { mode: string }) => {
-    const response = await fetch('https://enigmatic-basin-07550.herokuapp.com/exit', {
+    const response = await fetch(`${config.HOST}exit`, {
         method: 'POST',
         cache: 'no-cache',
         headers: {

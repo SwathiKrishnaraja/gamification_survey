@@ -1,2 +1,3 @@
 # gamification_survey
-Repository of Master thesis
+
+Implements a survey for the master thesis program.
