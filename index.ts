@@ -22,7 +22,7 @@ app.use(bodyParser.json())
 app.use(helmet())
 
 app.use(function (req, res, next) {
-    res.header("Access-Control-Allow-Origin", `${config.HOST}`); // update to match the domain you will make the request from
+    res.header("Access-Control-Allow-Origin", `${process.env.HOST}`); // update to match the domain you will make the request from
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     next();
 });

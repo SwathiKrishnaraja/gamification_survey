@@ -14,7 +14,7 @@ type DataType = {
 }
 
 const submitSurveyData = async (data: DataType) => {
-  const response = await fetch(`${config.HOST}submit`, {
+  const response = await fetch(`${process.env.HOST}submit`, {
     method: 'POST',
     cache: 'no-cache',
     headers: {
