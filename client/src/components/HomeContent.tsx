@@ -10,7 +10,7 @@ import { useDispatch } from 'react-redux';
 import assignSurveyMode from '../helpers/assignSurveyMode'
 
 const PrivacyHeading = styled.h4`
-color: ${props => props.color}
+color: ${props => props.color};
 `
 
 const HomeContent = () => {

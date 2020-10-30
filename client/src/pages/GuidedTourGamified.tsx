@@ -71,7 +71,6 @@ const GuidedTourGamified = () => {
 
     const handleJoyrideCallbackForTour1 = (data: CallBackProps) => {
         const { index, status } = data
-        console.log(index, status)
         if (index === 4 && status === 'running') {
             dispatch({ type: 'ADD_BADGE', payload: listOfMockImages[0] })
         }

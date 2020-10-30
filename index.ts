@@ -9,7 +9,6 @@ import dotenvExpand from 'dotenv-expand'
 
 const myEnv = dotenv.config({ path: './prisma/.env' })
 dotenvExpand(myEnv)
-console.log(myEnv)
 
 const prisma = new PrismaClient()
 

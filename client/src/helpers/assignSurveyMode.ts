@@ -43,7 +43,7 @@ const getPreviousSurveyMode = (modes: Array<SurveyMode>): SurveyMode | boolean =
 */
 const assignSurveyMode = async () => {
     let newMode
-    const modesFromBackend = await getSurveyMode()
+    const { body: modesFromBackend } = await getSurveyMode()
     const previousMode = await getPreviousSurveyMode(modesFromBackend)
 
     if (previousMode) {

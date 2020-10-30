@@ -8,7 +8,6 @@ const getSurveyMode = async () => {
     })
     const data = await response.json()
     const mode = await data.body
-    await console.log(data)
     return data
 }
 export default getSurveyMode
