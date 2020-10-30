@@ -2,7 +2,7 @@ import React from 'react';
 
 export const renderSortedComponents = (componentList: Array<React.ReactElement>) =>
     componentList.sort(
-        (a, b) => (Number(b.props.children[0].props.children[1]) - Number(a.props.children[0].props.children[1]))
+        (a, b) => (Number(b.props.children[0].props.children[0]) - Number(a.props.children[0].props.children[0]))
     )
 
 
