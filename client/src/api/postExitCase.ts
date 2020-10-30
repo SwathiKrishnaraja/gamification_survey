@@ -1,4 +1,3 @@
-import { config } from '../config'
 
 const postExitCase = async (data: { mode: string }) => {
     const response = await fetch(`/exit`, {

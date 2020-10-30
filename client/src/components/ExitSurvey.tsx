@@ -14,13 +14,13 @@ const ExitSurvey: React.FC = () => {
     }
 
     const mode = useSelector((state: RootState) => state.entryPointReducer.mode)
-    const handleConfirmationButton = async () => {
+    const handleConfirmationButton = () => {
         try {
-            await postExitCase({ mode })
+            history.push('/')
+            postExitCase({ mode })
         } catch (error) {
             throw error
         }
-        history.push('/')
     }
 
     const ConfirmMessage = () => {
