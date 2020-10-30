@@ -30,6 +30,7 @@ app.post('/exit', async (req: Request, res: Response) => {
     try {
         const data = await req.body
         const exitCase = await prisma.exitCandidates.create({
+            data: data
         })
         res.send({
             status: 200,
