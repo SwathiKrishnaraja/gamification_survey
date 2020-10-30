@@ -57,11 +57,11 @@ const q5: Questions = {
         text: 'Very'
     },
     {
-        value: 3,
+        value: 4,
         text: 'Extremely'
     },
     {
-        value: 3,
+        value: 5,
         text: 'Not at all'
     }],
     rows: [{
@@ -77,31 +77,31 @@ const q5: Questions = {
         text: 'awake'
     },
     {
-        value: 'club',
+        value: 'kgf',
         text: 'ashamed'
     },
     {
-        value: 'club',
+        value: 'rocky',
         text: 'suggested'
     },
     {
-        value: 'club',
+        value: 'gotu',
         text: 'nervous'
     },
     {
-        value: 'club',
+        value: 'von',
         text: 'determined'
     },
     {
-        value: 'club',
+        value: 'goundermann',
         text: 'attention'
     },
     {
-        value: 'club',
+        value: 'kongu',
         text: 'anxious'
     },
     {
-        value: 'club',
+        value: 'satchki',
         text: 'active'
     },
     ]
