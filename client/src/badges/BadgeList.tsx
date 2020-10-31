@@ -43,7 +43,7 @@ export const listOfImages: Array<Badge> = [
     {
         id: 103,
         src: Third,
-        name: "Audience favorite",
+        name: "Sherlock Holmes",
         description: 'Find the mascot',
         isAchieved: false,
         isNotified: false,

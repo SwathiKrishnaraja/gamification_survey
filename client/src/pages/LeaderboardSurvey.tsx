@@ -8,13 +8,22 @@ import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '../reducer/reducer';
 import LeaderboardComponent from '../components/LeaderboardComponent'
 import createABarGraphElement, { barGraphElements } from '../helpers/createLeaderboardElements'
-
+import Mascot from '../components/Mascot'
 
 const LeaderBoardSurvey = () => {
     const [progress, setProgress] = useState<number>(0)
     const dispatch = useDispatch()
     const pointsFromReduxStore = useSelector((state: RootState) => state.addPointsReducer)
     const { zeus, ron, han, jonas } = barGraphElements
+    const [showMascot, setShowMascot] = useState<boolean>(false)
+
+    const handleMascot = () => {
+        setShowMascot(showMascot ? false : true)
+    }
+
+    const addPoints = () => {
+        dispatch({ type: 'ADD_POINTS', payload: 100 })
+    }
 
     const handleProgress = () => {
         if (progress === 88) {
@@ -40,10 +49,12 @@ const LeaderBoardSurvey = () => {
                 <CustomProgressBar progress={progress} />
                 <div className='leaderBoard-body'>
                     <div className='survey-body'>
-                        <SurveyQuestions progress={progress} handleProgress={handleProgress} />
+                        <SurveyQuestions progress={progress} handleProgress={handleProgress} handleMascot={handleMascot} />
+                        {showMascot ? <Mascot handleMascot={handleMascot} addPoints={addPoints} /> : null}
                     </div>
                     <LeaderboardComponent points={pointsFromReduxStore} listOfComponents={listOfComponents} />
                 </div>
+
             </div>
 
             <Footer />

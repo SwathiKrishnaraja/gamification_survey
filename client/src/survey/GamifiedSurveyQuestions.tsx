@@ -21,9 +21,10 @@ type AnswerStore = {
 type Props = {
     progress: number,
     handleProgress: () => void
+    handleMascot: () => void
 }
 
-const SurveyQuestions = ({ handleProgress }: Props) => {
+const SurveyQuestions = ({ handleProgress, handleMascot }: Props) => {
     const dispatch = useDispatch()
     const provideBadge = badgeProvider(dispatch)
     const store = useStore()
@@ -87,6 +88,10 @@ const SurveyQuestions = ({ handleProgress }: Props) => {
         // below is the check to provide badge if the user has reached the last page of the survey
         if (newCurrentPage.name === 'page8') {
             provideBadge.badge.fastAchiever()
+        }
+
+        if (sender.currentPageNo === 4) {
+            handleMascot()
         }
     }
 
