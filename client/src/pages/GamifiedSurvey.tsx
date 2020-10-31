@@ -8,11 +8,22 @@ import SurveyQuestions from '../survey/GamifiedSurveyQuestions'
 import ExitSurvey from '../components/ExitSurvey';
 import badgeProvider from '../BadgeRules/BadgeRules';
 import { useDispatch } from 'react-redux';
+import Mascot from '../components/Mascot'
 
 const GamifiedSurvey = () => {
   const dispatch = useDispatch()
   const provideBadge = useMemo(() => badgeProvider(dispatch), [dispatch])
   const [progress, setProgress] = useState<number>(0)
+  const [showMascot, setShowMascot] = useState<boolean>(false)
+
+  const handleMascot = () => {
+    setShowMascot(showMascot ? false : true)
+  }
+
+  const provideBadgeForMascot = () => {
+    provideBadge.badge.findTheMascot()
+  }
+
 
   const handleProgress = () => {
     if (progress === 88) {
@@ -33,7 +44,8 @@ const GamifiedSurvey = () => {
       <div className="main-body">
         <Badges />
         <CustomProgressBar progress={progress} />
-        <SurveyQuestions progress={progress} handleProgress={handleProgress} />
+        <SurveyQuestions progress={progress} handleProgress={handleProgress} handleMascot={handleMascot} />
+        {showMascot ? <Mascot handleMascot={handleMascot} provideBadgeForMascot={provideBadgeForMascot} /> : null}
       </div>
 
       <Footer />

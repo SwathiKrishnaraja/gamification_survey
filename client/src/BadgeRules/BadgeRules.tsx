@@ -18,6 +18,9 @@ const badgeProvider = (dispatch: Dispatch<BadgeAction>) => {
         thirtyThreeBadge: () => {
             dispatch({ type: 'ADD_BADGE', payload: listOfImages[1] })
         },
+        findTheMascot: () => {
+            dispatch({ type: 'ADD_BADGE', payload: listOfImages[2] })
+        },
         sixtySixBadge: () => {
             dispatch({ type: 'ADD_BADGE', payload: listOfImages[3] })
         },
