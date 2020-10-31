@@ -23,9 +23,10 @@ type AnswerStore = {
 type Props = {
     progress: number,
     handleProgress: () => void
+    handleMascot: () => void
 }
 
-const SurveyQuestions = ({ progress, handleProgress }: Props) => {
+const SurveyQuestions = ({ progress, handleProgress, handleMascot }: Props) => {
     const history = useHistory()
     const [showModal, setShowModal] = useState(false)
     const [answerStore, setAnswerStore] = useState<Array<AnswerStore>>([{ name: '', id: '0', isAnswered: true }])
@@ -65,6 +66,9 @@ const SurveyQuestions = ({ progress, handleProgress }: Props) => {
         // below is the check to provide badge if the user has reached the last page of the survey
         if (newCurrentPage.name === 'page8') {
             dispatch({ type: 'ADD_POINTS', payload: 100 })
+        }
+        if (sender.currentPageNo === 4) {
+            handleMascot()
         }
     }
 
