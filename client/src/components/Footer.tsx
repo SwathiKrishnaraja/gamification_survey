@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
 import ImprintModal from './ImprintModal';
-import ImprintContent from './ImprintContent'
+import DataProtection from './DataProtection'
 import styled from 'styled-components'
+import { useTranslation } from 'react-i18next'
+import LegalInformation from './LegalInformation';
 
 const FooterComponent = styled.footer`
   position: relative;
@@ -10,7 +12,18 @@ const FooterComponent = styled.footer`
 `
 const Footer = () => {
   const [showImprint, setShowImprint] = useState<boolean>(false)
-  const handleImprintClick = () => {
+  const { t } = useTranslation()
+  const [isLegal, setIsLegal] = useState<boolean>(false)
+  const [isData, setIsData] = useState<boolean>(false)
+
+  const handleDataProtection = () => {
+    setIsLegal(false)
+    setIsData(true)
+    setShowImprint(showImprint ? false : true)
+  }
+  const handleLegalInformation = () => {
+    setIsLegal(true)
+    setIsData(false)
     setShowImprint(showImprint ? false : true)
   }
   return (
@@ -18,9 +31,9 @@ const Footer = () => {
       <hr style={{ width: '98%' }} />
       <div className="home-footer">
 
-        <button style={{ marginRight: 5 }} className="imprint-button" onClick={handleImprintClick}>Legal Information</button>
-        <button className="imprint-button" onClick={handleImprintClick}>Data Protection Information</button>
-        <ImprintModal showModal={showImprint} handleClick={handleImprintClick} title='Privacy and General Information' children={<ImprintContent />} />
+        <button style={{ marginRight: 5 }} className="imprint-button" onClick={handleLegalInformation}>Legal Information</button>
+        <button className="imprint-button" onClick={handleDataProtection}>Data Protection Information</button>
+        <ImprintModal showModal={showImprint} handleClick={isLegal ? handleLegalInformation : handleDataProtection} title={isData ? t('dataProtectionInformation.header') : t('legalInformation.header')} children={isData ? <DataProtection /> : <LegalInformation />} />
 
       </div>
     </FooterComponent>

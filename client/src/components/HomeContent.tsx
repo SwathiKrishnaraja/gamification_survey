@@ -3,7 +3,7 @@ import { useHistory } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import udsLogo from '../content/sic.png'
 import dfkiLogo from '../content/DFKI_Logo.jpg'
-import ImprintContent from './ImprintContent'
+import DataProtection from './DataProtection'
 import ImprintModal from './ImprintModal'
 import styled from 'styled-components'
 import { useDispatch } from 'react-redux';
@@ -73,7 +73,7 @@ const HomeContent = () => {
           <PrivacyHeading data-testid='privacy-header' color={isChecked ? 'black' : 'red'} >* Data Protection and Participation Information</PrivacyHeading>
           <input data-testid='privacy-checkbox' type='checkbox' onClick={handleCheckBoxClick} />
           <label>I have read and understood the information on <a data-testid='data-protection-anchor' style={{ textDecoration: 'none', color: '#337ab7' }} onClick={handleDataProtectionTagClick} href='# '>data protection</a> and the participation information and agree that my data may be used anonymously for the mentioned purposes</label>
-          <ImprintModal children={<ImprintContent />} handleClick={handleDataProtectionTagClick} showModal={showModal} title='Privacy and General Information' />
+          <ImprintModal children={<DataProtection />} handleClick={handleDataProtectionTagClick} showModal={showModal} title={t('dataProtectionInformation.header')} />
         </div>
 
       </div>

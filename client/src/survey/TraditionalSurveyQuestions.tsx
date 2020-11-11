@@ -1,6 +1,6 @@
 import React, { useState, Fragment } from 'react'
 import * as Survey from 'survey-react'
-import json from './json/TraditionalSurveyJSON'
+import TraditionalSurveyJSON from './json/TraditionalSurveyJSON'
 import { useHistory } from 'react-router-dom'
 import GuidedTourModal from '../components/GuidedTour/GuidedTourModal'
 import ThanksText from '../components/ThanksText'
@@ -22,7 +22,8 @@ type Props = {
 const SurveyQuestions = ({ handleProgress }: Props) => {
     const history = useHistory()
     const [showModal, setShowModal] = useState(false)
-    const survey_mode = useSelector((state:RootState) => state.entryPointReducer.mode)
+    const survey_mode = useSelector((state: RootState) => state.entryPointReducer.mode)
+    const surveyJson = TraditionalSurveyJSON()
 
     /**
      * 
@@ -36,16 +37,16 @@ const SurveyQuestions = ({ handleProgress }: Props) => {
         let listOfSurveyQuestions = []
         setShowModal(showModal ? false : true)
         try {
-            const { timeSpent:time_taken, data } = sender
+            const { timeSpent: time_taken, data } = sender
             listOfSurveyQuestions.push(data)
             const average_time = Math.round(getAverageTime(time_taken))
-            const char_count = getCharacterCount(filterOpenQuestions(listOfSurveyQuestions)) 
-            const result =  data
-            submitSurveyData({survey_mode,char_count,time_taken,average_time, result})
-            postSurveyMode({mode: survey_mode})
-            
+            const char_count = getCharacterCount(filterOpenQuestions(listOfSurveyQuestions))
+            const result = data
+            submitSurveyData({ survey_mode, char_count, time_taken, average_time, result })
+            postSurveyMode({ mode: survey_mode })
+
         } catch (error) {
-            throw(error)
+            throw (error)
         }
     }
     const handleProceedButton = () => {
@@ -60,9 +61,10 @@ const SurveyQuestions = ({ handleProgress }: Props) => {
         }
     }
 
+
     return (
         <Fragment>
-            <Survey.Survey json={json} onComplete={handleSurveyCompletion} onCurrentPageChanged={handlePageChange} />
+            <Survey.Survey json={surveyJson} onComplete={handleSurveyCompletion} onCurrentPageChanged={handlePageChange} />
             <GuidedTourModal showModal={showModal} handleClick={handleProceedButton} children={<ThanksText />} styleClass='thank-you-modal' modalWindowButton='Proceed' buttonClass='exit-survey-button' />
         </Fragment>
     )

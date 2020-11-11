@@ -1,6 +1,6 @@
 import React from 'react'
 import * as Survey from 'survey-react'
-import json from './json/PreSurveyJSON'
+import JSON from './json/PreSurveyJSON'
 import { useHistory } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { RootState } from '../reducer/reducer'
@@ -39,10 +39,11 @@ const SurveyQuestions: React.FC = () => {
 
     const history = useHistory()
     const path = getNavigationPath(surveyMode)
+    const surveyJSON = JSON()
 
 
     return (
-        <Survey.Survey json={json} onComplete={() => history.push(path)} />
+        <Survey.Survey json={surveyJSON} onComplete={() => history.push(path)} />
     )
 }
 export default SurveyQuestions 
