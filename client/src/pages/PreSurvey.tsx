@@ -11,7 +11,6 @@ const PreSurvey = () => {
     <div className="container">
       <Header children={<Fragment />} />
       <div className="main-body">
-        <h3>Please answer the following questions about yourself before entering the survey</h3>
         <Survey />
       </div>
 
