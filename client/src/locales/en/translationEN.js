@@ -38,6 +38,11 @@ export const translationEN = {
     preSurvey: {
       q1:
         'The following words describe different feelings and sensations. Read each word and then enter the intensity of the feeling you are experiencing in the scale next to each word. You have the possibility to choose between five different levels. ',
+      q1c1: 'Slightly',
+      q1c2: 'Moderately',
+      q1c3: 'Very',
+      q1c4: 'Extremely',
+      q1c5: 'Not at all',
       q1a1: 'Active',
       q1a2: 'Upset',
       q1a3: 'Hostile',
