@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useMemo } from 'react'
 import * as Survey from 'survey-react'
 import { useHistory } from 'react-router-dom'
 import badgeProvider from '../BadgeRules/BadgeRules';
 import { useDispatch, useSelector, useStore } from 'react-redux';
-import json from './json/GamifiedSurveyJSON'
+import GamifiedSurveyJSON from './json/GamifiedSurveyJSON'
 import getCharacterCount from '../helpers/getCharacterCount'
 import filterOpenQuestions from '../helpers/filterOpenQuestions'
 import submitSurveyData from '../api/submitSurveyData'
@@ -11,7 +11,6 @@ import postSurveyMode from '../api/postSurveyMode'
 import getAverageTime from '../helpers/getAverageTime'
 import { RootState } from '../reducer/reducer';
 
-export const model = new Survey.Model(json);
 type AnswerStore = {
     name: string,
     id: string,
@@ -25,6 +24,8 @@ type Props = {
 }
 
 const SurveyQuestions = ({ handleProgress, handleMascot }: Props) => {
+    const surveyJson = GamifiedSurveyJSON()
+
     const dispatch = useDispatch()
     const provideBadge = badgeProvider(dispatch)
     const store = useStore()
@@ -35,7 +36,7 @@ const SurveyQuestions = ({ handleProgress, handleMascot }: Props) => {
     const history = useHistory()
     const [answerStore, setAnswerStore] = useState<Array<AnswerStore>>([{ name: '', id: '0', isAnswered: true }])
     const [count, setCount] = useState(0)
-    const listOfLastPageQuestions = ['q25', 'q26']
+    const listOfLastPageQuestions = ['q28', 'q29', 'q30']
 
     const handleSurveyAnswer = (sender: Survey.SurveyModel, options: any): any => {
         const { question } = options
@@ -56,13 +57,13 @@ const SurveyQuestions = ({ handleProgress, handleMascot }: Props) => {
         }
 
         switch (count) {
-            case 9:
+            case 10:
                 provideBadge.badge.thirtyThreeBadge()
                 break
-            case 17:
+            case 20:
                 provideBadge.badge.sixtySixBadge()
                 break
-            case 26:
+            case 30:
                 provideBadge.badge.fullPoints()
                 const currentStore = store.getState()
                 if (Object.keys(currentStore).length === 9) {
@@ -78,10 +79,10 @@ const SurveyQuestions = ({ handleProgress, handleMascot }: Props) => {
         handleProgress()
         const { newCurrentPage, oldCurrentPage } = options
         // stops the time of previous page and starts the new timer
-        model.stopTimer()
-        model.startTimer()
+        sender.stopTimer()
+        sender.startTimer()
         const timeSpentOnPreviousPage = oldCurrentPage?.timeSpent
-        if (timeSpentOnPreviousPage > 1) {
+        if (timeSpentOnPreviousPage > 120000) {
             setIsTactician(isTactician + 1)
         }
 
@@ -99,7 +100,7 @@ const SurveyQuestions = ({ handleProgress, handleMascot }: Props) => {
     const handleSurveyCompletion = (sender: Survey.SurveyModel, options: any) => {
         if (answerStore
             .filter(element => listOfLastPageQuestions.includes(element.name))
-            .length === 2) {
+            .length === 3) {
             provideBadge.badge.masterOfInterview()
         }
         if (isTactician === 8) {
@@ -128,7 +129,7 @@ const SurveyQuestions = ({ handleProgress, handleMascot }: Props) => {
     }
 
     return (
-        <Survey.Survey model={model}
+        <Survey.Survey json={surveyJson}
             onValueChanged={handleSurveyAnswer}
             onComplete={handleSurveyCompletion}
             onCurrentPageChanged={handlePageChange}

@@ -26,7 +26,7 @@ const GamifiedSurvey = () => {
 
 
   const handleProgress = () => {
-    if (progress === 88) {
+    if (progress === 99) {
       setProgress(100)
     } else {
       setProgress(progress + 11)
