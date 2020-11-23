@@ -15,7 +15,7 @@ const WarningMessage = () => {
     return (
         <Fragment>
             <Warning>Attention!</Warning>
-            <Message>This application is not supported for mobile browsers. Please use a bigger screen for participating in the survey. Thanks for your understanding.</Message>
+            <Message>Dear Participant, this application is not supported for mobile browsers. Kindly use a bigger screen for participating in the survey. Thanks for your understanding.</Message>
         </Fragment>
 
     )

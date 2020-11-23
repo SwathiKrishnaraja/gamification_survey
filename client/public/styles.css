@@ -706,7 +706,7 @@ thead {
   color: white;
   display: inline-block;
   margin-bottom: 0;
-  width: 20%;
+  width: 30%;
   font-weight: 400;
   text-align: center;
   -ms-touch-action: manipulation;
@@ -727,8 +727,7 @@ thead {
 .notify-small-screen-modal {
   position: fixed;
   background: white;
-  width: 550px;
-  height: 120px;
+  width: 300px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);

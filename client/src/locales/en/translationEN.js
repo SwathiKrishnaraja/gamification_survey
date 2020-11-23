@@ -7,7 +7,7 @@ export const translationEN = {
         'I would like to invite you to take part in a survey about sports and exercise as part of my master thesis. Please answer the questions as honestly as possible. Of course, all your data will be kept anonymous and confidential and cannot be traced back to you. If you are not sure which answer applies to you, please choose the alternative that applies to you.',
       content2: 'It will take about 10-15 minutes to answer the questionnaire.',
       content3:
-        'Information on data protection can be found in the data protection information. Your feedback will help us to improve the experience - so every feedback is appreciated. Thank you for your cooperation,',
+        'Information on data protection can be found in the data protection information. Your feedback will help us to improve the experience - so every feedback is appreciated. Thank you for your cooperation.',
       name: 'Swathi Krishnaraja',
       button: 'Continue',
     },
