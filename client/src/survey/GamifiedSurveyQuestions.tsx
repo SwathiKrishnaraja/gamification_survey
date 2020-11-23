@@ -25,7 +25,6 @@ type Props = {
 
 const SurveyQuestions = ({ handleProgress, handleMascot }: Props) => {
     const surveyJson = GamifiedSurveyJSON()
-
     const dispatch = useDispatch()
     const provideBadge = badgeProvider(dispatch)
     const store = useStore()
