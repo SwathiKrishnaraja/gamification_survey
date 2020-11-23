@@ -589,7 +589,6 @@ thead {
   position: fixed;
   background: white;
   width: 550px;
-  height: 100px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -723,4 +722,16 @@ thead {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+
+.notify-small-screen-modal {
+  position: fixed;
+  background: white;
+  width: 550px;
+  height: 120px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 2px;
+  padding: 10px;
 }
