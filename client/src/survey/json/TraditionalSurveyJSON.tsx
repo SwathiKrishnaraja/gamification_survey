@@ -445,43 +445,118 @@ const JSON = () => {
         title: t('mainSurvey.q20')
     }
     const q21: Questions = {
-        type: 'text',
+        type: 'radiogroup',
         name: 'q21',
-        title: t('mainSurvey.q21')
+        title: t('mainSurvey.q21'),
+        choices: [t('mainSurvey.q21a1'),
+        t('mainSurvey.q21a2'),
+        t('mainSurvey.q21a3'),
+        t('mainSurvey.q21a4'),
+        t('mainSurvey.q21a5'),
+        t('mainSurvey.q21a6'),
+        t('mainSurvey.q21a7'),
+        t('mainSurvey.q21a8'),
+        t('mainSurvey.q21a9'),
+        t('mainSurvey.q21a10'),
+        ]
     }
     const q22: Questions = {
-        type: 'text',
+        type: 'radiogroup',
         name: 'q22',
-        title: t('mainSurvey.q22')
+        title: t('mainSurvey.q22'),
+        choices: [t('mainSurvey.q22a1'),
+        t('mainSurvey.q22a2'),
+        t('mainSurvey.q22a3'),
+        t('mainSurvey.q22a4'),
+        t('mainSurvey.q22a5'),
+        t('mainSurvey.q22a6'),
+        t('mainSurvey.q22a7'),
+        t('mainSurvey.q22a8'),
+        t('mainSurvey.q22a9'),
+        ]
     }
     const q23: Questions = {
-        type: 'text',
+        type: 'radiogroup',
         name: 'q23',
-        title: t('mainSurvey.q23')
+        title: t('mainSurvey.q23'),
+        choices: [t('mainSurvey.q23a1'),
+        t('mainSurvey.q23a2'),
+        t('mainSurvey.q23a3'),
+        t('mainSurvey.q23a4'),
+        ]
     }
     const q24: Questions = {
-        type: 'text',
+        type: 'radiogroup',
         name: 'q24',
-        title: t('mainSurvey.q24')
+        title: t('mainSurvey.q24'),
+        choices: [t('mainSurvey.q24a1'),
+        t('mainSurvey.q24a2'),
+        t('mainSurvey.q24a3'),
+        ]
     }
-
     const q25: Questions = {
         type: 'radiogroup',
         name: 'q25',
+        title: t('mainSurvey.q25'),
+        choices: [t('mainSurvey.q25a1'),
+        t('mainSurvey.q25a2'),
+        t('mainSurvey.q25a3'),
+        t('mainSurvey.q25a4'),
+        ]
+    }
+    const q26: Questions = {
+        type: 'radiogroup',
+        name: 'q26',
+        title: t('mainSurvey.q26'),
+        choices: [t('mainSurvey.q26a1'),
+        t('mainSurvey.q26a2'),
+        t('mainSurvey.q26a3'),
+        t('mainSurvey.q26a4'),
+        ]
+    }
+    const q27: Questions = {
+        type: 'radiogroup',
+        name: 'q27',
         title: t('mainSurvey.q27'),
         choices: [t('mainSurvey.q27a1'),
         t('mainSurvey.q27a2'),
-        t('mainSurvey.q27a3')]
+        t('mainSurvey.q27a3'),
+        t('mainSurvey.q27a4'),
+        t('mainSurvey.q27a5'),
+        t('mainSurvey.q27a6'),
+        ]
     }
-
-    const q26: Questions = {
+    const q28: Questions = {
         type: 'radiogroup',
         name: 'q28',
         title: t('mainSurvey.q28'),
         choices: [t('mainSurvey.q28a1'),
         t('mainSurvey.q28a2'),
-        t('mainSurvey.q28a3')]
+        t('mainSurvey.q28a3'),
+        t('mainSurvey.q28a4'),
+        t('mainSurvey.q28a5'),
+        t('mainSurvey.q28a6'),
+        ]
     }
+    const q29: Questions = {
+        type: 'radiogroup',
+        name: 'q29',
+        title: t('mainSurvey.q29'),
+        choices: [t('mainSurvey.q29a1'),
+        t('mainSurvey.q29a2'),
+        t('mainSurvey.q29a3'),
+        ]
+    }
+    const q30: Questions = {
+        type: 'radiogroup',
+        name: 'q30',
+        title: t('mainSurvey.q30'),
+        choices: [t('mainSurvey.q30a1'),
+        t('mainSurvey.q30a2'),
+        t('mainSurvey.q30a3'),
+        ]
+    }
+
 
 
     const json = {
@@ -590,12 +665,24 @@ const JSON = () => {
                     {
                         "type": "panel",
                         "elements": [
-                            q25, q26,
+                            q25, q26, q27
                         ],
                         "name": "panel8"
                     }
                 ],
                 "name": "page8"
+            },
+            {
+                "elements": [
+                    {
+                        "type": "panel",
+                        "elements": [
+                            q28, q29, q30
+                        ],
+                        "name": "panel9"
+                    }
+                ],
+                "name": "page9"
             },
         ],
         mode: "edit"
