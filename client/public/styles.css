@@ -593,6 +593,8 @@ thead {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  border-radius: 2px;
+  padding: 10px;
 }
 .x-styled-close {
   margin: 10px;
@@ -695,4 +697,30 @@ thead {
   display: flex;
   flex-direction: column;
   margin-bottom: 10px;
+}
+
+/* HomeContent notify small screen */
+
+.notify-small-screen {
+  background-color: #337ab7;
+  border-color: #2e6da4;
+  color: white;
+  display: inline-block;
+  margin-bottom: 0;
+  width: 20%;
+  font-weight: 400;
+  text-align: center;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  border-radius: 4px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }

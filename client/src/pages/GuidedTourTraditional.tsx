@@ -21,7 +21,7 @@ export const TourContinueElement: React.FC = () => {
             <hr style={{ width: '98%' }} />
             <h4>
                 <br />
-            You have finished the Guided tour of first version.
+            You have finished the Guided tour.
             </h4>
         </Fragment>
     )

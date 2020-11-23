@@ -2,7 +2,7 @@ import React from 'react'
 
 interface Props {
     showModal: boolean
-    handleCancelButton: () => void,
+    handleCancelButton?: () => void,
     handleConfirmationButton: () => void,
     children: React.ReactNode
     modalWindowButton: string

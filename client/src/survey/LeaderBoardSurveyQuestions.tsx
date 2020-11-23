@@ -1,6 +1,6 @@
 import React, { useState, Fragment, useEffect } from 'react'
 import * as Survey from 'survey-react'
-import json from './json/LeaderBoardSurveyJSON'
+import LeaderboardSurveyJson from './json/LeaderBoardSurveyJSON'
 import { useHistory } from 'react-router-dom'
 import GuidedTourModal from '../components/GuidedTour/GuidedTourModal'
 import ThanksText from '../components/ThanksText'
@@ -13,7 +13,6 @@ import postSurveyMode from '../api/postSurveyMode'
 import getAverageTime from '../helpers/getAverageTime'
 import { RootState } from '../reducer/reducer';
 
-export const model = new Survey.Model(json);
 type AnswerStore = {
     name: string,
     id: string,
@@ -22,16 +21,18 @@ type AnswerStore = {
 
 type Props = {
     progress: number,
+    showMascot: boolean,
     handleProgress: () => void
     handleMascot: () => void
 }
 
-const SurveyQuestions = ({ progress, handleProgress, handleMascot }: Props) => {
+const SurveyQuestions = ({ progress, handleProgress, handleMascot, showMascot }: Props) => {
+    const surveyJson = LeaderboardSurveyJson()
     const history = useHistory()
     const [showModal, setShowModal] = useState(false)
     const [answerStore, setAnswerStore] = useState<Array<AnswerStore>>([{ name: '', id: '0', isAnswered: true }])
     const [count, setCount] = useState(0)
-    const listOfLastPageQuestions = ['q25', 'q26']
+    const listOfLastPageQuestions = ['q28', 'q29', 'q30']
     const dispatch = useDispatch()
     const [isTactician, setIsTactician] = useState(0)
     const store = useStore()
@@ -56,10 +57,10 @@ const SurveyQuestions = ({ progress, handleProgress, handleMascot }: Props) => {
         handleProgress()
         const { newCurrentPage, oldCurrentPage } = options
         // stops the time of previous page and starts the new timer
-        model.stopTimer()
-        model.startTimer()
+        sender.stopTimer()
+        sender.startTimer()
         const timeSpentOnPreviousPage = oldCurrentPage?.timeSpent
-        if (timeSpentOnPreviousPage > 1) {
+        if (timeSpentOnPreviousPage > 120000) {
             setIsTactician(isTactician + 1)
         }
 
@@ -68,6 +69,10 @@ const SurveyQuestions = ({ progress, handleProgress, handleMascot }: Props) => {
             dispatch({ type: 'ADD_POINTS', payload: 100 })
         }
         if (sender.currentPageNo === 4) {
+            handleMascot()
+        }
+
+        if (sender.currentPageNo === 5 && showMascot) {
             handleMascot()
         }
     }
@@ -89,13 +94,13 @@ const SurveyQuestions = ({ progress, handleProgress, handleMascot }: Props) => {
         }
 
         switch (count) {
-            case 9:
+            case 10:
                 dispatch({ type: 'ADD_POINTS', payload: 100 })
                 break
-            case 17:
+            case 20:
                 dispatch({ type: 'ADD_POINTS', payload: 100 })
                 break
-            case 26:
+            case 30:
                 dispatch({ type: 'ADD_POINTS', payload: 100 })
                 const currentStore = store.getState()
                 if (Object.keys(currentStore).length === 9) {
@@ -119,7 +124,7 @@ const SurveyQuestions = ({ progress, handleProgress, handleMascot }: Props) => {
     const handleSurveyCompletion = (sender: SurveyModel, options: any) => {
         if (answerStore
             .filter(element => listOfLastPageQuestions.includes(element.name))
-            .length === 2) {
+            .length === 3) {
             dispatch({ type: 'ADD_POINTS', payload: 100 })
         }
         dispatch({ type: 'ADD_POINTS', payload: 100 })
@@ -147,7 +152,7 @@ const SurveyQuestions = ({ progress, handleProgress, handleMascot }: Props) => {
 
     return (
         <Fragment>
-            <Survey.Survey model={model}
+            <Survey.Survey json={surveyJson}
                 onValueChanged={handleSurveyAnswer}
                 onComplete={handleSurveyCompletion}
                 onCurrentPageChanged={handlePageChange} />
