@@ -21,11 +21,12 @@ type AnswerStore = {
 
 type Props = {
     progress: number,
+    showMascot: boolean,
     handleProgress: () => void
     handleMascot: () => void
 }
 
-const SurveyQuestions = ({ progress, handleProgress, handleMascot }: Props) => {
+const SurveyQuestions = ({ progress, handleProgress, handleMascot, showMascot }: Props) => {
     const surveyJson = LeaderboardSurveyJson()
     const history = useHistory()
     const [showModal, setShowModal] = useState(false)
@@ -68,6 +69,10 @@ const SurveyQuestions = ({ progress, handleProgress, handleMascot }: Props) => {
             dispatch({ type: 'ADD_POINTS', payload: 100 })
         }
         if (sender.currentPageNo === 4) {
+            handleMascot()
+        }
+
+        if (sender.currentPageNo === 5 && showMascot) {
             handleMascot()
         }
     }

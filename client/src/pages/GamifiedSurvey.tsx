@@ -44,7 +44,7 @@ const GamifiedSurvey = () => {
       <div className="main-body">
         <Badges />
         <CustomProgressBar progress={progress} />
-        <SurveyQuestions progress={progress} handleProgress={handleProgress} handleMascot={handleMascot} />
+        <SurveyQuestions progress={progress} handleProgress={handleProgress} showMascot={showMascot} handleMascot={handleMascot} />
         {showMascot ? <Mascot handleMascot={handleMascot} provideBadgeForMascot={provideBadgeForMascot} /> : null}
       </div>
 

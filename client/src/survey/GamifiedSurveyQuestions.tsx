@@ -19,11 +19,12 @@ type AnswerStore = {
 
 type Props = {
     progress: number,
+    showMascot: boolean,
     handleProgress: () => void
     handleMascot: () => void
 }
 
-const SurveyQuestions = ({ handleProgress, handleMascot }: Props) => {
+const SurveyQuestions = ({ handleProgress, handleMascot, showMascot }: Props) => {
     const surveyJson = GamifiedSurveyJSON()
     const dispatch = useDispatch()
     const provideBadge = badgeProvider(dispatch)
@@ -91,6 +92,10 @@ const SurveyQuestions = ({ handleProgress, handleMascot }: Props) => {
         }
 
         if (sender.currentPageNo === 4) {
+            handleMascot()
+        }
+
+        if (sender.currentPageNo === 5 && showMascot) {
             handleMascot()
         }
     }

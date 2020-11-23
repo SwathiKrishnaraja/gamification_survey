@@ -49,7 +49,7 @@ const LeaderBoardSurvey = () => {
                 <CustomProgressBar progress={progress} />
                 <div className='leaderBoard-body'>
                     <div className='survey-body'>
-                        <SurveyQuestions progress={progress} handleProgress={handleProgress} handleMascot={handleMascot} />
+                        <SurveyQuestions progress={progress} handleProgress={handleProgress} handleMascot={handleMascot} showMascot={showMascot} />
                         {showMascot ? <Mascot handleMascot={handleMascot} addPoints={addPoints} /> : null}
                     </div>
                     <LeaderboardComponent points={pointsFromReduxStore} listOfComponents={listOfComponents} />
