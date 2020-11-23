@@ -11,7 +11,7 @@ const TraditionalSurvey = () => {
   const [progress, setProgress] = useState<number>(0)
 
   const handleProgress = () => {
-    if (progress === 88) {
+    if (progress === 99) {
       setProgress(100)
     } else {
       setProgress(progress + 11)
