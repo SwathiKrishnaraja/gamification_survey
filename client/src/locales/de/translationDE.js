@@ -64,7 +64,7 @@ export const translationDE = {
       q2c6: 'Mostly Agree',
       q2c7: 'Entirely Agree',
 
-      q2a1: 'It makes me happy if I am able to help others.', 
+      q2a1: 'It makes me happy if I am able to help others.',
       q2a2: 'Interacting with others is important to me.',
       q2a3: 'It is important to me to follow my own path.',
       q2a4: 'I like overcoming obstacles.',
@@ -87,7 +87,7 @@ export const translationDE = {
       q2a21: 'Being independent is important to me.',
       q2a22: 'I like mastering difficult tasks.',
       q2a23: 'If the reward is sufficient I will put in the effort.',
-      q2a24: 'I dislike following rules.'
+      q2a24: 'I dislike following rules.',
     },
     mainSurvey: {
       q1:
@@ -270,10 +270,11 @@ export const translationDE = {
       q19a3: 'Rather dissatisfied',
       q19a4: 'Very unhappy',
 
-      q20: 'Finally, we ask you to provide some statistics. In which state do you live in?',
-     
+      q20:
+        'Finally, we ask you to provide some statistics. In which state do you live in?',
+
       q21: 'What is the highest degree or level of school you have completed?',
-  
+
       q21a1: 'No schooling completed',
       q21a2: 'High school graduate, diploma or the equivalent',
       q21a3: 'Some college credit, no degree',
@@ -368,19 +369,22 @@ export const translationDE = {
       q1a9: 'Attentive',
       q1a10: 'Afraid',
 
-      q2: 'To what extend do you agree with the following statements?',
-      q2c1: '1 Not at all true',
+      q2:
+        'To what extend do you agree with the following statements? Rate on a scale of 1 to 7.',
+      q2c1: '1',
       q2c2: '2',
       q2c3: '3',
-      q2c4: '4 Somewhat true',
+      q2c4: '4',
       q2c5: '5',
       q2c6: '6',
-      q2c7: '7 Very true', 
+      q2c7: '7',
 
       q2a1: 'I believe that doing this activity could be of some value for me.',
       q2a2: 'I believe I had some choice about doing this activity.',
-      q2a3: 'While I was doing this activity, I was thinking about how much I enjoyed it.',
-      q2a4: 'I believe that doing this activity is useful for improved concentration.',
+      q2a3:
+        'While I was doing this activity, I was thinking about how much I enjoyed it.',
+      q2a4:
+        'I believe that doing this activity is useful for improved concentration.',
       q2a5: 'This activity was fun to do.',
       q2a6: 'I think this activity is important for my improvement.',
       q2a7: 'I enjoyed doing this activity very much.',
@@ -389,19 +393,23 @@ export const translationDE = {
       q2a10: 'I think this is an important activity.',
       q2a11: 'I felt like I was enjoying the activity while I was doing it.',
       q2a12: 'I thought this was a very boring activity.',
-      q2a13: 'It is possible that this activity could improve my studying habits.',
+      q2a13:
+        'It is possible that this activity could improve my studying habits.',
       q2a14: 'I felt like I had no choice but to do this activity.',
       q2a15: 'I thought this was a very interesting activity.',
-      q2a16: 'I am willing to do this activity again because I think it is somewhat useful.',
+      q2a16:
+        'I am willing to do this activity again because I think it is somewhat useful.',
       q2a17: 'I would describe this activity as very enjoyable.',
       q2a18: 'I felt like I had to do this activity.',
-      q2a19: 'I believe doing this activity could be somewhat beneficial for me.',
+      q2a19:
+        'I believe doing this activity could be somewhat beneficial for me.',
       q2a20: 'I did this activity because I had to.',
       q2a21: 'I believe doing this activity could help me do better in school.',
       q2a22: 'While doing this activity I felt like I had a choice.',
       q2a23: 'I would describe this activity as very fun.',
       q2a24: 'I felt like it was not my own choice to do this activity.',
-      q2a25: 'I would be willing to do this activity again because it has some value for me.',
+      q2a25:
+        'I would be willing to do this activity again because it has some value for me.',
 
       q3:
         'Below are some statements about the questionnaire itself. Please indicate for every statement, if you strongly agree, somewhat agree, somewhat disagree, or strongly disagree.',
@@ -410,20 +418,20 @@ export const translationDE = {
       q3c3: 'Somewhat Disagree',
       q3c4: 'Strongly Disagree',
       q3c5: 'No Answer',
-      
+
       q3a1: 'The questionnaire was entertaining.',
       q3a2: 'Completing the questionnaire took a lot of time.',
       q3a3:
         'The questionnaire was designed differently from conventional questionnaires.',
-      q3a4: 'I liked the questionnaire better than conventional questionnaires.',
+      q3a4:
+        'I liked the questionnaire better than conventional questionnaires.',
 
       q4: 'What did you like about the survey? ',
 
       q5: 'What did you not like about the survey?',
 
       q6: 'What would you change about the survey?',
-
-      },
+    },
 
     selfReportChoiceEnableDisable: {
       q1:
@@ -442,8 +450,7 @@ export const translationDE = {
       q2c4: 'agree',
       q2c5: 'strongly agree',
 
-      q3:
-        'Overall, what did you feel about the choice given to you?',
+      q3: 'Overall, what did you feel about the choice given to you?',
 
       q4: 'Overall, what did you feel about gamification in survey?',
     },
@@ -479,8 +486,7 @@ export const translationDE = {
       q4c4: 'agree',
       q4c5: 'strongly agree',
 
-      q5:
-        'Overall, what did you feel about the choice given to you?',
+      q5: 'Overall, what did you feel about the choice given to you?',
 
       q6: 'Overall, what did you feel about gamification in survey?',
     },
@@ -509,8 +515,6 @@ export const translationDE = {
       q3c5: 'strongly agree',
 
       q4: 'Overall, what did you feel about gamification in survey?',
-
     },
-  
   },
 }
