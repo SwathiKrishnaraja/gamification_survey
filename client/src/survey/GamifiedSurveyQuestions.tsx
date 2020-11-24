@@ -9,7 +9,8 @@ import filterOpenQuestions from '../helpers/filterOpenQuestions'
 import submitSurveyData from '../api/submitSurveyData'
 import postSurveyMode from '../api/postSurveyMode'
 import getAverageTime from '../helpers/getAverageTime'
-import { RootState } from '../reducer/reducer';
+import { RootState } from '../reducer/reducer'
+import { Badge } from '../types/types'
 
 type AnswerStore = {
     name: string,
@@ -38,41 +39,41 @@ const SurveyQuestions = ({ handleProgress, handleMascot, showMascot }: Props) =>
     const [count, setCount] = useState(0)
     const listOfLastPageQuestions = ['q28', 'q29', 'q30']
 
+
     const handleSurveyAnswer = (sender: Survey.SurveyModel, options: any): any => {
         const { question } = options
-        if (!(answerStore.find(element => element.id === question.id))) {
-            setAnswerStore([
-                ...answerStore,
-                {
-                    name: question.name,
-                    id: question.id,
-                    isAnswered: question.isAnswered
-                }
-            ])
+
+        if (!answerStore.find((element) => element.id === question.id)) {
             if (question.isAnswered) {
+                setAnswerStore([
+                    ...answerStore,
+                    {
+                        name: question.name,
+                        id: question.id,
+                        isAnswered: question.isAnswered
+                    }
+                ])
                 setCount(count + 1)
-            }
 
-
-        }
-
-        switch (count) {
-            case 10:
-                provideBadge.badge.thirtyThreeBadge()
-                break
-            case 20:
-                provideBadge.badge.sixtySixBadge()
-                break
-            case 30:
-                provideBadge.badge.fullPoints()
-                const currentStore = store.getState()
-                if (Object.keys(currentStore).length === 9) {
-                    provideBadge.badge.medalCollector()
+                switch (count) {
+                    case 10:
+                        provideBadge.badge.thirtyThreeBadge()
+                        break
+                    case 20:
+                        provideBadge.badge.sixtySixBadge()
+                        break
+                    case 30:
+                        provideBadge.badge.fullPoints()
+                        const currentStore = store.getState()
+                        if (Object.keys(currentStore).length === 9) {
+                            provideBadge.badge.medalCollector()
+                        }
+                        break
+                    default:
                 }
-                break
-            default:
-                console.log(count)
+            }
         }
+
     }
 
     const handlePageChange = (sender: Survey.SurveyModel, options: any): any => {

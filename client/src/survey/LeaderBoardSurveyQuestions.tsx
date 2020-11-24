@@ -79,36 +79,36 @@ const SurveyQuestions = ({ progress, handleProgress, handleMascot, showMascot }:
 
     const handleSurveyAnswer = (sender: Survey.SurveyModel, options: any): any => {
         const { question } = options
-        if (!(answerStore.find(element => element.id === question.id))) {
-            setAnswerStore([
-                ...answerStore,
-                {
-                    name: question.name,
-                    id: question.id,
-                    isAnswered: question.isAnswered
-                }
-            ])
-            if (question.isAnswered) {
-                setCount(count + 1)
-            }
-        }
 
-        switch (count) {
-            case 10:
-                dispatch({ type: 'ADD_POINTS', payload: 100 })
-                break
-            case 20:
-                dispatch({ type: 'ADD_POINTS', payload: 100 })
-                break
-            case 30:
-                dispatch({ type: 'ADD_POINTS', payload: 100 })
-                const currentStore = store.getState()
-                if (Object.keys(currentStore).length === 9) {
-                    dispatch({ type: 'ADD_POINTS', payload: 100 })
+        if (!answerStore.find((element) => element.id === question.id)) {
+            if (question.isAnswered) {
+                setAnswerStore([
+                    ...answerStore,
+                    {
+                        name: question.name,
+                        id: question.id,
+                        isAnswered: question.isAnswered
+                    }
+                ])
+                setCount(count + 1)
+
+                switch (count) {
+                    case 10:
+                        dispatch({ type: 'ADD_POINTS', payload: 100 })
+                        break
+                    case 20:
+                        dispatch({ type: 'ADD_POINTS', payload: 100 })
+                        break
+                    case 30:
+                        dispatch({ type: 'ADD_POINTS', payload: 100 })
+                        const currentStore = store.getState()
+                        if (Object.keys(currentStore).length === 9) {
+                            dispatch({ type: 'ADD_POINTS', payload: 100 })
+                        }
+                        break
+                    default:
                 }
-                break
-            default:
-                console.log(count)
+            }
         }
     }
 
