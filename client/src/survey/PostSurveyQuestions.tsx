@@ -21,11 +21,11 @@ const GenericSurveyQuestions = () => {
             text: t('postSurvey.q1c3')
         },
         {
-            value: 3,
+            value: 4,
             text: t('postSurvey.q1c4')
         },
         {
-            value: 3,
+            value: 5,
             text: t('postSurvey.q1c5')
         }],
         rows: [{
@@ -270,11 +270,11 @@ const GamifiedSurveyQuestions = () => {
             text: t('postSurvey.q1c3')
         },
         {
-            value: 3,
+            value: 4,
             text: t('postSurvey.q1c4')
         },
         {
-            value: 3,
+            value: 5,
             text: t('postSurvey.q1c5')
         }],
         rows: [{
@@ -319,7 +319,6 @@ const GamifiedSurveyQuestions = () => {
         },
         ]
     }
-
     const q2: Questions = {
         type: 'matrix',
         name: 'q2',
@@ -563,11 +562,11 @@ const TraditionalGamifiedQuestions = () => {
             text: t('postSurvey.q1c3')
         },
         {
-            value: 3,
+            value: 4,
             text: t('postSurvey.q1c4')
         },
         {
-            value: 3,
+            value: 5,
             text: t('postSurvey.q1c5')
         }],
         rows: [{
@@ -612,7 +611,6 @@ const TraditionalGamifiedQuestions = () => {
         },
         ]
     }
-
     const q2: Questions = {
         type: 'matrix',
         name: 'q2',
@@ -849,11 +847,11 @@ const GamifiedChoiceQuestions = () => {
             text: t('postSurvey.q1c3')
         },
         {
-            value: 3,
+            value: 4,
             text: t('postSurvey.q1c4')
         },
         {
-            value: 3,
+            value: 5,
             text: t('postSurvey.q1c5')
         }],
         rows: [{
@@ -898,7 +896,6 @@ const GamifiedChoiceQuestions = () => {
         },
         ]
     }
-
     const q2: Questions = {
         type: 'matrix',
         name: 'q2',

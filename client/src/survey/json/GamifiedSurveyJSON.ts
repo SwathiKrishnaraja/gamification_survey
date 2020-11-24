@@ -143,81 +143,81 @@ const JSON = () => {
         name: 'q12',
         title: t('mainSurvey.q12'),
         columns: [{
-            value: 1,
+            value: 121,
             text: t('mainSurvey.q12c1')
         },
         {
-            value: 2,
+            value: 122,
             text: t('mainSurvey.q12c2')
         },
         {
-            value: 3,
+            value: 123,
             text: t('mainSurvey.q12c3')
         },
         {
-            value: 4,
+            value: 124,
             text: t('mainSurvey.q12c4')
         },
         {
-            value: 5,
+            value: 125,
             text: t('mainSurvey.q12c5')
         },
         ],
         rows: [
             {
-                value: '1',
+                value: '121',
                 text: t('mainSurvey.q12a1')
             },
             {
-                value: '2',
+                value: '122',
                 text: t('mainSurvey.q12a2')
             },
             {
-                value: '3',
+                value: '123',
                 text: t('mainSurvey.q12a3')
             },
             {
-                value: '4',
+                value: '124',
                 text: t('mainSurvey.q12a4')
             },
             {
-                value: '5',
+                value: '125',
                 text: t('mainSurvey.q12a5')
             },
             {
-                value: '6',
+                value: '126',
                 text: t('mainSurvey.q12a6')
             },
             {
-                value: '7',
+                value: '127',
                 text: t('mainSurvey.q12a7')
             },
             {
-                value: '8',
+                value: '128',
                 text: t('mainSurvey.q12a8')
             },
             {
-                value: '9',
+                value: '129',
                 text: t('mainSurvey.q12a9')
             },
             {
-                value: '10',
+                value: '1210',
                 text: t('mainSurvey.q12a10')
             },
             {
-                value: '11',
+                value: '1211',
                 text: t('mainSurvey.q12a11')
             },
             {
-                value: '12',
+                value: '1212',
                 text: t('mainSurvey.q12a12')
             },
             {
-                value: '13',
+                value: '1213',
                 text: t('mainSurvey.q12a13')
             },
             {
-                value: '14',
+                value: '1214',
                 text: t('mainSurvey.q12a14')
             },
 
@@ -292,27 +292,27 @@ const JSON = () => {
         },
         {
             value: '7',
-            text: t('mainSurvey.q15a6')
-        },
-        {
-            value: '8',
             text: t('mainSurvey.q15a7')
         },
         {
-            value: '9',
+            value: '8',
             text: t('mainSurvey.q15a8')
         },
         {
-            value: '10',
+            value: '9',
             text: t('mainSurvey.q15a9')
         },
         {
-            value: '11',
+            value: '10',
             text: t('mainSurvey.q15a10')
         },
         {
-            value: '12',
+            value: '11',
             text: t('mainSurvey.q15a11')
+        },
+        {
+            value: '12',
+            text: t('mainSurvey.q15a12')
         },
         ]
 
