@@ -292,30 +292,29 @@ const JSON = () => {
         },
         {
             value: '7',
-            text: t('mainSurvey.q15a6')
-        },
-        {
-            value: '8',
             text: t('mainSurvey.q15a7')
         },
         {
-            value: '9',
+            value: '8',
             text: t('mainSurvey.q15a8')
         },
         {
-            value: '10',
+            value: '9',
             text: t('mainSurvey.q15a9')
         },
         {
-            value: '11',
+            value: '10',
             text: t('mainSurvey.q15a10')
         },
         {
-            value: '12',
+            value: '11',
             text: t('mainSurvey.q15a11')
         },
+        {
+            value: '12',
+            text: t('mainSurvey.q15a12')
+        },
         ]
-
     }
 
     const q16: Questions = {
