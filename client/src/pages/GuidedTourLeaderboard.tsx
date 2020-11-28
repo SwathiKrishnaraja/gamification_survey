@@ -63,7 +63,12 @@ const GuidedTourLeaderboard = () => {
     const [runTour1, setRunTour1] = useState(false)
     const [showModal, setShowModal] = useState(false)
     const [showTour, setShowTour] = useState(false)
-    const surveyMode = useSelector((state: RootState) => state.entryPointReducer.mode)
+
+    // Testing-setup for thesis
+    // const surveyMode = useSelector((state: RootState) => state.entryPointReducer.mode) //uncomment this for prod
+    const surveyMode = useSelector((state: RootState) => state.optionsProviderReducer)
+    // Testing-setup for thesis
+
     const { zeus, ron, han, jonas } = barGraphElements
     const user = createABarGraphElement('You', 850, 85, 'blue')
     const listOfComponents: Array<React.ReactElement> = [zeus, ron, han, jonas, user]
