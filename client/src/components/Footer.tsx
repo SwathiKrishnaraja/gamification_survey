@@ -8,7 +8,7 @@ import LegalInformation from './LegalInformation';
 const FooterComponent = styled.footer`
   position: relative;
   bottom: 0px;
-  width: 100%
+  width: 100%;
 `
 const Footer = () => {
   const [showImprint, setShowImprint] = useState<boolean>(false)

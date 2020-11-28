@@ -6,8 +6,10 @@ import dfkiLogo from '../content/DFKI_Logo.jpg'
 import DataProtection from './DataProtection'
 import ImprintModal from './ImprintModal'
 import styled from 'styled-components'
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import assignSurveyMode from '../helpers/assignSurveyMode'
+import { RootState } from '../reducer/reducer';
+
 
 const PrivacyHeading = styled.h4`
 color: ${props => props.color};
@@ -21,6 +23,10 @@ const HomeContent = () => {
   const [isChecked, setIsChecked] = useState<boolean>(true)
   const dispatch = useDispatch()
 
+  // Testing-setup for thesis
+  const modeSelected = useSelector((state: RootState) => state.optionsProviderReducer)
+  // Testing-setup for thesis
+
   const handleDataProtectionTagClick = () => {
     setShowModal(showModal ? false : true)
   }
@@ -30,7 +36,12 @@ const HomeContent = () => {
   }
 
   const addSurveyModeToStore = async () => {
-    const surveyMode = await assignSurveyMode()
+    // Testing-setup for thesis
+    // const surveyMode = await assignSurveyMode() //uncomment this for production
+
+    const surveyMode = modeSelected
+
+    // Testing-setup for thesis
     dispatch({ type: 'ADD_MODE', payload: surveyMode })
   }
 
@@ -80,6 +91,6 @@ const HomeContent = () => {
       <button data-testid='proceed-button' className="continue-button" onClick={handleProceed}>{t('homeContent.button')}</button>
     </Fragment>
   );
-};
+}
 
-export default HomeContent;
+export default HomeContent
