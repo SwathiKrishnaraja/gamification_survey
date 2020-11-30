@@ -17,22 +17,26 @@ const CloseButton = styled.button`
     border-radius: 3px;
     padding: 5px;
 `
+const CustomSpan = styled.span`
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+`
+const CustomDiv = styled.div`
+    width: 100%;
+`
 
 const ImprintModal: React.FC<Props> = ({ showModal, handleClick, children, title }) => {
     const modalCss = showModal ? 'modal-open' : 'modal-close'
     return (
         <div data-testid='modal' className={modalCss}>
             <section className='modalMain'>
-                <div style={{
-                    display: 'flex',
-                    justifyContent: 'space-between',
-                    alignItems: 'center'
-                }}>
-                    <span>
-                        <h1 style={{ margin: 10 }}>{title}</h1>
-                        {/* <button className='x-styled-close' onClick={handleClick}>x</button> */}
-                    </span>
-                </div >
+                <CustomDiv>
+                    <CustomSpan>
+                        <h1 style={{ margin: 10, marginLeft: 100 }}>{title}</h1>
+                        <button className='x-styled-close' onClick={handleClick}>x</button>
+                    </CustomSpan>
+                </CustomDiv >
                 <hr />
                 {children}
                 <hr />
