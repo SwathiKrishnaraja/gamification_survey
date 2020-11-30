@@ -56,13 +56,13 @@ export const translationEN = {
       q1a10: 'Afraid',
 
       q2: 'To what extend do you agree with the following statements?',
-      q2c1: 'Entirely Disagree',
-      q2c2: 'Mostly Disagree',
+      q2c1: 'Strongly Disagree',
+      q2c2: 'Disagree',
       q2c3: 'Somewhat Disagree',
       q2c4: 'Neither Agree nor Disagree',
       q2c5: 'Somewhat Agree',
-      q2c6: 'Mostly Agree',
-      q2c7: 'Entirely Agree',
+      q2c6: 'Agree',
+      q2c7: 'Strongly Agree',
 
       q2a1: 'It makes me happy if I am able to help others.',
       q2a2: 'Interacting with others is important to me.',
@@ -174,10 +174,10 @@ export const translationEN = {
 
       q12:
         'Here are a few more reasons to be physically active, please indicate for every statement, if you strongly agree, somewhat agree, somewhat disagree, or strongly disagree.',
-      q12c1: 'Strongly Agree',
-      q12c2: 'Somewhat Agree',
-      q12c3: 'Somewhat Disagree',
-      q12c4: 'Strongly Disagree',
+      q12c1: 'Strongly Disagree',
+      q12c2: 'Somewhat Disagree',
+      q12c3: 'Somewhat Agree',
+      q12c4: 'Strongly Agree',
       q12c5: 'No Answer',
 
       q12a1: 'It gives me a chance to think.',
@@ -206,10 +206,10 @@ export const translationEN = {
 
       q15:
         'Here are a few more reasons to be physically active, please indicate for every statement, if you strongly agree, somewhat agree, somewhat disagree, or strongly disagree.',
-      q15c1: 'Strongly Agree',
-      q15c2: 'Somewhat Agree',
-      q15c3: 'Somewhat Disagree',
-      q15c4: 'Strongly Disagree',
+      q15c1: 'Strongly Disagree',
+      q15c2: 'Somewhat Disagree',
+      q15c3: 'Somewhat Agree',
+      q15c4: 'Strongly Agree',
       q15c5: 'No Answer',
 
       q15a1: 'Sports does more harm than good.',
@@ -228,10 +228,10 @@ export const translationEN = {
 
       q16:
         'Here you will find again some statements, please indicate for every statement, if you strongly agree, somewhat agree, somewhat disagree, or strongly disagree.',
-      q16c1: 'Strongly Agree',
-      q16c2: 'Somewhat Agree',
-      q16c3: 'Somewhat Disagree',
-      q16c4: 'Strongly Disagree',
+      q16c1: 'Strongly Disagree',
+      q16c2: 'Somewhat Disagree',
+      q16c3: 'Somewhat Agree',
+      q16c4: 'Strongly Agree',
       q16c5: 'No Answer',
 
       q16a1: 'Exercise must first and foremost be fun.',
@@ -246,10 +246,10 @@ export const translationEN = {
 
       q17:
         'Below, are few measures to motivate young people to be more active are shown. Please indicate for every measure, whether you believe that these can motivate young people to take more exercise.',
-      q17c1: 'Strongly Agree',
-      q17c2: 'Somewhat Agree',
-      q17c3: 'Somewhat Disagree',
-      q17c4: 'Strongly Disagree',
+      q17c1: 'Strongly Disagree',
+      q17c2: 'Somewhat Disagree',
+      q17c3: 'Somewhat Agree',
+      q17c4: 'Strongly Agree',
       q17c5: 'No Answer',
 
       q17a1: 'More offers for exercise in school/at work.',
@@ -271,7 +271,7 @@ export const translationEN = {
       q19a4: 'Very unhappy',
 
       q20:
-        'Finally, we ask you to provide some statistics. In which state do you live in?',
+        'Finally, we ask you to provide some statistics. In which country do you live in?',
 
       q21: 'What is the highest degree or level of school you have completed?',
 
@@ -284,7 +284,8 @@ export const translationEN = {
       q21a7: 'Master’s degree',
       q21a8: 'Professional degree',
       q21a9: 'Doctorate degree',
-      q21a10: 'No answer',
+      q21a10: 'Other',
+      q21a11: 'No answer',
 
       q22: 'And you are in which line of work… ',
       q22a1: 'School student',
@@ -343,7 +344,7 @@ export const translationEN = {
       q29a3: 'No answer',
 
       q30:
-        'Are you familiar with badges (or points and leaderboard) from computer games?',
+        'Are you familiar with badges, points and leaderboard from computer games?',
       q30a1: 'Yes',
       q30a2: 'No',
       q30a3: 'No answer',
@@ -370,7 +371,7 @@ export const translationEN = {
       q1a10: 'Afraid',
 
       q2:
-        'To what extent do you agree with the following statements? Rate on a scale of 1 to 7.',
+        'To what extent do you agree with the following statements? Rate on a scale of 1 to 7, where 1 = Strongly Disagree, 2 = Disagree, 3 = Somewhat Disagree, 4 = Neither Disagree Nor Agree, 5 = Somewhat Agree, 6 = Agree, 7 = Strongly Agree.',
       q2c1: '1',
       q2c2: '2',
       q2c3: '3',
@@ -413,10 +414,10 @@ export const translationEN = {
 
       q3:
         'Below are some statements about the questionnaire itself. Please indicate for every statement, if you strongly agree, somewhat agree, somewhat disagree, or strongly disagree.',
-      q3c1: 'Strongly agree',
-      q3c2: 'Somewhat Agree',
-      q3c3: 'Somewhat Disagree',
-      q3c4: 'Strongly Disagree',
+      q3c1: 'Strongly Disagree',
+      q3c2: 'Somewhat Disagree',
+      q3c3: 'Somewhat Agree',
+      q3c4: 'Strongly Agree',
       q3c5: 'No Answer',
 
       q3a1: 'The questionnaire was entertaining.',
