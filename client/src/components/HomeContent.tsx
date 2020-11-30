@@ -78,7 +78,6 @@ const HomeContent = () => {
         <p style={{ textAlign: 'left' }}> {t('homeContent.name')}</p>
         <div className='home-page-logos'>
           <img alt='uds' src={udsLogo} />
-          <img alt='dfki' src={dfkiLogo} />
         </div>
         <div style={{ textAlign: 'left' }}>
           <PrivacyHeading data-testid='privacy-header' color={isChecked ? 'black' : 'red'} >* Data Protection and Participation Information</PrivacyHeading>
