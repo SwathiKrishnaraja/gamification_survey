@@ -1,4 +1,5 @@
 import React from 'react'
+import styled from 'styled-components'
 
 interface Props {
     showModal: boolean
@@ -6,6 +7,17 @@ interface Props {
     children: React.ReactNode
     title: string
 }
+
+const CloseButton = styled.button`
+    margin-bottom: 9px;
+    width: 100px;
+    font-size: medium;
+    background: #337ab7;
+    color: white;
+    border-radius: 3px;
+    padding: 5px;
+`
+
 const ImprintModal: React.FC<Props> = ({ showModal, handleClick, children, title }) => {
     const modalCss = showModal ? 'modal-open' : 'modal-close'
     return (
@@ -24,7 +36,7 @@ const ImprintModal: React.FC<Props> = ({ showModal, handleClick, children, title
                 <hr />
                 {children}
                 <hr />
-                <button style={{ marginBottom: 10 }} onClick={handleClick}> Close</button>
+                <CloseButton style={{ marginBottom: 10 }} onClick={handleClick}> Close</CloseButton>
             </section>
 
         </div>
