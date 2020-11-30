@@ -31,6 +31,14 @@ const HomeContent = () => {
     setShowModal(showModal ? false : true)
   }
 
+  const modal = document.getElementsByClassName('modal-open')
+
+  const handleClickOutsideModal = (event: React.MouseEvent<HTMLElement>) => {
+    if (event.target === modal[0]) {
+      handleDataProtectionTagClick()
+    }
+  }
+
   const handleCheckBoxClick = () => {
     setHasAgreed(hasAgreed ? false : true)
   }
@@ -64,7 +72,7 @@ const HomeContent = () => {
 
   return (
     <Fragment>
-      <div data-testid='intro-content' className="main-body">
+      <div onClick={handleClickOutsideModal} id="modal" data-testid='intro-content' className="main-body">
         <p style={{ textAlign: 'left' }}>{t('homeContent.greeting')}</p>
         <p style={{ textAlign: 'left' }}>
           {t('homeContent.content1')}

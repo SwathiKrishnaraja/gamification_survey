@@ -28,8 +28,17 @@ const CustomDiv = styled.div`
 
 const ImprintModal: React.FC<Props> = ({ showModal, handleClick, children, title }) => {
     const modalCss = showModal ? 'modal-open' : 'modal-close'
+
+    const modal = document.getElementsByClassName('modal-open')
+
+    window.onclick = (event: MouseEvent) => {
+        if (event.target === modal[0]) {
+            handleClick()
+        }
+    }
+
     return (
-        <div data-testid='modal' className={modalCss}>
+        <div id='modal' data-testid='modal' className={modalCss}>
             <section className='modalMain'>
                 <CustomDiv>
                     <CustomSpan>
