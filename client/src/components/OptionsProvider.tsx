@@ -6,9 +6,8 @@ import { useDispatch } from 'react-redux'
 const Container = styled.div`
 display: flex;
 flex-direction: column;
-margin-top: 150px;
-justify-content:baseline;
-height: 100%;
+justify-content:center;
+height: 80vh;
 align-items: center;
 `
 

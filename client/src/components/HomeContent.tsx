@@ -15,6 +15,18 @@ const PrivacyHeading = styled.h4`
 color: ${props => props.color};
 `
 
+const Button = styled.button`
+    width: 120px;
+    background-color: #337ab7;
+    border-color: #2e6da4;
+    color: white;
+    padding: 10px 16px;
+    font-size: 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 160px;
+`
+
 const HomeContent = () => {
   const { t } = useTranslation()
   const history = useHistory()
@@ -73,29 +85,30 @@ const HomeContent = () => {
   return (
     <Fragment>
       <div onClick={handleClickOutsideModal} id="modal" data-testid='intro-content' className="main-body">
-        <p style={{ textAlign: 'left' }}>{t('homeContent.greeting')}</p>
-        <p style={{ textAlign: 'left' }}>
-          {t('homeContent.content1')}
-        </p>
-        <p style={{ textAlign: 'left' }}>
-          {t('homeContent.content2')}
-        </p>
-        <p style={{ textAlign: 'left' }}>
-          {t('homeContent.content3')}
-        </p>
-        <p style={{ textAlign: 'left' }}> {t('homeContent.name')}</p>
-        <div className='home-page-logos'>
-          <img alt='uds' src={udsLogo} />
+        <div>
+          <p style={{ textAlign: 'left' }}>{t('homeContent.greeting')}</p>
+          <p style={{ textAlign: 'left' }}>
+            {t('homeContent.content1')}
+          </p>
+          <p style={{ textAlign: 'left' }}>
+            {t('homeContent.content2')}
+          </p>
+          <p style={{ textAlign: 'left' }}>
+            {t('homeContent.content3')}
+          </p>
+          <p style={{ textAlign: 'left' }}> {t('homeContent.name')}</p>
+          <div className='home-page-logos'>
+            <img alt='uds' src={udsLogo} />
+          </div>
+          <div style={{ textAlign: 'left' }}>
+            <PrivacyHeading data-testid='privacy-header' color={isChecked ? 'black' : 'red'} >* Data Protection and Participation Information</PrivacyHeading>
+            <input id="privacy" name="privacy" data-testid='privacy-checkbox' type='checkbox' onClick={handleCheckBoxClick} />
+            <label style={{ cursor: 'pointer' }} htmlFor="privacy">I have read and understood the information on <a data-testid='data-protection-anchor' style={{ textDecoration: 'none', color: '#337ab7', cursor: 'pointer' }} onClick={handleDataProtectionTagClick} href='# '>data protection</a> and the participation information and agree that my data may be used anonymously for the mentioned purposes.</label>
+            <ImprintModal children={<DataProtection />} handleClick={handleDataProtectionTagClick} showModal={showModal} title={t('dataProtectionInformation.header')} />
+          </div>
+          <Button data-testid='proceed-button' onClick={handleProceed}>{t('homeContent.button')}</Button>
         </div>
-        <div style={{ textAlign: 'left' }}>
-          <PrivacyHeading data-testid='privacy-header' color={isChecked ? 'black' : 'red'} >* Data Protection and Participation Information</PrivacyHeading>
-          <input id="privacy" name="privacy" data-testid='privacy-checkbox' type='checkbox' onClick={handleCheckBoxClick} />
-          <label style={{ cursor: 'pointer' }} htmlFor="privacy">I have read and understood the information on <a data-testid='data-protection-anchor' style={{ textDecoration: 'none', color: '#337ab7', cursor: 'pointer' }} onClick={handleDataProtectionTagClick} href='# '>data protection</a> and the participation information and agree that my data may be used anonymously for the mentioned purposes.</label>
-          <ImprintModal children={<DataProtection />} handleClick={handleDataProtectionTagClick} showModal={showModal} title={t('dataProtectionInformation.header')} />
-        </div>
-
       </div>
-      <button data-testid='proceed-button' className="continue-button" onClick={handleProceed}>{t('homeContent.button')}</button>
     </Fragment>
   );
 }
