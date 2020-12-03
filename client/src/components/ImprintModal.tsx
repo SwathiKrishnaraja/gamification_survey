@@ -9,7 +9,7 @@ interface Props {
 }
 
 const CloseButton = styled.button`
-    margin-bottom: 9px;
+    margin-bottom: 10px;
     width: 100px;
     font-size: medium;
     background: #337ab7;
@@ -39,7 +39,7 @@ const ImprintModal: React.FC<Props> = ({ showModal, handleClick, children, title
 
     return (
         <div id='modal' data-testid='modal' className={modalCss}>
-            <section className='modalMain'>
+            <div className='modalMain'>
                 <CustomDiv>
                     <CustomSpan>
                         <h1 style={{ margin: 10, marginLeft: 100 }}>{title}</h1>
@@ -49,8 +49,8 @@ const ImprintModal: React.FC<Props> = ({ showModal, handleClick, children, title
                 <hr />
                 {children}
                 <hr />
-                <CloseButton style={{ marginBottom: 10 }} onClick={handleClick}> Close</CloseButton>
-            </section>
+                <CloseButton onClick={handleClick}> Close</CloseButton>
+            </div>
 
         </div>
     )
