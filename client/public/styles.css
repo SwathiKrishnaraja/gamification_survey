@@ -338,8 +338,10 @@ thead {
   text-align: center;
 }
 .sv_qstn label.sv_q_m_label {
-  margin-top: -10px;
+  margin-top: -25px;
   cursor: pointer;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 .sv_q_checkbox {
   height: 35px;
