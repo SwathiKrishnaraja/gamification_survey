@@ -14,7 +14,7 @@ const TraditionalSurvey = () => {
     if (progress === 99) {
       setProgress(100)
     } else {
-      setProgress(progress + 11)
+      setProgress(progress + 10)
     }
   }
   return (
