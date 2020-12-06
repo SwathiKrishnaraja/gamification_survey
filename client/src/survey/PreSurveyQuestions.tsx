@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import * as Survey from 'survey-react'
 import JSON from './json/PreSurveyJSON'
 import { useHistory } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { RootState } from '../reducer/reducer'
+import { SurveyModel } from 'survey-react'
 
 
 /**
@@ -40,6 +41,8 @@ const SurveyQuestions: React.FC = () => {
     const surveyMode: string = useSelector((state: RootState) => state.optionsProviderReducer)
 
     // Testing-setup for thesis
+
+
 
     const history = useHistory()
     const path = getNavigationPath(surveyMode)

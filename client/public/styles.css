@@ -251,6 +251,11 @@ input {
   cursor: pointer;
 }
 
+.sv_qstn_error_top div {
+  color: red;
+  font-size: large;
+}
+
 .sv_p_root {
   text-align: left;
 }

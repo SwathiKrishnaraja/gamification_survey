@@ -8,7 +8,8 @@ export interface Questions {
     isRequired?: boolean,
     hasSelectAll?: true,
     minRateDescription?: string,
-    maxRateDescription?: string
+    maxRateDescription?: string,
+    isAllRowRequired?: boolean
 
 }
 
@@ -38,7 +39,7 @@ export interface Badge {
 }
 
 export type SurveyQuestionsType = {
-    [key:string]:string
+    [key: string]: string
 }
 
 export type OpenQuestions = {
