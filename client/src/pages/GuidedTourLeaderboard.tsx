@@ -110,7 +110,7 @@ const GuidedTourLeaderboard = () => {
             <Header children={<ExitSurvey />} />
             <div className="main-body">
                 <h2>Here is a guided tour for the survey</h2>
-                <button className='continue-button' onClick={handleStartTour}>Start Tour</button>
+                {showTour ? null : <button className='continue-button' onClick={handleStartTour}>Start Tour</button>}
                 {
                     showTour
                         ? <div className='guided-tour-div'>
