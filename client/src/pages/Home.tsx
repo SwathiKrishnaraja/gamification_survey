@@ -6,10 +6,15 @@ import LanguageSelection from '../components/LanguageSelection'
 import ExitSurveyModal from '../components/modal/ExitSurveyModal'
 import WarningMessage from '../components/WarningMessage'
 import OptionsProvider from '../components/OptionsProvider'
+import { useHistory } from 'react-router';
 
 const Home = () => {
   const [notifyForSmallScreen, setNotifyForSmallScreen] = useState<boolean>(false)
   const [showModal, setShowModal] = useState(true)
+
+  const history = useHistory()
+  let currentPathname: string
+  let currentSearch: string
 
   // Testing-setup for thesis
   const [modeSelected, setModeSelected] = useState(false)
@@ -22,6 +27,31 @@ const Home = () => {
     if ((window.screen.availHeight < 700) || window.screen.availWidth < 1000) {
       setNotifyForSmallScreen(true)
     }
+  })
+
+  useEffect(() => {
+    history.listen((newLocation: { pathname: string; search: string; }, action: string) => {
+      if (action === "PUSH") {
+        if (
+          newLocation.pathname !== currentPathname ||
+          newLocation.search !== currentSearch
+        ) {
+          // Save new location
+          currentPathname = newLocation.pathname;
+          currentSearch = newLocation.search;
+          console.log(currentPathname, currentSearch)
+
+          // Clone location object and push it to history
+          history.push({
+            pathname: newLocation.pathname,
+            search: newLocation.search
+          })
+        }
+      } else {
+        // Send user back if they try to navigate back
+        history.go(1)
+      }
+    })
   })
 
   const handleConfirmationButton = () => {
