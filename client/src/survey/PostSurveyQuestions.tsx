@@ -1,6 +1,10 @@
 
 import { Questions, MatrixObject } from '../types/types'
 import { useTranslation } from 'react-i18next'
+import shuffle from '../helpers/shuffle'
+
+const shuffledQ1 = shuffle(10)
+const shuffledQ2 = shuffle(25)
 
 const GenericSurveyQuestions = () => {
     const { t } = useTranslation()
@@ -8,65 +12,67 @@ const GenericSurveyQuestions = () => {
         type: 'matrix',
         name: 'q5',
         title: t('postSurvey.q1'),
+        isRequired: true,
+        isAllRowRequired: true,
         columns: [{
             value: 1,
-            text: t('postSurvey.q1c1')
+            text: t('preSurvey.q1c1')
         },
         {
             value: 2,
-            text: t('postSurvey.q1c2')
+            text: t('preSurvey.q1c2')
         },
         {
             value: 3,
-            text: t('postSurvey.q1c3')
+            text: t('preSurvey.q1c3')
         },
         {
             value: 4,
-            text: t('postSurvey.q1c4')
+            text: t('preSurvey.q1c4')
         },
         {
             value: 5,
-            text: t('postSurvey.q1c5')
+            text: t('preSurvey.q1c5')
         }],
         rows: [{
             value: 'spare',
-            text: t('postSurvey.q1a1'),
+            text: t(`preSurvey.q1a${shuffledQ1[0]}`)
         },
         {
             value: 'active',
-            text: t('postSurvey.q1a2'),
+            text: t(`preSurvey.q1a${shuffledQ1[1]}`)
         },
         {
             value: 'scope',
-            text: t('postSurvey.q1a3'),
+            text: t(`preSurvey.q1a${shuffledQ1[2]}`)
         },
         {
-            value: 'a',
-            text: t('postSurvey.q1a4'),
+            value: 'kgf',
+            text: t(`preSurvey.q1a${shuffledQ1[3]}`)
         },
         {
-            value: 'b',
-            text: t('postSurvey.q1a5'),
+            value: 'rocky',
+            text: t(`preSurvey.q1a${shuffledQ1[4]}`)
         },
         {
-            value: 'c',
-            text: t('postSurvey.q1a6'),
+            value: 'gotu',
+            text: t(`preSurvey.q1a${shuffledQ1[5]}`)
         },
         {
-            value: 'd',
-            text: t('postSurvey.q1a7'),
+            value: 'von',
+            text: t(`preSurvey.q1a${shuffledQ1[6]}`)
         },
         {
-            value: 'e',
-            text: t('postSurvey.q1a8'),
+            value: 'goundermann',
+            text: t(`preSurvey.q1a${shuffledQ1[7]}`)
         },
         {
-            value: 'f',
-            text: t('postSurvey.q1a9'),
+            value: 'kongu',
+            text: t(`preSurvey.q1a${shuffledQ1[8]}`)
         },
         {
-            value: 'g',
-            text: t('postSurvey.q1a10'),
+            value: 'satchki',
+            text: t(`preSurvey.q1a${shuffledQ1[9]}`)
         },
         ]
     }
@@ -105,106 +111,107 @@ const GenericSurveyQuestions = () => {
         }],
         rows: [{
             value: 'a',
-            text: t('postSurvey.q2a1')
+            text: t(`postSurvey.q2a${shuffledQ2[0]}`)
         },
         {
             value: 'b',
-            text: t('postSurvey.q2a2'),
+            text: t(`postSurvey.q2a${shuffledQ2[1]}`)
         },
         {
             value: 'c',
-            text: t('postSurvey.q2a3')
+            text: t(`postSurvey.q2a${shuffledQ2[2]}`)
         },
         {
             value: 'd',
-            text: t('postSurvey.q2a4')
+            text: t(`postSurvey.q2a${shuffledQ2[3]}`)
         },
         {
             value: 'e',
-            text: t('postSurvey.q2a5')
+            text: t(`postSurvey.q2a${shuffledQ2[4]}`)
         },
         {
             value: 'f',
-            text: t('postSurvey.q2a6'),
+            text: t(`postSurvey.q2a${shuffledQ2[5]}`)
         },
         {
             value: 'g',
-            text: t('postSurvey.q2a7')
+            text: t(`postSurvey.q2a${shuffledQ2[6]}`)
         },
         {
             value: 'h',
-            text: t('postSurvey.q2a8')
+            text: t(`postSurvey.q2a${shuffledQ2[7]}`)
         },
         {
             value: 'i',
-            text: t('postSurvey.q2a9')
+            text: t(`postSurvey.q2a${shuffledQ2[8]}`)
         },
         {
             value: 'j',
-            text: t('postSurvey.q2a10'),
+            text: t(`postSurvey.q2a${shuffledQ2[9]}`)
         },
         {
             value: 'k',
-            text: t('postSurvey.q2a11')
+            text: t(`postSurvey.q2a${shuffledQ2[10]}`)
         },
         {
             value: 'l',
-            text: t('postSurvey.q2a12')
+            text: t(`postSurvey.q2a${shuffledQ2[11]}`)
         },
         {
             value: 'm',
-            text: t('postSurvey.q2a13')
+            text: t(`postSurvey.q2a${shuffledQ2[12]}`)
         },
         {
             value: 'n',
-            text: t('postSurvey.q2a14'),
+            text: t(`postSurvey.q2a${shuffledQ2[13]}`)
         },
         {
             value: 'o',
-            text: t('postSurvey.q2a15')
+            text: t(`postSurvey.q2a${shuffledQ2[14]}`)
         },
         {
             value: 'p',
-            text: t('postSurvey.q2a16')
+            text: t(`postSurvey.q2a${shuffledQ2[15]}`)
         },
         {
             value: 'q',
-            text: t('postSurvey.q2a17')
+            text: t(`postSurvey.q2a${shuffledQ2[16]}`)
         },
         {
             value: 'r',
-            text: t('postSurvey.q2a18'),
+            text: t(`postSurvey.q2a${shuffledQ2[17]}`)
         },
         {
             value: 's',
-            text: t('postSurvey.q2a19')
+            text: t(`postSurvey.q2a${shuffledQ2[18]}`)
         },
         {
             value: 't',
-            text: t('postSurvey.q2a20')
+            text: t(`postSurvey.q2a${shuffledQ2[19]}`)
         },
         {
             value: 'u',
-            text: t('postSurvey.q2a21')
+            text: t(`postSurvey.q2a${shuffledQ2[20]}`)
         },
         {
             value: 'v',
-            text: t('postSurvey.q2a22'),
+            text: t(`postSurvey.q2a${shuffledQ2[21]}`)
         },
         {
             value: 'w',
-            text: t('postSurvey.q2a23')
+            text: t(`postSurvey.q2a${shuffledQ2[22]}`)
         },
         {
             value: 'x',
-            text: t('postSurvey.q2a24')
+            text: t(`postSurvey.q2a${shuffledQ2[23]}`)
         },
         {
             value: 'y',
-            text: t('postSurvey.q2a25')
+            text: t(`postSurvey.q2a${shuffledQ2[24]}`)
         },
         ]
     }
+
     const q3: Questions = {
         type: 'matrix',
         name: 'q3',
@@ -257,68 +264,71 @@ const GamifiedSurveyQuestions = () => {
         type: 'matrix',
         name: 'q5',
         title: t('postSurvey.q1'),
+        isRequired: true,
+        isAllRowRequired: true,
         columns: [{
             value: 1,
-            text: t('postSurvey.q1c1')
+            text: t('preSurvey.q1c1')
         },
         {
             value: 2,
-            text: t('postSurvey.q1c2')
+            text: t('preSurvey.q1c2')
         },
         {
             value: 3,
-            text: t('postSurvey.q1c3')
+            text: t('preSurvey.q1c3')
         },
         {
             value: 4,
-            text: t('postSurvey.q1c4')
+            text: t('preSurvey.q1c4')
         },
         {
             value: 5,
-            text: t('postSurvey.q1c5')
+            text: t('preSurvey.q1c5')
         }],
         rows: [{
             value: 'spare',
-            text: t('postSurvey.q1a1'),
+            text: t(`preSurvey.q1a${shuffledQ1[0]}`)
         },
         {
             value: 'active',
-            text: t('postSurvey.q1a2'),
+            text: t(`preSurvey.q1a${shuffledQ1[1]}`)
         },
         {
             value: 'scope',
-            text: t('postSurvey.q1a3'),
+            text: t(`preSurvey.q1a${shuffledQ1[2]}`)
         },
         {
-            value: 'a',
-            text: t('postSurvey.q1a4'),
+            value: 'kgf',
+            text: t(`preSurvey.q1a${shuffledQ1[3]}`)
         },
         {
-            value: 'b',
-            text: t('postSurvey.q1a5'),
+            value: 'rocky',
+            text: t(`preSurvey.q1a${shuffledQ1[4]}`)
         },
         {
-            value: 'c',
-            text: t('postSurvey.q1a6'),
+            value: 'gotu',
+            text: t(`preSurvey.q1a${shuffledQ1[5]}`)
         },
         {
-            value: 'd',
-            text: t('postSurvey.q1a7'),
+            value: 'von',
+            text: t(`preSurvey.q1a${shuffledQ1[6]}`)
         },
         {
-            value: 'e',
-            text: t('postSurvey.q1a8'),
+            value: 'goundermann',
+            text: t(`preSurvey.q1a${shuffledQ1[7]}`)
         },
         {
-            value: 'f',
-            text: t('postSurvey.q1a9'),
+            value: 'kongu',
+            text: t(`preSurvey.q1a${shuffledQ1[8]}`)
         },
         {
-            value: 'g',
-            text: t('postSurvey.q1a10'),
+            value: 'satchki',
+            text: t(`preSurvey.q1a${shuffledQ1[9]}`)
         },
         ]
     }
+
     const q2: Questions = {
         type: 'matrix',
         name: 'q2',
@@ -353,103 +363,103 @@ const GamifiedSurveyQuestions = () => {
         }],
         rows: [{
             value: 'a',
-            text: t('postSurvey.q2a1')
+            text: t(`postSurvey.q2a${shuffledQ2[0]}`)
         },
         {
             value: 'b',
-            text: t('postSurvey.q2a2'),
+            text: t(`postSurvey.q2a${shuffledQ2[1]}`)
         },
         {
             value: 'c',
-            text: t('postSurvey.q2a3')
+            text: t(`postSurvey.q2a${shuffledQ2[2]}`)
         },
         {
             value: 'd',
-            text: t('postSurvey.q2a4')
+            text: t(`postSurvey.q2a${shuffledQ2[3]}`)
         },
         {
             value: 'e',
-            text: t('postSurvey.q2a5')
+            text: t(`postSurvey.q2a${shuffledQ2[4]}`)
         },
         {
             value: 'f',
-            text: t('postSurvey.q2a6'),
+            text: t(`postSurvey.q2a${shuffledQ2[5]}`)
         },
         {
             value: 'g',
-            text: t('postSurvey.q2a7')
+            text: t(`postSurvey.q2a${shuffledQ2[6]}`)
         },
         {
             value: 'h',
-            text: t('postSurvey.q2a8')
+            text: t(`postSurvey.q2a${shuffledQ2[7]}`)
         },
         {
             value: 'i',
-            text: t('postSurvey.q2a9')
+            text: t(`postSurvey.q2a${shuffledQ2[8]}`)
         },
         {
             value: 'j',
-            text: t('postSurvey.q2a10'),
+            text: t(`postSurvey.q2a${shuffledQ2[9]}`)
         },
         {
             value: 'k',
-            text: t('postSurvey.q2a11')
+            text: t(`postSurvey.q2a${shuffledQ2[10]}`)
         },
         {
             value: 'l',
-            text: t('postSurvey.q2a12')
+            text: t(`postSurvey.q2a${shuffledQ2[11]}`)
         },
         {
             value: 'm',
-            text: t('postSurvey.q2a13')
+            text: t(`postSurvey.q2a${shuffledQ2[12]}`)
         },
         {
             value: 'n',
-            text: t('postSurvey.q2a14'),
+            text: t(`postSurvey.q2a${shuffledQ2[13]}`)
         },
         {
             value: 'o',
-            text: t('postSurvey.q2a15')
+            text: t(`postSurvey.q2a${shuffledQ2[14]}`)
         },
         {
             value: 'p',
-            text: t('postSurvey.q2a16')
+            text: t(`postSurvey.q2a${shuffledQ2[15]}`)
         },
         {
             value: 'q',
-            text: t('postSurvey.q2a17')
+            text: t(`postSurvey.q2a${shuffledQ2[16]}`)
         },
         {
             value: 'r',
-            text: t('postSurvey.q2a18'),
+            text: t(`postSurvey.q2a${shuffledQ2[17]}`)
         },
         {
             value: 's',
-            text: t('postSurvey.q2a19')
+            text: t(`postSurvey.q2a${shuffledQ2[18]}`)
         },
         {
             value: 't',
-            text: t('postSurvey.q2a20')
+            text: t(`postSurvey.q2a${shuffledQ2[19]}`)
         },
         {
             value: 'u',
-            text: t('postSurvey.q2a21')
+            text: t(`postSurvey.q2a${shuffledQ2[20]}`)
         },
         {
             value: 'v',
-            text: t('postSurvey.q2a22'),
+            text: t(`postSurvey.q2a${shuffledQ2[21]}`)
         },
         {
             value: 'w',
-            text: t('postSurvey.q2a23')
+            text: t(`postSurvey.q2a${shuffledQ2[22]}`)
         },
         {
             value: 'x',
-            text: t('postSurvey.q2a24')
+            text: t(`postSurvey.q2a${shuffledQ2[23]}`)
         },
         {
             value: 'y',
-            text: t('postSurvey.q2a25')
+            text: t(`postSurvey.q2a${shuffledQ2[24]}`)
         },
         ]
     }
@@ -549,68 +559,71 @@ const TraditionalGamifiedQuestions = () => {
         type: 'matrix',
         name: 'q5',
         title: t('postSurvey.q1'),
+        isRequired: true,
+        isAllRowRequired: true,
         columns: [{
             value: 1,
-            text: t('postSurvey.q1c1')
+            text: t('preSurvey.q1c1')
         },
         {
             value: 2,
-            text: t('postSurvey.q1c2')
+            text: t('preSurvey.q1c2')
         },
         {
             value: 3,
-            text: t('postSurvey.q1c3')
+            text: t('preSurvey.q1c3')
         },
         {
             value: 4,
-            text: t('postSurvey.q1c4')
+            text: t('preSurvey.q1c4')
         },
         {
             value: 5,
-            text: t('postSurvey.q1c5')
+            text: t('preSurvey.q1c5')
         }],
         rows: [{
             value: 'spare',
-            text: t('postSurvey.q1a1'),
+            text: t(`preSurvey.q1a${shuffledQ1[0]}`)
         },
         {
             value: 'active',
-            text: t('postSurvey.q1a2'),
+            text: t(`preSurvey.q1a${shuffledQ1[1]}`)
         },
         {
             value: 'scope',
-            text: t('postSurvey.q1a3'),
+            text: t(`preSurvey.q1a${shuffledQ1[2]}`)
         },
         {
-            value: 'a',
-            text: t('postSurvey.q1a4'),
+            value: 'kgf',
+            text: t(`preSurvey.q1a${shuffledQ1[3]}`)
         },
         {
-            value: 'b',
-            text: t('postSurvey.q1a5'),
+            value: 'rocky',
+            text: t(`preSurvey.q1a${shuffledQ1[4]}`)
         },
         {
-            value: 'c',
-            text: t('postSurvey.q1a6'),
+            value: 'gotu',
+            text: t(`preSurvey.q1a${shuffledQ1[5]}`)
         },
         {
-            value: 'd',
-            text: t('postSurvey.q1a7'),
+            value: 'von',
+            text: t(`preSurvey.q1a${shuffledQ1[6]}`)
         },
         {
-            value: 'e',
-            text: t('postSurvey.q1a8'),
+            value: 'goundermann',
+            text: t(`preSurvey.q1a${shuffledQ1[7]}`)
         },
         {
-            value: 'f',
-            text: t('postSurvey.q1a9'),
+            value: 'kongu',
+            text: t(`preSurvey.q1a${shuffledQ1[8]}`)
         },
         {
-            value: 'g',
-            text: t('postSurvey.q1a10'),
+            value: 'satchki',
+            text: t(`preSurvey.q1a${shuffledQ1[9]}`)
         },
         ]
     }
+
     const q2: Questions = {
         type: 'matrix',
         name: 'q2',
@@ -645,103 +658,103 @@ const TraditionalGamifiedQuestions = () => {
         }],
         rows: [{
             value: 'a',
-            text: t('postSurvey.q2a1')
+            text: t(`postSurvey.q2a${shuffledQ2[0]}`)
         },
         {
             value: 'b',
-            text: t('postSurvey.q2a2'),
+            text: t(`postSurvey.q2a${shuffledQ2[1]}`)
         },
         {
             value: 'c',
-            text: t('postSurvey.q2a3')
+            text: t(`postSurvey.q2a${shuffledQ2[2]}`)
         },
         {
             value: 'd',
-            text: t('postSurvey.q2a4')
+            text: t(`postSurvey.q2a${shuffledQ2[3]}`)
         },
         {
             value: 'e',
-            text: t('postSurvey.q2a5')
+            text: t(`postSurvey.q2a${shuffledQ2[4]}`)
         },
         {
             value: 'f',
-            text: t('postSurvey.q2a6'),
+            text: t(`postSurvey.q2a${shuffledQ2[5]}`)
         },
         {
             value: 'g',
-            text: t('postSurvey.q2a7')
+            text: t(`postSurvey.q2a${shuffledQ2[6]}`)
         },
         {
             value: 'h',
-            text: t('postSurvey.q2a8')
+            text: t(`postSurvey.q2a${shuffledQ2[7]}`)
         },
         {
             value: 'i',
-            text: t('postSurvey.q2a9')
+            text: t(`postSurvey.q2a${shuffledQ2[8]}`)
         },
         {
             value: 'j',
-            text: t('postSurvey.q2a10'),
+            text: t(`postSurvey.q2a${shuffledQ2[9]}`)
         },
         {
             value: 'k',
-            text: t('postSurvey.q2a11')
+            text: t(`postSurvey.q2a${shuffledQ2[10]}`)
         },
         {
             value: 'l',
-            text: t('postSurvey.q2a12')
+            text: t(`postSurvey.q2a${shuffledQ2[11]}`)
         },
         {
             value: 'm',
-            text: t('postSurvey.q2a13')
+            text: t(`postSurvey.q2a${shuffledQ2[12]}`)
         },
         {
             value: 'n',
-            text: t('postSurvey.q2a14'),
+            text: t(`postSurvey.q2a${shuffledQ2[13]}`)
         },
         {
             value: 'o',
-            text: t('postSurvey.q2a15')
+            text: t(`postSurvey.q2a${shuffledQ2[14]}`)
         },
         {
             value: 'p',
-            text: t('postSurvey.q2a16')
+            text: t(`postSurvey.q2a${shuffledQ2[15]}`)
         },
         {
             value: 'q',
-            text: t('postSurvey.q2a17')
+            text: t(`postSurvey.q2a${shuffledQ2[16]}`)
         },
         {
             value: 'r',
-            text: t('postSurvey.q2a18'),
+            text: t(`postSurvey.q2a${shuffledQ2[17]}`)
         },
         {
             value: 's',
-            text: t('postSurvey.q2a19')
+            text: t(`postSurvey.q2a${shuffledQ2[18]}`)
         },
         {
             value: 't',
-            text: t('postSurvey.q2a20')
+            text: t(`postSurvey.q2a${shuffledQ2[19]}`)
         },
         {
             value: 'u',
-            text: t('postSurvey.q2a21')
+            text: t(`postSurvey.q2a${shuffledQ2[20]}`)
         },
         {
             value: 'v',
-            text: t('postSurvey.q2a22'),
+            text: t(`postSurvey.q2a${shuffledQ2[21]}`)
         },
         {
             value: 'w',
-            text: t('postSurvey.q2a23')
+            text: t(`postSurvey.q2a${shuffledQ2[22]}`)
         },
         {
             value: 'x',
-            text: t('postSurvey.q2a24')
+            text: t(`postSurvey.q2a${shuffledQ2[23]}`)
         },
         {
             value: 'y',
-            text: t('postSurvey.q2a25')
+            text: t(`postSurvey.q2a${shuffledQ2[24]}`)
         },
         ]
     }
@@ -834,68 +847,71 @@ const GamifiedChoiceQuestions = () => {
         type: 'matrix',
         name: 'q5',
         title: t('postSurvey.q1'),
+        isRequired: true,
+        isAllRowRequired: true,
         columns: [{
             value: 1,
-            text: t('postSurvey.q1c1')
+            text: t('preSurvey.q1c1')
         },
         {
             value: 2,
-            text: t('postSurvey.q1c2')
+            text: t('preSurvey.q1c2')
         },
         {
             value: 3,
-            text: t('postSurvey.q1c3')
+            text: t('preSurvey.q1c3')
         },
         {
             value: 4,
-            text: t('postSurvey.q1c4')
+            text: t('preSurvey.q1c4')
         },
         {
             value: 5,
-            text: t('postSurvey.q1c5')
+            text: t('preSurvey.q1c5')
         }],
         rows: [{
             value: 'spare',
-            text: t('postSurvey.q1a1'),
+            text: t(`preSurvey.q1a${shuffledQ1[0]}`)
         },
         {
             value: 'active',
-            text: t('postSurvey.q1a2'),
+            text: t(`preSurvey.q1a${shuffledQ1[1]}`)
         },
         {
             value: 'scope',
-            text: t('postSurvey.q1a3'),
+            text: t(`preSurvey.q1a${shuffledQ1[2]}`)
         },
         {
-            value: 'a',
-            text: t('postSurvey.q1a4'),
+            value: 'kgf',
+            text: t(`preSurvey.q1a${shuffledQ1[3]}`)
         },
         {
-            value: 'b',
-            text: t('postSurvey.q1a5'),
+            value: 'rocky',
+            text: t(`preSurvey.q1a${shuffledQ1[4]}`)
         },
         {
-            value: 'c',
-            text: t('postSurvey.q1a6'),
+            value: 'gotu',
+            text: t(`preSurvey.q1a${shuffledQ1[5]}`)
         },
         {
-            value: 'd',
-            text: t('postSurvey.q1a7'),
+            value: 'von',
+            text: t(`preSurvey.q1a${shuffledQ1[6]}`)
         },
         {
-            value: 'e',
-            text: t('postSurvey.q1a8'),
+            value: 'goundermann',
+            text: t(`preSurvey.q1a${shuffledQ1[7]}`)
         },
         {
-            value: 'f',
-            text: t('postSurvey.q1a9'),
+            value: 'kongu',
+            text: t(`preSurvey.q1a${shuffledQ1[8]}`)
         },
         {
-            value: 'g',
-            text: t('postSurvey.q1a10'),
+            value: 'satchki',
+            text: t(`preSurvey.q1a${shuffledQ1[9]}`)
         },
         ]
     }
+
     const q2: Questions = {
         type: 'matrix',
         name: 'q2',
@@ -930,103 +946,103 @@ const GamifiedChoiceQuestions = () => {
         }],
         rows: [{
             value: 'a',
-            text: t('postSurvey.q2a1')
+            text: t(`postSurvey.q2a${shuffledQ2[0]}`)
         },
         {
             value: 'b',
-            text: t('postSurvey.q2a2'),
+            text: t(`postSurvey.q2a${shuffledQ2[1]}`)
         },
         {
             value: 'c',
-            text: t('postSurvey.q2a3')
+            text: t(`postSurvey.q2a${shuffledQ2[2]}`)
         },
         {
             value: 'd',
-            text: t('postSurvey.q2a4')
+            text: t(`postSurvey.q2a${shuffledQ2[3]}`)
         },
         {
             value: 'e',
-            text: t('postSurvey.q2a5')
+            text: t(`postSurvey.q2a${shuffledQ2[4]}`)
         },
         {
             value: 'f',
-            text: t('postSurvey.q2a6'),
+            text: t(`postSurvey.q2a${shuffledQ2[5]}`)
         },
         {
             value: 'g',
-            text: t('postSurvey.q2a7')
+            text: t(`postSurvey.q2a${shuffledQ2[6]}`)
         },
         {
             value: 'h',
-            text: t('postSurvey.q2a8')
+            text: t(`postSurvey.q2a${shuffledQ2[7]}`)
         },
         {
             value: 'i',
-            text: t('postSurvey.q2a9')
+            text: t(`postSurvey.q2a${shuffledQ2[8]}`)
         },
         {
             value: 'j',
-            text: t('postSurvey.q2a10'),
+            text: t(`postSurvey.q2a${shuffledQ2[9]}`)
         },
         {
             value: 'k',
-            text: t('postSurvey.q2a11')
+            text: t(`postSurvey.q2a${shuffledQ2[10]}`)
         },
         {
             value: 'l',
-            text: t('postSurvey.q2a12')
+            text: t(`postSurvey.q2a${shuffledQ2[11]}`)
         },
         {
             value: 'm',
-            text: t('postSurvey.q2a13')
+            text: t(`postSurvey.q2a${shuffledQ2[12]}`)
         },
         {
             value: 'n',
-            text: t('postSurvey.q2a14'),
+            text: t(`postSurvey.q2a${shuffledQ2[13]}`)
         },
         {
             value: 'o',
-            text: t('postSurvey.q2a15')
+            text: t(`postSurvey.q2a${shuffledQ2[14]}`)
         },
         {
             value: 'p',
-            text: t('postSurvey.q2a16')
+            text: t(`postSurvey.q2a${shuffledQ2[15]}`)
         },
         {
             value: 'q',
-            text: t('postSurvey.q2a17')
+            text: t(`postSurvey.q2a${shuffledQ2[16]}`)
         },
         {
             value: 'r',
-            text: t('postSurvey.q2a18'),
+            text: t(`postSurvey.q2a${shuffledQ2[17]}`)
         },
         {
             value: 's',
-            text: t('postSurvey.q2a19')
+            text: t(`postSurvey.q2a${shuffledQ2[18]}`)
         },
         {
             value: 't',
-            text: t('postSurvey.q2a20')
+            text: t(`postSurvey.q2a${shuffledQ2[19]}`)
         },
         {
             value: 'u',
-            text: t('postSurvey.q2a21')
+            text: t(`postSurvey.q2a${shuffledQ2[20]}`)
         },
         {
             value: 'v',
-            text: t('postSurvey.q2a22'),
+            text: t(`postSurvey.q2a${shuffledQ2[21]}`)
         },
         {
             value: 'w',
-            text: t('postSurvey.q2a23')
+            text: t(`postSurvey.q2a${shuffledQ2[22]}`)
         },
         {
             value: 'x',
-            text: t('postSurvey.q2a24')
+            text: t(`postSurvey.q2a${shuffledQ2[23]}`)
         },
         {
             value: 'y',
-            text: t('postSurvey.q2a25')
+            text: t(`postSurvey.q2a${shuffledQ2[24]}`)
         },
         ]
     }
