@@ -21,5 +21,6 @@ CREATE TABLE "public"."Participants"
     badges INT,
     points INT,
     leaderboard_position INT,
-    narratives_unlocked INT
+    narratives_unlocked INT,
+    browser VARCHAR(255) NOT NULL
 );

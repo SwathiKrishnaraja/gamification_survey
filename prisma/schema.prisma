@@ -28,4 +28,5 @@ model Participants {
   points               Int?
   leaderboard_position Int?
   narratives_unlocked  Int?
+  browser              String
 }
