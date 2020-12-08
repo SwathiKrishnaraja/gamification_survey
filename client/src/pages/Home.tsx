@@ -6,7 +6,7 @@ import LanguageSelection from '../components/LanguageSelection'
 import ExitSurveyModal from '../components/modal/ExitSurveyModal'
 import WarningMessage from '../components/WarningMessage'
 import OptionsProvider from '../components/OptionsProvider'
-import { useHistory } from 'react-router';
+import { useHistory } from 'react-router'
 
 const Home = () => {
   const [notifyForSmallScreen, setNotifyForSmallScreen] = useState<boolean>(false)
@@ -39,7 +39,6 @@ const Home = () => {
           // Save new location
           currentPathname = newLocation.pathname;
           currentSearch = newLocation.search;
-          console.log(currentPathname, currentSearch)
 
           // Clone location object and push it to history
           history.push({
