@@ -10,7 +10,8 @@ type DataType = {
   badges?: number,
   points?: number,
   leaderboard_position?: number,
-  narratives_unlocked?: number
+  narratives_unlocked?: number,
+  browser: string
 }
 
 const submitSurveyData = async (data: DataType) => {
