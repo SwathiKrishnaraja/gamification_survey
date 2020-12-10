@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import * as Survey from 'survey-react'
 import JSON from './json/PreSurveyJSON'
 import { useHistory } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { RootState } from '../reducer/reducer'
+import { SurveyModel } from 'survey-react'
 
 
 /**
@@ -41,13 +42,22 @@ const SurveyQuestions: React.FC = () => {
 
     // Testing-setup for thesis
 
+
+
     const history = useHistory()
     const path = getNavigationPath(surveyMode)
     const surveyJSON = JSON()
 
+    const dispatch = useDispatch()
 
+    const handleSurveyCompletion = (sender: SurveyModel, options: any) => {
+
+        const { data: presurvey } = sender
+        dispatch({ type: 'STORE_SURVEY', payload: { presurvey } })
+        history.push(path)
+    }
     return (
-        <Survey.Survey json={surveyJSON} onComplete={() => history.push(path)} />
+        <Survey.Survey json={surveyJSON} onComplete={handleSurveyCompletion} />
     )
 }
 export default SurveyQuestions 

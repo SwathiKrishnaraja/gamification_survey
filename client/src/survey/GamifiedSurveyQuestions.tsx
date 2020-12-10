@@ -123,8 +123,14 @@ const SurveyQuestions = ({ handleProgress, handleMascot, showMascot }: Props) =>
             listOfSurveyQuestions.push(data)
             const average_time = Math.round(getAverageTime(time_taken))
             const char_count = getCharacterCount(filterOpenQuestions(listOfSurveyQuestions))
-            const result = data
-            submitSurveyData({ survey_mode, char_count, time_taken, average_time, result, badges })
+            const mainsurvey = data
+            const browser = window.navigator.userAgent
+            dispatch({
+                type: 'STORE_SURVEY',
+                payload: {
+                    survey_mode, char_count, time_taken, average_time, mainsurvey, browser, badges
+                }
+            })
             postSurveyMode({ mode: survey_mode })
 
         } catch (error) {

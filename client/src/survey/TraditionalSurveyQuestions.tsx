@@ -7,10 +7,9 @@ import ThanksText from '../components/ThanksText'
 import { SurveyModel } from 'survey-react'
 import getCharacterCount from '../helpers/getCharacterCount'
 import filterOpenQuestions from '../helpers/filterOpenQuestions'
-import submitSurveyData from '../api/submitSurveyData'
 import postSurveyMode from '../api/postSurveyMode'
 import getAverageTime from '../helpers/getAverageTime'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { RootState } from '../reducer/reducer'
 
 
@@ -24,6 +23,7 @@ const SurveyQuestions = ({ handleProgress }: Props) => {
     const [showModal, setShowModal] = useState(false)
     const survey_mode = useSelector((state: RootState) => state.entryPointReducer.mode)
     const surveyJson = TraditionalSurveyJSON()
+    const dispatch = useDispatch()
 
     /**
      * 
@@ -41,9 +41,16 @@ const SurveyQuestions = ({ handleProgress }: Props) => {
             listOfSurveyQuestions.push(data)
             const average_time = Math.round(getAverageTime(time_taken))
             const char_count = getCharacterCount(filterOpenQuestions(listOfSurveyQuestions))
-            const result = data
-            submitSurveyData({ survey_mode, char_count, time_taken, average_time, result })
+            const mainsurvey = data
+            const browser = window.navigator.userAgent
+            dispatch({
+                type: 'STORE_SURVEY',
+                payload: {
+                    survey_mode, char_count, time_taken, average_time, mainsurvey, browser
+                }
+            })
             postSurveyMode({ mode: survey_mode })
+
 
         } catch (error) {
             throw (error)

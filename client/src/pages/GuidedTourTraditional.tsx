@@ -92,8 +92,12 @@ const GuidedTourTraditional = () => {
                 hideBackButton={true}
                 styles={{
                     options: {
-                        arrowColor: '#f5f5f5',
-                        backgroundColor: '#f5f5f5',
+                        arrowColor: '#b1cee9',
+                        backgroundColor: '#b1cee9',
+                        overlayColor: 'rgba(79, 26, 0, 0.4)',
+                        primaryColor: '#000',
+                        textColor: '#004a14',
+                        width: 500,
                         zIndex: 1000,
                     }
                 }}
@@ -101,7 +105,8 @@ const GuidedTourTraditional = () => {
             <Header children={<ExitSurvey />} />
             <div className="main-body">
                 <h2>Here is a guided tour for the first version of the survey</h2>
-                <button className='continue-button' onClick={handleStartTour}>Start Tour</button>
+                {showTour ? null : <button className='continue-button' onClick={handleStartTour}>Start Tour</button>}
+
                 {showTour
                     ? <div className='guided-tour-div'>
                         <CustomProgressBar progress={70} />

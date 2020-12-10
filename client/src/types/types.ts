@@ -8,7 +8,8 @@ export interface Questions {
     isRequired?: boolean,
     hasSelectAll?: true,
     minRateDescription?: string,
-    maxRateDescription?: string
+    maxRateDescription?: string,
+    isAllRowRequired?: boolean
 
 }
 
@@ -38,9 +39,24 @@ export interface Badge {
 }
 
 export type SurveyQuestionsType = {
-    [key:string]:string
+    [key: string]: string
 }
 
 export type OpenQuestions = {
     [key: string]: string | number
+}
+
+export type SurveyDataType = {
+    survey_mode: string,
+    presurvey: SurveyQuestionsType,
+    mainsurvey: SurveyQuestionsType,
+    postsurvey: SurveyQuestionsType
+    char_count: Array<OpenQuestions>,
+    average_time: number,
+    time_taken: number,
+    badges?: number,
+    points?: number,
+    leaderboard_position?: number,
+    narratives_unlocked?: number,
+    browser: string
 }

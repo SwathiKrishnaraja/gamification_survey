@@ -20,7 +20,9 @@ model Mode {
 model Participants {
   id                   Int    @id @default(autoincrement())
   survey_mode          String
-  result               Json?
+  presurvey            Json?
+  mainsurvey           Json?
+  postsurvey           Json?
   char_count           Json?
   average_time         Int?
   time_taken           Int?
@@ -28,4 +30,5 @@ model Participants {
   points               Int?
   leaderboard_position Int?
   narratives_unlocked  Int?
+  browser              String
 }

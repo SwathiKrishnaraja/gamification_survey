@@ -18,6 +18,7 @@ const q2: Questions = {
     type: 'matrix',
     name: 'q5',
     title: 'You will find different activities listed here, please indicate if you are physically active at least once in a while.',
+    isRequired: true,
     columns: [{
         value: 1,
         text: 'Yes'
@@ -33,19 +34,7 @@ const q2: Questions = {
     rows: [{
         value: 'spare',
         text: 'In my spare time I do sports to train',
-    },
-    {
-        value: 'active',
-        text: 'I am active in my free time, but mostly spontaneously and without a fixed training goal'
-    },
-    {
-        value: 'scope',
-        text: 'I am physically active within the scope of school, my training or my job'
-    },
-    {
-        value: 'club',
-        text: 'I am active in one or more sports clubs'
-    }]
+    },]
 }
 
 
