@@ -14,7 +14,9 @@ CREATE TABLE "public"."Participants"
 (
     id SERIAL PRIMARY KEY NOT NULL,
     survey_mode VARCHAR(255) NOT NULL,
-    result JSON,
+    presurvey JSON,
+    mainsurvey JSON,
+    postsurvey JSON,
     char_count JSON,
     average_time INT,
     time_taken INT,
