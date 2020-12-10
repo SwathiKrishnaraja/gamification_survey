@@ -57,7 +57,10 @@ export const stepsForTraditionalTour: Step[] = [
     },
     {
         target: '.sv_row:nth-child(2)',
-        content: 'Questions are presented in the below formats. Few questions are marked mandatory using this * symbol. Please choose an option and click Submit to proceed to the next page',
+        content: `Questions are presented in the below formats. You will find mandatory as well as
+        optional questions throughout the survey. Mandatory questions will be mentioned
+        explicitly with an asterisk (*) at the end of the question. Please answer the two questions presented here and click submit to
+        complete the guided tour.`,
         placement: 'bottom',
         spotlightPadding: 0,
         disableOverlay: true,
@@ -83,7 +86,10 @@ export const stepsForLeaderboardTour: Step[] = [
     },
     {
         target: '.sv_row:nth-child(2)',
-        content: 'Questions are presented in the below formats. Please choose option and click Submit to proceed to the next page',
+        content: `Questions are presented in the below formats. You will find mandatory as well as
+        optional questions throughout the survey. Mandatory questions will be mentioned
+        explicitly with an asterisk (*) at the end of the question. Please answer the two questions presented here and click submit to
+        complete the guided tour.`,
         placement: 'bottom',
         spotlightPadding: 0,
         disableOverlay: true,

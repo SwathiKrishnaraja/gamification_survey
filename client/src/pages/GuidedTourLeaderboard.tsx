@@ -16,16 +16,23 @@ import ExitSurvey from '../components/ExitSurvey'
 import { RootState } from '../reducer/reducer'
 import createABarGraphElement, { barGraphElements } from '../helpers/createLeaderboardElements'
 import LeaderboardComponent from '../components/LeaderboardComponent';
+import styled from 'styled-components';
 
+const StyledText = styled.h4`
+    font-weight: 400;
+    padding: 2px;
+
+`
 const TourContinueElement: React.FC = () => {
     return (
         <div>
             <h2>Congratulations !</h2>
             <hr style={{ width: '98%' }} />
             <br />
-            <h4>
-                You have finished the Guided tour.
-            </h4>
+            <StyledText>
+                You have now completed the guided tour of the survey. Now you
+                will be redirected to the actual survey. Click ‘Continue’ to begin the survey.
+            </StyledText>
 
         </div>
     )

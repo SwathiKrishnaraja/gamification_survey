@@ -12,17 +12,26 @@ import { stepsForTraditionalTour } from '../components/GuidedTour/TourSteps'
 import ExitSurvey from '../components/ExitSurvey'
 import { useSelector } from 'react-redux'
 import { RootState } from '../reducer/reducer'
+import styled from 'styled-components'
 
+const StyledText = styled.h4`
+    font-weight: 400;
+    padding: 2px;
 
-export const TourContinueElement: React.FC = () => {
+`
+type TourProps = {
+    surveyMode: string
+}
+export const TourContinueElement: React.FC<TourProps> = ({ surveyMode }) => {
     return (
         <Fragment>
             <h2>Congratulations !</h2>
             <hr style={{ width: '98%' }} />
-            <h4>
-                <br />
-            You have finished the Guided tour.
-            </h4>
+            <StyledText>
+                {surveyMode === 'TRADITIONAL_GAMIFIED_1' || surveyMode === 'TRADITIONAL_GAMIFIED_2'
+                    ? `You have now completed the guided tour of the survey. Now you will be redirected to the guided tour of the next version.`
+                    : `You have now completed the guided tour of the survey. Now you will be redirected to the actual survey. Click ‘Continue’ to begin the survey.`}
+            </StyledText>
         </Fragment>
     )
 }
@@ -114,7 +123,7 @@ const GuidedTourTraditional = () => {
                             callback={handleSurveyCallback}
                         />
                         {showModal
-                            ? <GuidedTourModal showModal={showModal} handleClick={handleTourProceed} children={<TourContinueElement />} modalWindowButton='Continue' styleClass='guided-modal-main' buttonClass='continue-button' />
+                            ? <GuidedTourModal showModal={showModal} handleClick={handleTourProceed} children={<TourContinueElement surveyMode={surveyMode} />} modalWindowButton='Continue' styleClass='guided-modal-main' buttonClass='continue-button' />
                             : <Fragment />}
                     </div>
                     : <Fragment />
