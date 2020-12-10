@@ -1,6 +1,8 @@
-import React, { Fragment } from 'react'
+import React, { Fragment, useState } from 'react'
 import { useHistory } from 'react-router-dom'
 import { Badge } from '../../types/types'
+import GuidedTourModal from '../GuidedTour/GuidedTourModal'
+import ThanksText from '../ThanksText'
 import RenderGamifiedBadgesDashboard from './RenderGamifiedBadgesDashboard'
 import RenderLeaderboardDashboard from './RenderLeaderboardDashboard'
 
@@ -11,8 +13,13 @@ type Props = {
 }
 
 const DashboardComponent: React.FC<Props> = ({ mode, listOfAchievedBadges, pointsAchieved }) => {
+    const [showModal, setShowModal] = useState(false)
     const history = useHistory()
+
     const handleNextButton = () => {
+        setShowModal(true)
+    }
+    const handleProceedButton = () => {
         history.push('/PostSurvey')
     }
 
@@ -21,11 +28,9 @@ const DashboardComponent: React.FC<Props> = ({ mode, listOfAchievedBadges, point
             <div className='dashboard'>
                 {mode === 'badges' ? <RenderGamifiedBadgesDashboard listOfAchievedBadges={listOfAchievedBadges} /> : null}
                 {mode === 'leaderboard' ? <RenderLeaderboardDashboard pointsAchieved={pointsAchieved} /> : null}
-
-                <span style={{ marginLeft: 10, marginTop: 5 }}>Thank you for completing the survey. </span>
-                <span style={{ marginLeft: 10, marginTop: 5, marginBottom: 5 }}>Please let us know how you feel about the survey by clicking on 'Next'.</span>
             </div >
             <button style={{ marginTop: 20 }} className="continue-button" onClick={handleNextButton}>Next</button>
+            {showModal ? <GuidedTourModal showModal={showModal} handleClick={handleProceedButton} children={<ThanksText />} styleClass='thank-you-modal' modalWindowButton='Proceed' buttonClass='exit-survey-button' /> : null}
         </Fragment >
 
     )
