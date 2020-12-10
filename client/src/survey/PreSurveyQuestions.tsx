@@ -52,8 +52,8 @@ const SurveyQuestions: React.FC = () => {
 
     const handleSurveyCompletion = (sender: SurveyModel, options: any) => {
 
-        const { data: preSurvey } = sender
-        dispatch({ type: 'STORE_SURVEY', payload: { preSurvey } })
+        const { data: presurvey } = sender
+        dispatch({ type: 'STORE_SURVEY', payload: { presurvey } })
         history.push(path)
     }
     return (

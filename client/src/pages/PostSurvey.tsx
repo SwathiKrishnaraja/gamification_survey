@@ -42,8 +42,8 @@ const PostSurvey = () => {
     const dispatch = useDispatch()
 
     const handleSurveyCompletion = (sender: SurveyModel, options: any) => {
-        const { data: postSurvey } = sender
-        dispatch({ type: 'STORE_SURVEY', payload: { postSurvey } })
+        const { data: postsurvey } = sender
+        dispatch({ type: 'STORE_SURVEY', payload: { postsurvey } })
         history.push('/Thanks')
 
     }

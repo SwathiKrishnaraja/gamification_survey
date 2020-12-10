@@ -1,9 +1,9 @@
 import { SurveyDataType } from '../types/types'
 
 const defaultState: SurveyDataType = {
-    preSurvey: {},
-    mainSurvey: {},
-    postSurvey: {},
+    presurvey: {},
+    mainsurvey: {},
+    postsurvey: {},
     survey_mode: '',
     char_count: [],
     time_taken: 0,

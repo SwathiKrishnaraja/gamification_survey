@@ -41,12 +41,12 @@ const SurveyQuestions = ({ handleProgress }: Props) => {
             listOfSurveyQuestions.push(data)
             const average_time = Math.round(getAverageTime(time_taken))
             const char_count = getCharacterCount(filterOpenQuestions(listOfSurveyQuestions))
-            const mainSurvey = data
+            const mainsurvey = data
             const browser = window.navigator.userAgent
             dispatch({
                 type: 'STORE_SURVEY',
                 payload: {
-                    survey_mode, char_count, time_taken, average_time, mainSurvey, browser
+                    survey_mode, char_count, time_taken, average_time, mainsurvey, browser
                 }
             })
             postSurveyMode({ mode: survey_mode })

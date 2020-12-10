@@ -48,9 +48,9 @@ export type OpenQuestions = {
 
 export type SurveyDataType = {
     survey_mode: string,
-    preSurvey: SurveyQuestionsType,
-    mainSurvey: SurveyQuestionsType,
-    postSurvey: SurveyQuestionsType
+    presurvey: SurveyQuestionsType,
+    mainsurvey: SurveyQuestionsType,
+    postsurvey: SurveyQuestionsType
     char_count: Array<OpenQuestions>,
     average_time: number,
     time_taken: number,
