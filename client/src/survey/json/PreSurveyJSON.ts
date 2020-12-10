@@ -12,7 +12,6 @@ const JSON = () => {
         type: 'matrix',
         name: 'q5',
         title: t('preSurvey.q1'),
-        isRequired: true,
         isAllRowRequired: true,
         columns: [{
             value: 1,

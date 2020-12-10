@@ -48,9 +48,16 @@ const SurveyQuestions: React.FC = () => {
     const path = getNavigationPath(surveyMode)
     const surveyJSON = JSON()
 
+    const dispatch = useDispatch()
 
+    const handleSurveyCompletion = (sender: SurveyModel, options: any) => {
+
+        const { data: preSurvey } = sender
+        dispatch({ type: 'STORE_SURVEY', payload: { preSurvey } })
+        history.push(path)
+    }
     return (
-        <Survey.Survey json={surveyJSON} onComplete={() => history.push(path)} />
+        <Survey.Survey json={surveyJSON} onComplete={handleSurveyCompletion} />
     )
 }
 export default SurveyQuestions 

@@ -20,6 +20,7 @@ import rootReducer from './reducer/reducer'
 import Toast from './Toast/Toast';
 import GuidedTourLeaderboard from './pages/GuidedTourLeaderboard';
 import ChooseGamifiedVersion from './pages/ChooseGamifiedVersion';
+import ThankYouPage from './pages/ThankYouPage';
 
 const store = createStore(rootReducer)
 
@@ -38,6 +39,7 @@ const Routing = () => {
       <Route path='/Dashboard' component={Dashboard} />
       <Route path='/PostSurvey' component={PostSurvey} />
       <Route path='/LeaderBoardSurvey' component={LeaderBoardSurvey} />
+      <Route path='/Thanks' component={ThankYouPage} />
     </Router>
   )
 }

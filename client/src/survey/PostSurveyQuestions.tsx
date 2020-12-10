@@ -12,7 +12,6 @@ const GenericSurveyQuestions = () => {
         type: 'matrix',
         name: 'q5',
         title: t('postSurvey.q1'),
-        isRequired: true,
         isAllRowRequired: true,
         columns: [{
             value: 1,
@@ -262,7 +261,7 @@ const GamifiedSurveyQuestions = () => {
     const { t } = useTranslation()
     const q1: Questions = {
         type: 'matrix',
-        name: 'q5',
+        name: 'q1',
         title: t('postSurvey.q1'),
         isRequired: true,
         isAllRowRequired: true,
@@ -287,43 +286,43 @@ const GamifiedSurveyQuestions = () => {
             text: t('preSurvey.q1c5')
         }],
         rows: [{
-            value: 'spare',
+            value: t(`preSurvey.q1a${shuffledQ1[0]}`)!,
             text: t(`preSurvey.q1a${shuffledQ1[0]}`)
         },
         {
-            value: 'active',
+            value: t(`preSurvey.q1a${shuffledQ1[1]}`)!,
             text: t(`preSurvey.q1a${shuffledQ1[1]}`)
         },
         {
-            value: 'scope',
+            value: t(`preSurvey.q1a${shuffledQ1[2]}`)!,
             text: t(`preSurvey.q1a${shuffledQ1[2]}`)
         },
         {
-            value: 'kgf',
+            value: t(`preSurvey.q1a${shuffledQ1[3]}`)!,
             text: t(`preSurvey.q1a${shuffledQ1[3]}`)
         },
         {
-            value: 'rocky',
+            value: t(`preSurvey.q1a${shuffledQ1[4]}`)!,
             text: t(`preSurvey.q1a${shuffledQ1[4]}`)
         },
         {
-            value: 'gotu',
+            value: t(`preSurvey.q1a${shuffledQ1[5]}`)!,
             text: t(`preSurvey.q1a${shuffledQ1[5]}`)
         },
         {
-            value: 'von',
+            value: t(`preSurvey.q1a${shuffledQ1[6]}`)!,
             text: t(`preSurvey.q1a${shuffledQ1[6]}`)
         },
         {
-            value: 'goundermann',
+            value: t(`preSurvey.q1a${shuffledQ1[7]}`)!,
             text: t(`preSurvey.q1a${shuffledQ1[7]}`)
         },
         {
-            value: 'kongu',
+            value: t(`preSurvey.q1a${shuffledQ1[8]}`)!,
             text: t(`preSurvey.q1a${shuffledQ1[8]}`)
         },
         {
-            value: 'satchki',
+            value: t(`preSurvey.q1a${shuffledQ1[9]}`)!,
             text: t(`preSurvey.q1a${shuffledQ1[9]}`)
         },
         ]

@@ -45,3 +45,18 @@ export type SurveyQuestionsType = {
 export type OpenQuestions = {
     [key: string]: string | number
 }
+
+export type SurveyDataType = {
+    survey_mode: string,
+    preSurvey: SurveyQuestionsType,
+    mainSurvey: SurveyQuestionsType,
+    postSurvey: SurveyQuestionsType
+    char_count: Array<OpenQuestions>,
+    average_time: number,
+    time_taken: number,
+    badges?: number,
+    points?: number,
+    leaderboard_position?: number,
+    narratives_unlocked?: number,
+    browser: string
+}
