@@ -10,7 +10,7 @@ const JSON = () => {
     const { t } = useTranslation()
     const q1: Questions = {
         type: 'matrix',
-        name: 'q5',
+        name: 'q1',
         title: t('preSurvey.q1'),
         isAllRowRequired: true,
         columns: [{
