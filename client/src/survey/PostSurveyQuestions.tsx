@@ -239,6 +239,34 @@ const GenericSurveyQuestions = () => {
         title: t('postSurvey.q6')
     }
 
+    const q7: Questions = {
+        type: 'radiogroup',
+        name: 'q7',
+        isRequired: true,
+        title: t('postSurvey.q7'),
+        choices: [
+            t('postSurvey.q7c1'),
+            t('postSurvey.q7c2'),
+            t('postSurvey.q7c3'),
+            t('postSurvey.q7c4'),
+            t('postSurvey.q7c5'),
+        ]
+    }
+
+    const q8: Questions = {
+        type: 'radiogroup',
+        name: 'q8',
+        isRequired: true,
+        title: t('postSurvey.q8'),
+        choices: [
+            t('postSurvey.q8c1'),
+            t('postSurvey.q8c2'),
+            t('postSurvey.q8c3'),
+            t('postSurvey.q8c4'),
+            t('postSurvey.q8c5'),
+        ]
+    }
+
     const json = {
         "completeText": "Submit",
         showPrevButton: false,
@@ -248,7 +276,7 @@ const GenericSurveyQuestions = () => {
                     {
                         "type": "panel",
                         "elements": [
-                            q1, q2, q3, q4, q5, q6
+                            q1, q2, q3, q4, q5, q6, q7, q8
                         ],
                         "name": "panel1"
                     }
