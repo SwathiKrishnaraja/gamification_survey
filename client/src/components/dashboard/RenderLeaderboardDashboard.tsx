@@ -10,7 +10,7 @@ const RenderLeaderboardDashboard: React.FC<Props> = ({ pointsAchieved }) => {
     const user = createABarGraphElement('You', pointsAchieved, pointsAchieved / 10, 'blue')
     const listOfComponents: Array<React.ReactElement> = [zeus, ron, han, jonas, user]
     return <Fragment>
-        <span style={{ margin: 10 }}>Congratulations ! You have achieved the {pointsAchieved} points.</span>
+        <span style={{ margin: 10 }}>Congratulations ! You have achieved {pointsAchieved} points.</span>
         <LeaderboardComponent points={pointsAchieved} listOfComponents={listOfComponents} />
     </Fragment>
 

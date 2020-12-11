@@ -284,7 +284,7 @@ export const translationDE = {
       q21a7: 'Master’s degree',
       q21a8: 'Professional degree',
       q21a9: 'Doctorate degree',
-      q21a10: 'Other', 
+      q21a10: 'Other',
       q21a11: 'No answer',
 
       q22: 'And you are in which line of work… ',
@@ -384,8 +384,7 @@ export const translationDE = {
       q2a2: 'I believe I had some choice about doing the survey.',
       q2a3:
         'While I was doing the survey, I was thinking about how much I enjoyed it.',
-      q2a4:
-        'I think I did pretty well at the survey, compared to others.',
+      q2a4: 'I think I did pretty well at the survey, compared to others.',
       q2a5: 'Survey was fun to do.',
       q2a6: 'After working at this survey for awhile, I felt pretty competent.',
       q2a7: 'I enjoyed doing this survey very much.',
@@ -394,23 +393,19 @@ export const translationDE = {
       q2a10: 'I am satisfied with my performance at this task.',
       q2a11: 'I felt like I was enjoying the survey while I was doing it.',
       q2a12: 'I thought this was a very boring survey.',
-      q2a13:
-        'I was pretty skilled at doing this survey.',
+      q2a13: 'I was pretty skilled at doing this survey.',
       q2a14: 'I felt like I had no choice but to do this survey.',
       q2a15: 'I thought this was a very interesting survey.',
-      q2a16:
-        'This was a survey that I could not do very well.',
+      q2a16: 'This was a survey that I could not do very well.',
       q2a17: 'I would describe this survey as very enjoyable.',
       q2a18: 'I felt like I had to do this survey.',
-      q2a19:
-        'I felt very tense while doing this survey.',
+      q2a19: 'I felt very tense while doing this survey.',
       q2a20: 'I did this survey because I had to.',
       q2a21: 'I did not feel nervous at all while doing this.',
       q2a22: 'While doing this survey I felt like I had a choice.',
       q2a23: 'I would describe this survey as very fun.',
       q2a24: 'I felt like it was not my own choice to do this survey.',
-      q2a25:
-        'I felt pressured while doing the survey.',
+      q2a25: 'I felt pressured while doing the survey.',
 
       q3:
         'Below are some statements about the questionnaire itself. Please indicate for every statement, if you strongly agree, somewhat agree, somewhat disagree, or strongly disagree.',
@@ -432,6 +427,22 @@ export const translationDE = {
       q5: 'What did you not like about the survey?',
 
       q6: 'What would you change about the survey?',
+
+      q7:
+        'I would have liked if I was given the choice to choose which survey version I wanted to work with.',
+      q7c1: 'strongly disagree',
+      q7c2: 'disagree',
+      q7c3: 'neither',
+      q7c4: 'agree',
+      q7c5: 'strongly agree',
+
+      q8:
+        'I would have liked if I was the given the option to participate in a gamified survey.',
+      q8c1: 'strongly disagree',
+      q8c2: 'disagree',
+      q8c3: 'neither',
+      q8c4: 'agree',
+      q8c5: 'strongly agree',
     },
 
     selfReportChoiceEnableDisable: {

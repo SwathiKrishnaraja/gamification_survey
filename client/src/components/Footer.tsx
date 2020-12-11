@@ -33,7 +33,7 @@ const Footer = () => {
 
         <button style={{ marginRight: 5 }} className="imprint-button" onClick={handleLegalInformation}>Legal Information</button>
         <button className="imprint-button" onClick={handleDataProtection}>Data Protection Information</button>
-        <ImprintModal showModal={showImprint} handleClick={isLegal ? handleLegalInformation : handleDataProtection} title={isData ? t('dataProtectionInformation.header') : t('legalInformation.header')} children={isData ? <DataProtection /> : <LegalInformation />} />
+        <ImprintModal showModal={showImprint} handleClick={isLegal ? handleLegalInformation : handleDataProtection} title={isData ? 'Data Protection' : t('legalInformation.header')} children={isData ? <DataProtection /> : <LegalInformation />} />
 
       </div>
     </FooterComponent>

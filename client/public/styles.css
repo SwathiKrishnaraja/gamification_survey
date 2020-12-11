@@ -196,7 +196,7 @@ p {
 .modalMain {
   position: fixed;
   background: white;
-  width: 50%;
+  width: 35%;
   top: 50%;
   left: 50%;
   height: 60%;
@@ -384,7 +384,7 @@ thead {
   position: fixed;
   background: white;
   width: 400px;
-  height: 210px;
+  height: 240px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -653,7 +653,7 @@ thead {
   background: white;
   flex-direction: column;
   justify-content: space-around;
-  height: 180px;
+  height: 230px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);

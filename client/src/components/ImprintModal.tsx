@@ -42,7 +42,7 @@ const ImprintModal: React.FC<Props> = ({ showModal, handleClick, children, title
             <div className='modalMain'>
                 <CustomDiv>
                     <CustomSpan>
-                        <h1 style={{ margin: 10, marginLeft: 100 }}>{title}</h1>
+                        <h1 style={{ margin: 10, marginLeft: 150 }}>{title}</h1>
                         <button className='x-styled-close' onClick={handleClick}>x</button>
                     </CustomSpan>
                 </CustomDiv >
