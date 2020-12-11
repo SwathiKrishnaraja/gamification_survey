@@ -34,43 +34,43 @@ const JSON = () => {
             text: t('preSurvey.q1c5')
         }],
         rows: [{
-            value: 'spare',
+            value: t(`preSurvey.q1a${shuffledQ1[0]}`)!,
             text: t(`preSurvey.q1a${shuffledQ1[0]}`)
         },
         {
-            value: 'active',
+            value: t(`preSurvey.q1a${shuffledQ1[1]}`)!,
             text: t(`preSurvey.q1a${shuffledQ1[1]}`)
         },
         {
-            value: 'scope',
+            value: t(`preSurvey.q1a${shuffledQ1[2]}`)!,
             text: t(`preSurvey.q1a${shuffledQ1[2]}`)
         },
         {
-            value: 'kgf',
+            value: t(`preSurvey.q1a${shuffledQ1[3]}`)!,
             text: t(`preSurvey.q1a${shuffledQ1[3]}`)
         },
         {
-            value: 'rocky',
+            value: t(`preSurvey.q1a${shuffledQ1[4]}`)!,
             text: t(`preSurvey.q1a${shuffledQ1[4]}`)
         },
         {
-            value: 'gotu',
+            value: t(`preSurvey.q1a${shuffledQ1[5]}`)!,
             text: t(`preSurvey.q1a${shuffledQ1[5]}`)
         },
         {
-            value: 'von',
+            value: t(`preSurvey.q1a${shuffledQ1[6]}`)!,
             text: t(`preSurvey.q1a${shuffledQ1[6]}`)
         },
         {
-            value: 'goundermann',
+            value: t(`preSurvey.q1a${shuffledQ1[7]}`)!,
             text: t(`preSurvey.q1a${shuffledQ1[7]}`)
         },
         {
-            value: 'kongu',
+            value: t(`preSurvey.q1a${shuffledQ1[8]}`)!,
             text: t(`preSurvey.q1a${shuffledQ1[8]}`)
         },
         {
-            value: 'satchki',
+            value: t(`preSurvey.q1a${shuffledQ1[9]}`)!,
             text: t(`preSurvey.q1a${shuffledQ1[9]}`)
         },
         ]
@@ -111,99 +111,99 @@ const JSON = () => {
         }
         ],
         rows: [{
-            value: 'spare',
+            value: t(`preSurvey.q2a${shuffledQ2[0]}`)!,
             text: t(`preSurvey.q2a${shuffledQ2[0]}`)
         },
         {
-            value: 'active',
+            value: t(`preSurvey.q2a${shuffledQ2[1]}`)!,
             text: t(`preSurvey.q2a${shuffledQ2[1]}`)
         },
         {
-            value: 'scope',
+            value: t(`preSurvey.q2a${shuffledQ2[2]}`)!,
             text: t(`preSurvey.q2a${shuffledQ2[2]}`)
         },
         {
-            value: 'kgf',
+            value: t(`preSurvey.q2a${shuffledQ2[3]}`)!,
             text: t(`preSurvey.q2a${shuffledQ2[3]}`)
         },
         {
-            value: 'rocky',
+            value: t(`preSurvey.q2a${shuffledQ2[4]}`)!,
             text: t(`preSurvey.q2a${shuffledQ2[4]}`)
         },
         {
-            value: 'gotu',
+            value: t(`preSurvey.q2a${shuffledQ2[5]}`)!,
             text: t(`preSurvey.q2a${shuffledQ2[5]}`)
         },
         {
-            value: 'von',
+            value: t(`preSurvey.q2a${shuffledQ2[6]}`)!,
             text: t(`preSurvey.q2a${shuffledQ2[6]}`)
         },
         {
-            value: 'goundermann',
+            value: t(`preSurvey.q2a${shuffledQ2[7]}`)!,
             text: t(`preSurvey.q2a${shuffledQ2[7]}`)
         },
         {
-            value: 'kongu',
+            value: t(`preSurvey.q2a${shuffledQ2[8]}`)!,
             text: t(`preSurvey.q2a${shuffledQ2[8]}`)
         },
         {
-            value: 'satchki',
+            value: t(`preSurvey.q2a${shuffledQ2[9]}`)!,
             text: t(`preSurvey.q2a${shuffledQ2[9]}`)
         },
         {
-            value: 'a',
+            value: t(`preSurvey.q2a${shuffledQ2[10]}`)!,
             text: t(`preSurvey.q2a${shuffledQ2[10]}`)
         },
         {
-            value: 'b',
+            value: t(`preSurvey.q2a${shuffledQ2[11]}`)!,
             text: t(`preSurvey.q2a${shuffledQ2[11]}`)
         },
         {
-            value: 'c',
+            value: t(`preSurvey.q2a${shuffledQ2[12]}`)!,
             text: t(`preSurvey.q2a${shuffledQ2[12]}`)
         },
         {
-            value: 'd',
+            value: t(`preSurvey.q2a${shuffledQ2[13]}`)!,
             text: t(`preSurvey.q2a${shuffledQ2[13]}`)
         },
         {
-            value: 'e',
+            value: t(`preSurvey.q2a${shuffledQ2[14]}`)!,
             text: t(`preSurvey.q2a${shuffledQ2[14]}`)
         },
         {
-            value: 'f',
+            value: t(`preSurvey.q2a${shuffledQ2[15]}`)!,
             text: t(`preSurvey.q2a${shuffledQ2[15]}`)
         },
         {
-            value: 'g',
+            value: t(`preSurvey.q2a${shuffledQ2[16]}`)!,
             text: t(`preSurvey.q2a${shuffledQ2[16]}`)
         },
         {
-            value: 'h',
+            value: t(`preSurvey.q2a${shuffledQ2[17]}`)!,
             text: t(`preSurvey.q2a${shuffledQ2[17]}`)
         },
         {
-            value: 'i',
+            value: t(`preSurvey.q2a${shuffledQ2[18]}`)!,
             text: t(`preSurvey.q2a${shuffledQ2[18]}`)
         },
         {
-            value: 'j',
+            value: t(`preSurvey.q2a${shuffledQ2[19]}`)!,
             text: t(`preSurvey.q2a${shuffledQ2[19]}`)
         },
         {
-            value: 'k',
+            value: t(`preSurvey.q2a${shuffledQ2[20]}`)!,
             text: t(`preSurvey.q2a${shuffledQ2[20]}`)
         },
         {
-            value: 'l',
+            value: t(`preSurvey.q2a${shuffledQ2[21]}`)!,
             text: t(`preSurvey.q2a${shuffledQ2[21]}`)
         },
         {
-            value: 'm',
+            value: t(`preSurvey.q2a${shuffledQ2[22]}`)!,
             text: t(`preSurvey.q2a${shuffledQ2[22]}`)
         },
         {
-            value: 'n',
+            value: t(`preSurvey.q2a${shuffledQ2[23]}`)!,
             text: t(`preSurvey.q2a${shuffledQ2[23]}`)
         },
         ]

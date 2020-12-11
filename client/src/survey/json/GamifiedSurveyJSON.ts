@@ -62,19 +62,19 @@ const JSON = () => {
             text: t('mainSurvey.q5c3')
         }],
         rows: [{
-            value: 'spare',
+            value: t('mainSurvey.q5a1')!,
             text: t('mainSurvey.q5a1')
         },
         {
-            value: 'active',
+            value: t('mainSurvey.q5a2')!,
             text: t('mainSurvey.q5a2')
         },
         {
-            value: 'scope',
+            value: t('mainSurvey.q5a3')!,
             text: t('mainSurvey.q5a3')
         },
         {
-            value: 'club',
+            value: t('mainSurvey.q5a4')!,
             text: t('mainSurvey.q5a4')
         }]
     }
@@ -143,85 +143,83 @@ const JSON = () => {
         name: 'q12',
         title: t('mainSurvey.q12'),
         columns: [{
-            value: 121,
+            value: 1,
             text: t('mainSurvey.q12c1')
         },
         {
-            value: 122,
+            value: 2,
             text: t('mainSurvey.q12c2')
         },
         {
-            value: 123,
+            value: 3,
             text: t('mainSurvey.q12c3')
         },
         {
-            value: 124,
+            value: 4,
             text: t('mainSurvey.q12c4')
         },
         {
-            value: 125,
+            value: 5,
             text: t('mainSurvey.q12c5')
         },
         ],
         rows: [
             {
-                value: '121',
+                value: t('mainSurvey.q12a1')!,
                 text: t('mainSurvey.q12a1')
             },
             {
-                value: '122',
+                value: t('mainSurvey.q12a2')!,
                 text: t('mainSurvey.q12a2')
             },
             {
-                value: '123',
+                value: t('mainSurvey.q12a3')!,
                 text: t('mainSurvey.q12a3')
             },
             {
-                value: '124',
+                value: t('mainSurvey.q12a4')!,
                 text: t('mainSurvey.q12a4')
             },
             {
-                value: '125',
+                value: t('mainSurvey.q12a5')!,
                 text: t('mainSurvey.q12a5')
             },
             {
-                value: '126',
+                value: t('mainSurvey.q12a6')!,
                 text: t('mainSurvey.q12a6')
             },
             {
-                value: '127',
+                value: t('mainSurvey.q12a7')!,
                 text: t('mainSurvey.q12a7')
             },
             {
-                value: '128',
+                value: t('mainSurvey.q12a8')!,
                 text: t('mainSurvey.q12a8')
             },
             {
-                value: '129',
+                value: t('mainSurvey.q12a9')!,
                 text: t('mainSurvey.q12a9')
             },
             {
-                value: '1210',
+                value: t('mainSurvey.q12a10')!,
                 text: t('mainSurvey.q12a10')
             },
             {
-                value: '1211',
+                value: t('mainSurvey.q12a11')!,
                 text: t('mainSurvey.q12a11')
             },
             {
-                value: '1212',
+                value: t('mainSurvey.q12a12')!,
                 text: t('mainSurvey.q12a12')
             },
             {
-                value: '1213',
+                value: t('mainSurvey.q12a13')!,
                 text: t('mainSurvey.q12a13')
             },
             {
-                value: '1214',
+                value: t('mainSurvey.q12a14')!,
                 text: t('mainSurvey.q12a14')
             },
-
-
         ]
     }
 
@@ -267,51 +265,51 @@ const JSON = () => {
         },
         ],
         rows: [{
-            value: '1',
+            value: t('mainSurvey.q15a1')!,
             text: t('mainSurvey.q15a1')
         },
         {
-            value: '2',
+            value: t('mainSurvey.q15a2')!,
             text: t('mainSurvey.q15a2')
         },
         {
-            value: '3',
+            value: t('mainSurvey.q15a3')!,
             text: t('mainSurvey.q15a3')
         },
         {
-            value: '4',
+            value: t('mainSurvey.q15a4')!,
             text: t('mainSurvey.q15a4')
         },
         {
-            value: '5',
+            value: t('mainSurvey.q15a5')!,
             text: t('mainSurvey.q15a5')
         },
         {
-            value: '6',
+            value: t('mainSurvey.q15a6')!,
             text: t('mainSurvey.q15a6')
         },
         {
-            value: '7',
+            value: t('mainSurvey.q15a7')!,
             text: t('mainSurvey.q15a7')
         },
         {
-            value: '8',
+            value: t('mainSurvey.q15a8')!,
             text: t('mainSurvey.q15a8')
         },
         {
-            value: '9',
+            value: t('mainSurvey.q15a9')!,
             text: t('mainSurvey.q15a9')
         },
         {
-            value: '10',
+            value: t('mainSurvey.q15a10')!,
             text: t('mainSurvey.q15a10')
         },
         {
-            value: '11',
+            value: t('mainSurvey.q15a11')!,
             text: t('mainSurvey.q15a11')
         },
         {
-            value: '12',
+            value: t('mainSurvey.q15a12')!,
             text: t('mainSurvey.q15a12')
         },
         ]
@@ -340,39 +338,39 @@ const JSON = () => {
         },
         ],
         rows: [{
-            value: '1',
+            value: t('mainSurvey.q16a1')!,
             text: t('mainSurvey.q16a1')
         },
         {
-            value: '2',
+            value: t('mainSurvey.q16a2')!,
             text: t('mainSurvey.q16a2')
         },
         {
-            value: '3',
+            value: t('mainSurvey.q16a3')!,
             text: t('mainSurvey.q16a3')
         },
         {
-            value: '4',
+            value: t('mainSurvey.q16a4')!,
             text: t('mainSurvey.q16a4')
         },
         {
-            value: '5',
+            value: t('mainSurvey.q16a5')!,
             text: t('mainSurvey.q16a5')
         },
         {
-            value: '6',
+            value: t('mainSurvey.q16a6')!,
             text: t('mainSurvey.q16a6')
         },
         {
-            value: '7',
+            value: t('mainSurvey.q16a7')!,
             text: t('mainSurvey.q16a7')
         },
         {
-            value: '8',
+            value: t('mainSurvey.q16a8')!,
             text: t('mainSurvey.q16a8')
         },
         {
-            value: '9',
+            value: t('mainSurvey.q16a9')!,
             text: t('mainSurvey.q16a9')
         },
         ]
@@ -400,19 +398,19 @@ const JSON = () => {
         },
         ],
         rows: [{
-            value: '1',
+            value: t('mainSurvey.q17a1')!,
             text: t('mainSurvey.q17a1')
         },
         {
-            value: '2',
+            value: t('mainSurvey.q17a2')!,
             text: t('mainSurvey.q17a2')
         },
         {
-            value: '3',
+            value: t('mainSurvey.q17a3')!,
             text: t('mainSurvey.q17a3')
         },
         {
-            value: '4',
+            value: t('mainSurvey.q17a4')!,
             text: t('mainSurvey.q17a4')
         },
 
