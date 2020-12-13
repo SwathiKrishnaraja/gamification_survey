@@ -30,7 +30,7 @@ const MainBody = styled.div`
   height: 80vh;
   margin: auto;
   width: 88%;
-  overflow-y: scroll;
+  overflow-y: hidden;
   overflow-x: hidden;
   font-size: medium;
 `
