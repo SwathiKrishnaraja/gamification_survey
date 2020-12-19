@@ -90,24 +90,21 @@ export const translationEN = {
       q2a24: 'I dislike following rules.',
     },
     mainSurvey: {
-      q1:
-        'How do you feel in general? Please choose one of the following answers:',
+      q1: 'How do you feel in general?',
       q1a1: 'Very healthy',
       q1a2: 'Somewhat healthy',
       q1a3: 'Somewhat unhealthy',
       q1a4: 'Very unhealthy',
       q1a5: 'No answer',
 
-      q2:
-        'Overall, how would you assess yourself? Please choose one of the following answers:',
+      q2: 'Overall, how would you assess yourself?',
       q2a1: 'Very sporty',
       q2a2: 'Rather sporty',
       q2a3: 'Rather not sporty',
       q2a4: 'Not sporty at all',
       q2a5: 'No answer',
 
-      q3:
-        'And how would you describe yourself? Are you...Please choose one of the following answers:',
+      q3: 'And how would you describe yourself? Are you...',
       q3a1: 'More sociable and likes to be around people',
       q3a2: 'Rather lonely and likes to be alone',
       q3a3: 'No answer',
@@ -131,8 +128,7 @@ export const translationEN = {
         'I am physically active within the scope of school, my training or my job.',
       q5a4: 'I am active in one or more sports clubs.',
 
-      q6:
-        'How often are you physically active? Please choose one of the following answers:',
+      q6: 'How often are you physically active?',
       q6a1: 'Several times a week',
       q6a2: 'Several times per month',
       q6a3: 'Approximately once a month',
@@ -140,14 +136,13 @@ export const translationEN = {
       q6a5: 'No answer',
 
       q7:
-        ' And how would you rate your sports and physical activities? Do you do...Please choose one of the following answers:',
+        ' And how would you rate your sports and physical activities? Do you do...',
       q7a1: 'Enough',
       q7a2: 'Rather too much',
       q7a3: 'Rather too little',
       q7a4: 'No answer',
 
-      q8:
-        'If you are physically active, where is that? Please select one or more items from the list.',
+      q8: 'If you are physically active, where is that?',
       q8a1: 'At school or at my job training place',
       q8a2: 'In public spaces (streets, parks, green spaces, etc.)',
       q8a3:
@@ -161,7 +156,7 @@ export const translationEN = {
       q8a9: 'At my workplace',
 
       q9:
-        'And when you are physically active, do you prefer to be active together with other people, or do you prefer to be alone? Please choose one of the following answers:',
+        'And when you are physically active, do you prefer to be active together with other people, or do you prefer to be alone?',
       q9a1: 'I prefer to be active with other people',
       q9a2: 'I prefer to travel alone',
       q9a3: 'I like both',
@@ -196,7 +191,7 @@ export const translationEN = {
       q12a14: 'It helps me relax and relieve stress.',
 
       q13:
-        'Whats your circle of friends like? Are the people in your circle of friends, all in all... Please choose one of the following answers:',
+        'Whats your circle of friends like? Are the people in your circle of friends, all in all...',
       q13a1: 'Physically more active than you',
       q13a2: 'About as physically active as you',
       q13a3: 'Physically less active than you',

@@ -754,3 +754,9 @@ thead {
   border-radius: 2px;
   padding: 10px;
 }
+
+.sv_q_description {
+  font-style: italic;
+  padding: 10px;
+  font-size: 14px;
+}

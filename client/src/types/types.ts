@@ -9,7 +9,8 @@ export interface Questions {
     hasSelectAll?: true,
     minRateDescription?: string,
     maxRateDescription?: string,
-    isAllRowRequired?: boolean
+    isAllRowRequired?: boolean,
+    description?: string
 
 }
 
