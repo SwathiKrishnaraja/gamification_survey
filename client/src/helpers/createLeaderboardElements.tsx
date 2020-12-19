@@ -8,9 +8,9 @@ const createABarGraphElement = (name: string, points: number, height: number, co
         <span> {name} </span>
     </div >
 }
-const zeus = createABarGraphElement('Mark', 2200, 220)
-const ron = createABarGraphElement('Sash', 800, 80)
-const han = createABarGraphElement('Jonas', 1200, 120)
+const zeus = createABarGraphElement('Mark', 700, 70)
+const ron = createABarGraphElement('Sash', 200, 20)
+const han = createABarGraphElement('Jonas', 600, 60)
 const jonas = createABarGraphElement('Alex', 500, 50)
 
 export default createABarGraphElement

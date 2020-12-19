@@ -709,7 +709,7 @@ thead {
 .leaderBoard {
   display: flex;
   margin-left: 20px;
-  height: 300px;
+  height: 150px;
   background-color: #dbd9d9;
   flex-direction: row;
   align-items: flex-end;
