@@ -77,7 +77,7 @@ const GuidedTourLeaderboard = () => {
     // Testing-setup for thesis
 
     const { zeus, ron, han, jonas } = barGraphElements
-    const user = createABarGraphElement('You', 850, 85, 'blue')
+    const user = createABarGraphElement('You', 800, 80, 'blue')
     const listOfComponents: Array<React.ReactElement> = [zeus, ron, han, jonas, user]
 
     const handleJoyrideCallbackForTour1 = (data: CallBackProps) => {
@@ -130,7 +130,7 @@ const GuidedTourLeaderboard = () => {
                                 <div className='survey-body'>
                                     <SurveyQuestions />
                                 </div>
-                                <LeaderboardComponent points={850} listOfComponents={listOfComponents} />
+                                <LeaderboardComponent points={800} listOfComponents={listOfComponents} />
                             </div>
                             {
                                 showModal
