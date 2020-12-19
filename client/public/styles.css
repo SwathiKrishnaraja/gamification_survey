@@ -121,10 +121,16 @@ p {
   display: flex;
   justify-content: center;
   margin-top: 10px;
+  position: sticky;
+  top: 0;
+  background: #f5f5f5;
+  border-radius: 3px;
+  z-index: 1;
 }
 .Badges-div img {
   width: 60px;
   margin-right: 5px;
+  border-radius: 10px;
 }
 .inactive-badge {
   opacity: 0.4;
@@ -676,32 +682,39 @@ thead {
 .points {
   margin-top: 15px;
   margin-left: 20px;
-  height: 50px;
   background: #dbd9d9;
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  border-radius: 5px;
 }
 
 .points-container {
   display: flex;
   justify-content: space-evenly;
   background: #337ab7;
-  width: 100px;
-  height: 30px;
+  width: 150px;
+  height: 40px;
   align-items: center;
   float: right;
   color: white;
   margin: 10px;
   font-weight: bolder;
+  border-radius: 5px;
 }
 
 .leaderBoard {
   display: flex;
-  margin-top: 20px;
   margin-left: 20px;
   height: 300px;
   background-color: #dbd9d9;
   flex-direction: row;
   align-items: flex-end;
   justify-content: space-evenly;
+  position: sticky;
+  top: 50px;
+  border-radius: 5px;
 }
 
 .points-leaderBoards-container {
