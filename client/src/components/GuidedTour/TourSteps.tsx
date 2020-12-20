@@ -36,6 +36,9 @@ export const stepsForTour1: Step[] = [
         spotlightPadding: 0,
         disableBeacon: true,
         disableOverlay: true,
+        locale: {
+            last: 'Ok',
+        },
     },
 ]
 
@@ -64,6 +67,9 @@ export const stepsForTraditionalTour: Step[] = [
         placement: 'bottom',
         spotlightPadding: 0,
         disableOverlay: true,
+        locale: {
+            last: 'Ok',
+        },
     },
 
 ]
@@ -107,6 +113,9 @@ export const stepsForLeaderboardTour: Step[] = [
         placement: 'bottom',
         spotlightPadding: 0,
         disableOverlay: true,
+        locale: {
+            last: 'Ok',
+        },
     }
 
 ]

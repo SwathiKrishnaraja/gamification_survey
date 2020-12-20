@@ -1,14 +1,16 @@
 import React from 'react'
-import mascot from '../badges/3.png'
+import mascot from '../images/mascot.png'
 import styled from 'styled-components'
 
 const MascotImage = styled.img`
-width: 55px;
-height: 50px;
-cursor: pointer;
-border-radius: 5px;
-border: darkgreen;
-margin: 10px;
+    width: 100px;
+    height: 90px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: darkgreen;
+    margin: 10px;
+    background: papayawhip;
+    border-radius: 50px;
 `
 
 type Props = {
