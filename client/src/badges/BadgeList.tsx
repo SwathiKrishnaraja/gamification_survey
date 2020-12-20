@@ -68,7 +68,7 @@ export const listOfImages: Array<Badge> = [
         id: 106,
         src: Sixth,
         name: "Master of Interview",
-        description: 'Answer the interview questions',
+        description: 'Answer the interview questions (questions: 20 - 30)',
         isAchieved: false,
         isNotified: false,
     },

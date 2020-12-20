@@ -3,14 +3,14 @@ import { Step } from 'react-joyride';
 export const stepsForTour1: Step[] = [
     {
         target: '.Badges-div',
-        content: 'In this version, you are awarded badges for your progress in the survey',
+        content: 'Here, you will find a list of badges, that you will be able to collect as you progress in the survey. The badges that we show here, are just examples, to give you an idea of the badges in the actual survey.',
         disableBeacon: true,
         spotlightPadding: 0,
         disableOverlay: true,
     },
     {
         target: '.individual-badge',
-        content: 'Hover over the badge to see the badge details',
+        content: 'Hover over the badges to see what you will be needing to do, in order to achieve a badge.',
         spotlightPadding: 0,
         placement: 'left',
         disableOverlay: true,
@@ -18,7 +18,7 @@ export const stepsForTour1: Step[] = [
 
     {
         target: '.progress-bar-div',
-        content: 'Your progress is shown here.',
+        content: 'Your progress in the survey is shown here.',
         disableBeacon: true,
         spotlightPadding: 0,
         disableOverlay: true,
@@ -32,7 +32,7 @@ export const stepsForTour1: Step[] = [
     },
     {
         target: '.Badges-div',
-        content: 'On progressing in the survey, you will be notified when you unlock a new badge. The badge gets activated in the badges list. It is also possible to unlock other badges by progressing in the survey',
+        content: 'On progressing in the survey, you will be notified when you unlock a new badge. The badge gets activated in the badges list. It is also possible to unlock other badges by progressing in the survey.',
         spotlightPadding: 0,
         disableBeacon: true,
         disableOverlay: true,
@@ -43,7 +43,7 @@ export const stepsForTraditionalTour: Step[] = [
 
     {
         target: '.progress-bar-div',
-        content: 'Your progress is shown here.',
+        content: 'Your progress in the survey is shown here.',
         disableBeacon: true,
         spotlightPadding: 0,
         disableOverlay: true,
@@ -72,7 +72,7 @@ export const stepsForLeaderboardTour: Step[] = [
 
     {
         target: '.progress-bar-div',
-        content: 'Your progress is shown here.',
+        content: 'Your progress in the survey is shown here.',
         disableBeacon: true,
         spotlightPadding: 0,
         disableOverlay: true,
@@ -96,14 +96,14 @@ export const stepsForLeaderboardTour: Step[] = [
     },
     {
         target: '.points-container',
-        content: 'The points you collected is shown here.',
+        content: 'Here, you will be able to see the points that you have achieved so far, by progressing in the survey.',
         placement: 'bottom',
         spotlightPadding: 0,
         disableOverlay: true,
     },
     {
         target: '.leaderBoard',
-        content: 'Your can view your position in the leaderboard here.',
+        content: 'Here, you will be able to view your position in the leaderboard.',
         placement: 'bottom',
         spotlightPadding: 0,
         disableOverlay: true,
