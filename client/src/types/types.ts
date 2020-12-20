@@ -39,6 +39,19 @@ export interface Badge {
     isNotified: boolean
 }
 
+export interface PointsDetails {
+    id: number
+    src: any
+    name: string
+    description: string
+    isAchieved: boolean
+    isNotified: boolean
+}
+export interface Points {
+    points: 0,
+    details: Array<PointsDetails>
+}
+
 export type SurveyQuestionsType = {
     [key: string]: string
 }

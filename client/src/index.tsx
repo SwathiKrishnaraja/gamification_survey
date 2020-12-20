@@ -18,6 +18,7 @@ import { createStore } from 'redux'
 import { Provider } from 'react-redux'
 import rootReducer from './reducer/reducer'
 import Toast from './Toast/Toast';
+import PointsToast from './PointsToast/PointsToast'
 import GuidedTourLeaderboard from './pages/GuidedTourLeaderboard';
 import ChooseGamifiedVersion from './pages/ChooseGamifiedVersion';
 import ThankYouPage from './pages/ThankYouPage';
@@ -48,6 +49,7 @@ ReactDOM.render(
   <Provider store={store}>
     <Routing />
     <Toast />
+    <PointsToast />
   </Provider>,
   // </React.StrictMode >,
   document.getElementById('root')

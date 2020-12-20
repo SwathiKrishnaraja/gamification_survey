@@ -11,7 +11,7 @@ const RenderLeaderboardDashboard: React.FC<Props> = ({ pointsAchieved }) => {
     const listOfComponents: Array<React.ReactElement> = [zeus, ron, han, jonas, user]
     return <Fragment>
         <span style={{ margin: 10 }}>Congratulations ! You have achieved {pointsAchieved} points.</span>
-        <LeaderboardComponent points={pointsAchieved} listOfComponents={listOfComponents} />
+        <LeaderboardComponent points={pointsAchieved} listOfComponents={listOfComponents} isParentDashboard={true} />
     </Fragment>
 
 }

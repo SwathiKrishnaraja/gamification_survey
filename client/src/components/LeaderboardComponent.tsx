@@ -45,8 +45,9 @@ export const renderSortedComponents = (componentList: Array<React.ReactElement>)
 type LeaderboardComponentProps = {
     points: number,
     listOfComponents: Array<React.ReactElement>
+    isParentDashboard?: boolean
 }
-const LeaderboardComponent: React.FC<LeaderboardComponentProps> = ({ points, listOfComponents }) => {
+const LeaderboardComponent: React.FC<LeaderboardComponentProps> = ({ points, listOfComponents, isParentDashboard }) => {
     return <div className='points-leaderBoards-container'>
         <div className='points'>
             <div className='points-container'>
@@ -57,21 +58,24 @@ const LeaderboardComponent: React.FC<LeaderboardComponentProps> = ({ points, lis
         <div className='leaderBoard'>
             {renderSortedComponents(listOfComponents)}
         </div>
-        <Hint>
-            <HintText>How to achieve points</HintText>
-            <HintDescription>You are provided 100 points:</HintDescription>
-            <HintList>
-                <HintListItem>On start of the survey.</HintListItem>
-                <HintListItem>On answering 33% of the survey.</HintListItem>
-                <HintListItem>On finding the mascot.</HintListItem>
-                <HintListItem>On answering 66% of the survey.</HintListItem>
-                <HintListItem>On reaching the last 5 questions.</HintListItem>
-                <HintListItem>On answering the interview questions.</HintListItem>
-                <HintListItem>On answering all the questions including the open questions.</HintListItem>
-                <HintListItem>On taking atleast 3 minutes for each page.</HintListItem>
-                <HintListItem>On completing the survey.</HintListItem>
-            </HintList>
-        </Hint>
+        {isParentDashboard
+            ? null
+            : <Hint>
+                <HintText>How to achieve points</HintText>
+                <HintDescription>You are provided 100 points:</HintDescription>
+                <HintList>
+                    <HintListItem>On start of the survey.</HintListItem>
+                    <HintListItem>On answering 33% of the survey.</HintListItem>
+                    <HintListItem>On finding the mascot.</HintListItem>
+                    <HintListItem>On answering 66% of the survey.</HintListItem>
+                    <HintListItem>On reaching the last 5 questions.</HintListItem>
+                    <HintListItem>On answering the interview questions.</HintListItem>
+                    <HintListItem>On answering all the questions including the open questions.</HintListItem>
+                    <HintListItem>On taking atleast 3 minutes for each page.</HintListItem>
+                    <HintListItem>On completing the survey.</HintListItem>
+                </HintList>
+            </Hint>
+        }
     </div>
 }
 
