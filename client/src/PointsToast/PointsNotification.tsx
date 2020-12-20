@@ -1,6 +1,14 @@
 import React, { useEffect } from 'react'
 import { createPortal } from 'react-dom'
 import { PointsDetails } from '../types/types'
+import styled from 'styled-components'
+
+const Logo = styled.img`
+    height: 60px;
+    margin-right: 10px;
+    background: #337ab7;
+    border-radius: 10px;
+`
 type Props = {
     points: Array<PointsDetails>,
     showPoints: boolean,
@@ -31,7 +39,7 @@ const PointsNotifications = (props: Props) => {
 
                                 <div className="toast__text">
 
-                                    <img style={{ height: 60, marginRight: 10 }} src={point.src} alt='point' />
+                                    <Logo src={point.src} alt='point' />
                                     <span>{point.description}</span>
                                 </div>
                             </div>

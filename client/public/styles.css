@@ -505,6 +505,7 @@ thead {
   width: 365px;
   color: #fff;
   padding: 0px;
+  background-color: #e6eef0;
 }
 
 .notification-container button {
@@ -561,7 +562,7 @@ thead {
   line-height: 1.4;
   display: flex;
   align-items: center;
-  background-color: #f5f5f5;
+  background-color: #e6eef0;
   color: black;
 }
 
@@ -579,6 +580,7 @@ thead {
   justify-content: space-between;
   align-items: baseline;
   height: 35px;
+  font-weight: 600;
   color: white;
   background-color: #337ab7;
 }
