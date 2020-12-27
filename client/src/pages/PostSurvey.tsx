@@ -10,6 +10,17 @@ import { SurveyModel } from 'survey-react';
 import submitSurveyData from '../api/submitSurveyData'
 import { SurveyDataType } from '../types/types'
 import { useHistory } from 'react-router';
+import styled from 'styled-components'
+
+const DebriefText = styled.p`
+    font-size: medium;
+    font-weight: 400;
+`
+
+const DebriefHeading = styled.h3`
+    text-align:left;
+    margin:5px;
+`
 
 const PostSurvey = () => {
     const surveyMode: string = useSelector((state: RootState) => state.entryPointReducer.mode)
@@ -51,6 +62,12 @@ const PostSurvey = () => {
         <div className="container">
             <Header children={<Fragment />} />
             <div className="main-body">
+                <DebriefHeading>
+                    Debriefing
+                </DebriefHeading>
+                <DebriefText>Thank you for taking your time to complete the survey. Our research is directed towards understanding your thoughts and perspectives about your experience with the survey version that you experienced. Participants of the survey were presented with different versions of the survey itself. A few participants were presented with gamified survey version, containing game elements such as badges, or points and leaderboard. And a few other participants were presented with a survey with no game elements. And a few other participants were given with a choice to either disable gamification or the choice to choose their preferred survey version.</DebriefText>
+                <DebriefText>Therefore, here, we ask you to answer a few debriefing questions to understand your experience with the survey. Your responses will be very valuable for our research and hence contribute to our analyses of the survey versions and suggest new lines of approach for customizing a survey.</DebriefText>
+                <DebriefText><b>Please take a few minutes and provide us with your honest opinion.</b></DebriefText>
                 <Survey.Survey json={getSurveyQuestions(surveyMode)()} onComplete={handleSurveyCompletion} />
             </div>
             <Footer />
