@@ -129,6 +129,7 @@ const GuidedTourGamified = () => {
             <Header children={<ExitSurvey />} />
             <div className="main-body">
                 <h2>Here is a guided tour for the survey</h2>
+                <p>The survey that you will be presented with, will be containing game elements such as <b>Badges</b>. In order to understand how the respective gamification works, please click on the button <b>‘Start Tour’</b>, and have a guided walkthrough of the different functionalities that are available within the survey.</p>
                 {showTour ? null : <button className='continue-button' onClick={handleStartTour}>Start Tour</button>}
 
                 {
