@@ -79,7 +79,7 @@ const json = {
             "name": "page0"
         },
     ],
-    mode: 'edit'
+    mode: 'display'
 }
 export const model = new Survey.Model(json);
 

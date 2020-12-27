@@ -14,7 +14,7 @@ const defaultState: Points = {
 }
 
 export type AddPointsActionType = {
-    type: 'ADD_POINTS' | 'NOTIFY_POINTS',
+    type: 'ADD_POINTS' | 'NOTIFY_POINTS' | 'REMOVE_POINTS',
     payload: PointsDetails
 }
 
@@ -23,16 +23,20 @@ const addPointsReducer = (state = defaultState, action: AddPointsActionType) => 
     const { type, payload } = action
     switch (type) {
         case 'ADD_POINTS':
-            return {
-                points: (state.points + 100),
-                details: [
-                    ...state.details,
-                    {
-                        ...payload,
-                        isAchieved: true,
+            if ((state.details.filter(detail => detail.id === payload.id)).length === 0) {
+                return {
+                    points: (state.points + 100),
+                    details: [
+                        ...state.details,
+                        {
+                            ...payload,
+                            isAchieved: true,
 
-                    }
-                ]
+                        }
+                    ]
+                }
+            } else {
+                return state
             }
         case 'NOTIFY_POINTS':
             return {
@@ -51,6 +55,12 @@ const addPointsReducer = (state = defaultState, action: AddPointsActionType) => 
                     )
                 ]
             }
+        case 'REMOVE_POINTS':
+            return {
+                points: 0,
+                details: []
+            }
+
         default:
             return state
     }

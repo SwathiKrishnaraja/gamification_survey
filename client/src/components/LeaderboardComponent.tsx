@@ -60,7 +60,7 @@ const LeaderboardComponent: React.FC<LeaderboardComponentProps> = ({ points, lis
         </div>
         {isParentDashboard
             ? null
-            : <Hint>
+            : <Hint className="learboard-hint">
                 <HintText>How to achieve points</HintText>
                 <HintDescription>You are provided 100 points:</HintDescription>
                 <HintList>
