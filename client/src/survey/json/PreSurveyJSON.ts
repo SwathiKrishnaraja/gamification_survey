@@ -12,8 +12,8 @@ const JSON = () => {
         type: 'matrix',
         name: 'q1',
         title: t('preSurvey.q1'),
-        // isRequired: true,
-        // isAllRowRequired: true,
+        isRequired: true,
+        isAllRowRequired: true,
         columns: [{
             value: 1,
             text: t('preSurvey.q1c1')
@@ -81,8 +81,8 @@ const JSON = () => {
         type: 'matrix',
         name: 'q2',
         title: t('preSurvey.q2'),
-        // isRequired: true,
-        // isAllRowRequired: true,
+        isRequired: true,
+        isAllRowRequired: true,
         columns: [{
             value: 1,
             text: t('preSurvey.q2c1')
