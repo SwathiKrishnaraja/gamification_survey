@@ -12,6 +12,7 @@ import submitSurveyData from '../api/submitSurveyData'
 import postSurveyMode from '../api/postSurveyMode'
 import getAverageTime from '../helpers/getAverageTime'
 import { RootState } from '../reducer/reducer';
+import pointsProvider from '../PointRules/PointsRules';
 
 type AnswerStore = {
     name: string,
@@ -34,6 +35,7 @@ const SurveyQuestions = ({ progress, handleProgress, handleMascot, showMascot }:
     const [count, setCount] = useState(0)
     const listOfLastPageQuestions = ['q28', 'q29', 'q30']
     const dispatch = useDispatch()
+    const providePoints = pointsProvider(dispatch)
     const [isTactician, setIsTactician] = useState(0)
     const store = useStore()
     const survey_mode = useSelector((state: RootState) => state.entryPointReducer.mode)
@@ -66,7 +68,7 @@ const SurveyQuestions = ({ progress, handleProgress, handleMascot, showMascot }:
 
         // below is the check to provide badge if the user has reached the last page of the survey
         if (newCurrentPage.name === 'page8') {
-            dispatch({ type: 'ADD_POINTS', payload: 100 })
+            providePoints.points.fastAchiever()
         }
         if (sender.currentPageNo === 4) {
             handleMascot()
@@ -94,16 +96,16 @@ const SurveyQuestions = ({ progress, handleProgress, handleMascot, showMascot }:
 
                 switch (count) {
                     case 10:
-                        dispatch({ type: 'ADD_POINTS', payload: 100 })
+                        providePoints.points.thirtyThreePoints()
                         break
                     case 20:
-                        dispatch({ type: 'ADD_POINTS', payload: 100 })
+                        providePoints.points.sixtySixPoints()
                         break
                     case 30:
-                        dispatch({ type: 'ADD_POINTS', payload: 100 })
+                        providePoints.points.fullPoints()
                         const currentStore = store.getState()
                         if (Object.keys(currentStore).length === 9) {
-                            dispatch({ type: 'ADD_POINTS', payload: 100 })
+                            providePoints.points.medalCollector()
                         }
                         break
                     default:
@@ -112,22 +114,18 @@ const SurveyQuestions = ({ progress, handleProgress, handleMascot, showMascot }:
         }
     }
 
-    // below check is to provide the badge if all the questions in the last page is answered
-    useEffect(() => {
-        if (isTactician === 8) {
-            setIsTactician(0)
-            dispatch({ type: 'ADD_POINTS', payload: 100 })
-        }
-    }, [answerStore, dispatch, isTactician, listOfLastPageQuestions])
-
-
     const handleSurveyCompletion = (sender: SurveyModel, options: any) => {
         if (answerStore
             .filter(element => listOfLastPageQuestions.includes(element.name))
             .length === 3) {
-            dispatch({ type: 'ADD_POINTS', payload: 100 })
+            providePoints.points.masterOfInterview()
         }
-        dispatch({ type: 'ADD_POINTS', payload: 100 })
+
+        if (isTactician === 8) {
+            setIsTactician(0)
+            providePoints.points.tactician()
+        }
+        providePoints.points.winner()
 
 
         let listOfSurveyQuestions = []

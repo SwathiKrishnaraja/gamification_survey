@@ -59,13 +59,13 @@ const getNavigationPath = (surveyMode: string): string => {
         case 'TRADITIONAL_GAMIFIED_1':
             return '/ChooseVersion'
         case 'TRADITIONAL_GAMIFIED_2':
-            return '/ChooseVersion'
+            return '/GuidedTourTraditional'
         case 'GAMIFIED_WITH_BADGES':
             return '/GamifiedSurvey'
         case 'GAMIFIED_CHOICE_1':
             return '/GuidedTourLeaderboard'
         case 'GAMIFIED_CHOICE_2':
-            return '/GuidedTourLeaderboard'
+            return '/ChooseGamifiedVersion'
         default:
             return '/GamifiedSurvey'
     }
@@ -88,6 +88,7 @@ const GuidedTourGamified = () => {
         if (index === 4 && status === 'running') {
             dispatch({ type: 'ADD_BADGE', payload: listOfMockImages[0] })
         }
+        console.log(index, status)
         if (status === 'ready') {
             setShowModal(true)
         }

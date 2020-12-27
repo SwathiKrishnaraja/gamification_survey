@@ -9,7 +9,8 @@ export interface Questions {
     hasSelectAll?: true,
     minRateDescription?: string,
     maxRateDescription?: string,
-    isAllRowRequired?: boolean
+    isAllRowRequired?: boolean,
+    description?: string
 
 }
 
@@ -36,6 +37,19 @@ export interface Badge {
     description: string
     isAchieved: boolean
     isNotified: boolean
+}
+
+export interface PointsDetails {
+    id: number
+    src: any
+    name: string
+    description: string
+    isAchieved: boolean
+    isNotified: boolean
+}
+export interface Points {
+    points: 0,
+    details: Array<PointsDetails>
 }
 
 export type SurveyQuestionsType = {

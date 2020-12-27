@@ -17,6 +17,8 @@ import { RootState } from '../reducer/reducer'
 import createABarGraphElement, { barGraphElements } from '../helpers/createLeaderboardElements'
 import LeaderboardComponent from '../components/LeaderboardComponent';
 import styled from 'styled-components';
+import { renderSortedComponents } from '../components/LeaderboardComponent'
+import { Points } from '../types/types';
 
 const StyledText = styled.h4`
     font-weight: 400;
@@ -57,7 +59,7 @@ const getNavigationPath = (surveyMode: string): string => {
         case 'GAMIFIED_CHOICE_1':
             return '/ChooseGamifiedVersion'
         case 'GAMIFIED_CHOICE_2':
-            return '/ChooseGamifiedVersion'
+            return '/GuidedTourGamified'
         default:
             return '/LeaderBoardSurvey'
     }
@@ -77,11 +79,21 @@ const GuidedTourLeaderboard = () => {
     // Testing-setup for thesis
 
     const { zeus, ron, han, jonas } = barGraphElements
-    const user = createABarGraphElement('You', 850, 85, 'blue')
+
+    const points: Points = useSelector((state: RootState) => state.addPointsReducer)
+    const user = createABarGraphElement('You', points.points, (points.points / 10), 'blue')
     const listOfComponents: Array<React.ReactElement> = [zeus, ron, han, jonas, user]
 
     const handleJoyrideCallbackForTour1 = (data: CallBackProps) => {
         const { index, status } = data
+        if (status === 'ready') {
+            setShowModal(true)
+        }
+        if (index === 6 && status === 'running') {
+            dispatch({ type: 'ADD_POINTS', payload: listOfMockImages[0] })
+        }
+        console.log(index, status)
+        console.log('state', points)
         if (status === 'ready') {
             setShowModal(true)
         }
@@ -94,6 +106,7 @@ const GuidedTourLeaderboard = () => {
     }
 
     const handleTourProceed = () => {
+        dispatch({ type: 'REMOVE_POINTS', payload: listOfMockImages[0] })
         const path = getNavigationPath(surveyMode)
         history.push(path)
     }
@@ -131,7 +144,7 @@ const GuidedTourLeaderboard = () => {
                                 <div className='survey-body'>
                                     <SurveyQuestions />
                                 </div>
-                                <LeaderboardComponent points={850} listOfComponents={listOfComponents} />
+                                <LeaderboardComponent points={points.points} listOfComponents={renderSortedComponents(listOfComponents)} />
                             </div>
                             {
                                 showModal

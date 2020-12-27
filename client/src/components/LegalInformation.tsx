@@ -39,17 +39,6 @@ const LegalInformation: React.FC = () => {
             <Title>Saarland University</Title>
             <Subtitle>Saarland Informatics Campus</Subtitle>
 
-            <SubHeading>Postal Address</SubHeading>
-            <AddressLine>66123 Saarbrücken</AddressLine>
-            <AddressLine>Germany</AddressLine>
-            <AddressLine>
-                <MailTo email="info@uni-saarland.de">
-                    info@uni-saarland.de
-                </MailTo>
-            </AddressLine>
-
-
-
             <SubHeading>Contact Persons</SubHeading>
             <SubHeading>Swathi Krishnaraja</SubHeading>
             <AddressLine>Saarland Informatics Campus</AddressLine>
@@ -59,17 +48,6 @@ const LegalInformation: React.FC = () => {
                 <MailTo email="s8swkris@stud.uni-saarland.de">
                     s8swkris@stud.uni-saarland.de
                 </MailTo> </AddressLine>
-
-            <SubHeading>Dr.-Ing. Pascal Lessel</SubHeading>
-            <AddressLine>DFKI GmbH</AddressLine>
-            <AddressLine>Saarland Informatics Campus</AddressLine>
-            <AddressLine>Stuhlsatzenhausweg 3</AddressLine>
-            <AddressLine>D-66123 Saarbrücken</AddressLine>
-            <AddressLine>Email:
-                <MailTo email="Pascal.Lessel@dfki.de">
-                    Pascal.Lessel@dfki.de
-                </MailTo> </AddressLine>
-
 
         </Container >
     )
