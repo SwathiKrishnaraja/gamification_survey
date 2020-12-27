@@ -218,7 +218,7 @@ const GenericSurveyQuestions = () => {
         title: t('postSurvey.q3'),
         isRequired: true,
         columns: [t('postSurvey.q3c1'), t('postSurvey.q3c2'), t('postSurvey.q3c3'), t('postSurvey.q3c4'), t('postSurvey.q3c5'),],
-        rows: [t('postSurvey.q3a1'), t('postSurvey.q3a2'), t('postSurvey.q3a3'), t('postSurvey.q3a4')]
+        rows: [t('postSurvey.q3a1'), t('postSurvey.q3a2'), t('postSurvey.q3a3'), t('postSurvey.q3a4'), t('postSurvey.q7'), t('postSurvey.q8')]
     }
     const q4: Questions = {
         type: 'text',
@@ -239,34 +239,6 @@ const GenericSurveyQuestions = () => {
         title: t('postSurvey.q6')
     }
 
-    const q7: Questions = {
-        type: 'radiogroup',
-        name: 'q7',
-        isRequired: true,
-        title: t('postSurvey.q7'),
-        choices: [
-            t('postSurvey.q7c1'),
-            t('postSurvey.q7c2'),
-            t('postSurvey.q7c3'),
-            t('postSurvey.q7c4'),
-            t('postSurvey.q7c5'),
-        ]
-    }
-
-    const q8: Questions = {
-        type: 'radiogroup',
-        name: 'q8',
-        isRequired: true,
-        title: t('postSurvey.q8'),
-        choices: [
-            t('postSurvey.q8c1'),
-            t('postSurvey.q8c2'),
-            t('postSurvey.q8c3'),
-            t('postSurvey.q8c4'),
-            t('postSurvey.q8c5'),
-        ]
-    }
-
     const json = {
         "completeText": "Submit",
         showPrevButton: false,
@@ -276,7 +248,7 @@ const GenericSurveyQuestions = () => {
                     {
                         "type": "panel",
                         "elements": [
-                            q1, q2, q3, q4, q5, q6, q7, q8
+                            q1, q2, q3, q4, q5, q6
                         ],
                         "name": "panel1"
                     }
@@ -502,7 +474,7 @@ const GamifiedSurveyQuestions = () => {
         isRequired: true,
         title: t('postSurvey.q3'),
         columns: [t('postSurvey.q3c1'), t('postSurvey.q3c2'), t('postSurvey.q3c3'), t('postSurvey.q3c4'), t('postSurvey.q3c5'),],
-        rows: [t('postSurvey.q3a1'), t('postSurvey.q3a2'), t('postSurvey.q3a3'), t('postSurvey.q3a4')]
+        rows: [t('postSurvey.q3a1'), t('postSurvey.q3a2'), t('postSurvey.q3a3'), t('postSurvey.q3a4'), t('selfReportGamification.q1'), t('selfReportGamification.q2'), t('selfReportGamification.q3')]
     }
     const q4: Questions = {
         type: 'text',
@@ -523,47 +495,6 @@ const GamifiedSurveyQuestions = () => {
         title: t('postSurvey.q6')
     }
 
-    const q7: Questions = {
-        type: 'radiogroup',
-        name: 'q7',
-        isRequired: true,
-        title: t('selfReportGamification.q1'),
-        choices: [
-            t('selfReportGamification.q1c1'),
-            t('selfReportGamification.q1c2'),
-            t('selfReportGamification.q1c3'),
-            t('selfReportGamification.q1c4'),
-            t('selfReportGamification.q1c5'),
-        ]
-    }
-
-    const q8: Questions = {
-        type: 'radiogroup',
-        name: 'q8',
-        isRequired: true,
-        title: t('selfReportGamification.q2'),
-        choices: [
-            t('selfReportGamification.q2c1'),
-            t('selfReportGamification.q2c2'),
-            t('selfReportGamification.q2c3'),
-            t('selfReportGamification.q2c4'),
-            t('selfReportGamification.q2c5'),
-        ]
-    }
-    const q9: Questions = {
-        type: 'radiogroup',
-        name: 'q9',
-        isRequired: true,
-        title: t('selfReportGamification.q3'),
-        choices: [
-            t('selfReportGamification.q3c1'),
-            t('selfReportGamification.q3c2'),
-            t('selfReportGamification.q3c3'),
-            t('selfReportGamification.q3c4'),
-            t('selfReportGamification.q3c5'),
-        ]
-    }
-
     const q10: Questions = {
         type: 'text',
         name: 'q10',
@@ -580,7 +511,7 @@ const GamifiedSurveyQuestions = () => {
                     {
                         "type": "panel",
                         "elements": [
-                            q1, q2, q3, q4, q5, q6, q7, q8, q9, q10
+                            q1, q2, q3, q4, q5, q6, q10
                         ],
                         "name": "panel1"
                     }
@@ -806,7 +737,7 @@ const TraditionalGamifiedQuestions = () => {
         title: t('postSurvey.q3'),
         isRequired: true,
         columns: [t('postSurvey.q3c1'), t('postSurvey.q3c2'), t('postSurvey.q3c3'), t('postSurvey.q3c4'), t('postSurvey.q3c5'),],
-        rows: [t('postSurvey.q3a1'), t('postSurvey.q3a2'), t('postSurvey.q3a3'), t('postSurvey.q3a4')]
+        rows: [t('postSurvey.q3a1'), t('postSurvey.q3a2'), t('postSurvey.q3a3'), t('postSurvey.q3a4'), t('selfReportChoiceEnableDisable.q1'), t('selfReportChoiceEnableDisable.q2')]
     }
     const q4: Questions = {
         type: 'text',
@@ -827,33 +758,6 @@ const TraditionalGamifiedQuestions = () => {
         title: t('postSurvey.q6')
     }
 
-    const q7: Questions = {
-        type: 'radiogroup',
-        name: 'q7',
-        isRequired: true,
-        title: t('selfReportChoiceEnableDisable.q1'),
-        choices: [
-            t('selfReportChoiceEnableDisable.q1c1'),
-            t('selfReportChoiceEnableDisable.q1c2'),
-            t('selfReportChoiceEnableDisable.q1c3'),
-            t('selfReportChoiceEnableDisable.q1c4'),
-            t('selfReportChoiceEnableDisable.q1c5'),
-        ]
-    }
-
-    const q8: Questions = {
-        type: 'radiogroup',
-        name: 'q8',
-        isRequired: true,
-        title: t('selfReportChoiceEnableDisable.q2'),
-        choices: [
-            t('selfReportChoiceEnableDisable.q2c1'),
-            t('selfReportChoiceEnableDisable.q2c2'),
-            t('selfReportChoiceEnableDisable.q2c3'),
-            t('selfReportChoiceEnableDisable.q2c4'),
-            t('selfReportChoiceEnableDisable.q2c5'),
-        ]
-    }
     const q9: Questions = {
         type: 'text',
         name: 'q9',
@@ -877,7 +781,7 @@ const TraditionalGamifiedQuestions = () => {
                     {
                         "type": "panel",
                         "elements": [
-                            q1, q2, q3, q4, q5, q6, q7, q8, q9, q10
+                            q1, q2, q3, q4, q5, q6, q9, q10
                         ],
                         "name": "panel1"
                     }
@@ -1103,7 +1007,7 @@ const GamifiedChoiceQuestions = () => {
         title: t('postSurvey.q3'),
         isRequired: true,
         columns: [t('postSurvey.q3c1'), t('postSurvey.q3c2'), t('postSurvey.q3c3'), t('postSurvey.q3c4'), t('postSurvey.q3c5'),],
-        rows: [t('postSurvey.q3a1'), t('postSurvey.q3a2'), t('postSurvey.q3a3'), t('postSurvey.q3a4')]
+        rows: [t('postSurvey.q3a1'), t('postSurvey.q3a2'), t('postSurvey.q3a3'), t('postSurvey.q3a4'), t('selfReportChoiceG1G2.q1'), t('selfReportChoiceG1G2.q2'), t('selfReportChoiceG1G2.q3'), t('selfReportChoiceG1G2.q4')]
     }
     const q4: Questions = {
         type: 'text',
@@ -1122,61 +1026,6 @@ const GamifiedChoiceQuestions = () => {
         name: 'q6',
         isRequired: true,
         title: t('postSurvey.q6')
-    }
-
-    const q7: Questions = {
-        type: 'radiogroup',
-        name: 'q7',
-        isRequired: true,
-        title: t('selfReportChoiceG1G2.q1'),
-        choices: [
-            t('selfReportChoiceG1G2.q1c1'),
-            t('selfReportChoiceG1G2.q1c2'),
-            t('selfReportChoiceG1G2.q1c3'),
-            t('selfReportChoiceG1G2.q1c4'),
-            t('selfReportChoiceG1G2.q1c5'),
-        ]
-    }
-
-    const q8: Questions = {
-        type: 'radiogroup',
-        name: 'q8',
-        isRequired: true,
-        title: t('selfReportChoiceG1G2.q2'),
-        choices: [
-            t('selfReportChoiceG1G2.q2c1'),
-            t('selfReportChoiceG1G2.q2c2'),
-            t('selfReportChoiceG1G2.q2c3'),
-            t('selfReportChoiceG1G2.q2c4'),
-            t('selfReportChoiceG1G2.q2c5'),
-        ]
-    }
-    const q9: Questions = {
-        type: 'radiogroup',
-        name: 'q9',
-        isRequired: true,
-        title: t('selfReportChoiceG1G2.q3'),
-        choices: [
-            t('selfReportChoiceG1G2.q3c1'),
-            t('selfReportChoiceG1G2.q3c2'),
-            t('selfReportChoiceG1G2.q3c3'),
-            t('selfReportChoiceG1G2.q3c4'),
-            t('selfReportChoiceG1G2.q3c5'),
-        ]
-    }
-
-    const q10: Questions = {
-        type: 'radiogroup',
-        name: 'q10',
-        isRequired: true,
-        title: t('selfReportChoiceG1G2.q4'),
-        choices: [
-            t('selfReportChoiceG1G2.q4c1'),
-            t('selfReportChoiceG1G2.q4c2'),
-            t('selfReportChoiceG1G2.q4c3'),
-            t('selfReportChoiceG1G2.q4c4'),
-            t('selfReportChoiceG1G2.q4c5'),
-        ]
     }
 
     const q11: Questions = {
@@ -1204,7 +1053,7 @@ const GamifiedChoiceQuestions = () => {
                     {
                         "type": "panel",
                         "elements": [
-                            q1, q2, q3, q4, q5, q6, q7, q8, q9, q10, q11, q12
+                            q1, q2, q3, q4, q5, q6, q11, q12
                         ],
                         "name": "panel1"
                     }
