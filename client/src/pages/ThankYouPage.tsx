@@ -57,12 +57,8 @@ const ThankYouPage = () => {
         <div className="container">
             <Header children={<Fragment />} />
             <MainBody>
-                <Thanks>Thank you for taking the time to complete this survey. </Thanks>
-                <Thanks> We truly value the information
-                you have provided. We measure your behavior and other psychological aspects such
-                as your motivation, overall competence, and how you perceived the survey platform.
-                Your responses will contribute to our analyses of the survey versions and suggest
-                new lines of approach for customizing a survey.</Thanks>
+                <Thanks> Your feedback was submitted successfully. </Thanks>
+                <Thanks> We truly value the information you have provided.</Thanks>
                 <Thanks>If you have any comments on the survey or the project, or if you would like to know
                 more about the project and the results of the project, please send a message to
                 <MailTo email="s8swkris@stud.uni-saarland.de">
@@ -72,7 +68,7 @@ const ThankYouPage = () => {
                 <Thanks>Once again, we are extremely grateful to you for contributing your valuable time, your
                 honest information, and your thoughtful suggestions.</Thanks>
                 <Greeting>Many thanks,</Greeting>
-                <Persona>Project Team</Persona>
+                <Persona>Swathi Krishnaraja </Persona>
                 <Persona>Saarland Informatics Campus</Persona>
                 <Logo>
                     <LogoImg alt='uds' src={udsLogo} />
