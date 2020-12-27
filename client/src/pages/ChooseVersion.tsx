@@ -56,10 +56,10 @@ const ChooseVersion = () => {
         <div className="container">
             <Header children={<Fragment />} />
             <div className="main-body">
-                <h2>Choose your Survey version</h2>
-                <p>Here the two versions of survey are provided. Please use the try it button to try the two versions of survey. </p>
-                <p>Choose your preferred version.</p>
-                <p><b> As soon as you choose, the survey starts.</b></p>
+                <h2>Choose your own survey version</h2>
+                <p>Now, we provide you with a <b>choice</b> to choose between the two survey versions that you experienced through the guided tour. Please choose the version of survey that you most like.</p>
+                <p>Please select one version to start the actual survey.</p>
+                <p><b>As soon as you choose, the survey starts.</b></p>
                 <div className='choose-version-div'>
                     {getVersionBasedOnSurveyMode(surveyMode)?.firstVersion}
                     {getVersionBasedOnSurveyMode(surveyMode)?.secondVersion}
