@@ -36,6 +36,9 @@ export const stepsForTour1: Step[] = [
         spotlightPadding: 0,
         disableBeacon: true,
         disableOverlay: true,
+        locale: {
+            last: 'Ok',
+        },
     },
 ]
 
@@ -64,6 +67,9 @@ export const stepsForTraditionalTour: Step[] = [
         placement: 'bottom',
         spotlightPadding: 0,
         disableOverlay: true,
+        locale: {
+            last: 'Ok',
+        },
     },
 
 ]
@@ -85,18 +91,15 @@ export const stepsForLeaderboardTour: Step[] = [
         disableOverlay: true,
     },
     {
-        target: '.sv_row:nth-child(2)',
-        content: `Questions are presented in the below formats. You will find mandatory as well as
-        optional questions throughout the survey. Mandatory questions will be mentioned
-        explicitly with an asterisk (*) at the end of the question. Please answer the two questions presented here and click submit to
-        complete the guided tour.`,
-        placement: 'bottom',
+        target: '.points-container',
+        content: 'In this survey, you are provided points based on your progress. Based on the points your position in the leaderboard gets updated.',
+        placement: 'left',
         spotlightPadding: 0,
         disableOverlay: true,
     },
     {
         target: '.points-container',
-        content: 'The points you collected is shown here.',
+        content: 'The points you collect is shown here.',
         placement: 'bottom',
         spotlightPadding: 0,
         disableOverlay: true,
@@ -107,6 +110,25 @@ export const stepsForLeaderboardTour: Step[] = [
         placement: 'bottom',
         spotlightPadding: 0,
         disableOverlay: true,
-    }
+    },
+    {
+        target: ".learboard-hint",
+        content: 'Here you will find out how to achieve points in the survey.',
+        placement: 'left',
+        spotlightPadding: 0,
+        disableOverlay: true,
+    },
+    {
+        target: '.points-container',
+        content: 'On progressing in the survey, you will be notified when you achieve points and leaderboard is updated.',
+        spotlightPadding: 0,
+        placement: 'left',
+        disableBeacon: true,
+        disableOverlay: true,
+        locale: {
+            last: 'Ok',
+        },
+    },
+
 
 ]

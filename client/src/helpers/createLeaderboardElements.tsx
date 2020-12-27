@@ -4,14 +4,14 @@ const createABarGraphElement = (name: string, points: number, height: number, co
 
     return <div className='leader-element' key={Math.random()}>
         <span>{points} </span>
-        <div style={{ width: 40, height: height, backgroundColor: color, marginLeft: 10 }}> </div>
+        <div style={{ width: 40, height: height, backgroundColor: color, borderRadius: 5 }}> </div>
         <span> {name} </span>
     </div >
 }
-const zeus = createABarGraphElement('zeus', 2200, 220)
-const ron = createABarGraphElement('ron', 800, 80)
-const han = createABarGraphElement('han', 1200, 120)
-const jonas = createABarGraphElement('jonas', 500, 50)
+const zeus = createABarGraphElement('Mark', 700, 70)
+const ron = createABarGraphElement('Sash', 200, 20)
+const han = createABarGraphElement('Jonas', 600, 60)
+const jonas = createABarGraphElement('Alex', 500, 50)
 
 export default createABarGraphElement
 

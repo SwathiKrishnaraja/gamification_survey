@@ -31,7 +31,7 @@ const Notifications = (props: Props) => {
 
                                 <div className="toast__text">
 
-                                    <img style={{ height: 60, marginRight: 10 }} src={badge.src} alt='badge' />
+                                    <img style={{ height: 60, marginRight: 10, borderRadius: 10 }} src={badge.src} alt='badge' />
                                     <span>{badge.description}</span>
                                 </div>
                             </div>
