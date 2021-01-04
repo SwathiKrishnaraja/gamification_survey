@@ -746,7 +746,6 @@ thead {
   color: white;
   display: inline-block;
   margin-bottom: 0;
-  width: 30%;
   font-weight: 400;
   text-align: center;
   -ms-touch-action: manipulation;
@@ -773,6 +772,9 @@ thead {
   transform: translate(-50%, -50%);
   border-radius: 2px;
   padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .sv_q_description {

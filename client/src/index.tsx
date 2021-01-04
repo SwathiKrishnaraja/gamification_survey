@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import ReactDOM from 'react-dom';
 import { Route, BrowserRouter as Router } from 'react-router-dom'
 import './index.css';
@@ -22,10 +22,31 @@ import PointsToast from './PointsToast/PointsToast'
 import GuidedTourLeaderboard from './pages/GuidedTourLeaderboard';
 import ChooseGamifiedVersion from './pages/ChooseGamifiedVersion';
 import ThankYouPage from './pages/ThankYouPage';
+import ExitSurveyModal from './components/modal/ExitSurveyModal'
+import WarningMessage from './components/WarningMessage'
 
 const store = createStore(rootReducer)
 
 const Routing = () => {
+  const [notifyForSmallScreen, setNotifyForSmallScreen] = useState<boolean>(false)
+  const [showModal, setShowModal] = useState(true)
+
+  const handleConfirmationButton = () => {
+    setShowModal(showModal ? false : true)
+    window.location.reload()
+  }
+
+  useEffect(() => {
+    if ((window.innerHeight < 700) || window.innerWidth < 1000) {
+      setNotifyForSmallScreen(true)
+    }
+  }, [])
+
+  window.addEventListener('resize', () => {
+    if ((window.innerHeight < 700) || window.innerWidth < 1000) {
+      setNotifyForSmallScreen(true)
+    }
+  })
   return (
     <Router>
       <Route exact path='/' component={Home} />
@@ -41,6 +62,9 @@ const Routing = () => {
       <Route path='/PostSurvey' component={PostSurvey} />
       <Route path='/LeaderBoardSurvey' component={LeaderBoardSurvey} />
       <Route path='/Thanks' component={ThankYouPage} />
+      {notifyForSmallScreen
+        ? <ExitSurveyModal showModal={showModal} handleConfirmationButton={handleConfirmationButton} children={<WarningMessage />} styleClass='notify-small-screen-modal' modalWindowButton='OK' buttonClass='notify-small-screen' />
+        : null}
     </Router>
   )
 }
