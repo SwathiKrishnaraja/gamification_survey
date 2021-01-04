@@ -24,6 +24,7 @@ import ChooseGamifiedVersion from './pages/ChooseGamifiedVersion';
 import ThankYouPage from './pages/ThankYouPage';
 import ExitSurveyModal from './components/modal/ExitSurveyModal'
 import WarningMessage from './components/WarningMessage'
+import config from './config'
 
 const store = createStore(rootReducer)
 
@@ -37,13 +38,13 @@ const Routing = () => {
   }
 
   useEffect(() => {
-    if ((window.innerHeight < 700) || window.innerWidth < 1000) {
+    if ((window.innerHeight < config.MIN_HEIGHT) || window.innerWidth < config.MIN_WIDTH) {
       setNotifyForSmallScreen(true)
     }
   }, [])
 
   window.addEventListener('resize', () => {
-    if ((window.innerHeight < 700) || window.innerWidth < 1000) {
+    if ((window.innerHeight < config.MIN_HEIGHT) || window.innerWidth < config.MIN_WIDTH) {
       setNotifyForSmallScreen(true)
     }
   })
