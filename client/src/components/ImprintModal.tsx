@@ -32,7 +32,7 @@ const ImprintModal: React.FC<Props> = ({ showModal, handleClick, children, title
     const modal = document.getElementsByClassName('modal-open')
 
     window.onclick = (event: MouseEvent) => {
-        if (event.target === modal[0]) {
+        if (event.target === modal[0] && showModal) {
             handleClick()
         }
     }
