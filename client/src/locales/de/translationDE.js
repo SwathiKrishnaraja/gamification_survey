@@ -200,7 +200,7 @@ export const translationDE = {
       q14: 'Why are you not physically active?',
 
       q15:
-        'Here are a few more reasons to be physically active, please indicate for every statement, if you strongly agree, somewhat agree, somewhat disagree, or strongly disagree.',
+        'Here are a few more reasons not to be physically active, please indicate for every statement, if you strongly agree, somewhat agree, somewhat disagree, or strongly disagree.',
       q15c1: 'Strongly Disagree',
       q15c2: 'Somewhat Disagree',
       q15c3: 'Somewhat Agree',
@@ -208,7 +208,7 @@ export const translationDE = {
       q15c5: 'No Answer',
 
       q15a1: 'Sports does more harm than good.',
-      q15a2: 'Sports in unnecessary.',
+      q15a2: 'Sports is unnecessary.',
       q15a3: 'I cannot do sport, due to health or physical reasons.',
       q15a4:
         'I do not have the opportunity to do so, there is none or too little offers.',
@@ -312,7 +312,7 @@ export const translationDE = {
 
       q26: 'How big is your place where you live in?',
       q26a1: 'up to 5,000 inhabitants',
-      q26a2: 'up to 50,000 inhanitants',
+      q26a2: 'up to 50,000 inhabitants',
       q26a3: 'over 50,000 inhabitants',
       q26a4: 'No answer',
 
@@ -331,6 +331,7 @@ export const translationDE = {
       q28a4: 'Gender variant/ Non-conforming',
       q28a5: 'Not listed',
       q28a6: 'Prefer not to answer',
+      q28a7: 'Prefer to self describe',
 
       q29:
         'Do you play computer games? This also includes games on smartphones, tablets, consoles and handhelds (Nintendo 3Ds, Sony Vita,.).',

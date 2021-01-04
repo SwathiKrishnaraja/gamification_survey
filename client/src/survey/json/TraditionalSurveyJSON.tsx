@@ -542,7 +542,14 @@ const JSON = () => {
         t('mainSurvey.q28a4'),
         t('mainSurvey.q28a5'),
         t('mainSurvey.q28a6'),
+        t('mainSurvey.q28a7'),
         ]
+    }
+    const q28special: Questions = {
+        "type": "text",
+        "name": "q28special",
+        "visibleIf": "{q28} = 'Prefer to self describe'",
+        "title": "Please describe your gender.",
     }
     const q29: Questions = {
         type: 'radiogroup',
@@ -683,7 +690,7 @@ const JSON = () => {
                     {
                         "type": "panel",
                         "elements": [
-                            q28, q29, q30
+                            q28, q28special, q29, q30
                         ],
                         "name": "panel9"
                     }
