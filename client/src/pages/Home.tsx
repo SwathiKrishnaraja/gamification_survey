@@ -10,9 +10,9 @@ import { useHistory } from 'react-router'
 
 const Home = () => {
 
-  // const history = useHistory()
-  // let currentPathname: string
-  // let currentSearch: string
+  const history = useHistory()
+  let currentPathname: string
+  let currentSearch: string
 
   // Testing-setup for thesis
   const [modeSelected, setModeSelected] = useState(false)
@@ -22,29 +22,29 @@ const Home = () => {
   // Testing-setup for thesis
 
 
-  // useEffect(() => {
-  //   history.listen((newLocation: { pathname: string; search: string; }, action: string) => {
-  //     if (action === "PUSH") {
-  //       if (
-  //         newLocation.pathname !== currentPathname ||
-  //         newLocation.search !== currentSearch
-  //       ) {
-  //         // Save new location
-  //         currentPathname = newLocation.pathname;
-  //         currentSearch = newLocation.search;
+  useEffect(() => {
+    history.listen((newLocation: { pathname: string; search: string; }, action: string) => {
+      if (action === "PUSH") {
+        if (
+          newLocation.pathname !== currentPathname ||
+          newLocation.search !== currentSearch
+        ) {
+          // Save new location
+          currentPathname = newLocation.pathname;
+          currentSearch = newLocation.search;
 
-  //         // Clone location object and push it to history
-  //         history.push({
-  //           pathname: newLocation.pathname,
-  //           search: newLocation.search
-  //         })
-  //       }
-  //     } else {
-  //       // Send user back if they try to navigate back
-  //       history.go(1)
-  //     }
-  //   })
-  // })
+          // Clone location object and push it to history
+          history.push({
+            pathname: newLocation.pathname,
+            search: newLocation.search
+          })
+        }
+      } else {
+        // Send user back if they try to navigate back
+        history.go(1)
+      }
+    })
+  })
 
 
 
