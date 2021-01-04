@@ -9,8 +9,6 @@ import OptionsProvider from '../components/OptionsProvider'
 import { useHistory } from 'react-router'
 
 const Home = () => {
-  const [notifyForSmallScreen, setNotifyForSmallScreen] = useState<boolean>(false)
-  const [showModal, setShowModal] = useState(true)
 
   const history = useHistory()
   let currentPathname: string
@@ -23,11 +21,6 @@ const Home = () => {
   }
   // Testing-setup for thesis
 
-  useEffect(() => {
-    if ((window.screen.availHeight < 700) || window.screen.availWidth < 1000) {
-      setNotifyForSmallScreen(true)
-    }
-  })
 
   useEffect(() => {
     history.listen((newLocation: { pathname: string; search: string; }, action: string) => {
@@ -53,17 +46,11 @@ const Home = () => {
     })
   })
 
-  const handleConfirmationButton = () => {
-    setShowModal(showModal ? false : true)
-    window.location.reload()
-  }
+
 
   return (
     <div className="container">
       <Header children={<Fragment />} />
-      {notifyForSmallScreen
-        ? <ExitSurveyModal showModal={showModal} handleConfirmationButton={handleConfirmationButton} children={<WarningMessage />} styleClass='notify-small-screen-modal' modalWindowButton='OK' buttonClass='notify-small-screen' />
-        : null}
       {/* Testing-setup for thesis */}
       {modeSelected ? <HomeContent /> : <OptionsProvider handleModeSelected={handleModeSelected} />}
       {/* Testing-setup for thesis */}
