@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import ReactDOM from 'react-dom';
-import { Route, BrowserRouter as Router } from 'react-router-dom'
+import { Route, HashRouter } from 'react-router-dom'
 import './index.css';
 import './i18n';
 import Home from './pages/Home';
@@ -66,7 +66,7 @@ const Routing = () => {
     return null
   }
   return (
-    <Router>
+    <HashRouter>
       <Route exact path='/' component={Home} />
       <Route path='/GuidedTourTraditional' component={GuidedTourTraditional} />
       <Route path='/GuidedTourGamified' component={GuidedTourGamified} />
@@ -84,7 +84,7 @@ const Routing = () => {
       {/* {notifyForSmallScreen
         ? <ExitSurveyModal showModal={showModal} handleConfirmationButton={handleConfirmationButton} children={<WarningMessage />} styleClass='notify-small-screen-modal' modalWindowButton='OK' buttonClass='notify-small-screen' />
         : null} */}
-    </Router>
+    </HashRouter>
   )
 }
 ReactDOM.render(
