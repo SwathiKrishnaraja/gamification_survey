@@ -10,7 +10,8 @@ export interface Questions {
     minRateDescription?: string,
     maxRateDescription?: string,
     isAllRowRequired?: boolean,
-    description?: string
+    description?: string,
+    visibleIf?: string
 
 }
 
