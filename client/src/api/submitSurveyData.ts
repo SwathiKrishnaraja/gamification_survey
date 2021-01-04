@@ -1,5 +1,4 @@
 import { SurveyQuestionsType, OpenQuestions, SurveyDataType } from '../types/types'
-import { config } from '../config'
 
 
 const submitSurveyData = async (data: SurveyDataType) => {

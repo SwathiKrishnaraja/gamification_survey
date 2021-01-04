@@ -11,6 +11,7 @@ import submitSurveyData from '../api/submitSurveyData'
 import { SurveyDataType } from '../types/types'
 import { useHistory } from 'react-router';
 import styled from 'styled-components'
+import useLocalStorage from '../common/useLocalStorage'
 
 const DebriefText = styled.p`
     font-size: medium;
@@ -25,6 +26,7 @@ const DebriefHeading = styled.h3`
 const PostSurvey = () => {
     const surveyMode: string = useSelector((state: RootState) => state.entryPointReducer.mode)
     const history = useHistory()
+    const [storeUserVisit, hasUserVisited] = useLocalStorage()
 
     const getSurveyQuestions = (surveyMode: string) => {
         switch (surveyMode) {
@@ -55,7 +57,10 @@ const PostSurvey = () => {
     const handleSurveyCompletion = (sender: SurveyModel, options: any) => {
         const { data: postsurvey } = sender
         dispatch({ type: 'STORE_SURVEY', payload: { postsurvey } })
+        storeUserVisit()
         history.push('/Thanks')
+
+
 
     }
     return (

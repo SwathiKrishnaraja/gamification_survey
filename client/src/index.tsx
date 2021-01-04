@@ -25,12 +25,16 @@ import ThankYouPage from './pages/ThankYouPage';
 import ExitSurveyModal from './components/modal/ExitSurveyModal'
 import WarningMessage from './components/WarningMessage'
 import config from './config'
+import useLocalStorage from './common/useLocalStorage'
+import NotifyUserForEntry from './components/NotifyUserForEntry'
 
 const store = createStore(rootReducer)
 
 const Routing = () => {
   const [notifyForSmallScreen, setNotifyForSmallScreen] = useState<boolean>(false)
   const [showModal, setShowModal] = useState(true)
+  const [storeUserVisit, hasUserVisited] = useLocalStorage()
+  const [userVisit, setUserVisit] = useState(false)
 
   const handleConfirmationButton = () => {
     setShowModal(showModal ? false : true)
@@ -41,13 +45,26 @@ const Routing = () => {
     if ((window.innerHeight < config.MIN_HEIGHT) || window.innerWidth < config.MIN_WIDTH) {
       setNotifyForSmallScreen(true)
     }
-  }, [])
+    if (hasUserVisited()) {
+      setUserVisit(true)
+    }
+  }, [hasUserVisited])
 
   window.addEventListener('resize', () => {
     if ((window.innerHeight < config.MIN_HEIGHT) || window.innerWidth < config.MIN_WIDTH) {
       setNotifyForSmallScreen(true)
     }
   })
+
+  const RenderNotification = () => {
+    if (userVisit) {
+      return <ExitSurveyModal showModal={hasUserVisited()} handleConfirmationButton={handleConfirmationButton} children={<NotifyUserForEntry />} styleClass='notify-small-screen-modal' modalWindowButton='OK' buttonClass='notify-small-screen' />
+    } else if (notifyForSmallScreen) {
+      return <ExitSurveyModal showModal={showModal} handleConfirmationButton={handleConfirmationButton} children={<WarningMessage />} styleClass='notify-small-screen-modal' modalWindowButton='OK' buttonClass='notify-small-screen' />
+    }
+
+    return null
+  }
   return (
     <Router>
       <Route exact path='/' component={Home} />
@@ -63,9 +80,10 @@ const Routing = () => {
       <Route path='/PostSurvey' component={PostSurvey} />
       <Route path='/LeaderBoardSurvey' component={LeaderBoardSurvey} />
       <Route path='/Thanks' component={ThankYouPage} />
-      {notifyForSmallScreen
+      <RenderNotification />
+      {/* {notifyForSmallScreen
         ? <ExitSurveyModal showModal={showModal} handleConfirmationButton={handleConfirmationButton} children={<WarningMessage />} styleClass='notify-small-screen-modal' modalWindowButton='OK' buttonClass='notify-small-screen' />
-        : null}
+        : null} */}
     </Router>
   )
 }

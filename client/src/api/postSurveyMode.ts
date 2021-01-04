@@ -1,4 +1,3 @@
-import { config } from '../config'
 
 
 const postSurveyMode = async (data: { mode: string }) => {

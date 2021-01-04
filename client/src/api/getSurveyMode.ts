@@ -1,5 +1,4 @@
 
-import { config } from '../config'
 
 
 const getSurveyMode = async () => {
