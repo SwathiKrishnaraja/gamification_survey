@@ -33,7 +33,7 @@ const TourContinueElement: React.FC<TourProps> = ({ surveyMode }) => {
             <StyledText>
                 {surveyMode === 'GAMIFIED_CHOICE_1' || surveyMode === 'GAMIFIED_CHOICE_2'
                     ? `You have now completed the guided tour of the survey. Now you will be redirected to the guided tour of the next version.`
-                    : `You have now completed the guided tour of the survey. Now you will be redirected to the actual survey. Click ‘Continue’ to begin the survey.`}
+                    : `You have now completed the guided tour of the survey. Now you will be redirected to the actual survey. Please do not click Back or Refresh in the browser while taking the survey to not lose progress. Click ‘Continue’ to begin the survey.`}
             </StyledText>
 
         </div>
@@ -88,7 +88,6 @@ const GuidedTourGamified = () => {
         if (index === 4 && status === 'running') {
             dispatch({ type: 'ADD_BADGE', payload: listOfMockImages[0] })
         }
-        console.log(index, status)
         if (status === 'ready') {
             setShowModal(true)
         }

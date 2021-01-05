@@ -22,6 +22,7 @@ const StyledText = styled.h4`
 type TourProps = {
     surveyMode: string
 }
+
 export const TourContinueElement: React.FC<TourProps> = ({ surveyMode }) => {
     return (
         <Fragment>
@@ -30,7 +31,7 @@ export const TourContinueElement: React.FC<TourProps> = ({ surveyMode }) => {
             <StyledText>
                 {surveyMode === 'TRADITIONAL_GAMIFIED_1' || surveyMode === 'TRADITIONAL_GAMIFIED_2'
                     ? `You have now completed the guided tour of the survey. Now you will be redirected to the guided tour of the next version.`
-                    : `You have now completed the guided tour of the survey. Now you will be redirected to the actual survey. Click ‘Continue’ to begin the survey.`}
+                    : `You have now completed the guided tour of the survey. Now you will be redirected to the actual survey. Please do not click Back or Refresh in the browser while taking the survey to not lose progress. Click ‘Continue’ to begin the survey.`}
             </StyledText>
         </Fragment>
     )
