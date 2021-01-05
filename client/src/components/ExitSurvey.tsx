@@ -46,7 +46,7 @@ const ExitSurvey: React.FC = () => {
 
     return (
         <Fragment>
-            <a className='exit-survey' href='# ' onClick={handleCancelButton}>Exit and clear survey</a>
+            <a className='exit-survey' onClick={handleCancelButton}>Exit and clear survey</a>
             <ExitSurveyModal showModal={showModal} handleCancelButton={handleCancelButton} handleConfirmationButton={handleConfirmationButton} children={<ConfirmMessage />} styleClass='exit-survey-modal' modalCancelButton='Cancel' modalWindowButton='Ok' buttonClass='exit-survey-button' />
         </Fragment>
     )

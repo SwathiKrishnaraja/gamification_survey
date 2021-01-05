@@ -15,23 +15,11 @@ import PostSurvey from './pages/PostSurvey';
 import GuidedTourLeaderboard from './pages/GuidedTourLeaderboard';
 import ChooseGamifiedVersion from './pages/ChooseGamifiedVersion';
 import ThankYouPage from './pages/ThankYouPage';
-import ExitSurveyModal from './components/modal/ExitSurveyModal'
-import WarningMessage from './components/WarningMessage'
-import config from './config'
-import useLocalStorage from './common/useLocalStorage'
-import NotifyUserForEntry from './components/NotifyUserForEntry'
 
 
 const App = (props: any) => {
-  const [notifyForSmallScreen, setNotifyForSmallScreen] = useState<boolean>(false)
   const [showModal, setShowModal] = useState(true)
-  const [storeUserVisit, hasUserVisited] = useLocalStorage()
-  const [userVisit, setUserVisit] = useState(false)
 
-  const handleConfirmationButton = () => {
-    setShowModal(showModal ? false : true)
-    window.location.reload()
-  }
   const { history } = props
   let currentPathname: string
   let currentSearch: string
@@ -65,32 +53,6 @@ const App = (props: any) => {
     }
   })
 
-
-  useEffect(() => {
-    if ((window.innerHeight < config.MIN_HEIGHT) || window.innerWidth < config.MIN_WIDTH) {
-      setNotifyForSmallScreen(true)
-    }
-    if (hasUserVisited()) {
-      setUserVisit(true)
-    }
-  }, [hasUserVisited])
-
-
-  window.addEventListener('resize', () => {
-    if ((window.innerHeight < config.MIN_HEIGHT) || window.innerWidth < config.MIN_WIDTH) {
-      setNotifyForSmallScreen(true)
-    }
-  })
-
-  const RenderNotification = () => {
-    if (userVisit) {
-      return <ExitSurveyModal showModal={hasUserVisited()} handleConfirmationButton={handleConfirmationButton} children={<NotifyUserForEntry />} styleClass='notify-small-screen-modal' modalWindowButton='OK' buttonClass='notify-small-screen' />
-    } else if (notifyForSmallScreen) {
-      return <ExitSurveyModal showModal={showModal} handleConfirmationButton={handleConfirmationButton} children={<WarningMessage />} styleClass='notify-small-screen-modal' modalWindowButton='OK' buttonClass='notify-small-screen' />
-    }
-
-    return null
-  }
   return (
     <Switch>
       <Route exact path='/' render={() => <Redirect to="/Home" />} />
@@ -107,7 +69,7 @@ const App = (props: any) => {
       <Route path='/PostSurvey' component={PostSurvey} />
       <Route path='/LeaderBoardSurvey' component={LeaderBoardSurvey} />
       <Route path='/Thanks' component={ThankYouPage} />
-      <RenderNotification />
+
     </Switch>
   )
 }
