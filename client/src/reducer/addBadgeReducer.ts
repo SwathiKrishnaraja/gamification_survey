@@ -27,15 +27,21 @@ const defaultState: Array<Badge> = [
 
 const addBadgeReducer = (state = defaultState, action: BadgeAction): Array<Badge> => {
     const { payload } = action
+    const stateWithIds = state.map(badge => badge.id)
     switch (action.type) {
         case 'ADD_BADGE':
-            return [
-                ...state,
-                {
-                    ...payload,
-                    isAchieved: true
-                }
-            ]
+            if (stateWithIds.includes(payload.id)) {
+                return state
+            } else {
+                return [
+                    ...state,
+                    {
+                        ...payload,
+                        isAchieved: true
+                    }
+                ]
+            }
+
         case 'NOTIFY_BADGE':
             return [
                 ...state.map(badge => {
