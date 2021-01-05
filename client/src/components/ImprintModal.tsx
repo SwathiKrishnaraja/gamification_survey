@@ -14,7 +14,7 @@ const CloseButton = styled.button`
     font-size: medium;
     background: #337ab7;
     color: white;
-    border-radius: 3px;
+    border-radius: 8px;
     padding: 5px;
 `
 const CustomSpan = styled.span`

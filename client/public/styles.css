@@ -67,7 +67,7 @@ p {
   color: white;
   padding: 10px 16px;
   font-size: 18px;
-  border-radius: 6px;
+  border-radius: 13px;
   cursor: pointer;
 }
 .language-button-div {
@@ -211,7 +211,7 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-radius: 4px;
+  border-radius: 14px;
   justify-content: space-between;
 }
 /* Choose version page */
@@ -273,7 +273,7 @@ input {
   color: white;
   padding: 10px 16px;
   font-size: 18px;
-  border-radius: 6px;
+  border-radius: 12px;
 }
 .sv_next_btn {
   background-color: #337ab7;
@@ -394,7 +394,8 @@ thead {
   position: fixed;
   background: white;
   width: 400px;
-  height: 270px;
+  height: 290px;
+  border-radius: 20px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
