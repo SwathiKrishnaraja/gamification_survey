@@ -33,7 +33,7 @@ const TourContinueElement: React.FC = () => {
             <br />
             <StyledText>
                 You have now completed the guided tour of the survey. Now you
-                will be redirected to the actual survey. Click ‘Continue’ to begin the survey.
+                will be redirected to the actual survey.Please do not click Back or Refresh in the browser while taking the survey to not lose progress. Click ‘Continue’ to begin the survey.
             </StyledText>
 
         </div>

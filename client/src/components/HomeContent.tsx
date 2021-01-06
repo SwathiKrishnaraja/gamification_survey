@@ -115,7 +115,7 @@ const HomeContent = () => {
           <div style={{ textAlign: 'left' }}>
             <PrivacyHeading data-testid='privacy-header' color={isChecked ? 'black' : 'red'} >* Data Protection and Participation Information</PrivacyHeading>
             <input id="privacy" name="privacy" data-testid='privacy-checkbox' type='checkbox' onClick={handleCheckBoxClick} />
-            <label style={{ cursor: 'pointer' }} htmlFor="privacy">I have read and understood the information on <a data-testid='data-protection-anchor' style={{ textDecoration: 'none', color: '#337ab7', cursor: 'pointer' }} onClick={handleDataProtectionTagClick} href='# '>data protection</a> and the participation information and agree that my data may be used anonymously for the mentioned purposes.</label>
+            <label style={{ cursor: 'pointer' }} htmlFor="privacy">I have read and understood the information on <a data-testid='data-protection-anchor' style={{ textDecoration: 'none', color: '#337ab7', cursor: 'pointer' }} onClick={handleDataProtectionTagClick} >data protection</a> and the participation information and agree that my data may be used anonymously for the mentioned purposes.</label>
             <ImprintModal children={<DataProtection />} handleClick={handleDataProtectionTagClick} showModal={showModal} title='Data Protection' />
           </div>
           <Button data-testid='proceed-button' onClick={handleProceed}>{t('homeContent.button')}</Button>

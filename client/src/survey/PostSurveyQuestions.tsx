@@ -12,6 +12,7 @@ const GenericSurveyQuestions = () => {
         type: 'matrix',
         name: 'q1',
         title: t('preSurvey.q1'),
+        isRequired: true,
         isAllRowRequired: true,
         columns: [{
             value: 1,
@@ -80,6 +81,7 @@ const GenericSurveyQuestions = () => {
         type: 'matrix',
         name: 'q2',
         title: t('postSurvey.q2'),
+        isRequired: true,
         isAllRowRequired: true,
         columns: [{
             value: 1,
@@ -268,6 +270,7 @@ const GamifiedSurveyQuestions = () => {
         type: 'matrix',
         name: 'q1',
         title: t('postSurvey.q1'),
+        isRequired: true,
         isAllRowRequired: true,
         columns: [{
             value: 1,
@@ -336,6 +339,7 @@ const GamifiedSurveyQuestions = () => {
         type: 'matrix',
         name: 'q2',
         title: t('postSurvey.q2'),
+        isRequired: true,
         isAllRowRequired: true,
         columns: [{
             value: 1,
@@ -531,6 +535,7 @@ const TraditionalGamifiedQuestions = () => {
         type: 'matrix',
         name: 'q1',
         title: t('postSurvey.q1'),
+        isRequired: true,
         isAllRowRequired: true,
         columns: [{
             value: 1,
@@ -599,6 +604,7 @@ const TraditionalGamifiedQuestions = () => {
         type: 'matrix',
         name: 'q2',
         title: t('postSurvey.q2'),
+        isRequired: true,
         isAllRowRequired: true,
         columns: [{
             value: 1,
@@ -801,6 +807,7 @@ const GamifiedChoiceQuestions = () => {
         type: 'matrix',
         name: 'q1',
         title: t('postSurvey.q1'),
+        isRequired: true,
         isAllRowRequired: true,
         columns: [{
             value: 1,
