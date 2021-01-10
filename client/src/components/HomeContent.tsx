@@ -88,10 +88,10 @@ const HomeContent = () => {
         <div>
           <p style={{ textAlign: 'left' }}>Thank you for deciding to participate in this research.</p>
           <p style={{ textAlign: 'left' }}>
-            I would like to invite you to this research project, which is a part of a Master Thesis performed, at the Saarland University, Germany. The project is in the form of a survey. We are very much interested in learning about your perspectives about <b>sports and leisure activities.</b>
+            I would like to invite you to this research project, which is a part of a Master Thesis performed, at the Saarland University, Germany.  We are very much interested in learning about your perspectives about <b>sports and leisure activities.</b>
           </p>
           <p style={{ textAlign: 'left' }}>
-            Please answer the questions as honestly as possible. If you are not sure which answer applies to you, please choose the alternative that applies to you. Please note that you will not be requested for any personal information – for us, the most important thing is that we learn about your thoughts and perspectives. Additionally, all your data will be kept <b>anonymous and confidential</b> and cannot be traced back to you.
+            Please answer the questions as honestly as possible.  Please note that you will not be requested for any information that could identify you personally – for us, the most important thing is that we learn about your thoughts and perspectives. Additionally, all your data will be kept <b>anonymous and confidential</b> and cannot be traced back to you.
           </p>
           <p style={{ textAlign: 'left' }}>
             <b>Note:</b> The survey takes about <b>20-25 minutes</b>. Kindly take part in the entire session

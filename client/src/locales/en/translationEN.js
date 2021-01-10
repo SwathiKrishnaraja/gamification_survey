@@ -21,10 +21,10 @@ export const translationEN = {
       header: 'Data Protection Information',
       title1: 'General information',
       content1:
-        'The following study is a part of a Master thesis research conducted at the German Research Center for Artificial Intelligence (DFKI), Saarland University. Voluntary participation and freely given consent. Your participation in this research is entirely voluntary. The consent to participate in this study can be revoked at any time and without giving reasons until the end of the data collection process by either quitting the survey (a corresponding button is available on the website) or by closing the browser window. After the end of data collection, the statutory rights of revocation, information, correction, blocking and deletion can no longer be exercised because the data can no longer be attributed to the data subject.',
-      title2: 'Data collection',
-      content2:
-        'After consent to the collection of data, the following data are collected and processed anonymously: We collect all entries in the online survey, Few entries request personal information such as age, gender, city you live in, educational status, occupational status, and marital status. All these attributes are anonymous and the true identity of the participant is never requested (ie name, email address, etc are not collected). Also, we do not match the IP addresses of users to the survey data. However, in this survey, we include certain open-ended questions (which does not ask for any personal information or data), where you are allowed to freely enter any data/ information. Therefore, if you enter personal data in such fields, we cannot identify them. We securely store this data until the end of this research project. We respect your trust and protect your privacy. Therefore, we will never sell or share this data with any third parties, and the collected data is purely used for scientific and research purposes only.',
+        'The following study is a part of a Master thesis research conducted at the German Research Center for Artificial Intelligence (DFKI), Saarland University.',
+      title11: 'Voluntary participation and freely given consent',
+      content11:
+        'Your participation in this research is entirely voluntary. The consent to participate in this study can be revoked at any time and without giving reasons until the end of the data collection process by either quitting the survey (a corresponding button is available on the website) or by closing the browser window. After the end of data collection, the statutory rights of revocation, information, correction, blocking and deletion can no longer be exercised because the data can no longer be attributed to the data subject.',
       title3: 'Contact person',
       content3:
         'This study is conducted as a part of a Master thesis project. Therefore, if you have any questions that has not been answered in this privacy statement, or if you would like further information on data protection, please contact Swathi Krishnaraja (s8swkris@stud.uni-saarland.de).',
@@ -38,11 +38,11 @@ export const translationEN = {
     preSurvey: {
       q1:
         'How are you feeling right now? The following words describe different kinds of feelings and perception. Read every word and mark the intensity of the feeling you are experiencing in the scale next to each word. You have the possibility to choose between five different gradations. ',
-      q1c1: 'Slightly',
-      q1c2: 'Moderately',
-      q1c3: 'Very',
-      q1c4: 'Extremely',
-      q1c5: 'Not at all',
+      q1c1: 'Not at all',
+      q1c2: 'Slightly',
+      q1c3: 'Moderately',
+      q1c4: 'Very',
+      q1c5: 'Extremely',
 
       q1a1: 'Active',
       q1a2: 'Upset',
@@ -200,7 +200,7 @@ export const translationEN = {
       q14: 'Why are you not physically active?',
 
       q15:
-        'Here are a few more reasons not to be physically active, please indicate for every statement, if you strongly agree, somewhat agree, somewhat disagree, or strongly disagree.',
+        'Here are a few reasons on why you identify yourself to be not physically active, please indicate for every statement, if you strongly agree, somewhat agree, somewhat disagree, or strongly disagree.',
       q15c1: 'Strongly Disagree',
       q15c2: 'Somewhat Disagree',
       q15c3: 'Somewhat Agree',
@@ -211,7 +211,7 @@ export const translationEN = {
       q15a2: 'Sports is unnecessary.',
       q15a3: 'I cannot do sport, due to health or physical reasons.',
       q15a4:
-        'I do not have the opportunity to do so, there is none or too little offers.',
+        'I do not have the opportunity to do so, there are none or too little offers.',
       q15a5: 'I do not like the talk of sports and fitness.',
       q15a6: 'I cannot motivate myself.',
       q15a7: 'I do not have time for sports.',
@@ -222,7 +222,7 @@ export const translationEN = {
       q15a12: 'I had bad experience.',
 
       q16:
-        'Here you will find again some statements, please indicate for every statement, if you strongly agree, somewhat agree, somewhat disagree, or strongly disagree.',
+        'Here you will find again some more statements on why you identify yourself to be not physically active, please indicate for every statement, if you strongly agree, somewhat agree, somewhat disagree, or strongly disagree.',
       q16c1: 'Strongly Disagree',
       q16c2: 'Somewhat Disagree',
       q16c3: 'Somewhat Agree',
@@ -240,7 +240,7 @@ export const translationEN = {
       q16a9: 'Exercise helps me to get a more beautiful body.',
 
       q17:
-        'Below, are few measures to motivate young people to be more active are shown. Please indicate for every measure, whether you believe that these can motivate young people to take more exercise.',
+        'Below, are few measures to motivate young people to be more active. Please indicate for every measure, whether you believe that young people can be motivated through this?',
       q17c1: 'Strongly Disagree',
       q17c2: 'Somewhat Disagree',
       q17c3: 'Somewhat Agree',
@@ -254,15 +254,15 @@ export const translationEN = {
 
       q18:
         'When you think of your circle of friends now, what would you say? Do most people in your circle of friends assess the outfits they wear when they exercise as...',
-      q18a1: 'Highly relevant',
+      q18a1: 'Highly important',
       q18a2: 'Rather important',
       q18a3: 'Rather not important',
-      q18a4: 'Not relevant',
+      q18a4: 'Not important',
 
       q19: 'Overall, how do you feel with your looks?',
       q19a1: 'Very happy',
-      q19a2: 'Rather content',
-      q19a3: 'Rather dissatisfied',
+      q19a2: 'Somewhat happy',
+      q19a3: 'Somewhat unhappy',
       q19a4: 'Very unhappy',
 
       q20:
@@ -297,14 +297,15 @@ export const translationEN = {
       q23a1: 'Single',
       q23a2: 'Single, but have a steady relationship',
       q23a3: 'Married/registered partnership',
-      q23a4: 'No answer',
+      q23a4: 'Other',
+      q23a5: 'No answer',
 
       q24: 'Do you have children?',
       q24a1: 'Yes',
       q24a2: 'No',
       q24a3: 'No answer',
 
-      q25: 'You live in:',
+      q25: 'You live:',
       q25a1: 'at your parents house',
       q25a2: 'a seperate apartment or house',
       q25a3: 'in a shared apartment',
@@ -319,9 +320,9 @@ export const translationEN = {
       q27: 'How old are you?',
       q27a1: 'Below 18',
       q27a2: '18 - 24',
-      q27a3: '24 - 34',
-      q27a4: '34 - 44',
-      q27a5: '44 and above',
+      q27a3: '25 - 34',
+      q27a4: '35 - 44',
+      q27a5: '45 and above',
       q27a6: 'No answer',
 
       q28: 'Your Gender:',
@@ -349,11 +350,11 @@ export const translationEN = {
     postSurvey: {
       q1:
         'We would like to know again: How are you feeling right now? The following words describe different kinds of feelings and perception. Read every word and mark the intensity on the scale. You have the possibility to choose between five different gradations.',
-      q1c1: 'Slightly',
-      q1c2: 'Moderately',
-      q1c3: 'Very',
-      q1c4: 'Extremely',
-      q1c5: 'Not at all',
+      q1c1: 'Not at all',
+      q1c2: 'Slightly',
+      q1c3: 'Moderately',
+      q1c4: 'Very',
+      q1c5: 'Extremely',
 
       q1a1: 'Active',
       q1a2: 'Upset',
@@ -405,11 +406,11 @@ export const translationEN = {
 
       q3:
         'Below are some statements about the questionnaire itself. Please indicate for every statement, if you strongly agree, somewhat agree, somewhat disagree, or strongly disagree.',
-      q3c1: 'Strongly Disagree',
-      q3c2: 'Somewhat Disagree',
-      q3c3: 'Somewhat Agree',
-      q3c4: 'Strongly Agree',
-      q3c5: 'No Answer',
+      q3c1: 'Strongly disagree',
+      q3c2: 'Somewhat disagree',
+      q3c3: 'Neither agree nor disagree',
+      q3c4: 'Somewhat agree',
+      q3c5: 'Strongly agree',
 
       q3a1: 'The questionnaire was entertaining.',
       q3a2: 'Completing the questionnaire took a lot of time.',
@@ -417,6 +418,8 @@ export const translationEN = {
         'The questionnaire was designed differently from conventional questionnaires.',
       q3a4:
         'I liked the questionnaire better than conventional questionnaires.',
+      q3a5:
+        'I feel that the questions asked in the questionnare were reasonable.',
 
       q4: 'What did you like about the survey? ',
 
@@ -497,6 +500,9 @@ export const translationEN = {
       q5: 'Overall, what did you feel about the choice given to you?',
 
       q6: 'Overall, what did you feel about gamification in survey?',
+
+      q7:
+        'I would have liked if I had other game elements other than "Badges, Points and Leaderboard" to select from.',
     },
 
     selfReportGamification: {

@@ -37,10 +37,12 @@ const LegalInformation: React.FC = () => {
     return (
         <Container>
             <Title>Saarland University</Title>
+            <Subtitle>Department of Computer Science</Subtitle>
             <Subtitle>Saarland Informatics Campus</Subtitle>
 
             <SubHeading>Contact Persons</SubHeading>
             <SubHeading>Swathi Krishnaraja</SubHeading>
+            <AddressLine>Department of Computer Science</AddressLine>
             <AddressLine>Saarland Informatics Campus</AddressLine>
             <AddressLine>Stuhlsatzenhausweg 3</AddressLine>
             <AddressLine>D-66123 Saarbrücken</AddressLine>
