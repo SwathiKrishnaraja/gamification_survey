@@ -44,14 +44,14 @@ const JSON = () => {
         name: 'q4',
         title: t('mainSurvey.q4'),
         choices: [t('mainSurvey.q4a1'),
-        t('mainSurvey.q4a2'),
-        t('mainSurvey.q4a3')]
+        t('mainSurvey.q4a2'),]
     }
 
     const q5: Questions = {
         type: 'matrix',
         name: 'q5',
         title: t('mainSurvey.q5'),
+        visibleIf: "{q4} = 'Yes'",
         columns: [{
             value: 1,
             text: t('mainSurvey.q5c1')
@@ -86,6 +86,7 @@ const JSON = () => {
         type: 'radiogroup',
         name: 'q6',
         title: t('mainSurvey.q6'),
+        visibleIf: "{q4} = 'Yes'",
         description: 'Please choose one of the following answers.',
         choices: [t('mainSurvey.q6a1'),
         t('mainSurvey.q6a2'),
@@ -99,6 +100,7 @@ const JSON = () => {
         type: 'radiogroup',
         name: 'q7',
         title: t('mainSurvey.q7'),
+        visibleIf: "{q4} = 'Yes'",
         description: 'Please choose one of the following answers.',
         choices: [t('mainSurvey.q7a1'),
         t('mainSurvey.q7a2'),
@@ -110,6 +112,7 @@ const JSON = () => {
         type: "checkbox",
         name: 'q8',
         title: t('mainSurvey.q8'),
+        visibleIf: "{q4} = 'Yes'",
         description: 'Please select one or more items from the list.',
         choices: [t('mainSurvey.q8a1'),
         t('mainSurvey.q8a2'),
@@ -126,6 +129,7 @@ const JSON = () => {
         type: 'radiogroup',
         name: 'q9',
         title: t('mainSurvey.q9'),
+        visibleIf: "{q4} = 'Yes'",
         description: 'Please choose one of the following answers.',
         choices: [t('mainSurvey.q9a1'),
         t('mainSurvey.q9a2'),
@@ -135,12 +139,14 @@ const JSON = () => {
 
     const q10: Questions = {
         type: 'text',
+        visibleIf: "{q4} = 'Yes'",
         name: 'q10',
         title: t('mainSurvey.q10'),
     }
 
     const q11: Questions = {
         type: 'text',
+        visibleIf: "{q4} = 'Yes'",
         name: 'q11',
         title: t('mainSurvey.q11')
     }
@@ -148,6 +154,7 @@ const JSON = () => {
     const q12: Questions = {
         type: 'matrix',
         name: 'q12',
+        visibleIf: "{q4} = 'Yes'",
         title: t('mainSurvey.q12'),
         columns: [{
             value: 1,
@@ -244,12 +251,14 @@ const JSON = () => {
     const q14: Questions = {
         type: 'text',
         name: 'q14',
+        visibleIf: "{q4} = 'No'",
         title: t('mainSurvey.q14')
     }
 
     const q15: Questions = {
         type: 'matrix',
         name: 'q15',
+        visibleIf: "{q4} = 'No'",
         title: t('mainSurvey.q15'),
         columns: [{
             value: 1,
@@ -328,6 +337,7 @@ const JSON = () => {
         type: 'matrix',
         name: 'q16',
         title: t('mainSurvey.q16'),
+        visibleIf: "{q4} = 'No'",
         columns: [{
             value: 1,
             text: t('mainSurvey.q16c1')
@@ -387,6 +397,7 @@ const JSON = () => {
     const q17: Questions = {
         type: 'matrix',
         name: 'q17',
+        visibleIf: "{q4} = 'No'",
         title: t('mainSurvey.q17'),
         columns: [{
             value: 1,
@@ -489,6 +500,7 @@ const JSON = () => {
         t('mainSurvey.q23a2'),
         t('mainSurvey.q23a3'),
         t('mainSurvey.q23a4'),
+        t('mainSurvey.q23a5'),
         ]
     }
     const q24: Questions = {
@@ -582,7 +594,7 @@ const JSON = () => {
                     {
                         "type": "panel",
                         "elements": [
-                            q1, q2, q3
+                            q1, q2, q3, q4
                         ],
                         "name": "panel1"
                     }
@@ -594,7 +606,7 @@ const JSON = () => {
                     {
                         "type": "panel",
                         "elements": [
-                            q4, q5, q6
+                            q5, q6
                         ],
                         "name": "panel2"
                     }

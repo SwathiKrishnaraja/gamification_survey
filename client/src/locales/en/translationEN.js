@@ -254,15 +254,15 @@ export const translationEN = {
 
       q18:
         'When you think of your circle of friends now, what would you say? Do most people in your circle of friends assess the outfits they wear when they exercise as...',
-      q18a1: 'Highly relevant',
+      q18a1: 'Highly important',
       q18a2: 'Rather important',
       q18a3: 'Rather not important',
-      q18a4: 'Not relevant',
+      q18a4: 'Not important',
 
       q19: 'Overall, how do you feel with your looks?',
       q19a1: 'Very happy',
-      q19a2: 'Rather content',
-      q19a3: 'Rather dissatisfied',
+      q19a2: 'Somewhat happy',
+      q19a3: 'Somewhat unhappy',
       q19a4: 'Very unhappy',
 
       q20:
@@ -297,14 +297,15 @@ export const translationEN = {
       q23a1: 'Single',
       q23a2: 'Single, but have a steady relationship',
       q23a3: 'Married/registered partnership',
-      q23a4: 'No answer',
+      q23a4: 'Other',
+      q23a5: 'No answer',
 
       q24: 'Do you have children?',
       q24a1: 'Yes',
       q24a2: 'No',
       q24a3: 'No answer',
 
-      q25: 'You live in:',
+      q25: 'You live:',
       q25a1: 'at your parents house',
       q25a2: 'a seperate apartment or house',
       q25a3: 'in a shared apartment',
@@ -319,9 +320,9 @@ export const translationEN = {
       q27: 'How old are you?',
       q27a1: 'Below 18',
       q27a2: '18 - 24',
-      q27a3: '24 - 34',
-      q27a4: '34 - 44',
-      q27a5: '44 and above',
+      q27a3: '25 - 34',
+      q27a4: '35 - 44',
+      q27a5: '45 and above',
       q27a6: 'No answer',
 
       q28: 'Your Gender:',
