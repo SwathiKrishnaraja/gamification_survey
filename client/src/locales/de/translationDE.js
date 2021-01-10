@@ -350,11 +350,11 @@ export const translationDE = {
     postSurvey: {
       q1:
         'We would like to know again: How are you feeling right now? The following words describe different kinds of feelings and perception. Read every word and mark the intensity on the scale. You have the possibility to choose between five different gradations.',
-      q1c1: 'Slightly',
-      q1c2: 'Moderately',
-      q1c3: 'Very',
-      q1c4: 'Extremely',
-      q1c5: 'Not at all',
+      q1c1: 'Not at all',
+      q1c2: 'Slightly',
+      q1c3: 'Moderately',
+      q1c4: 'Very',
+      q1c5: 'Extremely',
 
       q1a1: 'Active',
       q1a2: 'Upset',
@@ -406,11 +406,11 @@ export const translationDE = {
 
       q3:
         'Below are some statements about the questionnaire itself. Please indicate for every statement, if you strongly agree, somewhat agree, somewhat disagree, or strongly disagree.',
-      q3c1: 'Strongly Disagree',
-      q3c2: 'Somewhat Disagree',
-      q3c3: 'Somewhat Agree',
-      q3c4: 'Strongly Agree',
-      q3c5: 'No Answer',
+      q3c1: 'Strongly disagree',
+      q3c2: 'Somewhat disagree',
+      q3c3: 'Neither agree nor disagree',
+      q3c4: 'Somewhat agree',
+      q3c5: 'Strongly agree',
 
       q3a1: 'The questionnaire was entertaining.',
       q3a2: 'Completing the questionnaire took a lot of time.',
@@ -418,6 +418,8 @@ export const translationDE = {
         'The questionnaire was designed differently from conventional questionnaires.',
       q3a4:
         'I liked the questionnaire better than conventional questionnaires.',
+      q3a5:
+        'I feel that the questions asked in the questionnare were reasonable.',
 
       q4: 'What did you like about the survey? ',
 
