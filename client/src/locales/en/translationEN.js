@@ -38,11 +38,11 @@ export const translationEN = {
     preSurvey: {
       q1:
         'How are you feeling right now? The following words describe different kinds of feelings and perception. Read every word and mark the intensity of the feeling you are experiencing in the scale next to each word. You have the possibility to choose between five different gradations. ',
-      q1c1: 'Slightly',
-      q1c2: 'Moderately',
-      q1c3: 'Very',
-      q1c4: 'Extremely',
-      q1c5: 'Not at all',
+      q1c1: 'Not at all',
+      q1c2: 'Slightly',
+      q1c3: 'Moderately',
+      q1c4: 'Very',
+      q1c5: 'Extremely',
 
       q1a1: 'Active',
       q1a2: 'Upset',
