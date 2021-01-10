@@ -200,7 +200,7 @@ export const translationEN = {
       q14: 'Why are you not physically active?',
 
       q15:
-        'Here are a few more reasons not to be physically active, please indicate for every statement, if you strongly agree, somewhat agree, somewhat disagree, or strongly disagree.',
+        'Here are a few reasons on why you identify yourself to be not physically active, please indicate for every statement, if you strongly agree, somewhat agree, somewhat disagree, or strongly disagree.',
       q15c1: 'Strongly Disagree',
       q15c2: 'Somewhat Disagree',
       q15c3: 'Somewhat Agree',
@@ -211,7 +211,7 @@ export const translationEN = {
       q15a2: 'Sports is unnecessary.',
       q15a3: 'I cannot do sport, due to health or physical reasons.',
       q15a4:
-        'I do not have the opportunity to do so, there is none or too little offers.',
+        'I do not have the opportunity to do so, there are none or too little offers.',
       q15a5: 'I do not like the talk of sports and fitness.',
       q15a6: 'I cannot motivate myself.',
       q15a7: 'I do not have time for sports.',
@@ -222,7 +222,7 @@ export const translationEN = {
       q15a12: 'I had bad experience.',
 
       q16:
-        'Here you will find again some statements, please indicate for every statement, if you strongly agree, somewhat agree, somewhat disagree, or strongly disagree.',
+        'Here you will find again some more statements on why you identify yourself to be not physically active, please indicate for every statement, if you strongly agree, somewhat agree, somewhat disagree, or strongly disagree.',
       q16c1: 'Strongly Disagree',
       q16c2: 'Somewhat Disagree',
       q16c3: 'Somewhat Agree',
@@ -240,7 +240,7 @@ export const translationEN = {
       q16a9: 'Exercise helps me to get a more beautiful body.',
 
       q17:
-        'Below, are few measures to motivate young people to be more active are shown. Please indicate for every measure, whether you believe that these can motivate young people to take more exercise.',
+        'Below, are few measures to motivate young people to be more active. Please indicate for every measure, whether you believe that young people can be motivated through this?'
       q17c1: 'Strongly Disagree',
       q17c2: 'Somewhat Disagree',
       q17c3: 'Somewhat Agree',
@@ -502,7 +502,7 @@ export const translationEN = {
       q6: 'Overall, what did you feel about gamification in survey?',
 
       q7:
-        'I would have liked if I had other game elements other than "Badges, Points and Leaderboard" to select from',
+        'I would have liked if I had other game elements other than "Badges, Points and Leaderboard" to select from.',
     },
 
     selfReportGamification: {
