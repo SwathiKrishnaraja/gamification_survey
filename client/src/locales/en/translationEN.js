@@ -240,7 +240,7 @@ export const translationEN = {
       q16a9: 'Exercise helps me to get a more beautiful body.',
 
       q17:
-        'Below, are few measures to motivate young people to be more active. Please indicate for every measure, whether you believe that young people can be motivated through this?'
+        'Below, are few measures to motivate young people to be more active. Please indicate for every measure, whether you believe that young people can be motivated through this?',
       q17c1: 'Strongly Disagree',
       q17c2: 'Somewhat Disagree',
       q17c3: 'Somewhat Agree',
