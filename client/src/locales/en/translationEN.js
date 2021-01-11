@@ -56,13 +56,13 @@ export const translationEN = {
       q1a10: 'Afraid',
 
       q2: 'To what extend do you agree with the following statements?',
-      q2c1: 'Strongly Disagree',
+      q2c1: 'Strongly disagree',
       q2c2: 'Disagree',
-      q2c3: 'Somewhat Disagree',
-      q2c4: 'Neither Agree nor Disagree',
-      q2c5: 'Somewhat Agree',
+      q2c3: 'Somewhat disagree',
+      q2c4: 'Neither agree nor disagree',
+      q2c5: 'Somewhat agree',
       q2c6: 'Agree',
-      q2c7: 'Strongly Agree',
+      q2c7: 'Strongly agree',
 
       q2a1: 'It makes me happy if I am able to help others.',
       q2a2: 'Interacting with others is important to me.',
@@ -168,12 +168,12 @@ export const translationEN = {
       q11: 'Why are you physically active? ',
 
       q12:
-        'Here are a few more reasons to be physically active, please indicate for every statement, if you strongly agree, somewhat agree, somewhat disagree, or strongly disagree.',
-      q12c1: 'Strongly Disagree',
-      q12c2: 'Somewhat Disagree',
-      q12c3: 'Somewhat Agree',
-      q12c4: 'Strongly Agree',
-      q12c5: 'No Answer',
+        'Here are a few more reasons to be physically active, please indicate for every statement, if you Strongly disagree, Somewhat disagree, Somewhat agree, or Strongly agree.',
+      q12c1: 'Strongly disagree',
+      q12c2: 'Somewhat disagree',
+      q12c3: 'Somewhat agree',
+      q12c4: 'Strongly agree',
+      q12c5: 'No answer',
 
       q12a1: 'It gives me a chance to think.',
       q12a2: 'My friends push me to.',
@@ -200,12 +200,12 @@ export const translationEN = {
       q14: 'Why are you not physically active?',
 
       q15:
-        'Here are a few reasons on why you identify yourself to be not physically active, please indicate for every statement, if you strongly agree, somewhat agree, somewhat disagree, or strongly disagree.',
-      q15c1: 'Strongly Disagree',
-      q15c2: 'Somewhat Disagree',
-      q15c3: 'Somewhat Agree',
-      q15c4: 'Strongly Agree',
-      q15c5: 'No Answer',
+        'Here are a few reasons on why you identify yourself to be not physically active, please indicate for every statement, if you Strongly disagree, Somewhat disagree, Somewhat agree, or Strongly agree.',
+      q15c1: 'Strongly disagree',
+      q15c2: 'Somewhat disagree',
+      q15c3: 'Somewhat agree',
+      q15c4: 'Strongly agree',
+      q15c5: 'No answer',
 
       q15a1: 'Sports does more harm than good.',
       q15a2: 'Sports is unnecessary.',
@@ -222,12 +222,12 @@ export const translationEN = {
       q15a12: 'I had bad experience.',
 
       q16:
-        'Here you will find again some more statements on why you identify yourself to be not physically active, please indicate for every statement, if you strongly agree, somewhat agree, somewhat disagree, or strongly disagree.',
-      q16c1: 'Strongly Disagree',
-      q16c2: 'Somewhat Disagree',
-      q16c3: 'Somewhat Agree',
-      q16c4: 'Strongly Agree',
-      q16c5: 'No Answer',
+        'Here you will find again some more statements on why you identify yourself to be not physically active, please indicate for every statement, if you Strongly disagree, Somewhat disagree, Somewhat agree, or Strongly agree.',
+      q16c1: 'Strongly disagree',
+      q16c2: 'Somewhat disagree',
+      q16c3: 'Somewhat agree',
+      q16c4: 'Strongly agree',
+      q16c5: 'No answer',
 
       q16a1: 'Exercise must first and foremost be fun.',
       q16a2: 'Non-sporty people are bullied more often.',
@@ -241,11 +241,11 @@ export const translationEN = {
 
       q17:
         'Below, are few measures to motivate young people to be more active. Please indicate for every measure, whether you believe that young people can be motivated through this?',
-      q17c1: 'Strongly Disagree',
-      q17c2: 'Somewhat Disagree',
-      q17c3: 'Somewhat Agree',
-      q17c4: 'Strongly Agree',
-      q17c5: 'No Answer',
+      q17c1: 'Strongly disagree',
+      q17c2: 'Somewhat disagree',
+      q17c3: 'Somewhat agree',
+      q17c4: 'Strongly agree',
+      q17c5: 'No answer',
 
       q17a1: 'More offers for exercise in school/at work.',
       q17a2: 'TV commercials with short fitness exercises.',
@@ -368,14 +368,14 @@ export const translationEN = {
       q1a10: 'Afraid',
 
       q2:
-        'To what extent do you agree with the following statements? Rate on a scale of 1 to 7, where 1 = Strongly Disagree, 2 = Disagree, 3 = Somewhat Disagree, 4 = Neither Disagree Nor Agree, 5 = Somewhat Agree, 6 = Agree, 7 = Strongly Agree.',
-      q2c1: '1',
-      q2c2: '2',
-      q2c3: '3',
-      q2c4: '4',
-      q2c5: '5',
-      q2c6: '6',
-      q2c7: '7',
+        'To what extent do you agree with the following statements? Rate using the below scale.',
+      q2c1: 'Strongly disagree',
+      q2c2: 'Disagree',
+      q2c3: 'Somewhat disagree',
+      q2c4: 'Neither disagree nor agree',
+      q2c5: 'Somewhat agree',
+      q2c6: 'Agree',
+      q2c7: 'Strongly agree',
 
       q2a1: 'I think I am pretty good at taking the survey.',
       q2a2: 'I believe I had some choice about doing the survey.',
@@ -405,7 +405,7 @@ export const translationEN = {
       q2a25: 'I felt pressured while doing the survey.',
 
       q3:
-        'Below are some statements about the questionnaire itself. Please indicate for every statement, if you strongly agree, somewhat agree, somewhat disagree, or strongly disagree.',
+        'Below are some statements about the questionnaire itself. Please indicate for every statement, how you feel using the below scale.',
       q3c1: 'Strongly disagree',
       q3c2: 'Somewhat disagree',
       q3c3: 'Neither agree nor disagree',
@@ -420,6 +420,10 @@ export const translationEN = {
         'I liked the questionnaire better than conventional questionnaires.',
       q3a5:
         'I feel that the questions asked in the questionnare were reasonable.',
+      q3a6:
+        'I feel that the answer options provided in the questionnare were reasonable.',
+      q3a7:
+        "I would have liked if I was the given the option to participate in a gamified survey. (A gamified survey is a survey which has game elements to motivate the user's engagement in the survey. For example, scoring points, competing with other participants or unlocking badges).",
 
       q4: 'What did you like about the survey? ',
 
@@ -429,29 +433,29 @@ export const translationEN = {
 
       q7:
         'I would have liked if I was given the choice to choose which survey version I wanted to work with.',
-      q7c1: 'strongly disagree',
-      q7c2: 'disagree',
-      q7c3: 'neither',
-      q7c4: 'agree',
-      q7c5: 'strongly agree',
+      q7c1: 'Strongly disagree',
+      q7c2: 'Disagree',
+      q7c3: 'Neither agree nor disagree',
+      q7c4: 'Agree',
+      q7c5: 'Strongly agree',
 
       q8:
         'I would have liked if I was the given the option to participate in a gamified survey.',
-      q8c1: 'strongly disagree',
-      q8c2: 'disagree',
-      q8c3: 'neither',
-      q8c4: 'agree',
-      q8c5: 'strongly agree',
+      q8c1: 'Strongly disagree',
+      q8c2: 'Disagree',
+      q8c3: 'Neither agree nor disagree',
+      q8c4: 'Agree',
+      q8c5: 'Strongly agree',
     },
 
     selfReportChoiceEnableDisable: {
       q1:
         'I liked that I was able to decide whether I want to use game elements or not.',
-      q1c1: 'strongly disagree',
-      q1c2: 'disagree',
-      q1c3: 'neither',
-      q1c4: 'agree',
-      q1c5: 'strongly agree',
+      q1c1: 'Strongly disagree',
+      q1c2: 'Disagree',
+      q1c3: 'Neither agree nor disagree',
+      q1c4: 'Agree',
+      q1c5: 'Strongly agree',
 
       q2:
         'I felt that I had control over which survey version I wanted to work with.',

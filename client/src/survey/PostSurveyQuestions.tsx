@@ -220,7 +220,7 @@ const GenericSurveyQuestions = () => {
         title: t('postSurvey.q3'),
         isRequired: true,
         columns: [t('postSurvey.q3c1'), t('postSurvey.q3c2'), t('postSurvey.q3c3'), t('postSurvey.q3c4'), t('postSurvey.q3c5'),],
-        rows: [t('postSurvey.q3a1'), t('postSurvey.q3a2'), t('postSurvey.q3a3'), t('postSurvey.q3a4'), t('postSurvey.q3a5'), t('postSurvey.q3a6'), t('postSurvey.q7'), t('postSurvey.q8')]
+        rows: [t('postSurvey.q3a1'), t('postSurvey.q3a2'), t('postSurvey.q3a3'), t('postSurvey.q3a4'), t('postSurvey.q3a5'), t('postSurvey.q3a6'), t('postSurvey.q3a7')]
     }
     const q4: Questions = {
         type: 'text',
