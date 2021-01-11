@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { useTranslation } from 'react-i18next';
-import { GenericSurveyQuestions, GamifiedSurveyQuestions, TraditionalGamifiedQuestions, GamifiedChoiceQuestions } from '../survey/PostSurveyQuestions'
+import { GenericSurveyQuestions, BadgesSurveyQuestions, LeaderboardSurveyQuestions, TraditionalGamifiedQuestions, GamifiedChoiceQuestions } from '../survey/PostSurveyQuestions'
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '../reducer/reducer';
 import * as Survey from 'survey-react'
@@ -33,15 +33,15 @@ const PostSurvey = () => {
             case 'TRADITIONAL':
                 return GenericSurveyQuestions
             case 'GAMIFIED':
-                return GamifiedSurveyQuestions
+                return BadgesSurveyQuestions
             case 'TRADITIONAL_GAMIFIED_1':
                 return TraditionalGamifiedQuestions
             case 'TRADITIONAL_GAMIFIED_2':
                 return TraditionalGamifiedQuestions
             case 'GAMIFIED_WITH_BADGES':
-                return GamifiedSurveyQuestions
+                return BadgesSurveyQuestions
             case 'GAMIFIED_WITH_POINTS':
-                return GamifiedSurveyQuestions
+                return LeaderboardSurveyQuestions
             case 'GAMIFIED_CHOICE_1':
                 return GamifiedChoiceQuestions
             case 'GAMIFIED_CHOICE_2':
