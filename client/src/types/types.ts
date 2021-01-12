@@ -75,3 +75,15 @@ export type SurveyDataType = {
     narratives_unlocked?: number,
     browser: string
 }
+
+export type SurveyMode = {
+    id: number,
+    mode: 'TRADITIONAL' |
+    'GAMIFIED' |
+    'TRADITIONAL_GAMIFIED_1' |
+    'TRADITIONAL_GAMIFIED_2' |
+    'GAMIFIED_WITH_BADGES' |
+    'GAMIFIED_WITH_POINTS' |
+    'GAMIFIED_CHOICE_1' |
+    'GAMIFIED_CHOICE_2'
+}

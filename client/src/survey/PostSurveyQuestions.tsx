@@ -220,22 +220,7 @@ const GenericSurveyQuestions = () => {
         title: t('postSurvey.q3'),
         isRequired: true,
         columns: [t('postSurvey.q3c1'), t('postSurvey.q3c2'), t('postSurvey.q3c3'), t('postSurvey.q3c4'), t('postSurvey.q3c5'),],
-        rows: [t('postSurvey.q3a1'), t('postSurvey.q3a2'), t('postSurvey.q3a3'), t('postSurvey.q3a4'), t('postSurvey.q3a5'), t('postSurvey.q3a6'), t('postSurvey.q3a7')]
-    }
-    const q4: Questions = {
-        type: 'text',
-        name: 'q4',
-        title: t('postSurvey.q4')
-    }
-    const q5: Questions = {
-        type: 'text',
-        name: 'q5',
-        title: t('postSurvey.q5')
-    }
-    const q6: Questions = {
-        type: 'text',
-        name: 'q6',
-        title: t('postSurvey.q6')
+        rows: [t('postSurvey.q3a2'), t('postSurvey.q3a3'), t('postSurvey.q3a4'), t('postSurvey.q3a5'), t('postSurvey.q3a6'), t('postSurvey.q3a7')]
     }
 
     const json = {
@@ -247,7 +232,7 @@ const GenericSurveyQuestions = () => {
                     {
                         "type": "panel",
                         "elements": [
-                            q1, q2, q3, q4, q5, q6
+                            q1, q2, q3
                         ],
                         "name": "panel1"
                     }
@@ -475,28 +460,7 @@ const BadgesSurveyQuestions = () => {
         isRequired: true,
         title: t('postSurvey.q3'),
         columns: [t('postSurvey.q3c1'), t('postSurvey.q3c2'), t('postSurvey.q3c3'), t('postSurvey.q3c4'), t('postSurvey.q3c5'),],
-        rows: [t('postSurvey.q3a1'), t('postSurvey.q3a2'), t('postSurvey.q3a3'), t('postSurvey.q3a4'), t('postSurvey.q3a5'), t('postSurvey.q3a6'), t('selfReportGamification.q1'), t('selfReportGamification.q2')]
-    }
-    const q4: Questions = {
-        type: 'text',
-        name: 'q4',
-        title: t('postSurvey.q4')
-    }
-    const q5: Questions = {
-        type: 'text',
-        name: 'q5',
-        title: t('postSurvey.q5')
-    }
-    const q6: Questions = {
-        type: 'text',
-        name: 'q6',
-        title: t('postSurvey.q6')
-    }
-
-    const q7: Questions = {
-        type: 'text',
-        name: 'q7',
-        title: t('selfReportGamification.q4')
+        rows: [t('postSurvey.q3a2'), t('postSurvey.q3a3'), t('postSurvey.q3a4'), t('postSurvey.q3a5'), t('postSurvey.q3a6'), t('selfReportGamification.q1'), t('selfReportGamification.q2'), t('selfReportGamification.q3')]
     }
 
     const json = {
@@ -508,7 +472,7 @@ const BadgesSurveyQuestions = () => {
                     {
                         "type": "panel",
                         "elements": [
-                            q1, q2, q3, q4, q5, q6, q7
+                            q1, q2, q3
                         ],
                         "name": "panel1"
                     }
@@ -736,28 +700,7 @@ const LeaderboardSurveyQuestions = () => {
         isRequired: true,
         title: t('postSurvey.q3'),
         columns: [t('postSurvey.q3c1'), t('postSurvey.q3c2'), t('postSurvey.q3c3'), t('postSurvey.q3c4'), t('postSurvey.q3c5'),],
-        rows: [t('postSurvey.q3a1'), t('postSurvey.q3a2'), t('postSurvey.q3a3'), t('postSurvey.q3a4'), t('postSurvey.q3a5'), t('postSurvey.q3a6'), t('selfReportLeaderboard.q1'), t('selfReportLeaderboard.q2')]
-    }
-    const q4: Questions = {
-        type: 'text',
-        name: 'q4',
-        title: t('postSurvey.q4')
-    }
-    const q5: Questions = {
-        type: 'text',
-        name: 'q5',
-        title: t('postSurvey.q5')
-    }
-    const q6: Questions = {
-        type: 'text',
-        name: 'q6',
-        title: t('postSurvey.q6')
-    }
-
-    const q7: Questions = {
-        type: 'text',
-        name: 'q7',
-        title: t('selfReportLeaderboard.q4')
+        rows: [t('postSurvey.q3a2'), t('postSurvey.q3a3'), t('postSurvey.q3a4'), t('postSurvey.q3a5'), t('postSurvey.q3a6'), t('selfReportLeaderboard.q1'), t('selfReportLeaderboard.q2'), t('selfReportLeaderboard.q3')]
     }
 
     const json = {
@@ -769,7 +712,7 @@ const LeaderboardSurveyQuestions = () => {
                     {
                         "type": "panel",
                         "elements": [
-                            q1, q2, q3, q4, q5, q6, q7
+                            q1, q2, q3
                         ],
                         "name": "panel1"
                     }
@@ -782,7 +725,6 @@ const LeaderboardSurveyQuestions = () => {
 
     return json
 }
-
 
 const TraditionalGamifiedQuestions = () => {
     const { t } = useTranslation()
@@ -998,35 +940,14 @@ const TraditionalGamifiedQuestions = () => {
         title: t('postSurvey.q3'),
         isRequired: true,
         columns: [t('postSurvey.q3c1'), t('postSurvey.q3c2'), t('postSurvey.q3c3'), t('postSurvey.q3c4'), t('postSurvey.q3c5'),],
-        rows: [t('postSurvey.q3a1'), t('postSurvey.q3a2'), t('postSurvey.q3a3'), t('postSurvey.q3a4'), t('postSurvey.q3a5'), t('postSurvey.q3a6'), t('selfReportChoiceEnableDisable.q1'), t('selfReportChoiceEnableDisable.q2'), t('selfReportChoiceEnableDisable.q3')]
+        rows: [t('postSurvey.q3a2'), t('postSurvey.q3a3'), t('postSurvey.q3a4'), t('postSurvey.q3a5'), t('postSurvey.q3a6'), t('selfReportChoiceEnableDisable.q1'), t('selfReportChoiceEnableDisable.q2')]
     }
+
     const q4: Questions = {
         type: 'text',
         name: 'q4',
-        title: t('postSurvey.q4')
-    }
-    const q5: Questions = {
-        type: 'text',
-        name: 'q5',
-        title: t('postSurvey.q5')
-    }
-    const q6: Questions = {
-        type: 'text',
-        name: 'q6',
-        title: t('postSurvey.q6')
-    }
-
-    const q7: Questions = {
-        type: 'text',
-        name: 'q7',
         title: t('selfReportChoiceEnableDisable.q4')
     }
-    const q8: Questions = {
-        type: 'text',
-        name: 'q8',
-        title: t('selfReportChoiceEnableDisable.q5')
-    }
-
 
     const json = {
         "completeText": "Submit",
@@ -1037,7 +958,7 @@ const TraditionalGamifiedQuestions = () => {
                     {
                         "type": "panel",
                         "elements": [
-                            q1, q2, q3, q4, q5, q6, q7, q8
+                            q1, q2, q3, q4
                         ],
                         "name": "panel1"
                     }
@@ -1264,37 +1185,14 @@ const GamifiedChoiceQuestions = () => {
         title: t('postSurvey.q3'),
         isRequired: true,
         columns: [t('postSurvey.q3c1'), t('postSurvey.q3c2'), t('postSurvey.q3c3'), t('postSurvey.q3c4'), t('postSurvey.q3c5'),],
-        rows: [t('postSurvey.q3a1'), t('postSurvey.q3a2'), t('postSurvey.q3a3'), t('postSurvey.q3a4'), t('postSurvey.q3a5'), t('postSurvey.q3a6'), t('selfReportChoiceG1G2.q1'), t('selfReportChoiceG1G2.q2'), t('selfReportChoiceG1G2.q3'), t('selfReportChoiceG1G2.q4')]
+        rows: [t('postSurvey.q3a2'), t('postSurvey.q3a3'), t('postSurvey.q3a4'), t('postSurvey.q3a5'), t('postSurvey.q3a6'), t('selfReportChoiceG1G2.q1'), t('selfReportChoiceG1G2.q2'), t('selfReportChoiceG1G2.q3'), t('selfReportChoiceG1G2.q4')]
     }
+
     const q4: Questions = {
         type: 'text',
         name: 'q4',
-        title: t('postSurvey.q4')
-    }
-    const q5: Questions = {
-        type: 'text',
-        name: 'q5',
-        title: t('postSurvey.q5')
-    }
-    const q6: Questions = {
-        type: 'text',
-        name: 'q6',
-        title: t('postSurvey.q6')
-    }
-
-    const q7: Questions = {
-        type: 'text',
-        name: 'q7',
         title: t('selfReportChoiceG1G2.q5')
     }
-
-    const q8: Questions = {
-        type: 'text',
-        name: 'q8',
-        title: t('selfReportChoiceG1G2.q6')
-    }
-
-
 
     const json = {
         "completeText": "Submit",
@@ -1305,7 +1203,7 @@ const GamifiedChoiceQuestions = () => {
                     {
                         "type": "panel",
                         "elements": [
-                            q1, q2, q3, q4, q5, q6, q7, q8
+                            q1, q2, q3, q4
                         ],
                         "name": "panel1"
                     }

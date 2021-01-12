@@ -1,63 +1,33 @@
+import studyOne from '../algorithm/studyOne'
+import studyThree from '../algorithm/studyThree'
+import studyTwo from '../algorithm/studyTwo'
 import getSurveyMode from '../api/getSurveyMode'
 
-/** 
- *  This file requests the backend api to get the previous survey modes 
-    and assigns the current survey mode 
-*/
-type SurveyMode = {
-    id: number,
-    mode: 'TRADITIONAL' |
-    'GAMIFIED' |
-    'TRADITIONAL_GAMIFIED_1' |
-    'TRADITIONAL_GAMIFIED_2' |
-    'GAMIFIED_WITH_BADGES' |
-    'GAMIFIED_WITH_POINTS' |
-    'GAMIFIED_CHOICE_1' |
-    'GAMIFIED_CHOICE_2'
-}
-
-const modes = [
-    'TRADITIONAL',
-    'GAMIFIED',
-    'TRADITIONAL_GAMIFIED_1',
-    'TRADITIONAL_GAMIFIED_2',
-    'GAMIFIED_WITH_BADGES',
-    'GAMIFIED_WITH_POINTS',
-    'GAMIFIED_CHOICE_1',
-    'GAMIFIED_CHOICE_2',
-]
-
-const getIndexOfMode = (listOfModes: Array<string>, { mode }: SurveyMode) =>
-    listOfModes.findIndex((val) => val === mode)
-
-const getPreviousSurveyMode = (modes: Array<SurveyMode>): SurveyMode | boolean => {
-    if (modes && modes.length >= 1) {
-        return modes.pop() as SurveyMode
-    } else {
-        return false
-    }
-}
 /** 
    * Implements a simple round robin approach to assign the survey mode 
    * @returns survey mode 
 */
 const assignSurveyMode = async () => {
-    let newMode
     const { body: modesFromBackend } = await getSurveyMode()
-    const previousMode = await getPreviousSurveyMode(modesFromBackend)
 
-    if (previousMode) {
-        const indexOfPreviousMode = getIndexOfMode(modes, previousMode as SurveyMode)
-        if (indexOfPreviousMode === (modes.length - 1)) {
-            newMode = modes[0]
-        } else {
-            newMode = modes[indexOfPreviousMode + 1]
-        }
-    } else {
-        newMode = modes[0]
+    if (!modesFromBackend) {
+        return 'TRADITIONAL'
     }
 
-    return newMode
+    const surveyCount = modesFromBackend.length
+
+    if (surveyCount <= 80) {
+        return studyOne(modesFromBackend)
+    }
+
+    if (surveyCount > 80 && surveyCount <= 160) {
+        return studyTwo(modesFromBackend)
+    }
+
+    if (modesFromBackend.length > 160) {
+        return studyThree(modesFromBackend)
+    }
+
 }
 
 export default assignSurveyMode 

@@ -412,45 +412,22 @@ export const translationDE = {
       q3c4: 'Somewhat agree',
       q3c5: 'Strongly agree',
 
-      q3a1: 'The questionnaire was entertaining.',
       q3a2: 'Completing the questionnaire took a lot of time.',
       q3a3:
-        'The questionnaire was designed differently from conventional questionnaires.',
+        'The questionnaire was designed differently from other online questionnaires.',
       q3a4:
-        'I liked the questionnaire better than conventional questionnaires.',
+        'I liked the questionnaire better than other online questionnaires.',
       q3a5:
         'I feel that the questions asked in the questionnare were reasonable.',
       q3a6:
         'I feel that the answer options provided in the questionnare were reasonable.',
       q3a7:
-        "I would have liked if I was the given the option to participate in a gamified survey. (A gamified survey is a survey which has game elements to motivate the user's engagement in the survey. For example, scoring points, competing with other participants or unlocking badges).",
-
-      q4: 'What did you like about the survey? ',
-
-      q5: 'What did you not like about the survey?',
-
-      q6: 'What would you change about the survey?',
-
-      q7:
-        'I would have liked if I was given the choice to choose which survey version I wanted to work with.',
-      q7c1: 'Strongly disagree',
-      q7c2: 'Disagree',
-      q7c3: 'Neither agree nor disagree',
-      q7c4: 'Agree',
-      q7c5: 'Strongly agree',
-
-      q8:
-        'I would have liked if I was the given the option to participate in a gamified survey.',
-      q8c1: 'Strongly disagree',
-      q8c2: 'Disagree',
-      q8c3: 'Neither agree nor disagree',
-      q8c4: 'Agree',
-      q8c5: 'Strongly agree',
+        'I would have liked it if game elements were available during the survey (For example, scoring points for filled out questions, comparing scores with other participants or unlocking badges for filled out questions, etc).',
     },
 
     selfReportChoiceEnableDisable: {
       q1:
-        'I appreciate that I could enable or disable the game element (i.e., badges).',
+        'I liked that I could enable or disable the game element (i.e., whether badges could be unlocked or not).',
       q1c1: 'Strongly disagree',
       q1c2: 'Disagree',
       q1c3: 'Neither agree nor disagree',
@@ -458,30 +435,19 @@ export const translationDE = {
       q1c5: 'Strongly agree',
 
       q2:
-        'I would have liked if I could have decided which game elements I wanted instead of having just badges as the game element.',
+        'I would have liked it to be able to decide which game element should be active in the survey instead of having a fixed one or none.',
       q2c1: 'strongly disagree',
       q2c2: 'disagree',
       q2c3: 'neither',
       q2c4: 'agree',
       q2c5: 'strongly agree',
 
-      q3:
-        'I felt that I had control over which survey version I wanted to work with.',
-      q3c1: 'strongly disagree',
-      q3c2: 'disagree',
-      q3c3: 'neither',
-      q3c4: 'agree',
-      q3c5: 'strongly agree',
-
       q4:
-        'Overall, what did you feel about game elements (badges) in the survey?',
-
-      q5:
-        'Overall, what did you feel about the choice provided to enable/disable gamification?',
+        'What made you to enable or disable the game element provided to you?',
     },
     selfReportChoiceG1G2: {
       q1:
-        'I would have liked if I could have decided whether I wanted to use game elements (badges, points and leaderboard) or not.',
+        'I liked that I could select which game element I want to use (i.e., badges or points and leaderboard).',
       q1c1: 'strongly disagree',
       q1c2: 'disagree',
       q1c3: 'neither',
@@ -489,7 +455,7 @@ export const translationDE = {
       q1c5: 'strongly agree',
 
       q2:
-        'I appreciate that I could select which game elements I wanted to use (badges, points and leaderboard).',
+        'I would have liked it if I had other game elements other than "Badges, Points and Leaderboard" to select from.',
       q2c1: 'strongly disagree',
       q2c2: 'disagree',
       q2c3: 'neither',
@@ -497,7 +463,7 @@ export const translationDE = {
       q2c5: 'strongly agree',
 
       q3:
-        'I felt that I had control over which survey version I wanted to work with.',
+        'I would have liked it to be able to active both game elements (i.e., badges and points and leaderboard).',
       q3c1: 'strongly disagree',
       q3c2: 'disagree',
       q3c3: 'neither',
@@ -508,15 +474,12 @@ export const translationDE = {
         'I would have liked if I had other game elements other than "Badges, Points and Leaderboard" to select from.',
 
       q5:
-        'Overall, what did you feel about the game elements (badges, points and leaderboard) in the survey?',
-
-      q6:
-        'Overall, what did you feel about the choice given to you in choosing between the game elements "badges" or "points and leaderboard"?',
+        'What made you choose the particular game element (badges or points and leaderboard)?',
     },
 
     selfReportGamification: {
       q1:
-        'I would have liked if I could have decided whether I wanted to use game elements (badges) or not.',
+        'I would have liked it to be able to decide whether I wanted to use game elements at all (i.e., I would have liked the option to disable game elements completely).',
       q1c1: 'strongly disagree',
       q1c2: 'disagree',
       q1c3: 'neither',
@@ -524,27 +487,24 @@ export const translationDE = {
       q1c5: 'strongly agree',
 
       q2:
-        ' I would have liked if I could have decided which game element should be kept active instead of having a fixed one.',
+        'I would have liked it to be able to decide which game element should be active in the survey instead of having a fixed one.',
       q2c1: 'strongly disagree',
       q2c2: 'disagree',
       q2c3: 'neither',
       q2c4: 'agree',
       q2c5: 'strongly agree',
 
-      q3: 'I would have liked if I could have had choices to choose from.',
+      q3: 'I liked that a game element was available in the survey.',
       q3c1: 'strongly disagree',
       q3c2: 'disagree',
       q3c3: 'neither',
       q3c4: 'agree',
       q3c5: 'strongly agree',
-
-      q4:
-        'Overall, what did you feel about game elements (badges) in the survey?',
     },
 
     selfReportLeaderboard: {
       q1:
-        'I would have liked if I could have decided whether I wanted to use game elements (points and leaderboard) or not.',
+        'I would have liked it to be able to decide whether I wanted to use game elements at all (i.e., I would have liked the option to disable game elements completely).',
       q1c1: 'strongly disagree',
       q1c2: 'disagree',
       q1c3: 'neither',
@@ -552,22 +512,19 @@ export const translationDE = {
       q1c5: 'strongly agree',
 
       q2:
-        ' I would have liked if I could have decided which game element should be kept active instead of having a fixed one.',
+        'I would have liked it to be able to decide which game element should be active in the survey instead of having a fixed one.',
       q2c1: 'strongly disagree',
       q2c2: 'disagree',
       q2c3: 'neither',
       q2c4: 'agree',
       q2c5: 'strongly agree',
 
-      q3: 'I would have liked if I could have had choices to choose from.',
+      q3: 'I liked that a game element was available in the survey.',
       q3c1: 'strongly disagree',
       q3c2: 'disagree',
       q3c3: 'neither',
       q3c4: 'agree',
       q3c5: 'strongly agree',
-
-      q4:
-        'Overall, what did you feel about game elements (points and leaderboard) in the survey?',
     },
   },
 }
