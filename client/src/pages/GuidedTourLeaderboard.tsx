@@ -73,10 +73,7 @@ const GuidedTourLeaderboard = () => {
     const [showModal, setShowModal] = useState(false)
     const [showTour, setShowTour] = useState(false)
 
-    // Testing-setup for thesis
-    // const surveyMode = useSelector((state: RootState) => state.entryPointReducer.mode) //uncomment this for prod
-    const surveyMode = useSelector((state: RootState) => state.optionsProviderReducer)
-    // Testing-setup for thesis
+    const surveyMode = useSelector((state: RootState) => state.entryPointReducer.mode) //uncomment this for prod
 
     const { zeus, ron, han, jonas } = barGraphElements
 

@@ -15,8 +15,7 @@ const ChooseGamifiedVersion = () => {
     const { t } = useTranslation()
 
 
-    // const surveyMode = useSelector((state: RootState) => state.entryPointReducer.mode) //uncomment this for prod
-    const surveyMode = useSelector((state: RootState) => state.optionsProviderReducer)
+    const surveyMode = useSelector((state: RootState) => state.entryPointReducer.mode) //uncomment this for prod
 
     const getVersionBasedOnSurveyMode = (surveyMode: string) => {
         switch (surveyMode) {

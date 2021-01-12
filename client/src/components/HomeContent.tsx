@@ -35,10 +35,6 @@ const HomeContent = () => {
   const [isChecked, setIsChecked] = useState<boolean>(true)
   const dispatch = useDispatch()
 
-  // Testing-setup for thesis
-  const modeSelected = useSelector((state: RootState) => state.optionsProviderReducer)
-  // Testing-setup for thesis
-
   const handleDataProtectionTagClick = () => {
     setShowModal(showModal ? false : true)
   }
@@ -56,12 +52,8 @@ const HomeContent = () => {
   }
 
   const addSurveyModeToStore = async () => {
-    // Testing-setup for thesis
-    // const surveyMode = await assignSurveyMode() //uncomment this for production
+    const surveyMode = await assignSurveyMode()
 
-    const surveyMode = modeSelected
-
-    // Testing-setup for thesis
     dispatch({ type: 'ADD_MODE', payload: surveyMode })
   }
 

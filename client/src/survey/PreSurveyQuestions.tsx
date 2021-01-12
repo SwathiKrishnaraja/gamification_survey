@@ -36,13 +36,7 @@ const getNavigationPath = (surveyMode: string): string => {
 }
 
 const SurveyQuestions: React.FC = () => {
-    // Testing-setup for thesis
-    // const surveyMode: string = useSelector((state: RootState) => state.entryPointReducer.mode) //uncomment this for prod
-    const surveyMode: string = useSelector((state: RootState) => state.optionsProviderReducer)
-
-    // Testing-setup for thesis
-
-
+    const surveyMode: string = useSelector((state: RootState) => state.entryPointReducer.mode) //uncomment this for prod
 
     const history = useHistory()
     const path = getNavigationPath(surveyMode)
