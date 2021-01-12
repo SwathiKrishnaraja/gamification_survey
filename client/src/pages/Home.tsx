@@ -10,20 +10,10 @@ import { useHistory } from 'react-router'
 
 const Home = () => {
 
-  // Testing-setup for thesis
-  const [modeSelected, setModeSelected] = useState(false)
-  const handleModeSelected = () => {
-    setModeSelected(modeSelected ? false : true)
-  }
-  // Testing-setup for thesis
-
-
   return (
     <div className="container">
       <Header children={<Fragment />} />
-      {/* Testing-setup for thesis */}
-      {modeSelected ? <HomeContent /> : <OptionsProvider handleModeSelected={handleModeSelected} />}
-      {/* Testing-setup for thesis */}
+      <HomeContent />
       <Footer />
     </div>
   )
