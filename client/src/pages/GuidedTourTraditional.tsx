@@ -19,6 +19,18 @@ const StyledText = styled.h4`
     padding: 2px;
 
 `
+
+const getModalText = (mode: string): string => {
+    switch (mode) {
+        case 'TRADITIONAL_GAMIFIED_1':
+            return `You have now completed the guided tour of the survey. Now you will be redirected to the guided tour of the next version.`
+        case 'TRADITIONAL_GAMIFIED_2':
+            return `You have now completed the guided tour of the survey. Now you will be redirected to the actual survey. Please do not click Back or Refresh in the browser while taking the survey to not lose progress. Click ‘Continue’ to begin the survey.`
+        default:
+            return `You have now completed the guided tour of the survey. Now you will be redirected to the actual survey. Please do not click Back or Refresh in the browser while taking the survey to not lose progress. Click ‘Continue’ to begin the survey.`
+    }
+
+}
 type TourProps = {
     surveyMode: string
 }
@@ -29,9 +41,7 @@ export const TourContinueElement: React.FC<TourProps> = ({ surveyMode }) => {
             <h2>Congratulations !</h2>
             <hr style={{ width: '98%' }} />
             <StyledText>
-                {surveyMode === 'TRADITIONAL_GAMIFIED_1' || surveyMode === 'TRADITIONAL_GAMIFIED_2'
-                    ? `You have now completed the guided tour of the survey. Now you will be redirected to the guided tour of the next version.`
-                    : `You have now completed the guided tour of the survey. Now you will be redirected to the actual survey. Please do not click Back or Refresh in the browser while taking the survey to not lose progress. Click ‘Continue’ to begin the survey.`}
+                {getModalText(surveyMode)}
             </StyledText>
         </Fragment>
     )
