@@ -25,9 +25,11 @@ const getModalText = (mode: string): string => {
         case 'TRADITIONAL_GAMIFIED_1':
             return `You have now completed the guided tour of the survey. Now you will be redirected to the guided tour of the next version.`
         case 'TRADITIONAL_GAMIFIED_2':
+            return `You have now completed the guided tour of the survey. Now you will be redirected to next page to choose your survey version. Please do not click Back or Refresh in the browser while taking the survey to not lose progress. Click ‘Continue’ to proceed.`
+        case 'TRADITIONAL':
             return `You have now completed the guided tour of the survey. Now you will be redirected to the actual survey. Please do not click Back or Refresh in the browser while taking the survey to not lose progress. Click ‘Continue’ to begin the survey.`
         default:
-            return `You have now completed the guided tour of the survey. Now you will be redirected to the actual survey. Please do not click Back or Refresh in the browser while taking the survey to not lose progress. Click ‘Continue’ to begin the survey.`
+            return `You have now completed the guided tour of the survey. Please do not click Back or Refresh in the browser while taking the survey to not lose progress. Click ‘Continue’ to proceed.`
     }
 
 }
