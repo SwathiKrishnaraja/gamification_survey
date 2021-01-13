@@ -21,6 +21,24 @@ const StyledText = styled.h4`
     padding: 2px;
 
 `
+const getModalText = (mode: string): string => {
+    switch (mode) {
+        case 'TRADITIONAL_GAMIFIED_1':
+            return `You have now completed the guided tour of the survey. Now you will be redirected to the actual survey. Please do not click Back or Refresh in the browser while taking the survey to not lose progress. Click ‘Continue’ to begin the survey.`
+        case 'TRADITIONAL_GAMIFIED_2':
+            return `You have now completed the guided tour of the survey. Now you will be redirected to the guided tour of the next version.`
+        case 'GAMIFIED_CHOICE_1':
+            return `You have now completed the guided tour of the survey. Now you will be redirected to the guided tour of the next version.`
+        case 'GAMIFIED_CHOICE_2':
+            return `You have now completed the guided tour of the survey. Now you will be redirected to the actual survey. Please do not click Back or Refresh in the browser while taking the survey to not lose progress. Click ‘Continue’ to begin the survey.`
+        case 'GAMIFIED_WITH_BADGES':
+            return `You have now completed the guided tour of the survey. Now you will be redirected to the actual survey. Please do not click Back or Refresh in the browser while taking the survey to not lose progress. Click ‘Continue’ to begin the survey.`
+        default:
+            return `You have now completed the guided tour of the survey. Please click Continue to proceed further.`
+    }
+
+}
+
 type TourProps = {
     surveyMode: string
 }
@@ -31,9 +49,7 @@ const TourContinueElement: React.FC<TourProps> = ({ surveyMode }) => {
             <hr style={{ width: '98%' }} />
             <br />
             <StyledText>
-                {surveyMode === 'GAMIFIED_CHOICE_1' || surveyMode === 'GAMIFIED_CHOICE_2'
-                    ? `You have now completed the guided tour of the survey. Now you will be redirected to the guided tour of the next version.`
-                    : `You have now completed the guided tour of the survey. Now you will be redirected to the actual survey. Please do not click Back or Refresh in the browser while taking the survey to not lose progress. Click ‘Continue’ to begin the survey.`}
+                {getModalText(surveyMode)}
             </StyledText>
 
         </div>

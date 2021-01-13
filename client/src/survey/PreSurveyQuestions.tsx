@@ -29,7 +29,7 @@ const getNavigationPath = (surveyMode: string): string => {
         case 'GAMIFIED_CHOICE_1':
             return '/GuidedTourGamified'
         case 'GAMIFIED_CHOICE_2':
-            return '/GuidedTourGamified'
+            return '/GuidedTourLeaderboard'
         default:
             return '/GuidedTourTraditional'
     }
