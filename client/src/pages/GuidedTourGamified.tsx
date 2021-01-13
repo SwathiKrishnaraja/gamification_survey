@@ -24,17 +24,17 @@ const StyledText = styled.h4`
 const getModalText = (mode: string): string => {
     switch (mode) {
         case 'TRADITIONAL_GAMIFIED_1':
-            return `You have now completed the guided tour of the survey. Now you will be redirected to the actual survey. Please do not click Back or Refresh in the browser while taking the survey to not lose progress. Click ‘Continue’ to begin the survey.`
+            return `You have now completed the guided tour of the survey. Now you will be redirected to next page to choose your survey version. Please do not click Back or Refresh in the browser while taking the survey to not lose progress. Click ‘Continue’ to proceed.`
         case 'TRADITIONAL_GAMIFIED_2':
             return `You have now completed the guided tour of the survey. Now you will be redirected to the guided tour of the next version.`
         case 'GAMIFIED_CHOICE_1':
             return `You have now completed the guided tour of the survey. Now you will be redirected to the guided tour of the next version.`
         case 'GAMIFIED_CHOICE_2':
-            return `You have now completed the guided tour of the survey. Now you will be redirected to the actual survey. Please do not click Back or Refresh in the browser while taking the survey to not lose progress. Click ‘Continue’ to begin the survey.`
+            return `You have now completed the guided tour of the survey. Now you will be redirected to next page to choose your survey version. Please do not click Back or Refresh in the browser while taking the survey to not lose progress. Click ‘Continue’ to proceed.`
         case 'GAMIFIED_WITH_BADGES':
             return `You have now completed the guided tour of the survey. Now you will be redirected to the actual survey. Please do not click Back or Refresh in the browser while taking the survey to not lose progress. Click ‘Continue’ to begin the survey.`
         default:
-            return `You have now completed the guided tour of the survey. Please click Continue to proceed further.`
+            return `You have now completed the guided tour of the survey. Please do not click Back or Refresh in the browser while taking the survey to not lose progress. Click ‘Continue’ to proceed.`
     }
 
 }
