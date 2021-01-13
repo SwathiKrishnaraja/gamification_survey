@@ -161,7 +161,7 @@ const GuidedTourLeaderboard = () => {
                             </div>
                             {
                                 showModal
-                                    ? <GuidedTourModal showModal={showModal} handleClick={handleTourProceed} children={<TourContinueElement />} modalWindowButton='Continue' styleClass='guided-modal-main' buttonClass='continue-button' />
+                                    ? <GuidedTourModal showModal={showModal} handleClick={handleTourProceed} children={<TourContinueElement surveyMode={surveyMode} />} modalWindowButton='Continue' styleClass='guided-modal-main' buttonClass='continue-button' />
                                     : <Fragment />}
                         </div>
                         : <Fragment />
