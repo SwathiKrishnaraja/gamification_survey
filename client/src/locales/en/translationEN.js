@@ -377,32 +377,27 @@ export const translationEN = {
       q2c6: 'Agree',
       q2c7: 'Strongly agree',
 
-      q2a1: 'I think I am pretty good at taking the survey.',
-      q2a2: 'I believe I had some choice about doing the survey.',
-      q2a3:
-        'While I was doing the survey, I was thinking about how much I enjoyed it.',
-      q2a4: 'I think I did pretty well at the survey, compared to others.',
-      q2a5: 'Survey was fun to do.',
-      q2a6: 'After working at this survey for awhile, I felt pretty competent.',
-      q2a7: 'I enjoyed doing this survey very much.',
-      q2a8: 'I really did not have a choice about doing this survey.',
-      q2a9: 'I did this survey because I wanted to.',
-      q2a10: 'I am satisfied with my performance at this task.',
-      q2a11: 'I felt like I was enjoying the survey while I was doing it.',
-      q2a12: 'I thought this was a very boring survey.',
-      q2a13: 'I was pretty skilled at doing this survey.',
-      q2a14: 'I felt like I had no choice but to do this survey.',
-      q2a15: 'I thought this was a very interesting survey.',
-      q2a16: 'This was a survey that I could not do very well.',
-      q2a17: 'I would describe this survey as very enjoyable.',
-      q2a18: 'I felt like I had to do this survey.',
-      q2a19: 'I felt very tense while doing this survey.',
-      q2a20: 'I did this survey because I had to.',
-      q2a21: 'I did not feel nervous at all while doing this.',
-      q2a22: 'While doing this survey I felt like I had a choice.',
-      q2a23: 'I would describe this survey as very fun.',
-      q2a24: 'I felt like it was not my own choice to do this survey.',
-      q2a25: 'I felt pressured while doing the survey.',
+      q2a1: 'I felt like I had to do this survey.',
+      q2a2: 'I felt like it was not my own choice to do this survey.',
+      q2a3: 'I did this survey because I wanted to.',
+      q2a4: 'I believe I had some choice about doing this survey.',
+      q2a5: 'I did not really have a choice about doing this survey.',
+      q2a6: 'I did this survey because I had no choice.',
+      q2a7: 'I did this survey because I had to.',
+      q2a8: 'I thought this survey was quite enjoyable.',
+      q2a9: 'I would describe this survey as very interesting.',
+      q2a10: 'This survey was fun to do.',
+      q2a11: 'While I was doing this survey, I was thinking about how much I enjoyed it.',
+      q2a12: 'I thought this was a boring survey.',
+      q2a13: 'This survey did not hold my attention at all.',
+      q2a14: 'I enjoyed doing this survey very much.',
+      q2a15: 'After working at this survey for awhile, I felt pretty competent.',
+      q2a16: 'I think I did pretty well at this survey, compared to others participants.',
+      q2a17: 'This was a survey that I could not do very well.',
+      q2a18: 'I was pretty skilled at doing this survey.',
+      q2a19: 'I think I am pretty good at taking this survey.',
+      q2a20: 'I am satisfied with my performance at this task.',
+
 
       q3:
         'Below are some statements about the questionnaire itself. Please indicate for every statement, how you feel using the below scale.',
@@ -412,45 +407,22 @@ export const translationEN = {
       q3c4: 'Somewhat agree',
       q3c5: 'Strongly agree',
 
-      q3a1: 'The questionnaire was entertaining.',
       q3a2: 'Completing the questionnaire took a lot of time.',
       q3a3:
-        'The questionnaire was designed differently from conventional questionnaires.',
+        'The questionnaire was designed differently from other online questionnaires.',
       q3a4:
-        'I liked the questionnaire better than conventional questionnaires.',
+        'I liked the questionnaire better than other online questionnaires.',
       q3a5:
         'I feel that the questions asked in the questionnare were reasonable.',
       q3a6:
         'I feel that the answer options provided in the questionnare were reasonable.',
       q3a7:
-        "I would have liked if I was the given the option to participate in a gamified survey. (A gamified survey is a survey which has game elements to motivate the user's engagement in the survey. For example, scoring points, competing with other participants or unlocking badges).",
-
-      q4: 'What did you like about the survey? ',
-
-      q5: 'What did you not like about the survey?',
-
-      q6: 'What would you change about the survey?',
-
-      q7:
-        'I would have liked if I was given the choice to choose which survey version I wanted to work with.',
-      q7c1: 'Strongly disagree',
-      q7c2: 'Disagree',
-      q7c3: 'Neither agree nor disagree',
-      q7c4: 'Agree',
-      q7c5: 'Strongly agree',
-
-      q8:
-        'I would have liked if I was the given the option to participate in a gamified survey.',
-      q8c1: 'Strongly disagree',
-      q8c2: 'Disagree',
-      q8c3: 'Neither agree nor disagree',
-      q8c4: 'Agree',
-      q8c5: 'Strongly agree',
+        'I would have liked it if game elements were available during the survey (For example, scoring points for filled out questions, comparing scores with other participants or unlocking badges for filled out questions, etc).',
     },
 
     selfReportChoiceEnableDisable: {
       q1:
-        'I liked that I was able to decide whether I want to use game elements or not.',
+        'I liked that I could enable or disable the game element (i.e., whether badges could be unlocked or not).',
       q1c1: 'Strongly disagree',
       q1c2: 'Disagree',
       q1c3: 'Neither agree nor disagree',
@@ -458,20 +430,19 @@ export const translationEN = {
       q1c5: 'Strongly agree',
 
       q2:
-        'I felt that I had control over which survey version I wanted to work with.',
+        'I would have liked it to be able to decide which game element should be active in the survey instead of having a fixed one or none.',
       q2c1: 'strongly disagree',
       q2c2: 'disagree',
       q2c3: 'neither',
       q2c4: 'agree',
       q2c5: 'strongly agree',
 
-      q3: 'Overall, what did you feel about the choice given to you?',
-
-      q4: 'Overall, what did you feel about gamification in survey?',
+      q4:
+        'What made you to enable or disable the game element provided to you?',
     },
     selfReportChoiceG1G2: {
       q1:
-        'I liked that I was able to decide which game elements I want to use.',
+        'I liked that I could select which game element I want to use (i.e., badges or points and leaderboard).',
       q1c1: 'strongly disagree',
       q1c2: 'disagree',
       q1c3: 'neither',
@@ -479,14 +450,15 @@ export const translationEN = {
       q1c5: 'strongly agree',
 
       q2:
-        'I felt that I had control over which survey version I wanted to work with.',
+        'I would have liked it if I had other game elements other than "Badges, Points and Leaderboard" to select from.',
       q2c1: 'strongly disagree',
       q2c2: 'disagree',
       q2c3: 'neither',
       q2c4: 'agree',
       q2c5: 'strongly agree',
 
-      q3: 'I would have liked if I could have had more choices to choose from.',
+      q3:
+        'I would have liked it to be able to active both game elements (i.e., badges and points and leaderboard).',
       q3c1: 'strongly disagree',
       q3c2: 'disagree',
       q3c3: 'neither',
@@ -494,45 +466,60 @@ export const translationEN = {
       q3c5: 'strongly agree',
 
       q4:
-        'I would have liked if I could have decided whether I wanted to use gamification or not.',
-      q4c1: 'strongly disagree',
-      q4c2: 'disagree',
-      q4c3: 'neither',
-      q4c4: 'agree',
-      q4c5: 'strongly agree',
-
-      q5: 'Overall, what did you feel about the choice given to you?',
-
-      q6: 'Overall, what did you feel about gamification in survey?',
-
-      q7:
         'I would have liked if I had other game elements other than "Badges, Points and Leaderboard" to select from.',
+
+      q5:
+        'What made you choose the particular game element (badges or points and leaderboard)?',
     },
 
     selfReportGamification: {
       q1:
-        'I would have liked if I could have decided whether I wanted to use gamification or not.',
+        'I would have liked it to be able to decide whether I wanted to use game elements at all (i.e., I would have liked the option to disable game elements completely).',
       q1c1: 'strongly disagree',
       q1c2: 'disagree',
       q1c3: 'neither',
       q1c4: 'agree',
       q1c5: 'strongly agree',
 
-      q2: ' I would have liked if I decided which game elements I want.',
+      q2:
+        'I would have liked it to be able to decide which game element should be active in the survey instead of having a fixed one.',
       q2c1: 'strongly disagree',
       q2c2: 'disagree',
       q2c3: 'neither',
       q2c4: 'agree',
       q2c5: 'strongly agree',
 
-      q3: 'I would have liked if I could have had choices to choose from.',
+      q3: 'I liked that a game element was available in the survey.',
       q3c1: 'strongly disagree',
       q3c2: 'disagree',
       q3c3: 'neither',
       q3c4: 'agree',
       q3c5: 'strongly agree',
+    },
 
-      q4: 'Overall, what did you feel about gamification in survey?',
+    selfReportLeaderboard: {
+      q1:
+        'I would have liked it to be able to decide whether I wanted to use game elements at all (i.e., I would have liked the option to disable game elements completely).',
+      q1c1: 'strongly disagree',
+      q1c2: 'disagree',
+      q1c3: 'neither',
+      q1c4: 'agree',
+      q1c5: 'strongly agree',
+
+      q2:
+        'I would have liked it to be able to decide which game element should be active in the survey instead of having a fixed one.',
+      q2c1: 'strongly disagree',
+      q2c2: 'disagree',
+      q2c3: 'neither',
+      q2c4: 'agree',
+      q2c5: 'strongly agree',
+
+      q3: 'I liked that a game element was available in the survey.',
+      q3c1: 'strongly disagree',
+      q3c2: 'disagree',
+      q3c3: 'neither',
+      q3c4: 'agree',
+      q3c5: 'strongly agree',
     },
   },
 }
