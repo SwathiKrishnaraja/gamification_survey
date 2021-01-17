@@ -13,6 +13,7 @@ import postSurveyMode from '../api/postSurveyMode'
 import getAverageTime from '../helpers/getAverageTime'
 import { RootState } from '../reducer/reducer';
 import pointsProvider from '../PointRules/PointsRules';
+import { isInactivePerson, isActivePerson } from '../helpers/fullPointsLogic'
 
 type AnswerStore = {
     name: string,
@@ -101,11 +102,22 @@ const SurveyQuestions = ({ progress, handleProgress, handleMascot, showMascot }:
                     case 20:
                         providePoints.points.sixtySixPoints()
                         break
-                    case 30:
-                        providePoints.points.fullPoints()
-                        const currentStore = store.getState()
-                        if (Object.keys(currentStore).length === 9) {
-                            providePoints.points.medalCollector()
+                    case 22:
+                        if (isInactivePerson(answerStore)) {
+                            providePoints.points.fullPoints()
+                            const currentStore = store.getState()
+                            if (Object.keys(currentStore).length === 9) {
+                                providePoints.points.medalCollector()
+                            }
+                        }
+                        break
+                    case 25:
+                        if (isActivePerson(answerStore)) {
+                            providePoints.points.fullPoints()
+                            const currentStore = store.getState()
+                            if (Object.keys(currentStore).length === 9) {
+                                providePoints.points.medalCollector()
+                            }
                         }
                         break
                     default:
