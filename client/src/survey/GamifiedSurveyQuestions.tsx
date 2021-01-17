@@ -53,6 +53,7 @@ const SurveyQuestions = ({ handleProgress, handleMascot, showMascot }: Props) =>
                         isAnswered: question.isAnswered
                     }
                 ])
+                console.log(answerStore)
                 setCount(count + 1)
 
                 switch (count) {
