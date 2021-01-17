@@ -191,26 +191,7 @@ const GenericSurveyQuestions = () => {
             value: t(`postSurvey.q2a${shuffledQ2[19]}`)!,
             text: t(`postSurvey.q2a${shuffledQ2[19]}`)
         },
-        {
-            value: t(`postSurvey.q2a${shuffledQ2[20]}`)!,
-            text: t(`postSurvey.q2a${shuffledQ2[20]}`)
-        },
-        {
-            value: t(`postSurvey.q2a${shuffledQ2[21]}`)!,
-            text: t(`postSurvey.q2a${shuffledQ2[21]}`)
-        },
-        {
-            value: t(`postSurvey.q2a${shuffledQ2[22]}`)!,
-            text: t(`postSurvey.q2a${shuffledQ2[22]}`)
-        },
-        {
-            value: t(`postSurvey.q2a${shuffledQ2[23]}`)!,
-            text: t(`postSurvey.q2a${shuffledQ2[23]}`)
-        },
-        {
-            value: t(`postSurvey.q2a${shuffledQ2[24]}`)!,
-            text: t(`postSurvey.q2a${shuffledQ2[24]}`)
-        },
+
         ]
     }
 
@@ -431,29 +412,9 @@ const BadgesSurveyQuestions = () => {
             value: t(`postSurvey.q2a${shuffledQ2[19]}`)!,
             text: t(`postSurvey.q2a${shuffledQ2[19]}`)
         },
-        {
-            value: t(`postSurvey.q2a${shuffledQ2[20]}`)!,
-            text: t(`postSurvey.q2a${shuffledQ2[20]}`)
-        },
-        {
-            value: t(`postSurvey.q2a${shuffledQ2[21]}`)!,
-            text: t(`postSurvey.q2a${shuffledQ2[21]}`)
-        },
-        {
-            value: t(`postSurvey.q2a${shuffledQ2[22]}`)!,
-            text: t(`postSurvey.q2a${shuffledQ2[22]}`)
-        },
-        {
-            value: t(`postSurvey.q2a${shuffledQ2[23]}`)!,
-            text: t(`postSurvey.q2a${shuffledQ2[23]}`)
-        },
-        {
-            value: t(`postSurvey.q2a${shuffledQ2[24]}`)!,
-            text: t(`postSurvey.q2a${shuffledQ2[24]}`)
-        },
+
         ]
     }
-
     const q3: Questions = {
         type: 'matrix',
         name: 'q3',
@@ -671,26 +632,7 @@ const LeaderboardSurveyQuestions = () => {
             value: t(`postSurvey.q2a${shuffledQ2[19]}`)!,
             text: t(`postSurvey.q2a${shuffledQ2[19]}`)
         },
-        {
-            value: t(`postSurvey.q2a${shuffledQ2[20]}`)!,
-            text: t(`postSurvey.q2a${shuffledQ2[20]}`)
-        },
-        {
-            value: t(`postSurvey.q2a${shuffledQ2[21]}`)!,
-            text: t(`postSurvey.q2a${shuffledQ2[21]}`)
-        },
-        {
-            value: t(`postSurvey.q2a${shuffledQ2[22]}`)!,
-            text: t(`postSurvey.q2a${shuffledQ2[22]}`)
-        },
-        {
-            value: t(`postSurvey.q2a${shuffledQ2[23]}`)!,
-            text: t(`postSurvey.q2a${shuffledQ2[23]}`)
-        },
-        {
-            value: t(`postSurvey.q2a${shuffledQ2[24]}`)!,
-            text: t(`postSurvey.q2a${shuffledQ2[24]}`)
-        },
+
         ]
     }
 
@@ -911,26 +853,7 @@ const TraditionalGamifiedQuestions = () => {
             value: t(`postSurvey.q2a${shuffledQ2[19]}`)!,
             text: t(`postSurvey.q2a${shuffledQ2[19]}`)
         },
-        {
-            value: t(`postSurvey.q2a${shuffledQ2[20]}`)!,
-            text: t(`postSurvey.q2a${shuffledQ2[20]}`)
-        },
-        {
-            value: t(`postSurvey.q2a${shuffledQ2[21]}`)!,
-            text: t(`postSurvey.q2a${shuffledQ2[21]}`)
-        },
-        {
-            value: t(`postSurvey.q2a${shuffledQ2[22]}`)!,
-            text: t(`postSurvey.q2a${shuffledQ2[22]}`)
-        },
-        {
-            value: t(`postSurvey.q2a${shuffledQ2[23]}`)!,
-            text: t(`postSurvey.q2a${shuffledQ2[23]}`)
-        },
-        {
-            value: t(`postSurvey.q2a${shuffledQ2[24]}`)!,
-            text: t(`postSurvey.q2a${shuffledQ2[24]}`)
-        },
+
         ]
     }
 
@@ -1047,6 +970,7 @@ const GamifiedChoiceQuestions = () => {
         type: 'matrix',
         name: 'q2',
         title: t('postSurvey.q2'),
+        isRequired: true,
         isAllRowRequired: true,
         columns: [{
             value: 1,
@@ -1156,26 +1080,7 @@ const GamifiedChoiceQuestions = () => {
             value: t(`postSurvey.q2a${shuffledQ2[19]}`)!,
             text: t(`postSurvey.q2a${shuffledQ2[19]}`)
         },
-        {
-            value: t(`postSurvey.q2a${shuffledQ2[20]}`)!,
-            text: t(`postSurvey.q2a${shuffledQ2[20]}`)
-        },
-        {
-            value: t(`postSurvey.q2a${shuffledQ2[21]}`)!,
-            text: t(`postSurvey.q2a${shuffledQ2[21]}`)
-        },
-        {
-            value: t(`postSurvey.q2a${shuffledQ2[22]}`)!,
-            text: t(`postSurvey.q2a${shuffledQ2[22]}`)
-        },
-        {
-            value: t(`postSurvey.q2a${shuffledQ2[23]}`)!,
-            text: t(`postSurvey.q2a${shuffledQ2[23]}`)
-        },
-        {
-            value: t(`postSurvey.q2a${shuffledQ2[24]}`)!,
-            text: t(`postSurvey.q2a${shuffledQ2[24]}`)
-        },
+
         ]
     }
 
