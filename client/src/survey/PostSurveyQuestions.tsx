@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next'
 import shuffle from '../helpers/shuffle'
 
 const shuffledQ1 = shuffle(10)
-const shuffledQ2 = shuffle(25)
+const shuffledQ2 = shuffle(20)
 
 const GenericSurveyQuestions = () => {
     const { t } = useTranslation()
