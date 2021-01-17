@@ -4,7 +4,7 @@
  * @returns avergae time
  */
 
-const numberOfSurveyPages = 8
+const numberOfSurveyPages = 9
 const getAverageTime = (timeSpent: number) => timeSpent / numberOfSurveyPages
 
 export default getAverageTime
