@@ -10,6 +10,10 @@ import submitSurveyData from '../api/submitSurveyData'
 import postSurveyMode from '../api/postSurveyMode'
 import getAverageTime from '../helpers/getAverageTime'
 import { RootState } from '../reducer/reducer'
+import {
+    isActivePerson,
+    isInactivePerson
+} from '../helpers/fullPointsLogic'
 import { Badge } from '../types/types'
 
 type AnswerStore = {
@@ -63,15 +67,28 @@ const SurveyQuestions = ({ handleProgress, handleMascot, showMascot }: Props) =>
                     case 20:
                         provideBadge.badge.sixtySixBadge()
                         break
-                    case 30:
-                        provideBadge.badge.fullPoints()
-                        const currentStore = store.getState()
-                        if (Object.keys(currentStore).length === 9) {
-                            provideBadge.badge.medalCollector()
+                    case 22:
+                        if (isInactivePerson(answerStore)) {
+                            provideBadge.badge.fullPoints()
+                            const currentStore = store.getState()
+                            if (Object.keys(currentStore).length === 9) {
+                                provideBadge.badge.medalCollector()
+                            }
+                        }
+                        break
+                    case 25:
+                        if (isActivePerson(answerStore)) {
+                            provideBadge.badge.fullPoints()
+                            const currentStore = store.getState()
+                            if (Object.keys(currentStore).length === 9) {
+                                provideBadge.badge.medalCollector()
+                            }
                         }
                         break
                     default:
                 }
+
+
             }
         }
 
