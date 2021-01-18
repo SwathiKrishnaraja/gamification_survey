@@ -387,17 +387,19 @@ export const translationEN = {
       q2a8: 'I thought this survey was quite enjoyable.',
       q2a9: 'I would describe this survey as very interesting.',
       q2a10: 'This survey was fun to do.',
-      q2a11: 'While I was doing this survey, I was thinking about how much I enjoyed it.',
+      q2a11:
+        'While I was doing this survey, I was thinking about how much I enjoyed it.',
       q2a12: 'I thought this was a boring survey.',
       q2a13: 'This survey did not hold my attention at all.',
       q2a14: 'I enjoyed doing this survey very much.',
-      q2a15: 'After working at this survey for awhile, I felt pretty competent.',
-      q2a16: 'I think I did pretty well at this survey, compared to others participants.',
+      q2a15:
+        'After working at this survey for awhile, I felt pretty competent.',
+      q2a16:
+        'I think I did pretty well at this survey, compared to others participants.',
       q2a17: 'This was a survey that I could not do very well.',
       q2a18: 'I was pretty skilled at doing this survey.',
       q2a19: 'I think I am pretty good at taking this survey.',
       q2a20: 'I am satisfied with my performance at this task.',
-
 
       q3:
         'Below are some statements about the questionnaire itself. Please indicate for every statement, how you feel using the below scale.',
@@ -438,7 +440,7 @@ export const translationEN = {
       q2c5: 'strongly agree',
 
       q4:
-        'What made you to enable or disable the game element provided to you?',
+        'What made you to choose between the first and second version of the survey?',
     },
     selfReportChoiceG1G2: {
       q1:
