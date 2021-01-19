@@ -67,6 +67,7 @@ const ThankYouPage = () => {
                 .</Thanks>
                 <Thanks>Once again, we are extremely grateful to you for contributing your valuable time, your
                 honest information, and your thoughtful suggestions.</Thanks>
+                <Thanks><b>Note:</b> If you participated in this via the Surveyswap platform please click this  <a href="https://surveyswap.io/sr/pWWC8LIvLZoy0pma"> link</a> to redeem your credit points.</Thanks>
                 <Greeting>Many thanks,</Greeting>
                 <Persona>Swathi Krishnaraja </Persona>
                 <Persona>Saarland Informatics Campus</Persona>
