@@ -16,15 +16,15 @@ const assignSurveyMode = async () => {
 
     const surveyCount = modesFromBackend.length
 
-    if (surveyCount <= 80) {
+    if (surveyCount <= 100) {
         return studyOne(modesFromBackend)
     }
 
-    if (surveyCount > 80 && surveyCount <= 160) {
+    if (surveyCount > 100 && surveyCount <= 200) {
         return studyTwo(modesFromBackend)
     }
 
-    if (modesFromBackend.length > 160) {
+    if (modesFromBackend.length > 200) {
         return studyThree(modesFromBackend)
     }
 
