@@ -1,43 +1,8 @@
+import fs from 'fs'
 import * as study1 from './study1.json'
+import getIPanasValue from './ipanas'
+import { ParsedDataType, IpanasDataType, Data } from './types'
 
-const UPSET = 'Upset'
-const DETERMINED = 'Determined'
-const ASHAMED = 'Ashamed'
-const NERVOUS = 'Nervous'
-const ATTENTIVE = 'Attentive'
-const INSPIRED = 'Inspired'
-const ACTIVE = 'Active'
-const HOSTILE = 'Hostile'
-const ALERT = 'Alert'
-const AFRAID = 'Afraid'
-
-const positiveAttributes = [ACTIVE, INSPIRED, ALERT, DETERMINED, ATTENTIVE]
-const negativeAttributes = [UPSET, HOSTILE, ASHAMED, NERVOUS, AFRAID]
-
-type Data = {
-    title: string,
-    values: Array<any>,
-    types: Array<number>,
-    type_names: Array<string>,
-    started_at: string,
-    finished_at: string,
-    checksum: string
-}
-
-type ParsedDataType = {
-    presurvey: {
-        q1: {
-            [key: string]: string,
-        },
-        q2: object,
-    },
-    postsurvey: {
-        q1: {
-            [key: string]: string
-        },
-        q2: object,
-    }
-}
 const getParsedData = (data: Data): Array<ParsedDataType> => {
     const parsedData: Array<ParsedDataType> = data.values.reduce((parsed, value, index) => {
         parsed[index] = {
@@ -49,54 +14,23 @@ const getParsedData = (data: Data): Array<ParsedDataType> => {
     return parsedData
 }
 
+const writeToFile = (data: Array<IpanasDataType>) => {
+    const stringifiedData = JSON.stringify(data)
+    fs.writeFile('./ipanasData.json', stringifiedData, err => {
+        if (err) {
+            console.log('Error writing file', err)
+        } else {
+            console.log('Success')
+        }
+    })
+}
 
-
-const iPanasScript = (data: Data) => {
+const analyseData = (data: Data) => {
     const parsedData: Array<ParsedDataType> = getParsedData(data)
     const dataWithIPanas = getIPanasValue(parsedData)
+    writeToFile(dataWithIPanas)
     console.log(dataWithIPanas)
 }
 
-const getIPanasValue = (data: Array<ParsedDataType>) => {
-    return data.reduce((dataWithAffects: Array<any>, eachDatum: ParsedDataType, index) => {
-        let positiveAffectForPresurvey = 0
-        let negativeAffectForPresurvey = 0
-        let positiveAffectForPostsurvey = 0
-        let negativeAffectForPostsurvey = 0
+analyseData(study1)
 
-        if (!eachDatum.presurvey.q1 || !eachDatum.postsurvey.q1 || Object.keys(eachDatum.presurvey.q1).length === 0 || Object.keys(eachDatum.postsurvey.q1).length === 0) {
-            return dataWithAffects
-        }
-        Object.keys(eachDatum.presurvey.q1).forEach(key => {
-            if (positiveAttributes.includes(key)) {
-                positiveAffectForPresurvey += Number(eachDatum.presurvey.q1[key])
-            } else {
-                negativeAffectForPresurvey += Number(eachDatum.presurvey.q1[key])
-            }
-        })
-
-        Object.keys(eachDatum.postsurvey.q1).forEach(key => {
-            if (positiveAttributes.includes(key)) {
-                positiveAffectForPostsurvey += Number(eachDatum.postsurvey.q1[key])
-            } else {
-                negativeAffectForPostsurvey += Number(eachDatum.postsurvey.q1[key])
-            }
-        })
-
-        dataWithAffects[index] = {
-            [index]: {
-                presurvey: {
-                    positive_affect: positiveAffectForPresurvey,
-                    negative_affect: negativeAffectForPresurvey
-                },
-                postsurvey: {
-                    positive_affect: positiveAffectForPostsurvey,
-                    negative_affect: negativeAffectForPostsurvey
-                }
-            }
-        }
-        return dataWithAffects
-    }, [])
-}
-
-iPanasScript(study1)
