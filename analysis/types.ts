@@ -11,7 +11,9 @@ export type ParsedDataType = {
         q1: {
             [key: string]: string
         },
-        q2: object,
+        q2: {
+            [key: string]: string
+        },
     }
 }
 export type IpanasDataType = {
@@ -35,6 +37,14 @@ export type hexadType = {
         achiever: number
         disruptor: number
         player: number
+    }
+}
+
+export type imiType = {
+    [key: string]: {
+        perceivedChoice: number
+        interest_enjoyment: number
+        perceivedCompetence: number
     }
 }
 
