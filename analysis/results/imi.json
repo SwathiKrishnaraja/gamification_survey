@@ -1,0 +1,576 @@
+[
+    {
+        "0": {
+            "perceivedChoice": 10,
+            "interest_enjoyment": 29,
+            "perceivedCompetence": 29
+        }
+    },
+    {
+        "1": {
+            "perceivedChoice": 5,
+            "interest_enjoyment": 28,
+            "perceivedCompetence": 29
+        }
+    },
+    {
+        "2": {
+            "perceivedChoice": 2,
+            "interest_enjoyment": 9,
+            "perceivedCompetence": 23
+        }
+    },
+    {
+        "3": {
+            "perceivedChoice": -2,
+            "interest_enjoyment": 6,
+            "perceivedCompetence": 18
+        }
+    },
+    {
+        "4": {
+            "perceivedChoice": 9,
+            "interest_enjoyment": 24,
+            "perceivedCompetence": 21
+        }
+    },
+    {
+        "5": {
+            "perceivedChoice": 6,
+            "interest_enjoyment": 15,
+            "perceivedCompetence": 20
+        }
+    },
+    {
+        "6": {
+            "perceivedChoice": 6,
+            "interest_enjoyment": 24,
+            "perceivedCompetence": 25
+        }
+    },
+    {
+        "7": {
+            "perceivedChoice": -2,
+            "interest_enjoyment": 30,
+            "perceivedCompetence": 34
+        }
+    },
+    {
+        "8": {
+            "perceivedChoice": -4,
+            "interest_enjoyment": 14,
+            "perceivedCompetence": 18
+        }
+    },
+    {
+        "9": {
+            "perceivedChoice": 5,
+            "interest_enjoyment": 23,
+            "perceivedCompetence": 21
+        }
+    },
+    {
+        "10": {
+            "perceivedChoice": 5,
+            "interest_enjoyment": 19,
+            "perceivedCompetence": 20
+        }
+    },
+    {
+        "11": {
+            "perceivedChoice": 8,
+            "interest_enjoyment": 20,
+            "perceivedCompetence": 23
+        }
+    },
+    {
+        "12": {
+            "perceivedChoice": 1,
+            "interest_enjoyment": 21,
+            "perceivedCompetence": 22
+        }
+    },
+    {
+        "13": {
+            "perceivedChoice": 3,
+            "interest_enjoyment": 16,
+            "perceivedCompetence": 19
+        }
+    },
+    {
+        "14": {
+            "perceivedChoice": 4,
+            "interest_enjoyment": 19,
+            "perceivedCompetence": 21
+        }
+    },
+    {
+        "15": {
+            "perceivedChoice": 6,
+            "interest_enjoyment": 26,
+            "perceivedCompetence": 18
+        }
+    },
+    {
+        "16": {
+            "perceivedChoice": 1,
+            "interest_enjoyment": 17,
+            "perceivedCompetence": 20
+        }
+    },
+    {
+        "17": {
+            "perceivedChoice": 1,
+            "interest_enjoyment": 17,
+            "perceivedCompetence": 20
+        }
+    },
+    {
+        "18": {
+            "perceivedChoice": 1,
+            "interest_enjoyment": 17,
+            "perceivedCompetence": 20
+        }
+    },
+    {
+        "19": {
+            "perceivedChoice": 1,
+            "interest_enjoyment": 17,
+            "perceivedCompetence": 20
+        }
+    },
+    {
+        "20": {
+            "perceivedChoice": 5,
+            "interest_enjoyment": 16,
+            "perceivedCompetence": 20
+        }
+    },
+    {
+        "21": {
+            "perceivedChoice": 3,
+            "interest_enjoyment": 19,
+            "perceivedCompetence": 27
+        }
+    },
+    {
+        "22": {
+            "perceivedChoice": -4,
+            "interest_enjoyment": 12,
+            "perceivedCompetence": 17
+        }
+    },
+    {
+        "23": {
+            "perceivedChoice": 2,
+            "interest_enjoyment": 13,
+            "perceivedCompetence": 22
+        }
+    },
+    {
+        "24": {
+            "perceivedChoice": 6,
+            "interest_enjoyment": 18,
+            "perceivedCompetence": 20
+        }
+    },
+    {
+        "25": {
+            "perceivedChoice": 0,
+            "interest_enjoyment": 18,
+            "perceivedCompetence": 22
+        }
+    },
+    {
+        "26": {
+            "perceivedChoice": -2,
+            "interest_enjoyment": 7,
+            "perceivedCompetence": 21
+        }
+    },
+    {
+        "27": {
+            "perceivedChoice": 11,
+            "interest_enjoyment": 29,
+            "perceivedCompetence": 34
+        }
+    },
+    {
+        "28": {
+            "perceivedChoice": -4,
+            "interest_enjoyment": 29,
+            "perceivedCompetence": 31
+        }
+    },
+    {
+        "29": {
+            "perceivedChoice": 2,
+            "interest_enjoyment": 28,
+            "perceivedCompetence": 29
+        }
+    },
+    {
+        "30": {
+            "perceivedChoice": 3,
+            "interest_enjoyment": -9,
+            "perceivedCompetence": 1
+        }
+    },
+    {
+        "31": {
+            "perceivedChoice": 11,
+            "interest_enjoyment": 23,
+            "perceivedCompetence": 28
+        }
+    },
+    {
+        "32": {
+            "perceivedChoice": -1,
+            "interest_enjoyment": 20,
+            "perceivedCompetence": 19
+        }
+    },
+    {
+        "33": {
+            "perceivedChoice": -1,
+            "interest_enjoyment": 8,
+            "perceivedCompetence": 21
+        }
+    },
+    {
+        "34": {
+            "perceivedChoice": 1,
+            "interest_enjoyment": 15,
+            "perceivedCompetence": 21
+        }
+    },
+    {
+        "35": {
+            "perceivedChoice": 2,
+            "interest_enjoyment": 23,
+            "perceivedCompetence": 16
+        }
+    },
+    {
+        "36": {
+            "perceivedChoice": 1,
+            "interest_enjoyment": 5,
+            "perceivedCompetence": 21
+        }
+    },
+    {
+        "37": {
+            "perceivedChoice": -5,
+            "interest_enjoyment": 26,
+            "perceivedCompetence": 22
+        }
+    },
+    {
+        "38": {
+            "perceivedChoice": 4,
+            "interest_enjoyment": 6,
+            "perceivedCompetence": 18
+        }
+    },
+    {
+        "39": {
+            "perceivedChoice": 5,
+            "interest_enjoyment": 6,
+            "perceivedCompetence": 17
+        }
+    },
+    {
+        "40": {
+            "perceivedChoice": 7,
+            "interest_enjoyment": 14,
+            "perceivedCompetence": 20
+        }
+    },
+    {
+        "41": {
+            "perceivedChoice": -4,
+            "interest_enjoyment": 12,
+            "perceivedCompetence": 16
+        }
+    },
+    {
+        "42": {
+            "perceivedChoice": -2,
+            "interest_enjoyment": 13,
+            "perceivedCompetence": 11
+        }
+    },
+    {
+        "43": {
+            "perceivedChoice": 9,
+            "interest_enjoyment": 13,
+            "perceivedCompetence": 27
+        }
+    },
+    {
+        "44": {
+            "perceivedChoice": -3,
+            "interest_enjoyment": 12,
+            "perceivedCompetence": 22
+        }
+    },
+    {
+        "45": {
+            "perceivedChoice": 0,
+            "interest_enjoyment": 12,
+            "perceivedCompetence": 16
+        }
+    },
+    {
+        "46": {
+            "perceivedChoice": 9,
+            "interest_enjoyment": 0,
+            "perceivedCompetence": 18
+        }
+    },
+    {
+        "47": {
+            "perceivedChoice": 10,
+            "interest_enjoyment": 16,
+            "perceivedCompetence": 10
+        }
+    },
+    {
+        "48": {
+            "perceivedChoice": 11,
+            "interest_enjoyment": 31,
+            "perceivedCompetence": 28
+        }
+    },
+    {
+        "49": {
+            "perceivedChoice": -5,
+            "interest_enjoyment": 16,
+            "perceivedCompetence": 20
+        }
+    },
+    {
+        "50": {
+            "perceivedChoice": 6,
+            "interest_enjoyment": 17,
+            "perceivedCompetence": 27
+        }
+    },
+    {
+        "51": {
+            "perceivedChoice": 4,
+            "interest_enjoyment": 19,
+            "perceivedCompetence": 21
+        }
+    },
+    {
+        "52": {
+            "perceivedChoice": 11,
+            "interest_enjoyment": 12,
+            "perceivedCompetence": 20
+        }
+    },
+    {
+        "53": {
+            "perceivedChoice": 4,
+            "interest_enjoyment": 17,
+            "perceivedCompetence": 20
+        }
+    },
+    {
+        "54": {
+            "perceivedChoice": 0,
+            "interest_enjoyment": 18,
+            "perceivedCompetence": 19
+        }
+    },
+    {
+        "55": {
+            "perceivedChoice": 3,
+            "interest_enjoyment": 19,
+            "perceivedCompetence": 20
+        }
+    },
+    {
+        "56": {
+            "perceivedChoice": 11,
+            "interest_enjoyment": 8,
+            "perceivedCompetence": 18
+        }
+    },
+    {
+        "57": {
+            "perceivedChoice": 4,
+            "interest_enjoyment": 21,
+            "perceivedCompetence": 25
+        }
+    },
+    {
+        "58": {
+            "perceivedChoice": -4,
+            "interest_enjoyment": 18,
+            "perceivedCompetence": 26
+        }
+    },
+    {
+        "59": {
+            "perceivedChoice": -9,
+            "interest_enjoyment": 17,
+            "perceivedCompetence": 22
+        }
+    },
+    {
+        "60": {
+            "perceivedChoice": 7,
+            "interest_enjoyment": 28,
+            "perceivedCompetence": 34
+        }
+    },
+    {
+        "61": {
+            "perceivedChoice": -3,
+            "interest_enjoyment": 11,
+            "perceivedCompetence": 15
+        }
+    },
+    {
+        "62": {
+            "perceivedChoice": 3,
+            "interest_enjoyment": 17,
+            "perceivedCompetence": 17
+        }
+    },
+    {
+        "63": {
+            "perceivedChoice": 12,
+            "interest_enjoyment": 15,
+            "perceivedCompetence": 22
+        }
+    },
+    {
+        "64": {
+            "perceivedChoice": 0,
+            "interest_enjoyment": 21,
+            "perceivedCompetence": 20
+        }
+    },
+    {
+        "65": {
+            "perceivedChoice": -10,
+            "interest_enjoyment": 14,
+            "perceivedCompetence": 20
+        }
+    },
+    {
+        "66": {
+            "perceivedChoice": 7,
+            "interest_enjoyment": 15,
+            "perceivedCompetence": 18
+        }
+    },
+    {
+        "67": {
+            "perceivedChoice": 6,
+            "interest_enjoyment": 19,
+            "perceivedCompetence": 23
+        }
+    },
+    {
+        "68": {
+            "perceivedChoice": 0,
+            "interest_enjoyment": 24,
+            "perceivedCompetence": 24
+        }
+    },
+    {
+        "69": {
+            "perceivedChoice": -5,
+            "interest_enjoyment": 20,
+            "perceivedCompetence": 20
+        }
+    },
+    {
+        "70": {
+            "perceivedChoice": -2,
+            "interest_enjoyment": 14,
+            "perceivedCompetence": 20
+        }
+    },
+    {
+        "71": {
+            "perceivedChoice": -9,
+            "interest_enjoyment": 10,
+            "perceivedCompetence": 21
+        }
+    },
+    {
+        "72": {
+            "perceivedChoice": 10,
+            "interest_enjoyment": 13,
+            "perceivedCompetence": 28
+        }
+    },
+    {
+        "73": {
+            "perceivedChoice": -4,
+            "interest_enjoyment": 11,
+            "perceivedCompetence": 15
+        }
+    },
+    {
+        "74": {
+            "perceivedChoice": 4,
+            "interest_enjoyment": 2,
+            "perceivedCompetence": 25
+        }
+    },
+    {
+        "75": {
+            "perceivedChoice": 7,
+            "interest_enjoyment": 16,
+            "perceivedCompetence": 20
+        }
+    },
+    {
+        "76": {
+            "perceivedChoice": 9,
+            "interest_enjoyment": 20,
+            "perceivedCompetence": 22
+        }
+    },
+    {
+        "77": {
+            "perceivedChoice": 9,
+            "interest_enjoyment": 7,
+            "perceivedCompetence": 23
+        }
+    },
+    {
+        "78": {
+            "perceivedChoice": 7,
+            "interest_enjoyment": 8,
+            "perceivedCompetence": 31
+        }
+    },
+    {
+        "79": {
+            "perceivedChoice": 9,
+            "interest_enjoyment": 12,
+            "perceivedCompetence": 28
+        }
+    },
+    {
+        "80": {
+            "perceivedChoice": -5,
+            "interest_enjoyment": 15,
+            "perceivedCompetence": 20
+        }
+    },
+    {
+        "81": {
+            "perceivedChoice": 2,
+            "interest_enjoyment": 5,
+            "perceivedCompetence": 17
+        }
+    }
+]
