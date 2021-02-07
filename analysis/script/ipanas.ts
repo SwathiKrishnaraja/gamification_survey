@@ -1,4 +1,4 @@
-import { ParsedDataType, IpanasDataType } from './types'
+import { ParsedDataType, IpanasDataType } from '../types'
 
 const UPSET = 'Upset'
 const DETERMINED = 'Determined'

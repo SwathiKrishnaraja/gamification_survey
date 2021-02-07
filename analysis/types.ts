@@ -3,7 +3,9 @@ export type ParsedDataType = {
         q1: {
             [key: string]: string,
         },
-        q2: object,
+        q2: {
+            [key: string]: string
+        },
     },
     postsurvey: {
         q1: {
@@ -22,6 +24,17 @@ export type IpanasDataType = {
             positive_affect: number,
             negative_affect: number
         }
+    }
+}
+
+export type hexadType = {
+    [key: string]: {
+        philanthropist: number
+        socializer: number
+        freeSpirit: number
+        achiever: number
+        disruptor: number
+        player: number
     }
 }
 
