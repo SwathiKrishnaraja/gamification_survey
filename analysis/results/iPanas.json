@@ -1,1 +1,974 @@
-[{"0":{"presurvey":{"positive_affect":11,"negative_affect":9},"postsurvey":{"positive_affect":9,"negative_affect":7}}},{"1":{"presurvey":{"positive_affect":16,"negative_affect":5},"postsurvey":{"positive_affect":0,"negative_affect":25}}},{"2":{"presurvey":{"positive_affect":14,"negative_affect":8},"postsurvey":{"positive_affect":0,"negative_affect":23}}},{"3":{"presurvey":{"positive_affect":11,"negative_affect":6},"postsurvey":{"positive_affect":15,"negative_affect":5}}},{"4":{"presurvey":{"positive_affect":15,"negative_affect":11},"postsurvey":{"positive_affect":15,"negative_affect":9}}},{"5":{"presurvey":{"positive_affect":10,"negative_affect":7},"postsurvey":{"positive_affect":11,"negative_affect":6}}},{"6":{"presurvey":{"positive_affect":19,"negative_affect":10},"postsurvey":{"positive_affect":20,"negative_affect":10}}},{"7":{"presurvey":{"positive_affect":25,"negative_affect":5},"postsurvey":{"positive_affect":25,"negative_affect":6}}},{"8":{"presurvey":{"positive_affect":16,"negative_affect":11},"postsurvey":{"positive_affect":17,"negative_affect":12}}},{"9":{"presurvey":{"positive_affect":9,"negative_affect":5},"postsurvey":{"positive_affect":13,"negative_affect":5}}},{"10":{"presurvey":{"positive_affect":17,"negative_affect":10},"postsurvey":{"positive_affect":19,"negative_affect":5}}},{"11":{"presurvey":{"positive_affect":19,"negative_affect":6},"postsurvey":{"positive_affect":18,"negative_affect":5}}},{"12":{"presurvey":{"positive_affect":13,"negative_affect":8},"postsurvey":{"positive_affect":18,"negative_affect":7}}},{"13":{"presurvey":{"positive_affect":13,"negative_affect":5},"postsurvey":{"positive_affect":12,"negative_affect":5}}},{"14":{"presurvey":{"positive_affect":19,"negative_affect":6},"postsurvey":{"positive_affect":18,"negative_affect":5}}},{"15":{"presurvey":{"positive_affect":11,"negative_affect":10},"postsurvey":{"positive_affect":13,"negative_affect":9}}},{"16":{"presurvey":{"positive_affect":14,"negative_affect":5},"postsurvey":{"positive_affect":15,"negative_affect":5}}},{"17":{"presurvey":{"positive_affect":14,"negative_affect":5},"postsurvey":{"positive_affect":15,"negative_affect":5}}},{"18":{"presurvey":{"positive_affect":14,"negative_affect":5},"postsurvey":{"positive_affect":15,"negative_affect":5}}},{"19":{"presurvey":{"positive_affect":14,"negative_affect":5},"postsurvey":{"positive_affect":15,"negative_affect":5}}},{"20":{"presurvey":{"positive_affect":18,"negative_affect":13},"postsurvey":{"positive_affect":19,"negative_affect":10}}},{"21":{"presurvey":{"positive_affect":9,"negative_affect":5},"postsurvey":{"positive_affect":13,"negative_affect":5}}},{"22":{"presurvey":{"positive_affect":12,"negative_affect":5},"postsurvey":{"positive_affect":15,"negative_affect":5}}},{"23":{"presurvey":{"positive_affect":13,"negative_affect":5},"postsurvey":{"positive_affect":12,"negative_affect":5}}},{"24":{"presurvey":{"positive_affect":18,"negative_affect":12},"postsurvey":{"positive_affect":18,"negative_affect":10}}},{"25":{"presurvey":{"positive_affect":14,"negative_affect":6},"postsurvey":{"positive_affect":16,"negative_affect":5}}},{"26":{"presurvey":{"positive_affect":13,"negative_affect":6},"postsurvey":{"positive_affect":15,"negative_affect":6}}},{"27":{"presurvey":{"positive_affect":13,"negative_affect":5},"postsurvey":{"positive_affect":12,"negative_affect":5}}},{"28":{"presurvey":{"positive_affect":10,"negative_affect":5},"postsurvey":{"positive_affect":12,"negative_affect":5}}},{"29":{"presurvey":{"positive_affect":11,"negative_affect":5},"postsurvey":{"positive_affect":12,"negative_affect":5}}},{"30":{"presurvey":{"positive_affect":12,"negative_affect":6},"postsurvey":{"positive_affect":7,"negative_affect":11}}},{"31":{"presurvey":{"positive_affect":5,"negative_affect":11},"postsurvey":{"positive_affect":5,"negative_affect":10}}},{"32":{"presurvey":{"positive_affect":15,"negative_affect":7},"postsurvey":{"positive_affect":14,"negative_affect":6}}},{"33":{"presurvey":{"positive_affect":12,"negative_affect":5},"postsurvey":{"positive_affect":10,"negative_affect":5}}},{"34":{"presurvey":{"positive_affect":13,"negative_affect":11},"postsurvey":{"positive_affect":12,"negative_affect":6}}},{"35":{"presurvey":{"positive_affect":14,"negative_affect":10},"postsurvey":{"positive_affect":16,"negative_affect":7}}},{"36":{"presurvey":{"positive_affect":16,"negative_affect":7},"postsurvey":{"positive_affect":12,"negative_affect":6}}},{"37":{"presurvey":{"positive_affect":19,"negative_affect":6},"postsurvey":{"positive_affect":21,"negative_affect":5}}},{"38":{"presurvey":{"positive_affect":7,"negative_affect":5},"postsurvey":{"positive_affect":7,"negative_affect":5}}},{"39":{"presurvey":{"positive_affect":17,"negative_affect":6},"postsurvey":{"positive_affect":15,"negative_affect":6}}},{"40":{"presurvey":{"positive_affect":15,"negative_affect":5},"postsurvey":{"positive_affect":12,"negative_affect":5}}},{"41":{"presurvey":{"positive_affect":15,"negative_affect":5},"postsurvey":{"positive_affect":15,"negative_affect":5}}},{"42":{"presurvey":{"positive_affect":18,"negative_affect":9},"postsurvey":{"positive_affect":16,"negative_affect":11}}},{"43":{"presurvey":{"positive_affect":18,"negative_affect":7},"postsurvey":{"positive_affect":21,"negative_affect":5}}},{"44":{"presurvey":{"positive_affect":15,"negative_affect":15},"postsurvey":{"positive_affect":17,"negative_affect":16}}},{"45":{"presurvey":{"positive_affect":6,"negative_affect":5},"postsurvey":{"positive_affect":7,"negative_affect":6}}},{"46":{"presurvey":{"positive_affect":16,"negative_affect":5},"postsurvey":{"positive_affect":13,"negative_affect":5}}},{"47":{"presurvey":{"positive_affect":11,"negative_affect":9},"postsurvey":{"positive_affect":9,"negative_affect":7}}},{"48":{"presurvey":{"positive_affect":18,"negative_affect":15},"postsurvey":{"positive_affect":20,"negative_affect":17}}},{"49":{"presurvey":{"positive_affect":14,"negative_affect":17},"postsurvey":{"positive_affect":16,"negative_affect":13}}},{"50":{"presurvey":{"positive_affect":16,"negative_affect":5},"postsurvey":{"positive_affect":18,"negative_affect":5}}},{"51":{"presurvey":{"positive_affect":16,"negative_affect":7},"postsurvey":{"positive_affect":20,"negative_affect":7}}},{"52":{"presurvey":{"positive_affect":10,"negative_affect":5},"postsurvey":{"positive_affect":10,"negative_affect":5}}},{"54":{"presurvey":{"positive_affect":11,"negative_affect":7},"postsurvey":{"positive_affect":12,"negative_affect":7}}},{"55":{"presurvey":{"positive_affect":12,"negative_affect":11},"postsurvey":{"positive_affect":16,"negative_affect":5}}},{"56":{"presurvey":{"positive_affect":19,"negative_affect":9},"postsurvey":{"positive_affect":24,"negative_affect":8}}},{"57":{"presurvey":{"positive_affect":7,"negative_affect":5},"postsurvey":{"positive_affect":7,"negative_affect":5}}},{"58":{"presurvey":{"positive_affect":11,"negative_affect":5},"postsurvey":{"positive_affect":10,"negative_affect":5}}},{"59":{"presurvey":{"positive_affect":7,"negative_affect":5},"postsurvey":{"positive_affect":12,"negative_affect":5}}},{"60":{"presurvey":{"positive_affect":12,"negative_affect":5},"postsurvey":{"positive_affect":20,"negative_affect":5}}},{"61":{"presurvey":{"positive_affect":9,"negative_affect":10},"postsurvey":{"positive_affect":11,"negative_affect":7}}},{"62":{"presurvey":{"positive_affect":11,"negative_affect":7},"postsurvey":{"positive_affect":10,"negative_affect":5}}},{"63":{"presurvey":{"positive_affect":17,"negative_affect":5},"postsurvey":{"positive_affect":11,"negative_affect":5}}},{"64":{"presurvey":{"positive_affect":15,"negative_affect":7},"postsurvey":{"positive_affect":16,"negative_affect":6}}},{"65":{"presurvey":{"positive_affect":18,"negative_affect":12},"postsurvey":{"positive_affect":16,"negative_affect":14}}},{"66":{"presurvey":{"positive_affect":10,"negative_affect":5},"postsurvey":{"positive_affect":7,"negative_affect":5}}},{"67":{"presurvey":{"positive_affect":15,"negative_affect":5},"postsurvey":{"positive_affect":17,"negative_affect":5}}},{"68":{"presurvey":{"positive_affect":16,"negative_affect":5},"postsurvey":{"positive_affect":15,"negative_affect":5}}},{"69":{"presurvey":{"positive_affect":12,"negative_affect":5},"postsurvey":{"positive_affect":12,"negative_affect":5}}},{"70":{"presurvey":{"positive_affect":15,"negative_affect":5},"postsurvey":{"positive_affect":20,"negative_affect":5}}},{"71":{"presurvey":{"positive_affect":13,"negative_affect":13},"postsurvey":{"positive_affect":13,"negative_affect":16}}},{"72":{"presurvey":{"positive_affect":17,"negative_affect":5},"postsurvey":{"positive_affect":22,"negative_affect":5}}},{"73":{"presurvey":{"positive_affect":12,"negative_affect":6},"postsurvey":{"positive_affect":12,"negative_affect":5}}},{"74":{"presurvey":{"positive_affect":18,"negative_affect":5},"postsurvey":{"positive_affect":14,"negative_affect":5}}},{"75":{"presurvey":{"positive_affect":13,"negative_affect":5},"postsurvey":{"positive_affect":13,"negative_affect":5}}},{"76":{"presurvey":{"positive_affect":16,"negative_affect":10},"postsurvey":{"positive_affect":13,"negative_affect":7}}},{"77":{"presurvey":{"positive_affect":5,"negative_affect":6},"postsurvey":{"positive_affect":7,"negative_affect":6}}},{"78":{"presurvey":{"positive_affect":10,"negative_affect":5},"postsurvey":{"positive_affect":12,"negative_affect":5}}},{"79":{"presurvey":{"positive_affect":10,"negative_affect":5},"postsurvey":{"positive_affect":10,"negative_affect":5}}},{"80":{"presurvey":{"positive_affect":16,"negative_affect":17},"postsurvey":{"positive_affect":15,"negative_affect":15}}},{"81":{"presurvey":{"positive_affect":15,"negative_affect":5},"postsurvey":{"positive_affect":13,"negative_affect":5}}}]
+[
+    {
+        "0": {
+            "presurvey": {
+                "positive_affect": 11,
+                "negative_affect": 9
+            },
+            "postsurvey": {
+                "positive_affect": 9,
+                "negative_affect": 7
+            }
+        }
+    },
+    {
+        "1": {
+            "presurvey": {
+                "positive_affect": 16,
+                "negative_affect": 5
+            },
+            "postsurvey": {
+                "positive_affect": 0,
+                "negative_affect": 25
+            }
+        }
+    },
+    {
+        "2": {
+            "presurvey": {
+                "positive_affect": 14,
+                "negative_affect": 8
+            },
+            "postsurvey": {
+                "positive_affect": 0,
+                "negative_affect": 23
+            }
+        }
+    },
+    {
+        "3": {
+            "presurvey": {
+                "positive_affect": 11,
+                "negative_affect": 6
+            },
+            "postsurvey": {
+                "positive_affect": 15,
+                "negative_affect": 5
+            }
+        }
+    },
+    {
+        "4": {
+            "presurvey": {
+                "positive_affect": 15,
+                "negative_affect": 11
+            },
+            "postsurvey": {
+                "positive_affect": 15,
+                "negative_affect": 9
+            }
+        }
+    },
+    {
+        "5": {
+            "presurvey": {
+                "positive_affect": 10,
+                "negative_affect": 7
+            },
+            "postsurvey": {
+                "positive_affect": 11,
+                "negative_affect": 6
+            }
+        }
+    },
+    {
+        "6": {
+            "presurvey": {
+                "positive_affect": 19,
+                "negative_affect": 10
+            },
+            "postsurvey": {
+                "positive_affect": 20,
+                "negative_affect": 10
+            }
+        }
+    },
+    {
+        "7": {
+            "presurvey": {
+                "positive_affect": 25,
+                "negative_affect": 5
+            },
+            "postsurvey": {
+                "positive_affect": 25,
+                "negative_affect": 6
+            }
+        }
+    },
+    {
+        "8": {
+            "presurvey": {
+                "positive_affect": 16,
+                "negative_affect": 11
+            },
+            "postsurvey": {
+                "positive_affect": 17,
+                "negative_affect": 12
+            }
+        }
+    },
+    {
+        "9": {
+            "presurvey": {
+                "positive_affect": 9,
+                "negative_affect": 5
+            },
+            "postsurvey": {
+                "positive_affect": 13,
+                "negative_affect": 5
+            }
+        }
+    },
+    {
+        "10": {
+            "presurvey": {
+                "positive_affect": 17,
+                "negative_affect": 10
+            },
+            "postsurvey": {
+                "positive_affect": 19,
+                "negative_affect": 5
+            }
+        }
+    },
+    {
+        "11": {
+            "presurvey": {
+                "positive_affect": 19,
+                "negative_affect": 6
+            },
+            "postsurvey": {
+                "positive_affect": 18,
+                "negative_affect": 5
+            }
+        }
+    },
+    {
+        "12": {
+            "presurvey": {
+                "positive_affect": 13,
+                "negative_affect": 8
+            },
+            "postsurvey": {
+                "positive_affect": 18,
+                "negative_affect": 7
+            }
+        }
+    },
+    {
+        "13": {
+            "presurvey": {
+                "positive_affect": 13,
+                "negative_affect": 5
+            },
+            "postsurvey": {
+                "positive_affect": 12,
+                "negative_affect": 5
+            }
+        }
+    },
+    {
+        "14": {
+            "presurvey": {
+                "positive_affect": 19,
+                "negative_affect": 6
+            },
+            "postsurvey": {
+                "positive_affect": 18,
+                "negative_affect": 5
+            }
+        }
+    },
+    {
+        "15": {
+            "presurvey": {
+                "positive_affect": 11,
+                "negative_affect": 10
+            },
+            "postsurvey": {
+                "positive_affect": 13,
+                "negative_affect": 9
+            }
+        }
+    },
+    {
+        "16": {
+            "presurvey": {
+                "positive_affect": 14,
+                "negative_affect": 5
+            },
+            "postsurvey": {
+                "positive_affect": 15,
+                "negative_affect": 5
+            }
+        }
+    },
+    {
+        "17": {
+            "presurvey": {
+                "positive_affect": 14,
+                "negative_affect": 5
+            },
+            "postsurvey": {
+                "positive_affect": 15,
+                "negative_affect": 5
+            }
+        }
+    },
+    {
+        "18": {
+            "presurvey": {
+                "positive_affect": 14,
+                "negative_affect": 5
+            },
+            "postsurvey": {
+                "positive_affect": 15,
+                "negative_affect": 5
+            }
+        }
+    },
+    {
+        "19": {
+            "presurvey": {
+                "positive_affect": 14,
+                "negative_affect": 5
+            },
+            "postsurvey": {
+                "positive_affect": 15,
+                "negative_affect": 5
+            }
+        }
+    },
+    {
+        "20": {
+            "presurvey": {
+                "positive_affect": 18,
+                "negative_affect": 13
+            },
+            "postsurvey": {
+                "positive_affect": 19,
+                "negative_affect": 10
+            }
+        }
+    },
+    {
+        "21": {
+            "presurvey": {
+                "positive_affect": 9,
+                "negative_affect": 5
+            },
+            "postsurvey": {
+                "positive_affect": 13,
+                "negative_affect": 5
+            }
+        }
+    },
+    {
+        "22": {
+            "presurvey": {
+                "positive_affect": 12,
+                "negative_affect": 5
+            },
+            "postsurvey": {
+                "positive_affect": 15,
+                "negative_affect": 5
+            }
+        }
+    },
+    {
+        "23": {
+            "presurvey": {
+                "positive_affect": 13,
+                "negative_affect": 5
+            },
+            "postsurvey": {
+                "positive_affect": 12,
+                "negative_affect": 5
+            }
+        }
+    },
+    {
+        "24": {
+            "presurvey": {
+                "positive_affect": 18,
+                "negative_affect": 12
+            },
+            "postsurvey": {
+                "positive_affect": 18,
+                "negative_affect": 10
+            }
+        }
+    },
+    {
+        "25": {
+            "presurvey": {
+                "positive_affect": 14,
+                "negative_affect": 6
+            },
+            "postsurvey": {
+                "positive_affect": 16,
+                "negative_affect": 5
+            }
+        }
+    },
+    {
+        "26": {
+            "presurvey": {
+                "positive_affect": 13,
+                "negative_affect": 6
+            },
+            "postsurvey": {
+                "positive_affect": 15,
+                "negative_affect": 6
+            }
+        }
+    },
+    {
+        "27": {
+            "presurvey": {
+                "positive_affect": 13,
+                "negative_affect": 5
+            },
+            "postsurvey": {
+                "positive_affect": 12,
+                "negative_affect": 5
+            }
+        }
+    },
+    {
+        "28": {
+            "presurvey": {
+                "positive_affect": 10,
+                "negative_affect": 5
+            },
+            "postsurvey": {
+                "positive_affect": 12,
+                "negative_affect": 5
+            }
+        }
+    },
+    {
+        "29": {
+            "presurvey": {
+                "positive_affect": 11,
+                "negative_affect": 5
+            },
+            "postsurvey": {
+                "positive_affect": 12,
+                "negative_affect": 5
+            }
+        }
+    },
+    {
+        "30": {
+            "presurvey": {
+                "positive_affect": 12,
+                "negative_affect": 6
+            },
+            "postsurvey": {
+                "positive_affect": 7,
+                "negative_affect": 11
+            }
+        }
+    },
+    {
+        "31": {
+            "presurvey": {
+                "positive_affect": 5,
+                "negative_affect": 11
+            },
+            "postsurvey": {
+                "positive_affect": 5,
+                "negative_affect": 10
+            }
+        }
+    },
+    {
+        "32": {
+            "presurvey": {
+                "positive_affect": 15,
+                "negative_affect": 7
+            },
+            "postsurvey": {
+                "positive_affect": 14,
+                "negative_affect": 6
+            }
+        }
+    },
+    {
+        "33": {
+            "presurvey": {
+                "positive_affect": 12,
+                "negative_affect": 5
+            },
+            "postsurvey": {
+                "positive_affect": 10,
+                "negative_affect": 5
+            }
+        }
+    },
+    {
+        "34": {
+            "presurvey": {
+                "positive_affect": 13,
+                "negative_affect": 11
+            },
+            "postsurvey": {
+                "positive_affect": 12,
+                "negative_affect": 6
+            }
+        }
+    },
+    {
+        "35": {
+            "presurvey": {
+                "positive_affect": 14,
+                "negative_affect": 10
+            },
+            "postsurvey": {
+                "positive_affect": 16,
+                "negative_affect": 7
+            }
+        }
+    },
+    {
+        "36": {
+            "presurvey": {
+                "positive_affect": 16,
+                "negative_affect": 7
+            },
+            "postsurvey": {
+                "positive_affect": 12,
+                "negative_affect": 6
+            }
+        }
+    },
+    {
+        "37": {
+            "presurvey": {
+                "positive_affect": 19,
+                "negative_affect": 6
+            },
+            "postsurvey": {
+                "positive_affect": 21,
+                "negative_affect": 5
+            }
+        }
+    },
+    {
+        "38": {
+            "presurvey": {
+                "positive_affect": 7,
+                "negative_affect": 5
+            },
+            "postsurvey": {
+                "positive_affect": 7,
+                "negative_affect": 5
+            }
+        }
+    },
+    {
+        "39": {
+            "presurvey": {
+                "positive_affect": 17,
+                "negative_affect": 6
+            },
+            "postsurvey": {
+                "positive_affect": 15,
+                "negative_affect": 6
+            }
+        }
+    },
+    {
+        "40": {
+            "presurvey": {
+                "positive_affect": 15,
+                "negative_affect": 5
+            },
+            "postsurvey": {
+                "positive_affect": 12,
+                "negative_affect": 5
+            }
+        }
+    },
+    {
+        "41": {
+            "presurvey": {
+                "positive_affect": 15,
+                "negative_affect": 5
+            },
+            "postsurvey": {
+                "positive_affect": 15,
+                "negative_affect": 5
+            }
+        }
+    },
+    {
+        "42": {
+            "presurvey": {
+                "positive_affect": 18,
+                "negative_affect": 9
+            },
+            "postsurvey": {
+                "positive_affect": 16,
+                "negative_affect": 11
+            }
+        }
+    },
+    {
+        "43": {
+            "presurvey": {
+                "positive_affect": 18,
+                "negative_affect": 7
+            },
+            "postsurvey": {
+                "positive_affect": 21,
+                "negative_affect": 5
+            }
+        }
+    },
+    {
+        "44": {
+            "presurvey": {
+                "positive_affect": 15,
+                "negative_affect": 15
+            },
+            "postsurvey": {
+                "positive_affect": 17,
+                "negative_affect": 16
+            }
+        }
+    },
+    {
+        "45": {
+            "presurvey": {
+                "positive_affect": 6,
+                "negative_affect": 5
+            },
+            "postsurvey": {
+                "positive_affect": 7,
+                "negative_affect": 6
+            }
+        }
+    },
+    {
+        "46": {
+            "presurvey": {
+                "positive_affect": 16,
+                "negative_affect": 5
+            },
+            "postsurvey": {
+                "positive_affect": 13,
+                "negative_affect": 5
+            }
+        }
+    },
+    {
+        "47": {
+            "presurvey": {
+                "positive_affect": 11,
+                "negative_affect": 9
+            },
+            "postsurvey": {
+                "positive_affect": 9,
+                "negative_affect": 7
+            }
+        }
+    },
+    {
+        "48": {
+            "presurvey": {
+                "positive_affect": 18,
+                "negative_affect": 15
+            },
+            "postsurvey": {
+                "positive_affect": 20,
+                "negative_affect": 17
+            }
+        }
+    },
+    {
+        "49": {
+            "presurvey": {
+                "positive_affect": 14,
+                "negative_affect": 17
+            },
+            "postsurvey": {
+                "positive_affect": 16,
+                "negative_affect": 13
+            }
+        }
+    },
+    {
+        "50": {
+            "presurvey": {
+                "positive_affect": 16,
+                "negative_affect": 5
+            },
+            "postsurvey": {
+                "positive_affect": 18,
+                "negative_affect": 5
+            }
+        }
+    },
+    {
+        "51": {
+            "presurvey": {
+                "positive_affect": 16,
+                "negative_affect": 7
+            },
+            "postsurvey": {
+                "positive_affect": 20,
+                "negative_affect": 7
+            }
+        }
+    },
+    {
+        "52": {
+            "presurvey": {
+                "positive_affect": 10,
+                "negative_affect": 5
+            },
+            "postsurvey": {
+                "positive_affect": 10,
+                "negative_affect": 5
+            }
+        }
+    },
+    {
+        "54": {
+            "presurvey": {
+                "positive_affect": 11,
+                "negative_affect": 7
+            },
+            "postsurvey": {
+                "positive_affect": 12,
+                "negative_affect": 7
+            }
+        }
+    },
+    {
+        "55": {
+            "presurvey": {
+                "positive_affect": 12,
+                "negative_affect": 11
+            },
+            "postsurvey": {
+                "positive_affect": 16,
+                "negative_affect": 5
+            }
+        }
+    },
+    {
+        "56": {
+            "presurvey": {
+                "positive_affect": 19,
+                "negative_affect": 9
+            },
+            "postsurvey": {
+                "positive_affect": 24,
+                "negative_affect": 8
+            }
+        }
+    },
+    {
+        "57": {
+            "presurvey": {
+                "positive_affect": 7,
+                "negative_affect": 5
+            },
+            "postsurvey": {
+                "positive_affect": 7,
+                "negative_affect": 5
+            }
+        }
+    },
+    {
+        "58": {
+            "presurvey": {
+                "positive_affect": 11,
+                "negative_affect": 5
+            },
+            "postsurvey": {
+                "positive_affect": 10,
+                "negative_affect": 5
+            }
+        }
+    },
+    {
+        "59": {
+            "presurvey": {
+                "positive_affect": 7,
+                "negative_affect": 5
+            },
+            "postsurvey": {
+                "positive_affect": 12,
+                "negative_affect": 5
+            }
+        }
+    },
+    {
+        "60": {
+            "presurvey": {
+                "positive_affect": 12,
+                "negative_affect": 5
+            },
+            "postsurvey": {
+                "positive_affect": 20,
+                "negative_affect": 5
+            }
+        }
+    },
+    {
+        "61": {
+            "presurvey": {
+                "positive_affect": 9,
+                "negative_affect": 10
+            },
+            "postsurvey": {
+                "positive_affect": 11,
+                "negative_affect": 7
+            }
+        }
+    },
+    {
+        "62": {
+            "presurvey": {
+                "positive_affect": 11,
+                "negative_affect": 7
+            },
+            "postsurvey": {
+                "positive_affect": 10,
+                "negative_affect": 5
+            }
+        }
+    },
+    {
+        "63": {
+            "presurvey": {
+                "positive_affect": 17,
+                "negative_affect": 5
+            },
+            "postsurvey": {
+                "positive_affect": 11,
+                "negative_affect": 5
+            }
+        }
+    },
+    {
+        "64": {
+            "presurvey": {
+                "positive_affect": 15,
+                "negative_affect": 7
+            },
+            "postsurvey": {
+                "positive_affect": 16,
+                "negative_affect": 6
+            }
+        }
+    },
+    {
+        "65": {
+            "presurvey": {
+                "positive_affect": 18,
+                "negative_affect": 12
+            },
+            "postsurvey": {
+                "positive_affect": 16,
+                "negative_affect": 14
+            }
+        }
+    },
+    {
+        "66": {
+            "presurvey": {
+                "positive_affect": 10,
+                "negative_affect": 5
+            },
+            "postsurvey": {
+                "positive_affect": 7,
+                "negative_affect": 5
+            }
+        }
+    },
+    {
+        "67": {
+            "presurvey": {
+                "positive_affect": 15,
+                "negative_affect": 5
+            },
+            "postsurvey": {
+                "positive_affect": 17,
+                "negative_affect": 5
+            }
+        }
+    },
+    {
+        "68": {
+            "presurvey": {
+                "positive_affect": 16,
+                "negative_affect": 5
+            },
+            "postsurvey": {
+                "positive_affect": 15,
+                "negative_affect": 5
+            }
+        }
+    },
+    {
+        "69": {
+            "presurvey": {
+                "positive_affect": 12,
+                "negative_affect": 5
+            },
+            "postsurvey": {
+                "positive_affect": 12,
+                "negative_affect": 5
+            }
+        }
+    },
+    {
+        "70": {
+            "presurvey": {
+                "positive_affect": 15,
+                "negative_affect": 5
+            },
+            "postsurvey": {
+                "positive_affect": 20,
+                "negative_affect": 5
+            }
+        }
+    },
+    {
+        "71": {
+            "presurvey": {
+                "positive_affect": 13,
+                "negative_affect": 13
+            },
+            "postsurvey": {
+                "positive_affect": 13,
+                "negative_affect": 16
+            }
+        }
+    },
+    {
+        "72": {
+            "presurvey": {
+                "positive_affect": 17,
+                "negative_affect": 5
+            },
+            "postsurvey": {
+                "positive_affect": 22,
+                "negative_affect": 5
+            }
+        }
+    },
+    {
+        "73": {
+            "presurvey": {
+                "positive_affect": 12,
+                "negative_affect": 6
+            },
+            "postsurvey": {
+                "positive_affect": 12,
+                "negative_affect": 5
+            }
+        }
+    },
+    {
+        "74": {
+            "presurvey": {
+                "positive_affect": 18,
+                "negative_affect": 5
+            },
+            "postsurvey": {
+                "positive_affect": 14,
+                "negative_affect": 5
+            }
+        }
+    },
+    {
+        "75": {
+            "presurvey": {
+                "positive_affect": 13,
+                "negative_affect": 5
+            },
+            "postsurvey": {
+                "positive_affect": 13,
+                "negative_affect": 5
+            }
+        }
+    },
+    {
+        "76": {
+            "presurvey": {
+                "positive_affect": 16,
+                "negative_affect": 10
+            },
+            "postsurvey": {
+                "positive_affect": 13,
+                "negative_affect": 7
+            }
+        }
+    },
+    {
+        "77": {
+            "presurvey": {
+                "positive_affect": 5,
+                "negative_affect": 6
+            },
+            "postsurvey": {
+                "positive_affect": 7,
+                "negative_affect": 6
+            }
+        }
+    },
+    {
+        "78": {
+            "presurvey": {
+                "positive_affect": 10,
+                "negative_affect": 5
+            },
+            "postsurvey": {
+                "positive_affect": 12,
+                "negative_affect": 5
+            }
+        }
+    },
+    {
+        "79": {
+            "presurvey": {
+                "positive_affect": 10,
+                "negative_affect": 5
+            },
+            "postsurvey": {
+                "positive_affect": 10,
+                "negative_affect": 5
+            }
+        }
+    },
+    {
+        "80": {
+            "presurvey": {
+                "positive_affect": 16,
+                "negative_affect": 17
+            },
+            "postsurvey": {
+                "positive_affect": 15,
+                "negative_affect": 15
+            }
+        }
+    },
+    {
+        "81": {
+            "presurvey": {
+                "positive_affect": 15,
+                "negative_affect": 5
+            },
+            "postsurvey": {
+                "positive_affect": 13,
+                "negative_affect": 5
+            }
+        }
+    }
+]
