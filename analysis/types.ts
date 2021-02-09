@@ -7,6 +7,9 @@ export type ParsedDataType = {
             [key: string]: string
         },
     },
+    mainsurvey: {
+        [key: string]: string,
+    },
     postsurvey: {
         q1: {
             [key: string]: string
@@ -27,6 +30,13 @@ export type IpanasDataType = {
             negative_affect: number
         }
     }
+}
+
+export type userExperience = {
+    usersWithPlayingExperience: number;
+    usersWithoutPlayingExperience: number;
+    usersWithBadgeExperience: number;
+    usersWithoutBadgeExperience: number;
 }
 
 export type hexadType = {
