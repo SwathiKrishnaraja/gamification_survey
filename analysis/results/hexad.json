@@ -530,7 +530,7 @@
         }
     },
     {
-        "54": {
+        "53": {
             "philanthropist": 22,
             "socializer": 21,
             "freeSpirit": 19,
@@ -540,7 +540,7 @@
         }
     },
     {
-        "55": {
+        "54": {
             "philanthropist": 25,
             "socializer": 24,
             "freeSpirit": 20,
@@ -550,7 +550,7 @@
         }
     },
     {
-        "56": {
+        "55": {
             "philanthropist": 28,
             "socializer": 19,
             "freeSpirit": 28,
@@ -560,7 +560,7 @@
         }
     },
     {
-        "57": {
+        "56": {
             "philanthropist": 23,
             "socializer": 16,
             "freeSpirit": 21,
@@ -570,7 +570,7 @@
         }
     },
     {
-        "58": {
+        "57": {
             "philanthropist": 15,
             "socializer": 7,
             "freeSpirit": 25,
@@ -580,7 +580,7 @@
         }
     },
     {
-        "59": {
+        "58": {
             "philanthropist": 16,
             "socializer": 16,
             "freeSpirit": 16,
@@ -590,7 +590,7 @@
         }
     },
     {
-        "60": {
+        "59": {
             "philanthropist": 19,
             "socializer": 25,
             "freeSpirit": 26,
@@ -600,7 +600,7 @@
         }
     },
     {
-        "61": {
+        "60": {
             "philanthropist": 13,
             "socializer": 19,
             "freeSpirit": 19,
@@ -610,7 +610,7 @@
         }
     },
     {
-        "62": {
+        "61": {
             "philanthropist": 20,
             "socializer": 13,
             "freeSpirit": 22,
@@ -620,7 +620,7 @@
         }
     },
     {
-        "63": {
+        "62": {
             "philanthropist": 23,
             "socializer": 10,
             "freeSpirit": 22,
@@ -630,7 +630,7 @@
         }
     },
     {
-        "64": {
+        "63": {
             "philanthropist": 16,
             "socializer": 16,
             "freeSpirit": 23,
@@ -640,7 +640,7 @@
         }
     },
     {
-        "65": {
+        "64": {
             "philanthropist": 22,
             "socializer": 12,
             "freeSpirit": 23,
@@ -650,7 +650,7 @@
         }
     },
     {
-        "66": {
+        "65": {
             "philanthropist": 23,
             "socializer": 14,
             "freeSpirit": 21,
@@ -660,7 +660,7 @@
         }
     },
     {
-        "67": {
+        "66": {
             "philanthropist": 22,
             "socializer": 24,
             "freeSpirit": 18,
@@ -670,7 +670,7 @@
         }
     },
     {
-        "68": {
+        "67": {
             "philanthropist": 24,
             "socializer": 15,
             "freeSpirit": 24,
@@ -680,7 +680,7 @@
         }
     },
     {
-        "69": {
+        "68": {
             "philanthropist": 22,
             "socializer": 22,
             "freeSpirit": 23,
@@ -690,7 +690,7 @@
         }
     },
     {
-        "70": {
+        "69": {
             "philanthropist": 23,
             "socializer": 20,
             "freeSpirit": 26,
@@ -700,7 +700,7 @@
         }
     },
     {
-        "71": {
+        "70": {
             "philanthropist": 26,
             "socializer": 27,
             "freeSpirit": 28,
@@ -710,7 +710,7 @@
         }
     },
     {
-        "72": {
+        "71": {
             "philanthropist": 27,
             "socializer": 26,
             "freeSpirit": 24,
@@ -720,7 +720,7 @@
         }
     },
     {
-        "73": {
+        "72": {
             "philanthropist": 26,
             "socializer": 27,
             "freeSpirit": 27,
@@ -730,7 +730,7 @@
         }
     },
     {
-        "74": {
+        "73": {
             "philanthropist": 26,
             "socializer": 23,
             "freeSpirit": 20,
@@ -740,7 +740,7 @@
         }
     },
     {
-        "75": {
+        "74": {
             "philanthropist": 18,
             "socializer": 20,
             "freeSpirit": 27,
@@ -750,7 +750,7 @@
         }
     },
     {
-        "76": {
+        "75": {
             "philanthropist": 26,
             "socializer": 24,
             "freeSpirit": 24,
@@ -760,7 +760,7 @@
         }
     },
     {
-        "77": {
+        "76": {
             "philanthropist": 27,
             "socializer": 23,
             "freeSpirit": 17,
@@ -770,7 +770,7 @@
         }
     },
     {
-        "78": {
+        "77": {
             "philanthropist": 25,
             "socializer": 20,
             "freeSpirit": 26,
@@ -780,7 +780,7 @@
         }
     },
     {
-        "79": {
+        "78": {
             "philanthropist": 22,
             "socializer": 16,
             "freeSpirit": 21,
@@ -790,23 +790,13 @@
         }
     },
     {
-        "80": {
+        "79": {
             "philanthropist": 21,
             "socializer": 18,
             "freeSpirit": 14,
             "achiever": 17,
             "disruptor": 18,
             "player": 16
-        }
-    },
-    {
-        "81": {
-            "philanthropist": 24,
-            "socializer": 20,
-            "freeSpirit": 20,
-            "achiever": 28,
-            "disruptor": 12,
-            "player": 28
         }
     }
 ]

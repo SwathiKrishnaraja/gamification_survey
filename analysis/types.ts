@@ -17,6 +17,9 @@ export type ParsedDataType = {
         q2: {
             [key: string]: string
         },
+        q3: {
+            [key: string]: string
+        }
     }
 }
 export type IpanasDataType = {
@@ -37,6 +40,13 @@ export type userExperience = {
     usersWithoutPlayingExperience: number;
     usersWithBadgeExperience: number;
     usersWithoutBadgeExperience: number;
+}
+
+export type userDetails = {
+    [key: string]: {
+        usersPerceivedDuration: number,
+        questionsAnsweredByTheUser: number
+    };
 }
 
 export type hexadType = {

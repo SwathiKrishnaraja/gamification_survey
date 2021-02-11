@@ -1,0 +1,482 @@
+[
+    {
+        "0": {
+            "usersPerceivedDuration": 1,
+            "questionsAnsweredByTheUser": 26
+        }
+    },
+    {
+        "1": {
+            "usersPerceivedDuration": 4,
+            "questionsAnsweredByTheUser": 26
+        }
+    },
+    {
+        "2": {
+            "usersPerceivedDuration": 4,
+            "questionsAnsweredByTheUser": 21
+        }
+    },
+    {
+        "3": {
+            "usersPerceivedDuration": 4,
+            "questionsAnsweredByTheUser": 20
+        }
+    },
+    {
+        "4": {
+            "usersPerceivedDuration": 3,
+            "questionsAnsweredByTheUser": 26
+        }
+    },
+    {
+        "5": {
+            "usersPerceivedDuration": 4,
+            "questionsAnsweredByTheUser": 22
+        }
+    },
+    {
+        "6": {
+            "usersPerceivedDuration": 1,
+            "questionsAnsweredByTheUser": 26
+        }
+    },
+    {
+        "7": {
+            "usersPerceivedDuration": 3,
+            "questionsAnsweredByTheUser": 26
+        }
+    },
+    {
+        "8": {
+            "usersPerceivedDuration": 3,
+            "questionsAnsweredByTheUser": 26
+        }
+    },
+    {
+        "9": {
+            "usersPerceivedDuration": 4,
+            "questionsAnsweredByTheUser": 25
+        }
+    },
+    {
+        "10": {
+            "usersPerceivedDuration": 4,
+            "questionsAnsweredByTheUser": 26
+        }
+    },
+    {
+        "11": {
+            "usersPerceivedDuration": 3,
+            "questionsAnsweredByTheUser": 26
+        }
+    },
+    {
+        "12": {
+            "usersPerceivedDuration": 4,
+            "questionsAnsweredByTheUser": 26
+        }
+    },
+    {
+        "13": {
+            "usersPerceivedDuration": 1,
+            "questionsAnsweredByTheUser": 26
+        }
+    },
+    {
+        "14": {
+            "usersPerceivedDuration": 2,
+            "questionsAnsweredByTheUser": 26
+        }
+    },
+    {
+        "15": {
+            "usersPerceivedDuration": 4,
+            "questionsAnsweredByTheUser": 26
+        }
+    },
+    {
+        "16": {
+            "usersPerceivedDuration": 4,
+            "questionsAnsweredByTheUser": 26
+        }
+    },
+    {
+        "17": {
+            "usersPerceivedDuration": 4,
+            "questionsAnsweredByTheUser": 26
+        }
+    },
+    {
+        "18": {
+            "usersPerceivedDuration": 4,
+            "questionsAnsweredByTheUser": 26
+        }
+    },
+    {
+        "19": {
+            "usersPerceivedDuration": 4,
+            "questionsAnsweredByTheUser": 26
+        }
+    },
+    {
+        "20": {
+            "usersPerceivedDuration": 3,
+            "questionsAnsweredByTheUser": 26
+        }
+    },
+    {
+        "21": {
+            "usersPerceivedDuration": 3,
+            "questionsAnsweredByTheUser": 22
+        }
+    },
+    {
+        "22": {
+            "usersPerceivedDuration": 4,
+            "questionsAnsweredByTheUser": 22
+        }
+    },
+    {
+        "23": {
+            "usersPerceivedDuration": 4,
+            "questionsAnsweredByTheUser": 26
+        }
+    },
+    {
+        "24": {
+            "usersPerceivedDuration": 4,
+            "questionsAnsweredByTheUser": 22
+        }
+    },
+    {
+        "25": {
+            "usersPerceivedDuration": 4,
+            "questionsAnsweredByTheUser": 26
+        }
+    },
+    {
+        "26": {
+            "usersPerceivedDuration": 4,
+            "questionsAnsweredByTheUser": 26
+        }
+    },
+    {
+        "27": {
+            "usersPerceivedDuration": 3,
+            "questionsAnsweredByTheUser": 25
+        }
+    },
+    {
+        "28": {
+            "usersPerceivedDuration": 2,
+            "questionsAnsweredByTheUser": 26
+        }
+    },
+    {
+        "29": {
+            "usersPerceivedDuration": 2,
+            "questionsAnsweredByTheUser": 26
+        }
+    },
+    {
+        "30": {
+            "usersPerceivedDuration": 5,
+            "questionsAnsweredByTheUser": 22
+        }
+    },
+    {
+        "31": {
+            "usersPerceivedDuration": 2,
+            "questionsAnsweredByTheUser": 26
+        }
+    },
+    {
+        "32": {
+            "usersPerceivedDuration": 4,
+            "questionsAnsweredByTheUser": 20
+        }
+    },
+    {
+        "33": {
+            "usersPerceivedDuration": 4,
+            "questionsAnsweredByTheUser": 20
+        }
+    },
+    {
+        "34": {
+            "usersPerceivedDuration": 4,
+            "questionsAnsweredByTheUser": 26
+        }
+    },
+    {
+        "35": {
+            "usersPerceivedDuration": 3,
+            "questionsAnsweredByTheUser": 26
+        }
+    },
+    {
+        "36": {
+            "usersPerceivedDuration": 4,
+            "questionsAnsweredByTheUser": 25
+        }
+    },
+    {
+        "37": {
+            "usersPerceivedDuration": 4,
+            "questionsAnsweredByTheUser": 26
+        }
+    },
+    {
+        "38": {
+            "usersPerceivedDuration": 4,
+            "questionsAnsweredByTheUser": 24
+        }
+    },
+    {
+        "39": {
+            "usersPerceivedDuration": 5,
+            "questionsAnsweredByTheUser": 26
+        }
+    },
+    {
+        "40": {
+            "usersPerceivedDuration": 4,
+            "questionsAnsweredByTheUser": 25
+        }
+    },
+    {
+        "41": {
+            "usersPerceivedDuration": 4,
+            "questionsAnsweredByTheUser": 26
+        }
+    },
+    {
+        "42": {
+            "usersPerceivedDuration": 1,
+            "questionsAnsweredByTheUser": 22
+        }
+    },
+    {
+        "43": {
+            "usersPerceivedDuration": 2,
+            "questionsAnsweredByTheUser": 26
+        }
+    },
+    {
+        "44": {
+            "usersPerceivedDuration": 2,
+            "questionsAnsweredByTheUser": 26
+        }
+    },
+    {
+        "45": {
+            "usersPerceivedDuration": 4,
+            "questionsAnsweredByTheUser": 22
+        }
+    },
+    {
+        "46": {
+            "usersPerceivedDuration": 3,
+            "questionsAnsweredByTheUser": 26
+        }
+    },
+    {
+        "47": {
+            "usersPerceivedDuration": 1,
+            "questionsAnsweredByTheUser": 26
+        }
+    },
+    {
+        "48": {
+            "usersPerceivedDuration": 4,
+            "questionsAnsweredByTheUser": 26
+        }
+    },
+    {
+        "49": {
+            "usersPerceivedDuration": 3,
+            "questionsAnsweredByTheUser": 22
+        }
+    },
+    {
+        "50": {
+            "usersPerceivedDuration": 4,
+            "questionsAnsweredByTheUser": 25
+        }
+    },
+    {
+        "51": {
+            "usersPerceivedDuration": 4,
+            "questionsAnsweredByTheUser": 26
+        }
+    },
+    {
+        "52": {
+            "usersPerceivedDuration": 2,
+            "questionsAnsweredByTheUser": 26
+        }
+    },
+    {
+        "53": {
+            "usersPerceivedDuration": 4,
+            "questionsAnsweredByTheUser": 22
+        }
+    },
+    {
+        "54": {
+            "usersPerceivedDuration": 2,
+            "questionsAnsweredByTheUser": 26
+        }
+    },
+    {
+        "55": {
+            "usersPerceivedDuration": 1,
+            "questionsAnsweredByTheUser": 26
+        }
+    },
+    {
+        "56": {
+            "usersPerceivedDuration": 5,
+            "questionsAnsweredByTheUser": 26
+        }
+    },
+    {
+        "57": {
+            "usersPerceivedDuration": 5,
+            "questionsAnsweredByTheUser": 26
+        }
+    },
+    {
+        "58": {
+            "usersPerceivedDuration": 2,
+            "questionsAnsweredByTheUser": 26
+        }
+    },
+    {
+        "59": {
+            "usersPerceivedDuration": 2,
+            "questionsAnsweredByTheUser": 26
+        }
+    },
+    {
+        "60": {
+            "usersPerceivedDuration": 5,
+            "questionsAnsweredByTheUser": 26
+        }
+    },
+    {
+        "61": {
+            "usersPerceivedDuration": 2,
+            "questionsAnsweredByTheUser": 26
+        }
+    },
+    {
+        "62": {
+            "usersPerceivedDuration": 2,
+            "questionsAnsweredByTheUser": 26
+        }
+    },
+    {
+        "63": {
+            "usersPerceivedDuration": 2,
+            "questionsAnsweredByTheUser": 25
+        }
+    },
+    {
+        "64": {
+            "usersPerceivedDuration": 2,
+            "questionsAnsweredByTheUser": 21
+        }
+    },
+    {
+        "65": {
+            "usersPerceivedDuration": 2,
+            "questionsAnsweredByTheUser": 26
+        }
+    },
+    {
+        "66": {
+            "usersPerceivedDuration": 2,
+            "questionsAnsweredByTheUser": 26
+        }
+    },
+    {
+        "67": {
+            "usersPerceivedDuration": 3,
+            "questionsAnsweredByTheUser": 26
+        }
+    },
+    {
+        "68": {
+            "usersPerceivedDuration": 4,
+            "questionsAnsweredByTheUser": 25
+        }
+    },
+    {
+        "69": {
+            "usersPerceivedDuration": 2,
+            "questionsAnsweredByTheUser": 26
+        }
+    },
+    {
+        "70": {
+            "usersPerceivedDuration": 4,
+            "questionsAnsweredByTheUser": 26
+        }
+    },
+    {
+        "71": {
+            "usersPerceivedDuration": 5,
+            "questionsAnsweredByTheUser": 26
+        }
+    },
+    {
+        "72": {
+            "usersPerceivedDuration": 5,
+            "questionsAnsweredByTheUser": 20
+        }
+    },
+    {
+        "73": {
+            "usersPerceivedDuration": 5,
+            "questionsAnsweredByTheUser": 26
+        }
+    },
+    {
+        "74": {
+            "usersPerceivedDuration": 4,
+            "questionsAnsweredByTheUser": 26
+        }
+    },
+    {
+        "75": {
+            "usersPerceivedDuration": 2,
+            "questionsAnsweredByTheUser": 26
+        }
+    },
+    {
+        "76": {
+            "usersPerceivedDuration": 4,
+            "questionsAnsweredByTheUser": 25
+        }
+    },
+    {
+        "77": {
+            "usersPerceivedDuration": 4,
+            "questionsAnsweredByTheUser": 26
+        }
+    },
+    {
+        "78": {
+            "usersPerceivedDuration": 4,
+            "questionsAnsweredByTheUser": 26
+        }
+    },
+    {
+        "79": {
+            "usersPerceivedDuration": 3,
+            "questionsAnsweredByTheUser": 22
+        }
+    }
+]

@@ -372,205 +372,191 @@
     },
     {
         "53": {
-            "perceivedChoice": 4,
-            "interest_enjoyment": 17,
-            "perceivedCompetence": 20
-        }
-    },
-    {
-        "54": {
             "perceivedChoice": 0,
             "interest_enjoyment": 18,
             "perceivedCompetence": 19
         }
     },
     {
-        "55": {
+        "54": {
             "perceivedChoice": 3,
             "interest_enjoyment": 19,
             "perceivedCompetence": 20
         }
     },
     {
-        "56": {
+        "55": {
             "perceivedChoice": 11,
             "interest_enjoyment": 8,
             "perceivedCompetence": 18
         }
     },
     {
-        "57": {
+        "56": {
             "perceivedChoice": 4,
             "interest_enjoyment": 21,
             "perceivedCompetence": 25
         }
     },
     {
-        "58": {
+        "57": {
             "perceivedChoice": -4,
             "interest_enjoyment": 18,
             "perceivedCompetence": 26
         }
     },
     {
-        "59": {
+        "58": {
             "perceivedChoice": -9,
             "interest_enjoyment": 17,
             "perceivedCompetence": 22
         }
     },
     {
-        "60": {
+        "59": {
             "perceivedChoice": 7,
             "interest_enjoyment": 28,
             "perceivedCompetence": 34
         }
     },
     {
-        "61": {
+        "60": {
             "perceivedChoice": -3,
             "interest_enjoyment": 11,
             "perceivedCompetence": 15
         }
     },
     {
-        "62": {
+        "61": {
             "perceivedChoice": 3,
             "interest_enjoyment": 17,
             "perceivedCompetence": 17
         }
     },
     {
-        "63": {
+        "62": {
             "perceivedChoice": 12,
             "interest_enjoyment": 15,
             "perceivedCompetence": 22
         }
     },
     {
-        "64": {
+        "63": {
             "perceivedChoice": 0,
             "interest_enjoyment": 21,
             "perceivedCompetence": 20
         }
     },
     {
-        "65": {
+        "64": {
             "perceivedChoice": -10,
             "interest_enjoyment": 14,
             "perceivedCompetence": 20
         }
     },
     {
-        "66": {
+        "65": {
             "perceivedChoice": 7,
             "interest_enjoyment": 15,
             "perceivedCompetence": 18
         }
     },
     {
-        "67": {
+        "66": {
             "perceivedChoice": 6,
             "interest_enjoyment": 19,
             "perceivedCompetence": 23
         }
     },
     {
-        "68": {
+        "67": {
             "perceivedChoice": 0,
             "interest_enjoyment": 24,
             "perceivedCompetence": 24
         }
     },
     {
-        "69": {
+        "68": {
             "perceivedChoice": -5,
             "interest_enjoyment": 20,
             "perceivedCompetence": 20
         }
     },
     {
-        "70": {
+        "69": {
             "perceivedChoice": -2,
             "interest_enjoyment": 14,
             "perceivedCompetence": 20
         }
     },
     {
-        "71": {
+        "70": {
             "perceivedChoice": -9,
             "interest_enjoyment": 10,
             "perceivedCompetence": 21
         }
     },
     {
-        "72": {
+        "71": {
             "perceivedChoice": 10,
             "interest_enjoyment": 13,
             "perceivedCompetence": 28
         }
     },
     {
-        "73": {
+        "72": {
             "perceivedChoice": -4,
             "interest_enjoyment": 11,
             "perceivedCompetence": 15
         }
     },
     {
-        "74": {
+        "73": {
             "perceivedChoice": 4,
             "interest_enjoyment": 2,
             "perceivedCompetence": 25
         }
     },
     {
-        "75": {
+        "74": {
             "perceivedChoice": 7,
             "interest_enjoyment": 16,
             "perceivedCompetence": 20
         }
     },
     {
-        "76": {
+        "75": {
             "perceivedChoice": 9,
             "interest_enjoyment": 20,
             "perceivedCompetence": 22
         }
     },
     {
-        "77": {
+        "76": {
             "perceivedChoice": 9,
             "interest_enjoyment": 7,
             "perceivedCompetence": 23
         }
     },
     {
-        "78": {
+        "77": {
             "perceivedChoice": 7,
             "interest_enjoyment": 8,
             "perceivedCompetence": 31
         }
     },
     {
-        "79": {
+        "78": {
             "perceivedChoice": 9,
             "interest_enjoyment": 12,
             "perceivedCompetence": 28
         }
     },
     {
-        "80": {
+        "79": {
             "perceivedChoice": -5,
             "interest_enjoyment": 15,
             "perceivedCompetence": 20
-        }
-    },
-    {
-        "81": {
-            "perceivedChoice": 2,
-            "interest_enjoyment": 5,
-            "perceivedCompetence": 17
         }
     }
 ]

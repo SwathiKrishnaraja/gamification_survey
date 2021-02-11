@@ -2,9 +2,10 @@ import fs from 'fs'
 import * as study1 from './study1.json'
 import getIPanasValue from './script/ipanas'
 import getHexadValue from './script/hexad'
-import { ParsedDataType, IpanasDataType, Data, hexadType, imiType, userExperience } from './types'
+import { ParsedDataType, IpanasDataType, Data, hexadType, imiType, userExperience, userDetails } from './types'
 import getIMIValue from './script/imi'
 import getUserExperience from './script/userExperience'
+import getUserDetails from './script/userDetails'
 
 const getParsedData = (data: Data): Array<ParsedDataType> => {
     const parsedData: Array<ParsedDataType> = data.values.reduce((parsed, value, index) => {
@@ -18,7 +19,7 @@ const getParsedData = (data: Data): Array<ParsedDataType> => {
     return parsedData
 }
 
-const writeToFile = (data: Array<IpanasDataType | hexadType | imiType> | userExperience, fileName: string) => {
+const writeToFile = (data: Array<IpanasDataType | hexadType | imiType | userDetails> | userExperience, fileName: string) => {
     const stringifiedData = JSON.stringify(data)
     fs.writeFile(`./analysis/results/${fileName}.json`, stringifiedData, err => {
         if (err) {
@@ -35,10 +36,12 @@ const analyseData = (data: Data) => {
     const hexadData = getHexadValue(parsedData)
     const imiData = getIMIValue(parsedData)
     const userExperienceData = getUserExperience(parsedData)
+    const userDetails = getUserDetails(parsedData)
     writeToFile(iPanasData, 'iPanas')
     writeToFile(hexadData, 'hexad')
     writeToFile(imiData, 'imi')
     writeToFile(userExperienceData, 'userExperience')
+    writeToFile(userDetails, 'userDetails')
 }
 
 analyseData(study1)
