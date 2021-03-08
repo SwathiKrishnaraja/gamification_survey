@@ -14,6 +14,7 @@ import getAverageTime from '../helpers/getAverageTime'
 import { RootState } from '../reducer/reducer';
 import pointsProvider from '../PointRules/PointsRules';
 import { isInactivePerson, isActivePerson } from '../helpers/fullPointsLogic'
+import { Points } from '../types/types'
 
 type AnswerStore = {
     name: string,
@@ -40,7 +41,7 @@ const SurveyQuestions = ({ progress, handleProgress, handleMascot, showMascot }:
     const [isTactician, setIsTactician] = useState(0)
     const store = useStore()
     const survey_mode = useSelector((state: RootState) => state.entryPointReducer.mode)
-    const points = useSelector((state: RootState) => state.addPointsReducer)
+    const pointsJSON: Points = useSelector((state: RootState) => state.addPointsReducer)
 
 
     /**
@@ -148,6 +149,7 @@ const SurveyQuestions = ({ progress, handleProgress, handleMascot, showMascot }:
             const char_count = getCharacterCount(filterOpenQuestions(listOfSurveyQuestions))
             const mainsurvey = data
             const browser = window.navigator.userAgent
+            const points = pointsJSON.points
             dispatch({
                 type: 'STORE_SURVEY',
                 payload: {
@@ -176,4 +178,4 @@ const SurveyQuestions = ({ progress, handleProgress, handleMascot, showMascot }:
         </Fragment>
     )
 }
-export default SurveyQuestions 
+export default SurveyQuestions
