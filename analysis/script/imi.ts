@@ -1,5 +1,14 @@
 import { ParsedDataType, imiType } from '../types'
 
+const reverseKeyMapping: any = {
+    1: 7,
+    2: 6,
+    3: 5,
+    4: 4,
+    5: 3,
+    6: 2,
+    7: 1
+}
 const perceivedChoicePositive = [
     'I felt like I had to do this survey.',
     'I did this survey because I wanted to.',
@@ -54,15 +63,15 @@ const getIMIValue = (data: Array<ParsedDataType>): Array<imiType> => {
             if (perceivedChoicePositive.includes(key)) {
                 perceivedChoice += Number(postsurveyData[key])
             } else if (perceivedChoiceNegative.includes(key)) {
-                perceivedChoice -= Number(postsurveyData[key])
+                perceivedChoice += reverseKeyMapping[Number(postsurveyData[key])]
             } else if (interestPositive.includes(key)) {
                 interest_enjoyment += Number(postsurveyData[key])
             } else if (interestNegative.includes(key)) {
-                interest_enjoyment -= Number(postsurveyData[key])
+                interest_enjoyment += reverseKeyMapping[Number(postsurveyData[key])]
             } else if (perceivedCompetencePositive.includes(key)) {
                 perceivedCompetence += Number(postsurveyData[key])
             } else if (perceivedCompetenceNegative.includes(key)) {
-                perceivedCompetence -= Number(postsurveyData[key])
+                perceivedCompetence += reverseKeyMapping[Number(postsurveyData[key])]
             }
         })
 
