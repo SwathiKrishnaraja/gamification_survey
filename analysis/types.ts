@@ -7,6 +7,9 @@ export type ParsedDataType = {
             [key: string]: string
         },
     },
+    mainsurvey: {
+        [key: string]: string
+    }
     postsurvey: {
         q1: {
             [key: string]: string
@@ -14,6 +17,9 @@ export type ParsedDataType = {
         q2: {
             [key: string]: string
         },
+        q3: {
+            [key: string]: string
+        }
     }
 }
 export type IpanasDataType = {
@@ -48,6 +54,19 @@ export type imiType = {
     }
 }
 
+export type userDetailsType = {
+    [key: string]: {
+        usersPerceivedDuration: number,
+        questionsAnsweredByTheUser: number
+    }
+}
+
+export type userExperienceType = {
+    usersWithPlayingExperience: number,
+    usersWithoutPlayingExperience: number,
+    usersWithBadgeExperience: number,
+    usersWithoutBadgeExperience: number
+}
 export type Data = {
     title: string,
     values: Array<any>,
